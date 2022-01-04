@@ -85,6 +85,21 @@
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/main.cpp">
 			<Option target="Magic"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/CreatureCard.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/CreatureCard.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Main.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/card.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/card.h">
+			<Option target="Magic"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

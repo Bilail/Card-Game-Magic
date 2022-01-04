@@ -74,12 +74,12 @@ clean: CMakeFiles/Magic.dir/clean
 CMakeFiles/Magic.dir/all:
 	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/depend
 	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles" --progress-num=1,2 "Built target Magic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles" --progress-num=1,2,3,4,5 "Built target Magic"
 .PHONY : CMakeFiles/Magic.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Magic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles" 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Magic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles" 0
 .PHONY : CMakeFiles/Magic.dir/rule

@@ -70,17 +70,62 @@ CMakeFiles/Magic.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Magic.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/main.cpp" -o CMakeFiles/Magic.dir/main.cpp.s
 
+CMakeFiles/Magic.dir/src/card.cpp.o: CMakeFiles/Magic.dir/flags.make
+CMakeFiles/Magic.dir/src/card.cpp.o: ../src/card.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Magic.dir/src/card.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Magic.dir/src/card.cpp.o -c "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/card.cpp"
+
+CMakeFiles/Magic.dir/src/card.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Magic.dir/src/card.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/card.cpp" > CMakeFiles/Magic.dir/src/card.cpp.i
+
+CMakeFiles/Magic.dir/src/card.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Magic.dir/src/card.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/card.cpp" -o CMakeFiles/Magic.dir/src/card.cpp.s
+
+CMakeFiles/Magic.dir/src/Main.cpp.o: CMakeFiles/Magic.dir/flags.make
+CMakeFiles/Magic.dir/src/Main.cpp.o: ../src/Main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Magic.dir/src/Main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Magic.dir/src/Main.cpp.o -c "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Main.cpp"
+
+CMakeFiles/Magic.dir/src/Main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Magic.dir/src/Main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Main.cpp" > CMakeFiles/Magic.dir/src/Main.cpp.i
+
+CMakeFiles/Magic.dir/src/Main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Magic.dir/src/Main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Main.cpp" -o CMakeFiles/Magic.dir/src/Main.cpp.s
+
+CMakeFiles/Magic.dir/src/CreatureCard.cpp.o: CMakeFiles/Magic.dir/flags.make
+CMakeFiles/Magic.dir/src/CreatureCard.cpp.o: ../src/CreatureCard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Magic.dir/src/CreatureCard.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Magic.dir/src/CreatureCard.cpp.o -c "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/CreatureCard.cpp"
+
+CMakeFiles/Magic.dir/src/CreatureCard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Magic.dir/src/CreatureCard.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/CreatureCard.cpp" > CMakeFiles/Magic.dir/src/CreatureCard.cpp.i
+
+CMakeFiles/Magic.dir/src/CreatureCard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Magic.dir/src/CreatureCard.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/CreatureCard.cpp" -o CMakeFiles/Magic.dir/src/CreatureCard.cpp.s
+
 # Object files for target Magic
 Magic_OBJECTS = \
-"CMakeFiles/Magic.dir/main.cpp.o"
+"CMakeFiles/Magic.dir/main.cpp.o" \
+"CMakeFiles/Magic.dir/src/card.cpp.o" \
+"CMakeFiles/Magic.dir/src/Main.cpp.o" \
+"CMakeFiles/Magic.dir/src/CreatureCard.cpp.o"
 
 # External object files for target Magic
 Magic_EXTERNAL_OBJECTS =
 
 Magic: CMakeFiles/Magic.dir/main.cpp.o
+Magic: CMakeFiles/Magic.dir/src/card.cpp.o
+Magic: CMakeFiles/Magic.dir/src/Main.cpp.o
+Magic: CMakeFiles/Magic.dir/src/CreatureCard.cpp.o
 Magic: CMakeFiles/Magic.dir/build.make
 Magic: CMakeFiles/Magic.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Magic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Magic"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Magic.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

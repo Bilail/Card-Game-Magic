@@ -5,6 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/main.cpp" "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles/Magic.dir/main.cpp.o"
+  "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/CreatureCard.cpp" "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles/Magic.dir/src/CreatureCard.cpp.o"
+  "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Main.cpp" "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles/Magic.dir/src/Main.cpp.o"
+  "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/card.cpp" "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl/CMakeFiles/Magic.dir/src/card.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

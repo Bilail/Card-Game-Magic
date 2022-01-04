@@ -150,6 +150,87 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/CreatureCard.o: src/CreatureCard.cpp.o
+
+.PHONY : src/CreatureCard.o
+
+# target to build an object file
+src/CreatureCard.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/CreatureCard.cpp.o
+.PHONY : src/CreatureCard.cpp.o
+
+src/CreatureCard.i: src/CreatureCard.cpp.i
+
+.PHONY : src/CreatureCard.i
+
+# target to preprocess a source file
+src/CreatureCard.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/CreatureCard.cpp.i
+.PHONY : src/CreatureCard.cpp.i
+
+src/CreatureCard.s: src/CreatureCard.cpp.s
+
+.PHONY : src/CreatureCard.s
+
+# target to generate assembly for a file
+src/CreatureCard.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/CreatureCard.cpp.s
+.PHONY : src/CreatureCard.cpp.s
+
+src/Main.o: src/Main.cpp.o
+
+.PHONY : src/Main.o
+
+# target to build an object file
+src/Main.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Main.cpp.o
+.PHONY : src/Main.cpp.o
+
+src/Main.i: src/Main.cpp.i
+
+.PHONY : src/Main.i
+
+# target to preprocess a source file
+src/Main.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Main.cpp.i
+.PHONY : src/Main.cpp.i
+
+src/Main.s: src/Main.cpp.s
+
+.PHONY : src/Main.s
+
+# target to generate assembly for a file
+src/Main.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Main.cpp.s
+.PHONY : src/Main.cpp.s
+
+src/card.o: src/card.cpp.o
+
+.PHONY : src/card.o
+
+# target to build an object file
+src/card.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/card.cpp.o
+.PHONY : src/card.cpp.o
+
+src/card.i: src/card.cpp.i
+
+.PHONY : src/card.i
+
+# target to preprocess a source file
+src/card.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/card.cpp.i
+.PHONY : src/card.cpp.i
+
+src/card.s: src/card.cpp.s
+
+.PHONY : src/card.s
+
+# target to generate assembly for a file
+src/card.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/card.cpp.s
+.PHONY : src/card.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +243,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/CreatureCard.o"
+	@echo "... src/CreatureCard.i"
+	@echo "... src/CreatureCard.s"
+	@echo "... src/Main.o"
+	@echo "... src/Main.i"
+	@echo "... src/Main.s"
+	@echo "... src/card.o"
+	@echo "... src/card.i"
+	@echo "... src/card.s"
 .PHONY : help
 
 
