@@ -12,22 +12,27 @@
 
 int main() {
 
-    Game game;
-    game.playGame();
+    /*Game game;
+    game.playGame();*/
+
+    Deck d1;
+    Deck d2;
 
     //Création des cartes :
-    CreatureCard("Soldier", 1, "White", 1, 1);
-    CreatureCard("ArmoredPegasus", 2, "White", 1, 2);
-    CreatureCard("WhiteKnight", 2, "White", 2, 2);
-    CreatureCard("AngryBear", 3, "Green", 3, 2);
-    CreatureCard("Guard", 4, "White", 2, 5);
-    CreatureCard("Werewolf", 4, "Green", 4, 6);
-    CreatureCard("Skeleton", 1, "Black", 1, 1);
-    CreatureCard("Ghost", 2, "Black", 2, 1);
-    CreatureCard("BlackKnight", 2, "Black", 2, 2);
-    CreatureCard("OrcManiac", 3, "Red", 4, 1);
-    CreatureCard("Hobgoblin", 3, "Red", 3, 3);
-    CreatureCard("Vampire", 4, "Black", 6, 3);
+    d1.add(CreatureCard ("Soldier", 1, "White", 1, 1));
+    d1.add(CreatureCard("ArmoredPegasus", 2, "White", 1, 2));
+    d1.add(CreatureCard("WhiteKnight", 2, "White", 2, 2));
+    d1.add(CreatureCard("AngryBear", 3, "Green", 3, 2));
+    d1.add(CreatureCard("Guard", 4, "White", 2, 5));
+    d1.add(CreatureCard("Werewolf", 4, "Green", 4, 6));
+    d1.add(CreatureCard("Skeleton", 1, "Black", 1, 1));
+    d1.add(CreatureCard("Ghost", 2, "Black", 2, 1));
+    d1.add(CreatureCard("BlackKnight", 2, "Black", 2, 2));
+    d1.add(CreatureCard("OrcManiac", 3, "Red", 4, 1));
+    d1.add(CreatureCard("Hobgoblin", 3, "Red", 3, 3));
+    d1.add(CreatureCard("Vampire", 4, "Black", 6, 3));*/
+
+    d1.printLibrary();
 
     class Forest : public LandCard {
     public:

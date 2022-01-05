@@ -16,6 +16,9 @@ protected:
     std::vector<Card> disCards;
 public:
     Deck();
+    ~Deck();
+    void add(Card card);
+    void printLibrary();
 };
 
 

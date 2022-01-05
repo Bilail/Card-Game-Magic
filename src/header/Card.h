@@ -46,7 +46,7 @@ public:
 
     void isStillOperational();
 
-    void print();
+    virtual void print();
 
 
 };
