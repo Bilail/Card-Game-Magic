@@ -13,6 +13,7 @@
 class Player {
 protected :
     std::string name;
+    std::string printColor;
     bool isAlive;
     int currentHp;
     static int baseHp;
@@ -20,6 +21,7 @@ protected :
 public :
     Player(std::string, Deck);
     ~Player(){};
+    void setPrintColor(std::string color);
     std::string getName();
 
 };

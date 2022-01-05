@@ -10,8 +10,9 @@
 
 class Game {
 private:
-    void initGame();
     void showBanner();
+    void initGame();
+    void randomDraw();
 protected:
     Player p1;
     Player p2;
