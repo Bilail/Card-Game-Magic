@@ -6,7 +6,59 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/main.cpp
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Game.cpp
+string
+-
 iostream
 -
+header/Player.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Player.h
+header/Deck.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Deck.h
+header/Game.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Game.h
+
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Main.cpp
+vector
+-
+header/Card.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Card.h
+header/CreatureCard.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/CreatureCard.h
+header/LandCard.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/LandCard.h
+header/Game.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Game.h
+header/Deck.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Deck.h
+
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Card.h
+string
+-
+
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/CreatureCard.h
+Card.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Card.h
+
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Deck.h
+vector
+-
+Card.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Card.h
+
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Game.h
+Player.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Player.h
+
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/LandCard.h
+string
+-
+Card.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Card.h
+
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Player.h
+string
+-
+Deck.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Deck.h
 

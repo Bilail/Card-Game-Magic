@@ -3,4 +3,4 @@ project(Magic)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Magic main.cpp src/Card.cpp src/Card.h src/Main.cpp src/CreatureCard.cpp src/CreatureCard.h)
+add_executable(Magic src/Card.cpp src/header/Card.h src/CreatureCard.cpp src/header/CreatureCard.h src/Game.cpp src/header/Game.h src/Main.cpp)

@@ -11,13 +11,20 @@ protected:
     std::string name;
     int manaCost;
     std::string color;
-    bool isDiscarded;
+    bool isDiscarded = false;
+    bool isEngaged = false;
     std::string typeOfCard;
 
 public:
-    Card(std::string nm, int mnCt, std::string clr, std::string typeOfCard);
+    Card(std::string nm, int mnCt, std::string clr);
 
     void setName(const std::string &name);
+
+    void Engage();
+
+    void Disengage();
+
+    bool getEngage();
 
     void setManaCost(int manaCost);
 
@@ -25,7 +32,6 @@ public:
 
     void setIsDiscarded(bool isDiscarded);
 
-    void setTypeOfCard(const std::string &typeOfCard);
 
     const std::string &getName() const;
 
@@ -35,10 +41,10 @@ public:
 
     bool getIsDiscarded() const;
 
-    const std::string &getTypeOfCard() const;
 
-    virtual ~Card();
+     ~Card();
 
+    void isStillOperational();
 
 
 };

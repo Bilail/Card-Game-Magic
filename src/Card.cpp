@@ -1,8 +1,21 @@
 //
 // Created by bilai on 04/01/2022.
 //
+#include <iostream>
 
-#include "Card.h"
+#include "header/Card.h"
+
+void Card::Engage() {
+    isEngaged = true;
+}
+
+void Card::Disengage() {
+    isEngaged = false;
+}
+
+bool Card::getEngage() {
+    return isEngaged;
+}
 
 void Card::setName(const std::string &name) {
     Card::name = name;
@@ -18,10 +31,6 @@ void Card::setColor(const std::string &color) {
 
 void Card::setIsDiscarded(bool isDiscarded) {
     Card::isDiscarded = isDiscarded;
-}
-
-void Card::setTypeOfCard(const std::string &typeOfCard) {
-    Card::typeOfCard = typeOfCard;
 }
 
 const std::string &Card::getName() const {
@@ -40,16 +49,24 @@ bool Card::getIsDiscarded() const {
     return isDiscarded;
 }
 
-const std::string &Card::getTypeOfCard() const {
-    return typeOfCard;
-}
-
-Card::Card(std::string nm, int mnCt, std::string clr, std::string typeOfCard) : name(nm), manaCost(mnCt),
-    color(clr), typeOfCard(typeOfCard) {
+Card::Card(std::string nm, int mnCt, std::string clr) {
+    name = nm;
+    manaCost = mnCt;
+    color = clr;
     isDiscarded = false;
 }
 
 Card::~Card() {
-
 }
+
+void Card::isStillOperational() {
+    if (!isDiscarded) {
+        std::cout << name << ": is still operational" << std::endl;
+    } else {
+        std::cout << name << ": is destroyed" << std::endl;
+    }
+}
+
+
+
 

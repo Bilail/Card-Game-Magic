@@ -123,32 +123,32 @@ Magic/fast:
 	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/build
 .PHONY : Magic/fast
 
-main.o: main.cpp.o
+src/Card.o: src/Card.cpp.o
 
-.PHONY : main.o
+.PHONY : src/Card.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Card.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Card.cpp.o
+.PHONY : src/Card.cpp.o
 
-main.i: main.cpp.i
+src/Card.i: src/Card.cpp.i
 
-.PHONY : main.i
+.PHONY : src/Card.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Card.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Card.cpp.i
+.PHONY : src/Card.cpp.i
 
-main.s: main.cpp.s
+src/Card.s: src/Card.cpp.s
 
-.PHONY : main.s
+.PHONY : src/Card.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Card.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Card.cpp.s
+.PHONY : src/Card.cpp.s
 
 src/CreatureCard.o: src/CreatureCard.cpp.o
 
@@ -177,6 +177,33 @@ src/CreatureCard.cpp.s:
 	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/CreatureCard.cpp.s
 .PHONY : src/CreatureCard.cpp.s
 
+src/Game.o: src/Game.cpp.o
+
+.PHONY : src/Game.o
+
+# target to build an object file
+src/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Game.cpp.o
+.PHONY : src/Game.cpp.o
+
+src/Game.i: src/Game.cpp.i
+
+.PHONY : src/Game.i
+
+# target to preprocess a source file
+src/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Game.cpp.i
+.PHONY : src/Game.cpp.i
+
+src/Game.s: src/Game.cpp.s
+
+.PHONY : src/Game.s
+
+# target to generate assembly for a file
+src/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Game.cpp.s
+.PHONY : src/Game.cpp.s
+
 src/Main.o: src/Main.cpp.o
 
 .PHONY : src/Main.o
@@ -204,33 +231,6 @@ src/Main.cpp.s:
 	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Main.cpp.s
 .PHONY : src/Main.cpp.s
 
-src/card.o: src/card.cpp.o
-
-.PHONY : src/card.o
-
-# target to build an object file
-src/card.cpp.o:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/card.cpp.o
-.PHONY : src/card.cpp.o
-
-src/card.i: src/card.cpp.i
-
-.PHONY : src/card.i
-
-# target to preprocess a source file
-src/card.cpp.i:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/card.cpp.i
-.PHONY : src/card.cpp.i
-
-src/card.s: src/card.cpp.s
-
-.PHONY : src/card.s
-
-# target to generate assembly for a file
-src/card.cpp.s:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/card.cpp.s
-.PHONY : src/card.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,18 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Magic"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Card.o"
+	@echo "... src/Card.i"
+	@echo "... src/Card.s"
 	@echo "... src/CreatureCard.o"
 	@echo "... src/CreatureCard.i"
 	@echo "... src/CreatureCard.s"
+	@echo "... src/Game.o"
+	@echo "... src/Game.i"
+	@echo "... src/Game.s"
 	@echo "... src/Main.o"
 	@echo "... src/Main.i"
 	@echo "... src/Main.s"
-	@echo "... src/card.o"
-	@echo "... src/card.i"
-	@echo "... src/card.s"
 .PHONY : help
 
 
