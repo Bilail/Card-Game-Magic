@@ -68,5 +68,17 @@ void Card::isStillOperational() {
 }
 
 
+void Card::print(){
+    system("Color 0A");
+    std::cout << "____________________________________" << std::endl;
+    std::cout << "| Name : " << name << "  |";
+    std::cout << "       | Cout  : " << manaCost << "  |"<< std::endl;
+    std::cout << "|                                   |" << std::endl << "|                                   |" << std::endl << "|";
+    std::cout << "___________________________________"  << "|"<< std::endl;
+}
+
+
+
+
 
 

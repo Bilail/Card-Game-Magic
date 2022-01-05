@@ -46,6 +46,8 @@ public:
 
     void isStillOperational();
 
+    void print();
+
 
 };
 

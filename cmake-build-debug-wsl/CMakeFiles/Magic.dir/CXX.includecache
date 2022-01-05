@@ -6,10 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Card.cpp
+iostream
+-
+header/Card.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Card.h
+
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/CreatureCard.cpp
+header/CreatureCard.h
+/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/CreatureCard.h
+string
+-
+
 /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Game.cpp
 string
 -
 iostream
+-
+random
 -
 header/Player.h
 /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Player.h
