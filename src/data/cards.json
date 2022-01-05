@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Soldier",
+    "strength": "1",
+    "stamina": "1",
+    "color": "White",
+    "commonCost": "1",
+    "colorCost": ["White"]
+  }
+]

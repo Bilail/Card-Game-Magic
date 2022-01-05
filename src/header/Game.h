@@ -9,16 +9,19 @@
 
 
 class Game {
+private:
+    void initGame();
+    void showBanner();
 protected:
     Player p1;
     Player p2;
-    int tour;
+    Player* playerTurn;
+    int nbRound;
 
 public :
     Game();
     //Game(Game const &); //reprendre une game
     void playGame();
-
 };
 
 
