@@ -2,7 +2,7 @@
 // Created by bilai on 04/01/2022.
 //
 #include <iostream>
-
+#include "header/StrColor.h"
 #include "header/Card.h"
 
 void Card::Engage() {
@@ -69,12 +69,15 @@ void Card::isStillOperational() {
 
 
 void Card::print(){
-    system("Color 0A");
-    std::cout << "____________________________________" << std::endl;
-    std::cout << "| Name : " << name << "  |";
-    std::cout << "       | Cout  : " << manaCost << "  |"<< std::endl;
-    std::cout << "|                                   |" << std::endl << "|                                   |" << std::endl << "|";
-    std::cout << "___________________________________"  << "|"<< std::endl;
+    std::string spaces = "                ";
+    for (int i = 0; i < name.length(); i++)
+        spaces.pop_back();
+    std::cout
+    << StrColor::print("____________________________________", color) << std::endl
+    << StrColor::print("| Name : " + name + spaces + "  Cout : " + std::to_string(manaCost) + " |", color) << std::endl
+    << StrColor::print("|                                   |", color) << std::endl
+    << StrColor::print("|                                   |", color) << std::endl
+    << StrColor::print("|___________________________________|", color) << std::endl;
 }
 
 
