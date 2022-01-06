@@ -10,6 +10,9 @@
 Deck::Deck() {
 }
 
+Deck::~Deck() {
+}
+
 void Deck::add(Card d){
     library.push_back(d);
 }

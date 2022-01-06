@@ -30,7 +30,7 @@ int main() {
     d1.add(CreatureCard("BlackKnight", 2, "Black", 2, 2));
     d1.add(CreatureCard("OrcManiac", 3, "Red", 4, 1));
     d1.add(CreatureCard("Hobgoblin", 3, "Red", 3, 3));
-    d1.add(CreatureCard("Vampire", 4, "Black", 6, 3));*/
+    d1.add(CreatureCard("Vampire", 4, "Black", 6, 3));
 
     d1.printLibrary();
 
