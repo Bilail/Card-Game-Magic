@@ -17,6 +17,8 @@ std::string StrColor::print(std::string str, std::string color) {
         return "\033[1;35m" + str + "\033[0m";
     else if (color == "cyan")
         return "\033[1;36m" + str + "\033[0m";
+    else if (color == "black")
+        return "\033[1;30m" + str + "\033[0m";
     else
         return "\033[1;37m" + str + "\033[0m";
 }
