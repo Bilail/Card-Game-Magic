@@ -46,7 +46,7 @@ public:
 
     void isStillOperational();
 
-    virtual void print();
+    virtual void print() const;
 
 
 };

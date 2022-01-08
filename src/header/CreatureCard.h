@@ -23,6 +23,8 @@ public:
 
     bool isFirstTurn();
 
+    void print() const;
+
 protected:
     int hp;
     int defaultHp;

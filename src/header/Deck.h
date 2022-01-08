@@ -7,18 +7,25 @@
 
 #include <vector>
 #include "Card.h"
+#include "CreatureCard.h"
+#include "LandCard.h"
 
 class Deck {
 protected:
-    std::vector<Card> inplayCards;
-    std::vector<Card> handPile;
-    std::vector<Card> library;
-    std::vector<Card> disCards;
+    std::vector<CreatureCard> creatures;
+    std::vector<LandCard> lands;
+    std::vector<Card*> inPlayCards;
+    std::vector<Card*> handPile;
+    std::vector<Card*> library;
+    std::vector<Card*> disCards;
 public:
+    static const int DECK_SIZE;
     Deck();
     ~Deck();
-    void add(Card card);
+    void addCreature(CreatureCard card);
+    //void addLand(LandCard card);
     void printLibrary();
+    void printInPlayCards();
 };
 
 

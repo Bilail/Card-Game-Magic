@@ -68,7 +68,7 @@ void Card::isStillOperational() {
 }
 
 
-void Card::print(){
+void Card::print() const {
     std::string spaces = "                ";
     for (int i = 0; i < name.length(); i++)
         spaces.pop_back();

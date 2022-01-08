@@ -2,24 +2,32 @@
 // Created by bilai on 05/01/2022.
 //
 
-#include <vector>
-
 #include "header/Card.h"
 #include "header/Deck.h"
 
+const int Deck::DECK_SIZE = 30;
+
 Deck::Deck() {
+    creatures.reserve(DECK_SIZE);
 }
 
 Deck::~Deck() {
 }
 
-void Deck::add(Card d){
-    library.push_back(d);
+void Deck::addCreature(CreatureCard card) {
+    if (creatures.size() < DECK_SIZE) {
+        creatures.push_back(CreatureCard(card));
+        library.push_back(&creatures.back());
+    }
 }
 
-void Deck::printLibrary(){
-    for (Card e : library){
-        e.print();
-    }
+void Deck::printLibrary() {
+    for (Card* c : library)
+        c->print();
+}
+
+void Deck::printInPlayCards() {
+    for (Card* c : inPlayCards)
+        c->print();
 }
 
