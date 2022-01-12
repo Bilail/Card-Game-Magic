@@ -88,10 +88,25 @@
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/CreatureCard.cpp">
 			<Option target="Magic"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Deck.cpp">
+			<Option target="Magic"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Game.cpp">
 			<Option target="Magic"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/GameCards.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/LandCard.cpp">
+			<Option target="Magic"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Main.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Player.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/StrColor.cpp">
 			<Option target="Magic"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Card.h">
@@ -100,7 +115,22 @@
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/CreatureCard.h">
 			<Option target="Magic"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Deck.h">
+			<Option target="Magic"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Game.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/GameCards.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/LandCard.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Player.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/StrColor.h">
 			<Option target="Magic"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/CMakeLists.txt">

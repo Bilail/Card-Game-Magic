@@ -6,26 +6,26 @@
 #define MAGIC_DECK_H
 
 #include <vector>
+#include <bits/stdc++.h>
 #include "Card.h"
-#include "CreatureCard.h"
-#include "LandCard.h"
+#include "GameCards.h"
 
 class Deck {
 protected:
-    std::vector<CreatureCard> creatures;
-    std::vector<LandCard> lands;
     std::vector<Card*> inPlayCards;
-    std::vector<Card*> handPile;
+    std::vector<Card*> handCards;
     std::vector<Card*> library;
     std::vector<Card*> disCards;
 public:
     static const int DECK_SIZE;
     Deck();
     ~Deck();
-    void addCreature(CreatureCard card);
-    //void addLand(LandCard card);
     void printLibrary();
     void printInPlayCards();
+    void generateRandomDeck();
+    bool drawCard();
+    void disengageCards();
+    std::vector<Card*> getPlayableCards();
 };
 
 

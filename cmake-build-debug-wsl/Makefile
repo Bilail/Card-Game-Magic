@@ -177,6 +177,33 @@ src/CreatureCard.cpp.s:
 	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/CreatureCard.cpp.s
 .PHONY : src/CreatureCard.cpp.s
 
+src/Deck.o: src/Deck.cpp.o
+
+.PHONY : src/Deck.o
+
+# target to build an object file
+src/Deck.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Deck.cpp.o
+.PHONY : src/Deck.cpp.o
+
+src/Deck.i: src/Deck.cpp.i
+
+.PHONY : src/Deck.i
+
+# target to preprocess a source file
+src/Deck.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Deck.cpp.i
+.PHONY : src/Deck.cpp.i
+
+src/Deck.s: src/Deck.cpp.s
+
+.PHONY : src/Deck.s
+
+# target to generate assembly for a file
+src/Deck.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Deck.cpp.s
+.PHONY : src/Deck.cpp.s
+
 src/Game.o: src/Game.cpp.o
 
 .PHONY : src/Game.o
@@ -203,6 +230,60 @@ src/Game.s: src/Game.cpp.s
 src/Game.cpp.s:
 	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
+
+src/GameCards.o: src/GameCards.cpp.o
+
+.PHONY : src/GameCards.o
+
+# target to build an object file
+src/GameCards.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/GameCards.cpp.o
+.PHONY : src/GameCards.cpp.o
+
+src/GameCards.i: src/GameCards.cpp.i
+
+.PHONY : src/GameCards.i
+
+# target to preprocess a source file
+src/GameCards.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/GameCards.cpp.i
+.PHONY : src/GameCards.cpp.i
+
+src/GameCards.s: src/GameCards.cpp.s
+
+.PHONY : src/GameCards.s
+
+# target to generate assembly for a file
+src/GameCards.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/GameCards.cpp.s
+.PHONY : src/GameCards.cpp.s
+
+src/LandCard.o: src/LandCard.cpp.o
+
+.PHONY : src/LandCard.o
+
+# target to build an object file
+src/LandCard.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/LandCard.cpp.o
+.PHONY : src/LandCard.cpp.o
+
+src/LandCard.i: src/LandCard.cpp.i
+
+.PHONY : src/LandCard.i
+
+# target to preprocess a source file
+src/LandCard.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/LandCard.cpp.i
+.PHONY : src/LandCard.cpp.i
+
+src/LandCard.s: src/LandCard.cpp.s
+
+.PHONY : src/LandCard.s
+
+# target to generate assembly for a file
+src/LandCard.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/LandCard.cpp.s
+.PHONY : src/LandCard.cpp.s
 
 src/Main.o: src/Main.cpp.o
 
@@ -231,6 +312,60 @@ src/Main.cpp.s:
 	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Main.cpp.s
 .PHONY : src/Main.cpp.s
 
+src/Player.o: src/Player.cpp.o
+
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Player.cpp.o
+.PHONY : src/Player.cpp.o
+
+src/Player.i: src/Player.cpp.i
+
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
+
+src/Player.s: src/Player.cpp.s
+
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
+src/StrColor.o: src/StrColor.cpp.o
+
+.PHONY : src/StrColor.o
+
+# target to build an object file
+src/StrColor.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/StrColor.cpp.o
+.PHONY : src/StrColor.cpp.o
+
+src/StrColor.i: src/StrColor.cpp.i
+
+.PHONY : src/StrColor.i
+
+# target to preprocess a source file
+src/StrColor.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/StrColor.cpp.i
+.PHONY : src/StrColor.cpp.i
+
+src/StrColor.s: src/StrColor.cpp.s
+
+.PHONY : src/StrColor.s
+
+# target to generate assembly for a file
+src/StrColor.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/StrColor.cpp.s
+.PHONY : src/StrColor.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,12 +381,27 @@ help:
 	@echo "... src/CreatureCard.o"
 	@echo "... src/CreatureCard.i"
 	@echo "... src/CreatureCard.s"
+	@echo "... src/Deck.o"
+	@echo "... src/Deck.i"
+	@echo "... src/Deck.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
+	@echo "... src/GameCards.o"
+	@echo "... src/GameCards.i"
+	@echo "... src/GameCards.s"
+	@echo "... src/LandCard.o"
+	@echo "... src/LandCard.i"
+	@echo "... src/LandCard.s"
 	@echo "... src/Main.o"
 	@echo "... src/Main.i"
 	@echo "... src/Main.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
+	@echo "... src/StrColor.o"
+	@echo "... src/StrColor.i"
+	@echo "... src/StrColor.s"
 .PHONY : help
 
 

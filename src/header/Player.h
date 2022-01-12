@@ -6,7 +6,8 @@
 #define MAGIC_PLAYER_H
 
 #include <string>
-
+#include <vector>
+#include "Card.h"
 #include "Deck.h"
 
 
@@ -23,7 +24,11 @@ public :
     ~Player(){};
     void setPrintColor(std::string color);
     std::string getName();
-
+    int getHp();
+    void setHp(int hp);
+    bool drawCard();
+    void disengageCards();
+    std::vector<Card*> getPlayableCards();
 };
 
 

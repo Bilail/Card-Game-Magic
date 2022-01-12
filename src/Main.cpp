@@ -20,37 +20,15 @@ int main() {
     Deck d1;
     GameCards gc;
 
-    for (int i = 0; i < gc.getCreatures().size(); i++)
-        d1.addCreature(gc.getCreatures().at(i));
+    /*for (int i = 0; i < gc.getCreatures().size(); i++)
+        d1.addCreature(gc.getCreatures().at(i));*/
 
+    std::cout << " ------- Deck de base ------- " << std::endl;
     d1.printLibrary();
-
-    class Forest : public LandCard {
-    public:
-        Forest() : LandCard("Forest", 0, "Green") {}
-    };
-
-    class Island : public LandCard {
-    public:
-        Island() : LandCard("Island", 0, "Blue") {}
-        ~Island(){}
-    };
-
-    class Mountain : public LandCard {
-    public:
-        Mountain() : LandCard("Mountain", 0, "Red") {}
-
-    };
-
-    class Plain : public LandCard {
-    public:
-        Plain() : LandCard("Plain", 0, "Yellow") {}
-    };
-
-    class Swamp : public LandCard {
-    public:
-        Swamp() : LandCard("Swamp", 0, "Black") {}
-    };
-
+    /*std::cout << "on mélange " << std::endl;
+    d1.generateRandomDeck();
+    std::cout << "------- Deck mélanger ------- " << std::endl;
+    d1.printLibrary();
+*/
     return 0;
 }

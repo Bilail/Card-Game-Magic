@@ -5,49 +5,35 @@
 #ifndef MAGIC_CARD_H
 #define MAGIC_CARD_H
 #include <string>
+#include <vector>
 
 class Card {
 protected:
     std::string name;
-    int manaCost;
+    std::vector<int> manaCost; // { Forest Green , Island Blue , Mountain Red, Plain Yellow, Swamp Black, Other }
     std::string color;
     bool isDiscarded = false;
     bool isEngaged = false;
     std::string typeOfCard;
 
 public:
-    Card(std::string nm, int mnCt, std::string clr);
-
+    Card(std::string nm, std::vector<int> mnCt, std::string clr);
+    static std::vector<std::string> ColorCode;
     void setName(const std::string &name);
-
-    void Engage();
-
-    void Disengage();
-
+    void engage();
+    void disengage();
     bool getEngage();
-
-    void setManaCost(int manaCost);
-
+    void setManaCost(std::vector<int> manaCost);
     void setColor(const std::string &color);
-
     void setIsDiscarded(bool isDiscarded);
-
-
     const std::string &getName() const;
-
-    int getManaCost() const;
-
+    std::vector<int> getManaCost() const;
     const std::string &getColor() const;
-
     bool getIsDiscarded() const;
-
-
      ~Card();
-
     void isStillOperational();
-
-    virtual void print() const;
-
+    virtual void print();
+    std::string manaToString();
 
 };
 

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/Magic.dir/src/Card.cpp.o CMakeFiles/Magic.dir/src/CreatureCard.cpp.o CMakeFiles/Magic.dir/src/Game.cpp.o CMakeFiles/Magic.dir/src/Main.cpp.o  -o Magic 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/Magic.dir/src/StrColor.cpp.o CMakeFiles/Magic.dir/src/Card.cpp.o CMakeFiles/Magic.dir/src/CreatureCard.cpp.o CMakeFiles/Magic.dir/src/LandCard.cpp.o CMakeFiles/Magic.dir/src/GameCards.cpp.o CMakeFiles/Magic.dir/src/Deck.cpp.o CMakeFiles/Magic.dir/src/Game.cpp.o CMakeFiles/Magic.dir/src/Player.cpp.o CMakeFiles/Magic.dir/src/Main.cpp.o  -o Magic 

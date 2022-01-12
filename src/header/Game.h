@@ -17,7 +17,7 @@ protected:
     Player p1;
     Player p2;
     Player* playerTurn;
-    int nbRound;
+    int round;
 
 public :
     Game();

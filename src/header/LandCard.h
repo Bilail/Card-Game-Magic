@@ -11,7 +11,7 @@
 
 class LandCard : public Card {
 public :
-    LandCard(std::string nm, int cm, std::string clr);
+    LandCard(std::string nm, std::string clr);
     ~LandCard(){};
 
     };

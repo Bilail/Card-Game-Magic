@@ -9,21 +9,15 @@
 
 class CreatureCard : public Card  {
 public:
-    CreatureCard(std::string nam, int mC, std::string cl, int ap, int hp);
-
+    CreatureCard(std::string nam, std::vector<int> mC, std::string cl, int ap, int hp);
     int getHp() const;
-
     int getAttackPower() const;
-
     void setHp(int hp);
-
     void setAttackPower(int attackPower);
-
     void invocate();
-
     bool isFirstTurn();
-
-    void print() const;
+    void print();
+    void attack();
 
 protected:
     int hp;

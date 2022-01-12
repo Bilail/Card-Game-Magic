@@ -5,10 +5,9 @@
 #include <string>
 
 #include "header/LandCard.h"
-#include "header/Card.h"
 
 
-LandCard::LandCard(std::string nm, int cm, std::string clr) : Card(nm,cm,clr) {
+LandCard::LandCard(std::string nm, std::string clr) : Card(nm,std::vector<int>(6, 0),clr) {
 
 }
 

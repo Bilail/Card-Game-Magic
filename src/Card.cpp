@@ -5,11 +5,13 @@
 #include "header/StrColor.h"
 #include "header/Card.h"
 
-void Card::Engage() {
+std::vector<std::string> Card::ColorCode = {"green","blue","red","yellow","black","white"};
+
+void Card::engage() {
     isEngaged = true;
 }
 
-void Card::Disengage() {
+void Card::disengage() {
     isEngaged = false;
 }
 
@@ -19,10 +21,6 @@ bool Card::getEngage() {
 
 void Card::setName(const std::string &name) {
     Card::name = name;
-}
-
-void Card::setManaCost(int manaCost) {
-    Card::manaCost = manaCost;
 }
 
 void Card::setColor(const std::string &color) {
@@ -37,7 +35,7 @@ const std::string &Card::getName() const {
     return name;
 }
 
-int Card::getManaCost() const {
+std::vector<int> Card::getManaCost() const {
     return manaCost;
 }
 
@@ -49,7 +47,7 @@ bool Card::getIsDiscarded() const {
     return isDiscarded;
 }
 
-Card::Card(std::string nm, int mnCt, std::string clr) {
+Card::Card(std::string nm, std::vector<int> mnCt, std::string clr) {
     name = nm;
     manaCost = mnCt;
     color = clr;
@@ -67,14 +65,27 @@ void Card::isStillOperational() {
     }
 }
 
+void Card::setManaCost(std::vector<int> manaCost) {
+    this-> manaCost = manaCost;
+}
 
-void Card::print() const {
+std::string Card::manaToString(){
+    std::string s = "";
+    for (int i = 0; i < manaCost.size(); i++) {
+        if (manaCost.at(i)>0) {
+            s = s + StrColor::print(std::to_string(manaCost.at(i)), Card::ColorCode.at(i)) + "|";
+        }
+    }
+    return s;
+}
+
+void Card::print() {
     std::string spaces = "                ";
     for (int i = 0; i < name.length(); i++)
         spaces.pop_back();
     std::cout
     << StrColor::print("____________________________________", color) << std::endl
-    << StrColor::print("| Name : " + name + spaces + "  Cout : " + std::to_string(manaCost) + " |", color) << std::endl
+    << StrColor::print("| Name : " + name + spaces + "  Cout :  |", color) << std::endl
     << StrColor::print("|                                   |", color) << std::endl
     << StrColor::print("|                                   |", color) << std::endl
     << StrColor::print("|___________________________________|", color) << std::endl;

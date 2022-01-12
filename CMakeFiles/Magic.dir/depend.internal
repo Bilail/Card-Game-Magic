@@ -15,7 +15,6 @@ CMakeFiles/Magic.dir/src/Deck.cpp.o
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Card.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/CreatureCard.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Deck.h
- /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/GameCards.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/LandCard.h
 CMakeFiles/Magic.dir/src/Game.cpp.o
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Game.cpp
@@ -23,7 +22,6 @@ CMakeFiles/Magic.dir/src/Game.cpp.o
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/CreatureCard.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Deck.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Game.h
- /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/GameCards.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/LandCard.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Player.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/StrColor.h
@@ -51,7 +49,6 @@ CMakeFiles/Magic.dir/src/Player.cpp.o
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Card.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/CreatureCard.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Deck.h
- /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/GameCards.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/LandCard.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Player.h
  /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/StrColor.h

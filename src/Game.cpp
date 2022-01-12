@@ -13,8 +13,9 @@
 #include "header/Game.h"
 #include "header/StrColor.h"
 
+
 Game::Game() : p1("", Deck()), p2("", Deck()) {
-    nbRound = 0;
+    round = 0;
 }
 
 void Game::playGame() {
@@ -22,6 +23,33 @@ void Game::playGame() {
     initGame();
     std::cout << "\nBienvenue aux joueurs " << p1.getName() << " et " << p2.getName() << " !\n\n";
     randomDraw();
+    while(p1.getHp() > 0 && p2.getHp() > 0){
+
+        std::cout << " ***---*** Début du tour ***---*** " << std::endl;
+        std::cout << "         || " << round << " ||       " << std::endl;
+        // PHASE DE PIOCHE
+        if (round != 1) {
+            if (!playerTurn->drawCard()) { // Le joueur perd s'il ne peut plus piocher
+                playerTurn->setHp(0);
+                continue;
+            }
+        }
+        // PHASE DE DESANGAGEMENT
+        playerTurn->disengageCards();
+
+        // PHASE PRINCIPALE
+        std::vector<Card*> playableCards = playerTurn->getPlayableCards();
+        std::cout << "Vous pouvez poser les cartes suivantes :\n";
+        for (int i = 0; i < playableCards.size(); i++) {
+            std::cout << playableCards.at(i)->getName() << " ";
+        }
+        std::cout << std::endl;
+
+        // PHASE DE COMBAT
+        // PHASE SECONDAIRE
+        // FIN DE TOUR ET CHANGEMENT DE JOUEUR
+    }
+
 }
 
 
@@ -36,15 +64,18 @@ void Game::showBanner() {
 }
 
 void Game::initGame() {
+    Deck d;
     std::string nameP1("P1");
     std::string nameP2("P2");
     std::cout << "Quel est le nom du premier joueur ?\n";
     std::cin >> nameP1;
     std::cout << "\nQuel est le nom du deuxieme joueur ?\n";
     std::cin >> nameP2;
-    p1 = Player(nameP1, Deck());
+    d.generateRandomDeck();
+    p1 = Player(nameP1,d);
     p1.setPrintColor("cyan");
-    p2 = Player(nameP2, Deck());
+    d.generateRandomDeck();
+    p2 = Player(nameP2, d);
     p2.setPrintColor("magenta");
 }
 
