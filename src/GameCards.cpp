@@ -17,7 +17,7 @@ GameCards::GameCards() {
     creatures.push_back(CreatureCard("BlackKnight", {0,0,0,0,1,2}, "black", 2, 2));
     creatures.push_back(CreatureCard("Naga Eternal", {0,2,0,0,0,1}, "blue", 3, 2));
     creatures.push_back(CreatureCard("Vampire", {0,0,0,0,1,4}, "black", 6, 3));
-    creatures.push_back(CreatureCard("Hobgoblin", {0,0,1,0,0,3}, "red", 3, 3));
+    creatures.push_back(CreatureCard("Hobgoblin", {0,3,1,1,0,3}, "red", 3, 3));
 
     // Création des terrains
     lands.push_back(LandCard("Forest", "Green"));
@@ -25,7 +25,6 @@ GameCards::GameCards() {
     lands.push_back(LandCard("Mountain", "Red"));
     lands.push_back(LandCard("Plain", "Yellow"));
     lands.push_back(LandCard("Swamp", "Black"));
-
 }
 
 

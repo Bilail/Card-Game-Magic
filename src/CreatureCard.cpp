@@ -45,13 +45,23 @@ void CreatureCard::attack(){
 
 
 void CreatureCard::print() {
-    std::string spaces = "                ";
+    std::string nameSpaces = "                ";
     for (int i = 0; i < name.length(); i++)
-        spaces.pop_back();
+        if (nameSpaces.length() > 0)
+            nameSpaces.pop_back();
+    std::string manaSpaces = "           ";
+    int nbManaCost = 0;
+    for (int i : manaCost)
+        if (i > 0)
+            nbManaCost++;
+    for (int i = 0; i < nbManaCost + nbManaCost - 1; i++) {
+        if (manaSpaces.length() > 0)
+            manaSpaces.pop_back();
+    }
     std::cout
-            << StrColor::print(" ___________________________________ ", color) << std::endl
-            << StrColor::print("| Name : " + name + spaces + "  Cout : " + manaToString(), color) << std::endl
-            << StrColor::print("|                                   |", color) << std::endl
-            << StrColor::print("| Attack : " + std::to_string(attackPower) + "                 HP : " + std::to_string(hp) + " |", color) << std::endl
-            << StrColor::print("|___________________________________|", color) << std::endl;
+            << StrColor::print(" ________________________ ", color) << std::endl
+            << StrColor::print("| Name : " + name + nameSpaces + "|", color) << std::endl
+            << StrColor::print("| Mana Cost : ", color) + manaToString() + StrColor::print(manaSpaces + "|", color) << std::endl
+            << StrColor::print("| Attack : " + std::to_string(attackPower) + "      HP : " + std::to_string(hp) + " |", color) << std::endl
+            << StrColor::print("|________________________|", color) << std::endl;
 }

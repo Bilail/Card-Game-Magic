@@ -13,8 +13,8 @@ class LandCard : public Card {
 public :
     LandCard(std::string nm, std::string clr);
     ~LandCard(){};
-
-    };
+    void print();
+};
 
 
 #endif //MAGIC_LANDCARD_H
