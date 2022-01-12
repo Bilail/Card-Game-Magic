@@ -21,8 +21,20 @@ Deck::~Deck() {
 }
 
 void Deck::printLibrary() {
-    for (Card* c : library)
-        c->print();
+    int firstCardLineIdx = 0;
+    int nbCardsPerLine = 5;
+    int linePerCardToPrint = 5;
+    int lineOfCards = (library.size()+1)/nbCardsPerLine;
+    for (int k = 0; k < lineOfCards; k++) {
+        for (int i = 1; i <= linePerCardToPrint; i++) {
+            for (int j = firstCardLineIdx; j < firstCardLineIdx + nbCardsPerLine && j < library.size(); j++) {
+                library.at(j)->printLine(i);
+                std::cout << " ";
+            }
+            std::cout << std::endl;
+        }
+        firstCardLineIdx += nbCardsPerLine;
+    }
 }
 
 void Deck::printInPlayCards() {

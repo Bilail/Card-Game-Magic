@@ -33,6 +33,7 @@ public:
      ~Card();
     void isStillOperational();
     virtual void print();
+    virtual void printLine(int line);
     std::string manaToString();
 
 };

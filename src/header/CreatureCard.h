@@ -17,6 +17,7 @@ public:
     void invocate();
     bool isFirstTurn();
     void print();
+    void printLine(int line);
     void attack();
 
 protected:

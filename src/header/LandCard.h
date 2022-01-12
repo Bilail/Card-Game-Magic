@@ -14,6 +14,7 @@ public :
     LandCard(std::string nm, std::string clr);
     ~LandCard(){};
     void print();
+    void printLine(int line);
 };
 
 
