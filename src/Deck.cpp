@@ -15,6 +15,7 @@ Deck::Deck() {
     }
     for(LandCard l : gc.getLands()) {
         library.push_back(new LandCard(l));
+        library.push_back(new LandCard(l));
     }
 }
 
@@ -63,7 +64,7 @@ std::vector<Card*> Deck::getPlayableCards() {
     std::vector<int> manaAvailable(6,0);
     for (Card* c : inPlayCards) {
         if (!c->getIsEngaged()) {
-            if (instanceof<LandCard>(c)) {
+            if (dynamic_cast<const LandCard*>(c)) {
                 manaAvailable.at(5) += 1;
                 int colorIndex = getIndex(Card::ColorCode, c->getColor());
                 manaAvailable.at(colorIndex) += 1;
@@ -87,4 +88,26 @@ std::vector<Card*> Deck::getPlayableCards() {
         }
     }
     return playableCards;
+}
+
+void Deck::playCard(Card* c) {
+    // On commence par engager les terrains nécessaires pour poser la carte
+    for (int i = 0; i < c->getManaCost().size(); i++) {
+        for (int j = 0; j < c->getManaCost().at(i); j++) {
+            for (int k = 0; k < inPlayCards.size(); k++) {
+                if (dynamic_cast<const LandCard*>(inPlayCards.at(k))) {
+                    if (!inPlayCards.at(k)->getIsEngaged()) {
+                        if (inPlayCards.at(k)->getColor() == Card::ColorCode[i] || i == 5) {
+                            inPlayCards.at(k)->engage();
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Puis on transfère la carte de la main vers les cartes en jeu
+    int idx = getIndex(handCards, c);
+    handCards.erase(handCards.begin() + idx);
+    inPlayCards.push_back(c);
 }

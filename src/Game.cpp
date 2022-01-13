@@ -6,8 +6,9 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
-#include<chrono>
-#include<thread>
+#include <chrono>
+#include <thread>
+#include "header/Util.h"
 #include "header/Player.h"
 #include "header/Deck.h"
 #include "header/Game.h"
@@ -26,7 +27,7 @@ void Game::playGame() {
     while(p1.getHp() > 0 && p2.getHp() > 0) {
         round++;
         std::cout << " ***---*** Début du tour n°" << round << " ***---*** " << std::endl;
-        std::cout << " ***---*** C'est à " << playerTurn->getName() << " de jouer ***---*** " << std::endl;
+        std::cout << " ***---*** C'est à " << playerTurn->getName() << " de jouer ***---***\n\n";
         // PHASE DE PIOCHE
         if (round != 1) {
             if (!playerTurn->drawCard()) { // Le joueur perd s'il ne peut plus piocher
@@ -38,14 +39,66 @@ void Game::playGame() {
         playerTurn->disengageCards();
 
         // PHASE PRINCIPALE
-        std::vector<Card*> playableCards = playerTurn->getPlayableCards();
-        std::cout << "Vous pouvez poser les cartes suivantes :\n";
-        Card::print(playableCards);
-        std::cout << std::endl;
-
+        bool stopMainPhase = false;
+        bool firstMainPhase = true;
+        bool hasPlayedLandCard = false;
+        while (!stopMainPhase) {
+            std::vector <Card*> playableCards = playerTurn->getPlayableCards();
+            if (hasPlayedLandCard) {
+                for (int i = 0; i < playableCards.size(); i++) {
+                    if (dynamic_cast<const LandCard*>(playableCards.at(i))) {
+                        playableCards.erase(playableCards.begin() + i);
+                        i = -1;
+                    }
+                }
+            }
+            if (playableCards.size() > 0) {
+                std::cout << "Vous pouvez poser les cartes suivantes :\n";
+                Card::print(playableCards);
+                std::cout << std::endl;
+                std::cout
+                        << "Indiquer le nom de la carte que vous souhaitez jouer (tapez \"aucune\" pour ne rien jouer) :\n";
+                bool validInput = false;
+                while (!validInput) {
+                    std::string cardToPlay = "";
+                    std::cin >> cardToPlay;
+                    if (cardToPlay != "aucune") {
+                        std::string cardColor = "white";
+                        for (Card *c: playableCards) {
+                            if (c->getName() == cardToPlay) {
+                                validInput = true;
+                                if (dynamic_cast<const LandCard*>(c))
+                                    hasPlayedLandCard =  true;
+                                cardColor = c->getColor();
+                                playerTurn->playCard(c);
+                                break;
+                            }
+                        }
+                        if (validInput) {
+                            std::cout << "\nVous venez de jouer la carte " << StrColor::print(cardToPlay, cardColor) << std::endl;
+                        } else {
+                            std::cout << "Le nom de la carte est inconnu, veuillez réessayer :\n";
+                        }
+                    }
+                    else {
+                        std::cout << "Vous avez décidé de ne jouer aucune carte.\n";
+                        validInput = true;
+                        stopMainPhase = true;
+                    }
+                }
+            } else {
+                if (firstMainPhase)
+                    std::cout << "Vous n'avez aucune carte jouable.\n";
+                else
+                    std::cout << "Vous ne pouvez plus jouer de cartes pour ce tour.\n";
+                stopMainPhase = true;
+            }
+            firstMainPhase = false;
+        }
         // PHASE DE COMBAT
         // PHASE SECONDAIRE
         // FIN DE TOUR ET CHANGEMENT DE JOUEUR
+        std::cout << std::endl << std::endl;
     }
     if (p1.getHp() <= 0 && p2.getHp() <= 0)
         std::cout << "Cette partie ce termine avec une égalité." << std::endl;

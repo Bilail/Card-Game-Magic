@@ -128,5 +128,3 @@ void Card::print(std::vector<Card*> v) {
         firstCardLineIdx += nbCardsPerLine;
     }
 }
-
-

@@ -42,3 +42,7 @@ void Player::disengageCards() {
 std::vector<Card*> Player::getPlayableCards() {
    return cards.getPlayableCards();
 }
+
+void Player::playCard(Card *c) {
+    cards.playCard(c);
+}

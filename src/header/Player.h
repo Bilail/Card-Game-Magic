@@ -29,6 +29,7 @@ public :
     bool drawCard();
     void disengageCards();
     std::vector<Card*> getPlayableCards();
+    void playCard(Card* c);
 };
 
 
