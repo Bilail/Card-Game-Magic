@@ -14,7 +14,7 @@
 int main() {
 
     Game game;
-    //game.playGame();
+    game.playGame();
 
     //Création des cartes :
     Deck d1;
@@ -23,9 +23,9 @@ int main() {
     /*for (int i = 0; i < gc.getCreatures().size(); i++)
         d1.addCreature(gc.getCreatures().at(i));*/
 
+    /*
     std::cout << " ------- Deck de base ------- " << std::endl;
-    d1.printLibrary();
-    /*std::cout << "on mélange " << std::endl;
+    d1.printLibrary();std::cout << "on mélange " << std::endl;
     d1.generateRandomDeck();
     std::cout << "------- Deck mélanger ------- " << std::endl;
     d1.printLibrary();

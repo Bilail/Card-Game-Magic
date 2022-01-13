@@ -10,6 +10,7 @@ int Player::baseHp = 20;
 
 Player::Player(std::string name , Deck deck) {
     this->name = name;
+    currentHp = baseHp;
     cards = deck;
     printColor = "white";
 }
@@ -31,7 +32,7 @@ void Player::setHp(int hp) {
 }
 
 bool Player::drawCard(){
-    cards.drawCard();
+    return cards.drawCard();
 }
 
 void Player::disengageCards() {
@@ -39,6 +40,5 @@ void Player::disengageCards() {
 }
 
 std::vector<Card*> Player::getPlayableCards() {
-
    return cards.getPlayableCards();
 }

@@ -20,11 +20,11 @@ GameCards::GameCards() {
     creatures.push_back(CreatureCard("Hobgoblin", {0,1,2,1,0,3}, "red", 3, 3));
 
     // Création des terrains
-    lands.push_back(LandCard("Forest", "Green"));
-    lands.push_back(LandCard("Island",  "Blue"));
-    lands.push_back(LandCard("Mountain", "Red"));
-    lands.push_back(LandCard("Plain", "Yellow"));
-    lands.push_back(LandCard("Swamp", "Black"));
+    lands.push_back(LandCard("Forest", "green"));
+    lands.push_back(LandCard("Island",  "blue"));
+    lands.push_back(LandCard("Mountain", "red"));
+    lands.push_back(LandCard("Plain", "yellow"));
+    lands.push_back(LandCard("Swamp", "black"));
 }
 
 

@@ -23,10 +23,10 @@ void Game::playGame() {
     initGame();
     std::cout << "\nBienvenue aux joueurs " << p1.getName() << " et " << p2.getName() << " !\n\n";
     randomDraw();
-    while(p1.getHp() > 0 && p2.getHp() > 0){
-
-        std::cout << " ***---*** Début du tour ***---*** " << std::endl;
-        std::cout << "         || " << round << " ||       " << std::endl;
+    while(p1.getHp() > 0 && p2.getHp() > 0) {
+        round++;
+        std::cout << " ***---*** Début du tour n°" << round << " ***---*** " << std::endl;
+        std::cout << " ***---*** C'est à " << playerTurn->getName() << " de jouer ***---*** " << std::endl;
         // PHASE DE PIOCHE
         if (round != 1) {
             if (!playerTurn->drawCard()) { // Le joueur perd s'il ne peut plus piocher
@@ -40,16 +40,19 @@ void Game::playGame() {
         // PHASE PRINCIPALE
         std::vector<Card*> playableCards = playerTurn->getPlayableCards();
         std::cout << "Vous pouvez poser les cartes suivantes :\n";
-        for (int i = 0; i < playableCards.size(); i++) {
-            std::cout << playableCards.at(i)->getName() << " ";
-        }
+        Card::print(playableCards);
         std::cout << std::endl;
 
         // PHASE DE COMBAT
         // PHASE SECONDAIRE
         // FIN DE TOUR ET CHANGEMENT DE JOUEUR
     }
-
+    if (p1.getHp() <= 0 && p2.getHp() <= 0)
+        std::cout << "Cette partie ce termine avec une égalité." << std::endl;
+    else if (p1.getHp() <= 0)
+        std::cout << "Le gagnant de cette partie est " + p2.getName() << std::endl;
+    else if (p2.getHp() <= 0)
+        std::cout << "Le gagnant de cette partie est " + p1.getName() << std::endl;
 }
 
 
@@ -87,20 +90,23 @@ void Game::randomDraw() {
         playerTurn = &p1;
     else
         playerTurn = &p2;
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    std::cout << "Roulement de tambours" << std::flush;
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    std::cout << " 5 " << std::flush;
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    std::cout << " 4 " << std::flush;
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    std::cout << " 3 " << std::flush;
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    std::cout << " 2 " << std::flush;
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    std::cout << " 1 " << std::flush;
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    std::cout << " BONNE ANN... ah non enfaite. " << std::flush;
-    std::this_thread::sleep_for(std::chrono::seconds(3));
-    std::cout << "\n\nC'est à " << playerTurn->getName() << " de commencer.\n\n";
+    if (false) {
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << "Roulement de tambours" << std::flush;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << " 5 " << std::flush;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << " 4 " << std::flush;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << " 3 " << std::flush;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << " 2 " << std::flush;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << " 1 " << std::flush;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << " BONNE ANN... ah non enfaite. " << std::flush;
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+        std::cout << "\n\n";
+    }
+    std::cout << "C'est à " << playerTurn->getName() << " de commencer.\n\n";
 }

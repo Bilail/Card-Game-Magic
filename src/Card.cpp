@@ -15,10 +15,6 @@ void Card::disengage() {
     isEngaged = false;
 }
 
-bool Card::getEngage() {
-    return isEngaged;
-}
-
 void Card::setName(const std::string &name) {
     Card::name = name;
 }
@@ -45,6 +41,10 @@ const std::string &Card::getColor() const {
 
 bool Card::getIsDiscarded() const {
     return isDiscarded;
+}
+
+bool Card::getIsEngaged() const {
+    return isEngaged;
 }
 
 Card::Card(std::string nm, std::vector<int> mnCt, std::string clr) {
@@ -112,7 +112,21 @@ void Card::printLine(int line) {
         std::cout << StrColor::print("|________________________|", color);
 }
 
-
-
+void Card::print(std::vector<Card*> v) {
+    int firstCardLineIdx = 0;
+    int nbCardsPerLine = 5;
+    int linePerCardToPrint = 5;
+    int lineOfCards = (v.size() + nbCardsPerLine - 1) / nbCardsPerLine;
+    for (int k = 0; k < lineOfCards; k++) {
+        for (int i = 1; i <= linePerCardToPrint; i++) {
+            for (int j = firstCardLineIdx; j < firstCardLineIdx + nbCardsPerLine && j < v.size(); j++) {
+                v.at(j)->printLine(i);
+                std::cout << " ";
+            }
+            std::cout << std::endl;
+        }
+        firstCardLineIdx += nbCardsPerLine;
+    }
+}
 
 

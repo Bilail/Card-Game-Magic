@@ -4,6 +4,7 @@
 
 #include "header/Card.h"
 #include "header/Deck.h"
+#include "header/Util.h"
 
 const int Deck::DECK_SIZE = 30;
 
@@ -21,25 +22,11 @@ Deck::~Deck() {
 }
 
 void Deck::printLibrary() {
-    int firstCardLineIdx = 0;
-    int nbCardsPerLine = 5;
-    int linePerCardToPrint = 5;
-    int lineOfCards = (library.size()+1)/nbCardsPerLine;
-    for (int k = 0; k < lineOfCards; k++) {
-        for (int i = 1; i <= linePerCardToPrint; i++) {
-            for (int j = firstCardLineIdx; j < firstCardLineIdx + nbCardsPerLine && j < library.size(); j++) {
-                library.at(j)->printLine(i);
-                std::cout << " ";
-            }
-            std::cout << std::endl;
-        }
-        firstCardLineIdx += nbCardsPerLine;
-    }
+    Card::print(library);
 }
 
 void Deck::printInPlayCards() {
-    for (Card* c : inPlayCards)
-        c->print();
+    Card::print(inPlayCards);
 }
 
 void Deck::generateRandomDeck(){
@@ -62,6 +49,7 @@ bool Deck::drawCard(){
     else {
         handCards.push_back(library.back());
         library.pop_back();
+        return true;
     }
 }
 
@@ -72,9 +60,31 @@ void Deck::disengageCards() {
 }
 
 std::vector<Card*> Deck::getPlayableCards() {
+    std::vector<int> manaAvailable(6,0);
+    for (Card* c : inPlayCards) {
+        if (!c->getIsEngaged()) {
+            if (instanceof<LandCard>(c)) {
+                manaAvailable.at(5) += 1;
+                int colorIndex = getIndex(Card::ColorCode, c->getColor());
+                manaAvailable.at(colorIndex) += 1;
+            }
+        }
+    }
     std::vector<Card*> playableCards;
-    for (int i = 0; i < handCards.size(); i++) {
-
+    for (Card* c : handCards) {
+        int landCardsUsed = 0;
+        for (int i = 0; i < c->getManaCost().size(); i++) {
+            if (i == 5) { // La position 5 correspond à tout type de terrain
+                if (c->getManaCost().at(i) <= manaAvailable.at(i) - landCardsUsed)
+                    playableCards.push_back(c);
+            }
+            else {
+                if (c->getManaCost().at(i) <= manaAvailable.at(i))
+                    landCardsUsed  += c->getManaCost().at(i);
+                else
+                    break;
+            }
+        }
     }
     return playableCards;
 }

@@ -4,6 +4,7 @@
 
 #ifndef MAGIC_CARD_H
 #define MAGIC_CARD_H
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -22,7 +23,6 @@ public:
     void setName(const std::string &name);
     void engage();
     void disengage();
-    bool getEngage();
     void setManaCost(std::vector<int> manaCost);
     void setColor(const std::string &color);
     void setIsDiscarded(bool isDiscarded);
@@ -30,11 +30,13 @@ public:
     std::vector<int> getManaCost() const;
     const std::string &getColor() const;
     bool getIsDiscarded() const;
+    bool getIsEngaged() const;
      ~Card();
     void isStillOperational();
     virtual void print();
     virtual void printLine(int line);
     std::string manaToString();
+    static void print(std::vector<Card*> v);
 
 };
 
