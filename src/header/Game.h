@@ -13,6 +13,7 @@ private:
     void showBanner();
     void initGame();
     void randomDraw();
+    void mainPhase();
 protected:
     Player p1;
     Player p2;

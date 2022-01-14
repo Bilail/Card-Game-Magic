@@ -39,62 +39,7 @@ void Game::playGame() {
         playerTurn->disengageCards();
 
         // PHASE PRINCIPALE
-        bool stopMainPhase = false;
-        bool firstMainPhase = true;
-        bool hasPlayedLandCard = false;
-        while (!stopMainPhase) {
-            std::vector <Card*> playableCards = playerTurn->getPlayableCards();
-            if (hasPlayedLandCard) {
-                for (int i = 0; i < playableCards.size(); i++) {
-                    if (dynamic_cast<const LandCard*>(playableCards.at(i))) {
-                        playableCards.erase(playableCards.begin() + i);
-                        i = -1;
-                    }
-                }
-            }
-            if (playableCards.size() > 0) {
-                std::cout << "Vous pouvez poser les cartes suivantes :\n";
-                Card::print(playableCards);
-                std::cout << std::endl;
-                std::cout
-                        << "Indiquer le nom de la carte que vous souhaitez jouer (tapez \"aucune\" pour ne rien jouer) :\n";
-                bool validInput = false;
-                while (!validInput) {
-                    std::string cardToPlay = "";
-                    std::cin >> cardToPlay;
-                    if (cardToPlay != "aucune") {
-                        std::string cardColor = "white";
-                        for (Card *c: playableCards) {
-                            if (c->getName() == cardToPlay) {
-                                validInput = true;
-                                if (dynamic_cast<const LandCard*>(c))
-                                    hasPlayedLandCard =  true;
-                                cardColor = c->getColor();
-                                playerTurn->playCard(c);
-                                break;
-                            }
-                        }
-                        if (validInput) {
-                            std::cout << "\nVous venez de jouer la carte " << StrColor::print(cardToPlay, cardColor) << std::endl;
-                        } else {
-                            std::cout << "Le nom de la carte est inconnu, veuillez réessayer :\n";
-                        }
-                    }
-                    else {
-                        std::cout << "Vous avez décidé de ne jouer aucune carte.\n";
-                        validInput = true;
-                        stopMainPhase = true;
-                    }
-                }
-            } else {
-                if (firstMainPhase)
-                    std::cout << "Vous n'avez aucune carte jouable.\n";
-                else
-                    std::cout << "Vous ne pouvez plus jouer de cartes pour ce tour.\n";
-                stopMainPhase = true;
-            }
-            firstMainPhase = false;
-        }
+        mainPhase();
         // PHASE DE COMBAT
         // PHASE SECONDAIRE
         // FIN DE TOUR ET CHANGEMENT DE JOUEUR
@@ -162,4 +107,63 @@ void Game::randomDraw() {
         std::cout << "\n\n";
     }
     std::cout << "C'est à " << playerTurn->getName() << " de commencer.\n\n";
+}
+
+void Game::mainPhase() {
+    bool stopMainPhase = false;
+    bool firstMainPhase = true;
+    bool hasPlayedLandCard = false;
+    while (!stopMainPhase) {
+        std::vector <Card*> playableCards = playerTurn->getPlayableCards();
+        if (hasPlayedLandCard) {
+            for (int i = 0; i < playableCards.size(); i++) {
+                if (dynamic_cast<const LandCard*>(playableCards.at(i))) {
+                    playableCards.erase(playableCards.begin() + i);
+                    i = -1;
+                }
+            }
+        }
+        if (playableCards.size() > 0) {
+            std::cout << "Vous pouvez poser les cartes suivantes :\n";
+            Card::print(playableCards);
+            std::cout << std::endl;
+            std::cout
+                    << "Indiquer le nom de la carte que vous souhaitez jouer (tapez \"aucune\" pour ne rien jouer) :\n";
+            bool validInput = false;
+            while (!validInput) {
+                std::string cardToPlay = "";
+                std::cin >> cardToPlay;
+                if (cardToPlay != "aucune") {
+                    std::string cardColor = "white";
+                    for (Card *c: playableCards) {
+                        if (c->getName() == cardToPlay) {
+                            validInput = true;
+                            if (dynamic_cast<const LandCard*>(c))
+                                hasPlayedLandCard =  true;
+                            cardColor = c->getColor();
+                            playerTurn->playCard(c);
+                            break;
+                        }
+                    }
+                    if (validInput) {
+                        std::cout << "\nVous venez de jouer la carte " << StrColor::print(cardToPlay, cardColor) << std::endl;
+                    } else {
+                        std::cout << "Le nom de la carte est inconnu, veuillez réessayer :\n";
+                    }
+                }
+                else {
+                    std::cout << "Vous avez décidé de ne jouer aucune carte.\n";
+                    validInput = true;
+                    stopMainPhase = true;
+                }
+            }
+        } else {
+            if (firstMainPhase)
+                std::cout << "Vous n'avez aucune carte jouable.\n";
+            else
+                std::cout << "Vous ne pouvez plus jouer de cartes pour ce tour.\n";
+            stopMainPhase = true;
+        }
+        firstMainPhase = false;
+    }
 }
