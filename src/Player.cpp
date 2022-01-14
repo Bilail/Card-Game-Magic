@@ -43,6 +43,11 @@ std::vector<Card*> Player::getPlayableCards() {
    return cards.getPlayableCards();
 }
 
+std::vector<Card*> Player::getAttackCards() {
+   return cards.getAttackCards();
+}
+
 void Player::playCard(Card *c) {
     cards.playCard(c);
 }
+

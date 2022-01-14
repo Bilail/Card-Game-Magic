@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Magic"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Magic">
+				<Option output="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/Magic" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 Magic"/>
+					<CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Magic/fast">
+				<Option output="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/Magic" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 Magic/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/mnt/c/Users/bilai/OneDrive/Paris\ Saclay/ET4/S7/C++/Projet/Magic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Card.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/CreatureCard.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Deck.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Game.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/GameCards.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/LandCard.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Main.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/Player.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/StrColor.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Card.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/CreatureCard.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Deck.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Game.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/GameCards.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/LandCard.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/Player.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/src/header/StrColor.h">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

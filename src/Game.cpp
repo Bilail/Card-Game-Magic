@@ -9,6 +9,7 @@
 #include <chrono>
 #include <thread>
 #include "header/Util.h"
+
 #include "header/Player.h"
 #include "header/Deck.h"
 #include "header/Game.h"
@@ -18,6 +19,7 @@
 Game::Game() : p1("", Deck()), p2("", Deck()) {
     round = 0;
 }
+
 
 void Game::playGame() {
     showBanner();
@@ -166,4 +168,77 @@ void Game::mainPhase() {
         }
         firstMainPhase = false;
     }
+}
+
+Player* Game::getOpponent() {
+    return (playerTurn == &p1) ? &p1 : &p2;
+}
+
+void Game::fightPhase(){
+    std::string cardToAttack  = "";
+    std::vector<Card*> chosenCardsToAttack;
+    bool stopAttack = false;
+    while (!stopAttack)
+    {
+        std::vector<Card*> attackCards = playerTurn->getAttackCards();
+        if (attackCards.size() == 0) {
+            std::cout << "Vous ne pouvez pas attaquer.\n";
+            stopAttack = true;
+            break;
+        }
+        else {
+            Card::print(attackCards);
+            std::cout << "Vous pouvez attaqué avec les cartes suivantes :\n";
+            std::cout << std::endl;
+            std::cout << "Avec qui souhaitez-vous attaquer ? \n";
+
+            bool validInput = false;
+            while (!validInput) {
+                std::string cardToPlay = "";
+                std::cin >> cardToPlay;
+                if (cardToPlay != "aucune") {
+                    std::string cardColor = "white";
+                    for (Card *c: attackCards) {
+                        if (c->getName() == cardToPlay) {
+                            validInput = true;
+                            cardColor = c->getColor();
+                            c->engage();
+                            chosenCardsToAttack.push_back(c);
+                            break;
+                        }
+                    }
+                    if (validInput) {
+                        std::cout << "\nVous venez d'enagager la carte " << StrColor::print(cardToPlay, cardColor)
+                                  << std::endl;
+                    } else {
+                        std::cout << "Le nom de la carte est inconnu, veuillez réessayer :\n";
+                    }
+                } else {
+                    std::cout << "Vous avez décidé d'engager aucune carte.\n";
+                    validInput = true;
+                    stopAttack = true;
+                }
+            }
+        }
+    }
+    // Phase de défense
+    if (chosenCardsToAttack.size() > 0) {
+        Player* opponent = getOpponent();
+        std::cout << "\nC'est à " << opponent->getName() << " de prendre la main." << std::endl;
+        std::cout << "Voulez-vous vous défendre ? (y/n) ";
+        std::string input;
+        std::cin >> input;
+        while (input != "y" || input != "n") {
+            std::cout << "\nRéponse inconnue, veuillez réessayer : ";
+            std::cin >> input;
+        }
+        if (input == "y") {
+            std::vector<Card*> defenseCards = opponent->getDefenseCards();
+            for (int i = 0; i < chosenCardsToAttack.size(); i++) {
+
+            }
+        }
+        std::cout << "\nC'est à " << playerTurn->getName() << " de reprendre la main." << std::endl;
+    }
+
 }

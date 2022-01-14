@@ -14,6 +14,8 @@ private:
     void initGame();
     void randomDraw();
     void mainPhase();
+    void fightPhase();
+    Player* getOpponent();
 protected:
     Player p1;
     Player p2;

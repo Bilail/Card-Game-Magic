@@ -111,3 +111,13 @@ void Deck::playCard(Card* c) {
     handCards.erase(handCards.begin() + idx);
     inPlayCards.push_back(c);
 }
+
+
+std::vector<Card*> Deck::getAttackCards() {
+    std::vector<Card*> attackCards;
+    for( Card* c : inPlayCards )
+        if (c->getIsEngaged() == false)
+            if (dynamic_cast<const CreatureCard*>(c))
+                attackCards.push_back(c);
+    return attackCards;
+}
