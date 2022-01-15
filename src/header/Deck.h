@@ -27,6 +27,7 @@ public:
     void disengageCards();
     std::vector<Card*> getPlayableCards();
     std::vector<Card*> getAttackCards();
+    std::vector<Card*> getDefenseCards();
     void playCard(Card* c);
 };
 

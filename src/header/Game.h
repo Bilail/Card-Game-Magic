@@ -26,6 +26,7 @@ public :
     Game();
     //Game(Game const &); //reprendre une game
     void playGame();
+    static int MAX_CARDS_IN_HAND;
 };
 
 

@@ -112,12 +112,20 @@ void Deck::playCard(Card* c) {
     inPlayCards.push_back(c);
 }
 
-
 std::vector<Card*> Deck::getAttackCards() {
     std::vector<Card*> attackCards;
     for( Card* c : inPlayCards )
-        if (c->getIsEngaged() == false)
+        if (!c->getIsEngaged())
             if (dynamic_cast<const CreatureCard*>(c))
                 attackCards.push_back(c);
     return attackCards;
+}
+
+std::vector<Card*> Deck::getDefenseCards() {
+    std::vector<Card*> defenseCards;
+    for( Card* c : inPlayCards )
+        if (c->getIsEngaged())
+            if (dynamic_cast<const CreatureCard*>(c))
+                defenseCards.push_back(c);
+    return defenseCards;
 }

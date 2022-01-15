@@ -16,16 +16,21 @@
 #include "header/StrColor.h"
 
 
+int Game::MAX_CARDS_IN_HAND = 7;
+
 Game::Game() : p1("", Deck()), p2("", Deck()) {
     round = 0;
 }
-
 
 void Game::playGame() {
     showBanner();
     initGame();
     std::cout << "\nBienvenue aux joueurs " << p1.getName() << " et " << p2.getName() << " !\n\n";
     randomDraw();
+    for (int i = 0; i < MAX_CARDS_IN_HAND; i++) {
+        p1.drawCard();
+        p2.drawCard();
+    }
     while(p1.getHp() > 0 && p2.getHp() > 0) {
         round++;
         std::cout << " ***---*** Début du tour n°" << round << " ***---*** " << std::endl;
@@ -43,6 +48,7 @@ void Game::playGame() {
         // PHASE PRINCIPALE
         mainPhase();
         // PHASE DE COMBAT
+        fightPhase();
         // PHASE SECONDAIRE
         // FIN DE TOUR ET CHANGEMENT DE JOUEUR
         std::cout << std::endl << std::endl;
@@ -171,7 +177,7 @@ void Game::mainPhase() {
 }
 
 Player* Game::getOpponent() {
-    return (playerTurn == &p1) ? &p1 : &p2;
+    return (playerTurn == &p1) ? &p2 : &p1;
 }
 
 void Game::fightPhase(){
@@ -187,11 +193,10 @@ void Game::fightPhase(){
             break;
         }
         else {
+            std::cout << "Vous pouvez attaquer avec les cartes suivantes :\n";
             Card::print(attackCards);
-            std::cout << "Vous pouvez attaqué avec les cartes suivantes :\n";
             std::cout << std::endl;
-            std::cout << "Avec qui souhaitez-vous attaquer ? \n";
-
+            std::cout << "Avec qui souhaitez-vous attaquer ? (tapez \"aucune\" pour ne pas attaquer)\n";
             bool validInput = false;
             while (!validInput) {
                 std::string cardToPlay = "";
@@ -225,17 +230,30 @@ void Game::fightPhase(){
     if (chosenCardsToAttack.size() > 0) {
         Player* opponent = getOpponent();
         std::cout << "\nC'est à " << opponent->getName() << " de prendre la main." << std::endl;
-        std::cout << "Voulez-vous vous défendre ? (y/n) ";
+        std::cout << "\nVotre adversaire vous attaque avec les cartes suivante :\n";
+        Card::print(chosenCardsToAttack);
+        std::cout << "\nVoulez-vous vous défendre ? (y/n) ";
         std::string input;
         std::cin >> input;
-        while (input != "y" || input != "n") {
+        while (input != "y" && input != "n") {
             std::cout << "\nRéponse inconnue, veuillez réessayer : ";
             std::cin >> input;
         }
         if (input == "y") {
             std::vector<Card*> defenseCards = opponent->getDefenseCards();
-            for (int i = 0; i < chosenCardsToAttack.size(); i++) {
-
+            if (defenseCards.size() > 0) {
+                for (int i = 0; i < chosenCardsToAttack.size(); i++) {
+                    std::cout << "Voici l'ensemble de vos créatures qui peuvent défendre :\n";
+                    Card::print(defenseCards);
+                    std::string  atkCardName = chosenCardsToAttack.at(i)->getName();
+                    std::string  atkCardColor = chosenCardsToAttack.at(i)->getColor();
+                    std::cout << "Avec quelle(s) carte(s) souhaitez-vous contrer la carte" << StrColor::print(atkCardName, atkCardColor) << " :\n";
+                    std::cin >> input;
+                    // TODO vérifier les noms des cartes et les stocker dans un vecteur de pair pour la défense
+                }
+            }
+            else {
+                std::cout << "Vous n'avez aucune créature d'engagée donc vous ne pouvez pas vous défendre.\n";
             }
         }
         std::cout << "\nC'est à " << playerTurn->getName() << " de reprendre la main." << std::endl;
