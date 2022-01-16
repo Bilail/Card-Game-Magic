@@ -2,8 +2,8 @@
 // Created by bilai on 05/01/2022.
 //
 
-#include "header/Player.h"
-#include "header/StrColor.h"
+#include "../header/Player.h"
+#include "../header/StrColor.h"
 
 
 int Player::baseHp = 20;

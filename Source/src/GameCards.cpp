@@ -2,7 +2,7 @@
 // Created by dope on 08/01/2022.
 //
 
-#include "header/GameCards.h"
+#include "../header/GameCards.h"
 
 GameCards::GameCards() {
     //  Création des créatures

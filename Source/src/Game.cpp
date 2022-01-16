@@ -8,12 +8,12 @@
 #include <time.h>
 #include <chrono>
 #include <thread>
-#include "header/Util.h"
+#include "../header/Util.h"
 
-#include "header/Player.h"
-#include "header/Deck.h"
-#include "header/Game.h"
-#include "header/StrColor.h"
+#include "../header/Player.h"
+#include "../header/Deck.h"
+#include "../header/Game.h"
+#include "../header/StrColor.h"
 
 
 int Game::MAX_CARDS_IN_HAND = 7;

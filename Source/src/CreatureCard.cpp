@@ -4,8 +4,8 @@
 
 #include <iostream>
 #include <string>
-#include "header/StrColor.h"
-#include "header/CreatureCard.h"
+#include "../header/StrColor.h"
+#include "../header/CreatureCard.h"
 
 
 

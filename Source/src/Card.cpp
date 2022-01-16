@@ -2,8 +2,8 @@
 // Created by bilai on 04/01/2022.
 //
 #include <iostream>
-#include "header/StrColor.h"
-#include "header/Card.h"
+#include "../header/StrColor.h"
+#include "../header/Card.h"
 
 std::vector<std::string> Card::ColorCode = {"green","blue","red","yellow","black","white"};
 

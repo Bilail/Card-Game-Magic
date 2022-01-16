@@ -2,7 +2,7 @@
 // Created by Rayane on 05/01/2022.
 //
 
-#include "header/StrColor.h"
+#include "../header/StrColor.h"
 
 std::string StrColor::print(std::string str, std::string color) {
     if (color == "red")

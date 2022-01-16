@@ -123,248 +123,248 @@ Magic/fast:
 	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/build
 .PHONY : Magic/fast
 
-src/Card.o: src/Card.cpp.o
+Source/src/Card.o: Source/src/Card.cpp.o
 
-.PHONY : src/Card.o
-
-# target to build an object file
-src/Card.cpp.o:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Card.cpp.o
-.PHONY : src/Card.cpp.o
-
-src/Card.i: src/Card.cpp.i
-
-.PHONY : src/Card.i
-
-# target to preprocess a source file
-src/Card.cpp.i:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Card.cpp.i
-.PHONY : src/Card.cpp.i
-
-src/Card.s: src/Card.cpp.s
-
-.PHONY : src/Card.s
-
-# target to generate assembly for a file
-src/Card.cpp.s:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Card.cpp.s
-.PHONY : src/Card.cpp.s
-
-src/CreatureCard.o: src/CreatureCard.cpp.o
-
-.PHONY : src/CreatureCard.o
+.PHONY : Source/src/Card.o
 
 # target to build an object file
-src/CreatureCard.cpp.o:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/CreatureCard.cpp.o
-.PHONY : src/CreatureCard.cpp.o
+Source/src/Card.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Card.cpp.o
+.PHONY : Source/src/Card.cpp.o
 
-src/CreatureCard.i: src/CreatureCard.cpp.i
+Source/src/Card.i: Source/src/Card.cpp.i
 
-.PHONY : src/CreatureCard.i
+.PHONY : Source/src/Card.i
 
 # target to preprocess a source file
-src/CreatureCard.cpp.i:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/CreatureCard.cpp.i
-.PHONY : src/CreatureCard.cpp.i
+Source/src/Card.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Card.cpp.i
+.PHONY : Source/src/Card.cpp.i
 
-src/CreatureCard.s: src/CreatureCard.cpp.s
+Source/src/Card.s: Source/src/Card.cpp.s
 
-.PHONY : src/CreatureCard.s
+.PHONY : Source/src/Card.s
 
 # target to generate assembly for a file
-src/CreatureCard.cpp.s:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/CreatureCard.cpp.s
-.PHONY : src/CreatureCard.cpp.s
+Source/src/Card.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Card.cpp.s
+.PHONY : Source/src/Card.cpp.s
 
-src/Deck.o: src/Deck.cpp.o
+Source/src/CreatureCard.o: Source/src/CreatureCard.cpp.o
 
-.PHONY : src/Deck.o
+.PHONY : Source/src/CreatureCard.o
 
 # target to build an object file
-src/Deck.cpp.o:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Deck.cpp.o
-.PHONY : src/Deck.cpp.o
+Source/src/CreatureCard.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/CreatureCard.cpp.o
+.PHONY : Source/src/CreatureCard.cpp.o
 
-src/Deck.i: src/Deck.cpp.i
+Source/src/CreatureCard.i: Source/src/CreatureCard.cpp.i
 
-.PHONY : src/Deck.i
+.PHONY : Source/src/CreatureCard.i
 
 # target to preprocess a source file
-src/Deck.cpp.i:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Deck.cpp.i
-.PHONY : src/Deck.cpp.i
+Source/src/CreatureCard.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/CreatureCard.cpp.i
+.PHONY : Source/src/CreatureCard.cpp.i
 
-src/Deck.s: src/Deck.cpp.s
+Source/src/CreatureCard.s: Source/src/CreatureCard.cpp.s
 
-.PHONY : src/Deck.s
+.PHONY : Source/src/CreatureCard.s
 
 # target to generate assembly for a file
-src/Deck.cpp.s:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Deck.cpp.s
-.PHONY : src/Deck.cpp.s
+Source/src/CreatureCard.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/CreatureCard.cpp.s
+.PHONY : Source/src/CreatureCard.cpp.s
 
-src/Game.o: src/Game.cpp.o
+Source/src/Deck.o: Source/src/Deck.cpp.o
 
-.PHONY : src/Game.o
+.PHONY : Source/src/Deck.o
 
 # target to build an object file
-src/Game.cpp.o:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Game.cpp.o
-.PHONY : src/Game.cpp.o
+Source/src/Deck.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Deck.cpp.o
+.PHONY : Source/src/Deck.cpp.o
 
-src/Game.i: src/Game.cpp.i
+Source/src/Deck.i: Source/src/Deck.cpp.i
 
-.PHONY : src/Game.i
+.PHONY : Source/src/Deck.i
 
 # target to preprocess a source file
-src/Game.cpp.i:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Game.cpp.i
-.PHONY : src/Game.cpp.i
+Source/src/Deck.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Deck.cpp.i
+.PHONY : Source/src/Deck.cpp.i
 
-src/Game.s: src/Game.cpp.s
+Source/src/Deck.s: Source/src/Deck.cpp.s
 
-.PHONY : src/Game.s
+.PHONY : Source/src/Deck.s
 
 # target to generate assembly for a file
-src/Game.cpp.s:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Game.cpp.s
-.PHONY : src/Game.cpp.s
+Source/src/Deck.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Deck.cpp.s
+.PHONY : Source/src/Deck.cpp.s
 
-src/GameCards.o: src/GameCards.cpp.o
+Source/src/Game.o: Source/src/Game.cpp.o
 
-.PHONY : src/GameCards.o
+.PHONY : Source/src/Game.o
 
 # target to build an object file
-src/GameCards.cpp.o:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/GameCards.cpp.o
-.PHONY : src/GameCards.cpp.o
+Source/src/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Game.cpp.o
+.PHONY : Source/src/Game.cpp.o
 
-src/GameCards.i: src/GameCards.cpp.i
+Source/src/Game.i: Source/src/Game.cpp.i
 
-.PHONY : src/GameCards.i
+.PHONY : Source/src/Game.i
 
 # target to preprocess a source file
-src/GameCards.cpp.i:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/GameCards.cpp.i
-.PHONY : src/GameCards.cpp.i
+Source/src/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Game.cpp.i
+.PHONY : Source/src/Game.cpp.i
 
-src/GameCards.s: src/GameCards.cpp.s
+Source/src/Game.s: Source/src/Game.cpp.s
 
-.PHONY : src/GameCards.s
+.PHONY : Source/src/Game.s
 
 # target to generate assembly for a file
-src/GameCards.cpp.s:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/GameCards.cpp.s
-.PHONY : src/GameCards.cpp.s
+Source/src/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Game.cpp.s
+.PHONY : Source/src/Game.cpp.s
 
-src/LandCard.o: src/LandCard.cpp.o
+Source/src/GameCards.o: Source/src/GameCards.cpp.o
 
-.PHONY : src/LandCard.o
+.PHONY : Source/src/GameCards.o
 
 # target to build an object file
-src/LandCard.cpp.o:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/LandCard.cpp.o
-.PHONY : src/LandCard.cpp.o
+Source/src/GameCards.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/GameCards.cpp.o
+.PHONY : Source/src/GameCards.cpp.o
 
-src/LandCard.i: src/LandCard.cpp.i
+Source/src/GameCards.i: Source/src/GameCards.cpp.i
 
-.PHONY : src/LandCard.i
+.PHONY : Source/src/GameCards.i
 
 # target to preprocess a source file
-src/LandCard.cpp.i:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/LandCard.cpp.i
-.PHONY : src/LandCard.cpp.i
+Source/src/GameCards.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/GameCards.cpp.i
+.PHONY : Source/src/GameCards.cpp.i
 
-src/LandCard.s: src/LandCard.cpp.s
+Source/src/GameCards.s: Source/src/GameCards.cpp.s
 
-.PHONY : src/LandCard.s
+.PHONY : Source/src/GameCards.s
 
 # target to generate assembly for a file
-src/LandCard.cpp.s:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/LandCard.cpp.s
-.PHONY : src/LandCard.cpp.s
+Source/src/GameCards.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/GameCards.cpp.s
+.PHONY : Source/src/GameCards.cpp.s
 
-src/Main.o: src/Main.cpp.o
+Source/src/LandCard.o: Source/src/LandCard.cpp.o
 
-.PHONY : src/Main.o
+.PHONY : Source/src/LandCard.o
 
 # target to build an object file
-src/Main.cpp.o:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Main.cpp.o
-.PHONY : src/Main.cpp.o
+Source/src/LandCard.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/LandCard.cpp.o
+.PHONY : Source/src/LandCard.cpp.o
 
-src/Main.i: src/Main.cpp.i
+Source/src/LandCard.i: Source/src/LandCard.cpp.i
 
-.PHONY : src/Main.i
+.PHONY : Source/src/LandCard.i
 
 # target to preprocess a source file
-src/Main.cpp.i:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Main.cpp.i
-.PHONY : src/Main.cpp.i
+Source/src/LandCard.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/LandCard.cpp.i
+.PHONY : Source/src/LandCard.cpp.i
 
-src/Main.s: src/Main.cpp.s
+Source/src/LandCard.s: Source/src/LandCard.cpp.s
 
-.PHONY : src/Main.s
+.PHONY : Source/src/LandCard.s
 
 # target to generate assembly for a file
-src/Main.cpp.s:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Main.cpp.s
-.PHONY : src/Main.cpp.s
+Source/src/LandCard.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/LandCard.cpp.s
+.PHONY : Source/src/LandCard.cpp.s
 
-src/Player.o: src/Player.cpp.o
+Source/src/Main.o: Source/src/Main.cpp.o
 
-.PHONY : src/Player.o
+.PHONY : Source/src/Main.o
 
 # target to build an object file
-src/Player.cpp.o:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Player.cpp.o
-.PHONY : src/Player.cpp.o
+Source/src/Main.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Main.cpp.o
+.PHONY : Source/src/Main.cpp.o
 
-src/Player.i: src/Player.cpp.i
+Source/src/Main.i: Source/src/Main.cpp.i
 
-.PHONY : src/Player.i
+.PHONY : Source/src/Main.i
 
 # target to preprocess a source file
-src/Player.cpp.i:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Player.cpp.i
-.PHONY : src/Player.cpp.i
+Source/src/Main.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Main.cpp.i
+.PHONY : Source/src/Main.cpp.i
 
-src/Player.s: src/Player.cpp.s
+Source/src/Main.s: Source/src/Main.cpp.s
 
-.PHONY : src/Player.s
+.PHONY : Source/src/Main.s
 
 # target to generate assembly for a file
-src/Player.cpp.s:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/Player.cpp.s
-.PHONY : src/Player.cpp.s
+Source/src/Main.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Main.cpp.s
+.PHONY : Source/src/Main.cpp.s
 
-src/StrColor.o: src/StrColor.cpp.o
+Source/src/Player.o: Source/src/Player.cpp.o
 
-.PHONY : src/StrColor.o
+.PHONY : Source/src/Player.o
 
 # target to build an object file
-src/StrColor.cpp.o:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/StrColor.cpp.o
-.PHONY : src/StrColor.cpp.o
+Source/src/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Player.cpp.o
+.PHONY : Source/src/Player.cpp.o
 
-src/StrColor.i: src/StrColor.cpp.i
+Source/src/Player.i: Source/src/Player.cpp.i
 
-.PHONY : src/StrColor.i
+.PHONY : Source/src/Player.i
 
 # target to preprocess a source file
-src/StrColor.cpp.i:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/StrColor.cpp.i
-.PHONY : src/StrColor.cpp.i
+Source/src/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Player.cpp.i
+.PHONY : Source/src/Player.cpp.i
 
-src/StrColor.s: src/StrColor.cpp.s
+Source/src/Player.s: Source/src/Player.cpp.s
 
-.PHONY : src/StrColor.s
+.PHONY : Source/src/Player.s
 
 # target to generate assembly for a file
-src/StrColor.cpp.s:
-	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/src/StrColor.cpp.s
-.PHONY : src/StrColor.cpp.s
+Source/src/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Player.cpp.s
+.PHONY : Source/src/Player.cpp.s
+
+Source/src/StrColor.o: Source/src/StrColor.cpp.o
+
+.PHONY : Source/src/StrColor.o
+
+# target to build an object file
+Source/src/StrColor.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/StrColor.cpp.o
+.PHONY : Source/src/StrColor.cpp.o
+
+Source/src/StrColor.i: Source/src/StrColor.cpp.i
+
+.PHONY : Source/src/StrColor.i
+
+# target to preprocess a source file
+Source/src/StrColor.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/StrColor.cpp.i
+.PHONY : Source/src/StrColor.cpp.i
+
+Source/src/StrColor.s: Source/src/StrColor.cpp.s
+
+.PHONY : Source/src/StrColor.s
+
+# target to generate assembly for a file
+Source/src/StrColor.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/StrColor.cpp.s
+.PHONY : Source/src/StrColor.cpp.s
 
 # Help Target
 help:
@@ -375,33 +375,33 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Magic"
-	@echo "... src/Card.o"
-	@echo "... src/Card.i"
-	@echo "... src/Card.s"
-	@echo "... src/CreatureCard.o"
-	@echo "... src/CreatureCard.i"
-	@echo "... src/CreatureCard.s"
-	@echo "... src/Deck.o"
-	@echo "... src/Deck.i"
-	@echo "... src/Deck.s"
-	@echo "... src/Game.o"
-	@echo "... src/Game.i"
-	@echo "... src/Game.s"
-	@echo "... src/GameCards.o"
-	@echo "... src/GameCards.i"
-	@echo "... src/GameCards.s"
-	@echo "... src/LandCard.o"
-	@echo "... src/LandCard.i"
-	@echo "... src/LandCard.s"
-	@echo "... src/Main.o"
-	@echo "... src/Main.i"
-	@echo "... src/Main.s"
-	@echo "... src/Player.o"
-	@echo "... src/Player.i"
-	@echo "... src/Player.s"
-	@echo "... src/StrColor.o"
-	@echo "... src/StrColor.i"
-	@echo "... src/StrColor.s"
+	@echo "... Source/src/Card.o"
+	@echo "... Source/src/Card.i"
+	@echo "... Source/src/Card.s"
+	@echo "... Source/src/CreatureCard.o"
+	@echo "... Source/src/CreatureCard.i"
+	@echo "... Source/src/CreatureCard.s"
+	@echo "... Source/src/Deck.o"
+	@echo "... Source/src/Deck.i"
+	@echo "... Source/src/Deck.s"
+	@echo "... Source/src/Game.o"
+	@echo "... Source/src/Game.i"
+	@echo "... Source/src/Game.s"
+	@echo "... Source/src/GameCards.o"
+	@echo "... Source/src/GameCards.i"
+	@echo "... Source/src/GameCards.s"
+	@echo "... Source/src/LandCard.o"
+	@echo "... Source/src/LandCard.i"
+	@echo "... Source/src/LandCard.s"
+	@echo "... Source/src/Main.o"
+	@echo "... Source/src/Main.i"
+	@echo "... Source/src/Main.s"
+	@echo "... Source/src/Player.o"
+	@echo "... Source/src/Player.i"
+	@echo "... Source/src/Player.s"
+	@echo "... Source/src/StrColor.o"
+	@echo "... Source/src/StrColor.i"
+	@echo "... Source/src/StrColor.s"
 .PHONY : help
 
 

@@ -2,9 +2,9 @@
 // Created by bilai on 05/01/2022.
 //
 
-#include "header/Card.h"
-#include "header/Deck.h"
-#include "header/Util.h"
+#include "../header/Card.h"
+#include "../header/Deck.h"
+#include "../header/Util.h"
 
 const int Deck::DECK_SIZE = 30;
 
