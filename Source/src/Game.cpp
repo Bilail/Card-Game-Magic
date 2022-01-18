@@ -288,9 +288,9 @@ void Game::fightPhase(){
                 int sumDefenseHp = 0;
                 int sumDefenseAtkPwr = 0;
                 for (Card* c : it.second) {
-                    CreatureCard* offensive_c = dynamic_cast<const CreatureCard*>(it.first);
-                    CreatureCard* defensive_c = dynamic_cast<const CreatureCard*>(c);
-                    if (offesive_c && defensive_c) {
+                    CreatureCard* offensive_c = dynamic_cast<CreatureCard*>(it.first);
+                    CreatureCard* defensive_c = dynamic_cast<CreatureCard*>(c);
+                    if (offensive_c && defensive_c) {
                         std::cout << "La carte " << StrColor::print(offensive_c->getName(), offensive_c->getColor())
                         << " attaque la carte " << StrColor::print(defensive_c->getName(), defensive_c->getColor()) << "\n";
                         if (offensive_c->getAttackPower() >= defensive_c->getHp())
