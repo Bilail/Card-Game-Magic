@@ -124,8 +124,23 @@ std::vector<Card*> Deck::getAttackCards() {
 std::vector<Card*> Deck::getDefenseCards() {
     std::vector<Card*> defenseCards;
     for( Card* c : inPlayCards )
-        if (c->getIsEngaged())
+        if (!c->getIsEngaged())
             if (dynamic_cast<const CreatureCard*>(c))
                 defenseCards.push_back(c);
     return defenseCards;
+}
+
+void Deck::discardCard(Card *c) {
+    for (int i = 0; i < inPlayCards.size(); i++) {
+        if (inPlayCards.at(i) == c) {
+            inPlayCards.erase(inPlayCards.begin()+i);
+            return;
+        }
+    }
+    for (int i = 0; i < handCards.size(); i++) {
+        if (handCards.at(i) == c) {
+            handCards.erase(handCards.begin()+i);
+            return;
+        }
+    }
 }

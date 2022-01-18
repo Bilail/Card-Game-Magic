@@ -6,7 +6,7 @@
 #include "../header/StrColor.h"
 
 
-int Player::baseHp = 20;
+int Player::baseHp = 4;
 
 Player::Player(std::string name , Deck deck) {
     this->name = name;
@@ -16,6 +16,10 @@ Player::Player(std::string name , Deck deck) {
 }
 
 std::string Player::getName() {
+    return name;
+}
+
+std::string Player::getColoredName() {
     return StrColor::print(name, printColor);
 }
 
@@ -55,3 +59,6 @@ void Player::playCard(Card *c) {
     cards.playCard(c);
 }
 
+void Player::discardCard(Card* c) {
+    cards.discardCard(c);
+}

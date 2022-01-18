@@ -4,6 +4,7 @@
 
 #ifndef MAGIC_CARD_H
 #define MAGIC_CARD_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -27,6 +28,7 @@ public:
     void setColor(const std::string &color);
     void setIsDiscarded(bool isDiscarded);
     const std::string &getName() const;
+    const std::string getColoredName() const;
     std::vector<int> getManaCost() const;
     const std::string &getColor() const;
     bool getIsDiscarded() const;

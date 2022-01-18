@@ -31,6 +31,10 @@ const std::string &Card::getName() const {
     return name;
 }
 
+const std::string Card::getColoredName() const {
+    return StrColor::print(name, color);
+}
+
 std::vector<int> Card::getManaCost() const {
     return manaCost;
 }

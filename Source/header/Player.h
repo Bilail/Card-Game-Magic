@@ -24,6 +24,7 @@ public :
     ~Player(){};
     void setPrintColor(std::string color);
     std::string getName();
+    std::string getColoredName();
     int getHp();
     void setHp(int hp);
     bool drawCard();
@@ -32,6 +33,7 @@ public :
     void playCard(Card* c);
     std::vector<Card*> getAttackCards();
     std::vector<Card*> getDefenseCards();
+    void discardCard(Card* c);
 };
 
 
