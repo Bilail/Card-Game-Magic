@@ -8,6 +8,7 @@
 #include <time.h>
 #include <chrono>
 #include <thread>
+#include <map>
 #include "../header/Util.h"
 
 #include "../header/Player.h"
@@ -229,6 +230,9 @@ void Game::fightPhase(){
     // Phase de défense
     if (chosenCardsToAttack.size() > 0) {
         Player* opponent = getOpponent();
+        std::map<Card*, std::vector<Card*>> attackDefenseCards;
+        for (Card * c : chosenCardsToAttack)
+            attackDefenseCards[c] = std::vector<Card*>();
         std::cout << "\nC'est à " << opponent->getName() << " de prendre la main." << std::endl;
         std::cout << "\nVotre adversaire vous attaque avec les cartes suivante :\n";
         Card::print(chosenCardsToAttack);
@@ -247,16 +251,58 @@ void Game::fightPhase(){
                     Card::print(defenseCards);
                     std::string  atkCardName = chosenCardsToAttack.at(i)->getName();
                     std::string  atkCardColor = chosenCardsToAttack.at(i)->getColor();
-                    std::cout << "Avec quelle(s) carte(s) souhaitez-vous contrer la carte" << StrColor::print(atkCardName, atkCardColor) << " :\n";
-                    std::cin >> input;
-                    // TODO vérifier les noms des cartes et les stocker dans un vecteur de pair pour la défense
+                    std::cout << "Avec quelle(s) carte(s) souhaitez-vous contrer la carte" << StrColor::print(atkCardName, atkCardColor) << " (tapez \"aucune\" pour ne pas défendre) :\n";
+                    bool validInput = false;
+                    do {
+                        std::cin >> input;
+                        if (input != "aucune") {
+                            for (Card* c : defenseCards) {
+                                if (c->getName() == input) {
+                                    validInput = true;
+                                    attackDefenseCards[chosenCardsToAttack.at(i)].push_back(c);
+                                    std::cout << "\nVous avez décidé de défendre avec la carte " << StrColor::print(c->getName(), c->getColor()) << " pas contrer l'attaque.\n";
+                                }
+                            }
+                        }
+                        else {
+                            validInput = true;
+                            std::cout << "\nVous avez décidé de ne pas contrer l'attaque.\n";
+                        }
+                        if (!validInput)
+                            std::cout << "\nRéponse inconnue, veuillez réessayer : ";
+                    } while (!validInput);
                 }
             }
             else {
                 std::cout << "Vous n'avez aucune créature d'engagée donc vous ne pouvez pas vous défendre.\n";
             }
         }
-        std::cout << "\nC'est à " << playerTurn->getName() << " de reprendre la main." << std::endl;
-    }
+        std::cout << "\nC'est à " << playerTurn->getName() << " de reprendre la main.\n\n";
+        for(auto it : attackDefenseCards) {
+            if (it.second.size() > 0) {
+                std::cout << "Votre carte " << StrColor::print(it.first->getName(), it.first->getColor()) << " se fait contrer par les cartes suivantes :\n";
+                Card::print(it.second);
+                if (it.second.size() > 1) {
+                    // TODO proposer au joueur de choisir l'ordre d'attaque
+                }
+                int sumDefenseHp = 0;
+                int sumDefenseAtkPwr = 0;
+                for (Card* c : it.second) {
+                    CreatureCard* offensive_c = dynamic_cast<const CreatureCard*>(it.first);
+                    CreatureCard* defensive_c = dynamic_cast<const CreatureCard*>(c);
+                    if (offesive_c && defensive_c) {
+                        std::cout << "La carte " << StrColor::print(offensive_c->getName(), offensive_c->getColor())
+                        << " attaque la carte " << StrColor::print(defensive_c->getName(), defensive_c->getColor()) << "\n";
+                        if (offensive_c->getAttackPower() >= defensive_c->getHp())
+                            std::cout << "La carte " << StrColor::print(defensive_c->getName(), defensive_c->getColor()) << " meurt.\n";
+                        if (defensive_c->getAttackPower() >= offensive_c->getHp())
+                            std::cout << "La carte " << StrColor::print(offensive_c->getName(), offensive_c->getColor()) << " meurt.\n";
+                        offensive_c->setHp(offensive_c->getHp() - defensive_c->getAttackPower());
+                        offensive_c->getAttackPower();
 
+                    }
+                }
+            }
+        }
+    }
 }
