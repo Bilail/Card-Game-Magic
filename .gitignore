@@ -34,3 +34,10 @@
 cmake-build-debug
 
 .idea
+
+/Testing/
+/cmake-build-debug-wsl/
+/CMakeFiles/
+/Build/
+
+
