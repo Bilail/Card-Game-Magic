@@ -9,6 +9,7 @@
 #include <bits/stdc++.h>
 #include "Card.h"
 #include "GameCards.h"
+#include <string>
 
 class Deck {
 protected:
@@ -19,6 +20,7 @@ protected:
 public:
     static const int DECK_SIZE;
     Deck();
+    Deck(std::string nomDeck);
     ~Deck();
     void printLibrary();
     void printInPlayCards();
@@ -30,6 +32,8 @@ public:
     std::vector<Card*> getDefenseCards();
     void playCard(Card* c);
     void discardCard(Card* c);
+    void CardtoJson(std::string nomDeck);
+
 };
 
 
