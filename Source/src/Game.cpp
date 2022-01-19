@@ -91,7 +91,6 @@ void Game::playGame() {
     }
 }
 
-
 void Game::showBanner() {
     std::cout
             << "  _   _  ____ _______   __  __          _____ _____ _____ \n"
@@ -211,7 +210,6 @@ Player* Game::getOpponent() {
 }
 
 void Game::fightPhase(){
-    std::string cardToAttack  = "";
     std::vector<Card*> chosenCardsToAttack;
     bool stopAttack = false;
     while (!stopAttack)
@@ -232,7 +230,7 @@ void Game::fightPhase(){
                 std::string cardToPlay = "";
                 std::getline(std::cin, cardToPlay);
                 if (cardToPlay != "aucune") {
-                    std::string cardColor = "white";
+                    std::string cardColor = "";
                     for (Card *c: attackCards) {
                         if (c->getName() == cardToPlay) {
                             validInput = true;
@@ -312,6 +310,51 @@ void Game::fightPhase(){
                 Card::print(it.second);
                 if (it.second.size() > 1) {
                     // TODO proposer au joueur de choisir l'ordre d'attaque
+                    std::cout << "Souhaitez-vous changer l'ordre d'attaque ? (y/n) ";
+                    std::string input;
+                    std::cin >> input;
+                    while (input != "y" && input != "n") {
+                        std::cout << "\nRéponse inconnue, veuillez réessayer : ";
+                        std::cin >> input;
+                    }
+                    if (input == "y") {
+                        std::vector<Card*> newOrder;
+                        std::cout << "Indiquez le nom de la carte à attaquer en premier : ";
+                        bool validInput = false;
+                        while (!validInput) {
+                            std::cin >> input;
+                            for (int i = 0; i < it.second.size(); i++) {
+                                if (it.second.at(i)->getName() == input) {
+                                    newOrder.push_back(it.second.at(i));
+                                    it.second.erase(it.second.begin() + i);
+                                    validInput = true;
+                                    break;
+                                }
+                            }
+                            if (!validInput) {
+                                std::cout << "\nRéponse inconnue, veuillez réessayer : ";
+                            }
+                        }
+                        while (it.second.size() > 0) {
+                            std::cout << "Indiquez le nom de la carte suivante à attaquer : ";
+                            bool validInput = false;
+                            while (!validInput) {
+                                std::cin >> input;
+                                for (int i = 0; i < it.second.size(); i++) {
+                                    if (it.second.at(i)->getName() == input) {
+                                        newOrder.push_back(it.second.at(i));
+                                        it.second.erase(it.second.begin() + i);
+                                        validInput = true;
+                                        break;
+                                    }
+                                }
+                                if (!validInput) {
+                                    std::cout << "\nRéponse inconnue, veuillez réessayer : ";
+                                }
+                            }
+                        }
+                        it.second = newOrder;
+                    }
                 }
                 int remainingAtkPower = offensive_c->getAttackPower();
                 for (Card* c : it.second) {
