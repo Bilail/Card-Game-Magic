@@ -1,4 +1,0 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic"
--- Configuring done
--- Generating done
--- Build files have been written to: /mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/cmake-build-debug-wsl

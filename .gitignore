@@ -35,7 +35,9 @@ cmake-build-debug
 
 .idea
 
-/cmake-build-debug
-/cmake-build-debug-wsl
-/CMakeFiles
-/Build
+/Testing/
+/cmake-build-debug-wsl/
+/CMakeFiles/
+/Build/
+
+

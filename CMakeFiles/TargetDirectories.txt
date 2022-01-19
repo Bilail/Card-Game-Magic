@@ -1,3 +1,0 @@
-/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/CMakeFiles/edit_cache.dir
-/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/CMakeFiles/Magic.dir
