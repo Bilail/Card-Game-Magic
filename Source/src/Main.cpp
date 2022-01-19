@@ -11,15 +11,20 @@
 #include "../header/Deck.h"
 #include "../header/GameCards.h"
 
+#include "../dependance/json.hpp"
+using json = nlohmann::json;
+
 int main() {
 
-    Game game;
-    game.playGame();
+    /*Game game;
+    game.playGame();*/
 
     //Création des cartes :
     Deck d1;
     GameCards gc;
-
+    // Test Json :
+    Deck *d2 = new Deck("../data/cards");
+    d2->printLibrary();
     /*for (int i = 0; i < gc.getCreatures().size(); i++)
         d1.addCreature(gc.getCreatures().at(i));*/
 

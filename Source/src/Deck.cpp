@@ -5,6 +5,13 @@
 #include "../header/Card.h"
 #include "../header/Deck.h"
 #include "../header/Util.h"
+#include <vector>
+#include <string>
+#include <iostream>
+#include <fstream>
+
+#include "../dependance/json.hpp"
+using json = nlohmann::json;
 
 const int Deck::DECK_SIZE = 30;
 
@@ -17,6 +24,10 @@ Deck::Deck() {
         library.push_back(new LandCard(l));
         library.push_back(new LandCard(l));
     }
+}
+
+Deck::Deck(std::string nomDeck){
+    CardtoJson(nomDeck);
 }
 
 Deck::~Deck() {
@@ -143,4 +154,34 @@ void Deck::discardCard(Card *c) {
             return;
         }
     }
+}
+
+
+void Deck::CardtoJson(std::string nomDeck) {
+    std::vector<Card*> r = {};
+    std::ifstream ifs(nomDeck+".json");
+    json deck;
+    ifs >> deck;
+
+    // Ajout des créature
+    auto& creatures = deck["Deck"]["Creature"];
+    for (auto& creature : creatures.items()){
+        std::string name = creature.value()["name"];
+        std::vector<int> mana = creature.value()["cost"];
+        std::string color = creature.value()["color"];
+        int attack = creature.value()["attack"];
+        int hp = creature.value()["hp"];
+
+        library.push_back(new CreatureCard(name, mana, color, attack, hp));
+    }
+
+    // Ajout des terrains
+    auto& lands = deck["Deck"]["Land"];
+    for (auto& land : lands.items()){
+        std::string name = land.value()["name"];
+        std::string color = land.value()["color"];
+        library.push_back(new LandCard(name, color));
+    }
+
+
 }
