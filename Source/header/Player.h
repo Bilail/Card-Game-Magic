@@ -33,6 +33,7 @@ public :
     void playCard(Card* c);
     std::vector<Card*> getAttackCards();
     std::vector<Card*> getDefenseCards();
+    std::vector<Card*> getHandCards();
     void discardCard(Card* c);
 };
 

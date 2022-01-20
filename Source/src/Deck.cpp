@@ -2,13 +2,12 @@
 // Created by bilai on 05/01/2022.
 //
 
-#include "../header/Card.h"
-#include "../header/Deck.h"
-#include "../header/Util.h"
 #include <vector>
 #include <string>
-#include <iostream>
 #include <fstream>
+#include "../header/Util.h"
+#include "../header/Card.h"
+#include "../header/Deck.h"
 
 #include "../dependance/json.hpp"
 using json = nlohmann::json;
@@ -41,11 +40,7 @@ void Deck::printInPlayCards() {
     Card::print(inPlayCards);
 }
 
-void Deck::generateRandomDeck(){
-
-    // Initialize seed randomly
-    srand(time(0));
-
+void Deck::generateRandomDeck() {
     for (int i=0; i<library.size() ;i++)
     {
         // Random for remaining positions.
@@ -156,6 +151,9 @@ void Deck::discardCard(Card *c) {
     }
 }
 
+std::vector<Card*> Deck::getHandCards() {
+    return handCards;
+}
 
 void Deck::CardtoJson(std::string nomDeck) {
     std::vector<Card*> r = {};

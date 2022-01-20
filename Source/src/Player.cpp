@@ -55,6 +55,10 @@ std::vector<Card*> Player::getDefenseCards() {
    return cards.getDefenseCards();
 }
 
+std::vector<Card*> Player::getHandCards() {
+   return cards.getHandCards();
+}
+
 void Player::playCard(Card *c) {
     cards.playCard(c);
 }

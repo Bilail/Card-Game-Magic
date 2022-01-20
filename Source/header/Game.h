@@ -15,11 +15,13 @@ private:
     void randomDraw();
     void mainPhase();
     void fightPhase();
+    void endOfTurnPhase();
     Player* getOpponent();
 protected:
     Player p1;
     Player p2;
     Player* playerTurn;
+    bool playerHasPlayedLandCard;
     int round;
 
 public :

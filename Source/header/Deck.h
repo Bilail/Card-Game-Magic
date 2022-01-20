@@ -30,6 +30,7 @@ public:
     std::vector<Card*> getPlayableCards();
     std::vector<Card*> getAttackCards();
     std::vector<Card*> getDefenseCards();
+    std::vector<Card*> getHandCards();
     void playCard(Card* c);
     void discardCard(Card* c);
     void CardtoJson(std::string nomDeck);
