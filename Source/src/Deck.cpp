@@ -182,6 +182,38 @@ void Deck::CardtoJson(std::string nomDeck) {
         std::string color = land.value()["color"];
         library.push_back(new LandCard(name, color));
     }
+}
 
-
+void Deck::exportToJson(std::string filename) {
+    json jsonfile;
+    jsonfile["Deck"]["Creature"] = json::array({});
+    jsonfile["Deck"]["Land"] = json::array({});
+    for (Card* c : library) {
+        if (CreatureCard* cc = dynamic_cast<CreatureCard*>(c)) {
+            json j = {
+                    {"name", cc->getName()},
+                    {"cost", {
+                        cc->getManaCost()[0],
+                        cc->getManaCost()[1],
+                        cc->getManaCost()[2],
+                        cc->getManaCost()[3],
+                        cc->getManaCost()[4],
+                        cc->getManaCost()[5]
+                    }},
+                    {"color", cc->getColor()},
+                    {"attack", cc->getAttackPower()},
+                    {"hp", cc->getHp()}
+            };
+            jsonfile["Deck"]["Creature"].push_back(j);
+        }
+        else if (LandCard* lc = dynamic_cast<LandCard*>(c)) {
+            json j = {
+                    {"name", lc->getName()},
+                    {"color", lc->getColor()}
+            };
+            jsonfile["Deck"]["Land"].push_back(j);
+        }
+    }
+    std::ofstream file(filename + ".json");
+    file << jsonfile;
 }

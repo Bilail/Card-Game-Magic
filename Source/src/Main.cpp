@@ -11,6 +11,7 @@
 #include "../header/Deck.h"
 #include "../header/GameCards.h"
 
+#include <filesystem>
 #include "../dependance/json.hpp"
 using json = nlohmann::json;
 
@@ -18,6 +19,19 @@ int main() {
 
     Game game;
     game.playGame();
+
+    /*
+    std::cout << "\nContenu de ./data/ :\n";
+    std::string path = "./data/";
+    for (const auto & entry : std::filesystem::directory_iterator(path)) {
+        std::cout << entry.path().filename() << std::endl;
+    }
+
+    Deck d;
+    std::cout << "\ngénération du json...\n";
+    d.exportToJson("test");
+    std::cout << "export terminé\n";
+    */
 
     //Création des cartes :
     /*    Deck d1;

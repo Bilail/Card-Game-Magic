@@ -33,6 +33,7 @@ public:
     void playCard(Card* c);
     void discardCard(Card* c);
     void CardtoJson(std::string nomDeck);
+    void exportToJson(std::string filename);
 
 };
 
