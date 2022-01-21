@@ -1,0 +1,4 @@
+<map id="Deck::getDefenseCards" name="Deck::getDefenseCards">
+<area shape="rect" id="node1" title="Les cartes qui peuvent défendre." alt="" coords="220,5,379,32"/>
+<area shape="rect" id="node2" href="$class_player.html#aabe0a76c0767e94328d75a32963b4de6" title="ses cartes qui peuvent défendre" alt="" coords="5,5,172,32"/>
+</map>

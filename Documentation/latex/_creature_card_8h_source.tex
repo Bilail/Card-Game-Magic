@@ -1,0 +1,37 @@
+\doxysection{Creature\+Card.\+h}
+\label{_creature_card_8h_source}\index{Source/header/CreatureCard.h@{Source/header/CreatureCard.h}}
+\textbf{ Aller à la documentation de ce fichier.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by bilai on 04/01/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef MAGIC\_CREATURECARD\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define MAGIC\_CREATURECARD\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Card.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }CreatureCard : \textcolor{keyword}{public} Card  \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     CreatureCard(std::string nam, std::vector<int> mC, std::string cl, \textcolor{keywordtype}{int} ap, \textcolor{keywordtype}{int} hp);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} getHp() \textcolor{keyword}{const};}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} getAttackPower() \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} setHp(\textcolor{keywordtype}{int} hp);}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} setAttackPower(\textcolor{keywordtype}{int} attackPower);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} invocate();}
+\DoxyCodeLine{46     \textcolor{keywordtype}{bool} isFirstTurn();}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} print();}
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} printLine(\textcolor{keywordtype}{int} line);}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} attack();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{59     \textcolor{keywordtype}{int} hp;}
+\DoxyCodeLine{60     \textcolor{keywordtype}{int} defaultHp;}
+\DoxyCodeLine{61     \textcolor{keywordtype}{int} attackPower;}
+\DoxyCodeLine{62     \textcolor{keywordtype}{bool} firstTurn;}
+\DoxyCodeLine{63 \};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_CREATURECARD\_H}}
+
+\end{DoxyCode}

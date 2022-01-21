@@ -1,0 +1,4 @@
+<map id="Player::disengageCards" name="Player::disengageCards">
+<area shape="rect" id="node1" title="désengager ses cartes" alt="" coords="5,5,165,32"/>
+<area shape="rect" id="node2" href="$class_deck.html#a6c2cab6b4c3c69c01c80f50441d2173a" title="désengager la carte" alt="" coords="213,5,367,32"/>
+</map>

@@ -1,0 +1,222 @@
+.TH "Deck" 3 "Vendredi 21 Janvier 2022" "Magic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Deck
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Deck\&.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBDeck\fP ()"
+.br
+.RI "Constructeur avec un deck par default\&. "
+.ti -1c
+.RI "\fBDeck\fP (std::string nomDeck)"
+.br
+.RI "Constructeur avec le choix d'un deck stocké en json\&. "
+.ti -1c
+.RI "\fB~Deck\fP ()"
+.br
+.ti -1c
+.RI "void \fBprintLibrary\fP ()"
+.br
+.RI "Affiche toute les cartes du joueurs\&. "
+.ti -1c
+.RI "void \fBprintInPlayCards\fP ()"
+.br
+.RI "Affiche les cartes que le joueur peut jouer\&. "
+.ti -1c
+.RI "void \fBgenerateRandomDeck\fP ()"
+.br
+.RI "Mélange le deck\&. "
+.ti -1c
+.RI "bool \fBdrawCard\fP ()"
+.br
+.RI "Piocher une carte\&. "
+.ti -1c
+.RI "void \fBdisengageCards\fP ()"
+.br
+.RI "désengager la carte "
+.ti -1c
+.RI "std::vector< \fBCard\fP * > \fBgetPlayableCards\fP ()"
+.br
+.RI "Obtenir les cartes jouable par le joueurs\&. "
+.ti -1c
+.RI "std::vector< \fBCard\fP * > \fBgetAttackCards\fP ()"
+.br
+.RI "Les cartes qui peuvent attaquer\&. "
+.ti -1c
+.RI "std::vector< \fBCard\fP * > \fBgetDefenseCards\fP ()"
+.br
+.RI "Les cartes qui peuvent défendre\&. "
+.ti -1c
+.RI "void \fBplayCard\fP (\fBCard\fP *c)"
+.br
+.RI "Les cartes jouables\&. "
+.ti -1c
+.RI "void \fBdiscardCard\fP (\fBCard\fP *c)"
+.br
+.RI "Les cartes dans le cimetière\&. "
+.ti -1c
+.RI "void \fBJsonToDeck\fP (std::string nomDeck)"
+.br
+.RI "Fonction qui convertit un fichier json de carte en deck jouable\&. "
+.in -1c
+.SS "Attributs publics statiques"
+
+.in +1c
+.ti -1c
+.RI "static const int \fBDECK_SIZE\fP = 30"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBCard\fP * > \fBinPlayCards\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBCard\fP * > \fBhandCards\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBCard\fP * > \fBlibrary\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBCard\fP * > \fBdisCards\fP"
+.br
+.in -1c
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Deck::Deck ()"
+
+.PP
+Constructeur avec un deck par default\&. 
+.SS "Deck::Deck (std::string nomDeck)"
+
+.PP
+Constructeur avec le choix d'un deck stocké en json\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fInomDeck\fP 
+.RE
+.PP
+
+.SS "Deck::~Deck ()"
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void Deck::discardCard (\fBCard\fP * c)"
+
+.PP
+Les cartes dans le cimetière\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIc\fP 
+.RE
+.PP
+
+.SS "void Deck::disengageCards ()"
+
+.PP
+désengager la carte 
+.SS "bool Deck::drawCard ()"
+
+.PP
+Piocher une carte\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void Deck::generateRandomDeck ()"
+
+.PP
+Mélange le deck\&. 
+.SS "std::vector< \fBCard\fP * > Deck::getAttackCards ()"
+
+.PP
+Les cartes qui peuvent attaquer\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "std::vector< \fBCard\fP * > Deck::getDefenseCards ()"
+
+.PP
+Les cartes qui peuvent défendre\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "std::vector< \fBCard\fP * > Deck::getPlayableCards ()"
+
+.PP
+Obtenir les cartes jouable par le joueurs\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void Deck::JsonToDeck (std::string nomDeck)"
+
+.PP
+Fonction qui convertit un fichier json de carte en deck jouable\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fInomDeck\fP 
+.RE
+.PP
+
+.SS "void Deck::playCard (\fBCard\fP * c)"
+
+.PP
+Les cartes jouables\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIc\fP 
+.RE
+.PP
+
+.SS "void Deck::printInPlayCards ()"
+
+.PP
+Affiche les cartes que le joueur peut jouer\&. 
+.SS "void Deck::printLibrary ()"
+
+.PP
+Affiche toute les cartes du joueurs\&. 
+.SH "Documentation des données membres"
+.PP 
+.SS "const int Deck::DECK_SIZE = 30\fC [static]\fP"
+
+.SS "std::vector<\fBCard\fP*> Deck::disCards\fC [protected]\fP"
+
+.SS "std::vector<\fBCard\fP*> Deck::handCards\fC [protected]\fP"
+
+.SS "std::vector<\fBCard\fP*> Deck::inPlayCards\fC [protected]\fP"
+
+.SS "std::vector<\fBCard\fP*> Deck::library\fC [protected]\fP"
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Magic à partir du code source\&.

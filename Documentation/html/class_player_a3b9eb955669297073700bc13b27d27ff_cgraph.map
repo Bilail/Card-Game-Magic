@@ -1,0 +1,4 @@
+<map id="Player::drawCard" name="Player::drawCard">
+<area shape="rect" id="node1" title="piocher une carte" alt="" coords="5,5,127,32"/>
+<area shape="rect" id="node2" href="$class_deck.html#a805e486ea52b3d84349aa9ec1edc1cad" title="Piocher une carte." alt="" coords="175,5,289,32"/>
+</map>

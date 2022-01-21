@@ -1,0 +1,446 @@
+\doxysection{Référence de la classe Card}
+\label{class_card}\index{Card@{Card}}
+
+
+{\ttfamily \#include $<$Card.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de Card\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_card__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Card\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_card__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Card} (std\+::string nm, std\+::vector$<$ int $>$ mn\+Ct, std\+::string clr)
+\begin{DoxyCompactList}\small\item\em Constructeur de card. \end{DoxyCompactList}\item 
+void \textbf{ set\+Name} (const std\+::string \&\textbf{ name})
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de saisir le nom d\textquotesingle{}une carte. \end{DoxyCompactList}\item 
+void \textbf{ engage} ()
+\begin{DoxyCompactList}\small\item\em Engager une carte. \end{DoxyCompactList}\item 
+void \textbf{ disengage} ()
+\begin{DoxyCompactList}\small\item\em Désengager une carte. \end{DoxyCompactList}\item 
+void \textbf{ set\+Mana\+Cost} (std\+::vector$<$ int $>$ \textbf{ mana\+Cost})
+\begin{DoxyCompactList}\small\item\em Saisir le cout en terrain. \end{DoxyCompactList}\item 
+void \textbf{ set\+Color} (const std\+::string \&\textbf{ color})
+\begin{DoxyCompactList}\small\item\em Saisir la couleur. \end{DoxyCompactList}\item 
+void \textbf{ set\+Is\+Discarded} (bool \textbf{ is\+Discarded})
+\begin{DoxyCompactList}\small\item\em Mettre une carte au cimetière. \end{DoxyCompactList}\item 
+const std\+::string \& \textbf{ get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Récuperer le nom de la carte. \end{DoxyCompactList}\item 
+const std\+::string \textbf{ get\+Colored\+Name} () const
+\begin{DoxyCompactList}\small\item\em Récuperer le nomde la couleur de la carte. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \textbf{ get\+Mana\+Cost} () const
+\begin{DoxyCompactList}\small\item\em Affiche le nom de la carte coloré \end{DoxyCompactList}\item 
+const std\+::string \& \textbf{ get\+Color} () const
+\begin{DoxyCompactList}\small\item\em Récupérer la couleur. \end{DoxyCompactList}\item 
+bool \textbf{ get\+Is\+Discarded} () const
+\begin{DoxyCompactList}\small\item\em Etat dans le cimetière ou pas. \end{DoxyCompactList}\item 
+bool \textbf{ get\+Is\+Engaged} () const
+\begin{DoxyCompactList}\small\item\em Engagé ou pas. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Card} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \textbf{ is\+Still\+Operational} ()
+\item 
+virtual void \textbf{ print} ()
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}affichage. \end{DoxyCompactList}\item 
+virtual void \textbf{ print\+Line} (int line)
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}affichage par ligne Pour l\textquotesingle{}affiche en ligne et non pas en colonne. \end{DoxyCompactList}\item 
+std\+::string \textbf{ mana\+To\+String} ()
+\begin{DoxyCompactList}\small\item\em Cout en terrain en string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static void \textbf{ print} (std\+::vector$<$ \textbf{ Card} $\ast$ $>$ v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \textbf{ Color\+Code} = \{\char`\"{}green\char`\"{},\char`\"{}blue\char`\"{},\char`\"{}red\char`\"{},\char`\"{}yellow\char`\"{},\char`\"{}black\char`\"{},\char`\"{}white\char`\"{}\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \textbf{ name}
+\item 
+std\+::vector$<$ int $>$ \textbf{ mana\+Cost}
+\item 
+std\+::string \textbf{ color}
+\item 
+bool \textbf{ is\+Discarded} = false
+\item 
+bool \textbf{ is\+Engaged} = false
+\item 
+std\+::string \textbf{ type\+Of\+Card}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\label{class_card_ab78c5712285d52f52bc0dcff4cfd344c}} 
+\index{Card@{Card}!Card@{Card}}
+\index{Card@{Card}!Card@{Card}}
+\doxysubsubsection{Card()}
+{\footnotesize\ttfamily Card\+::\+Card (\begin{DoxyParamCaption}\item[{std\+::string}]{nm,  }\item[{std\+::vector$<$ int $>$}]{mn\+Ct,  }\item[{std\+::string}]{clr }\end{DoxyParamCaption})}
+
+
+
+Constructeur de card. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nm} & \+: le nom de la carte \\
+\hline
+{\em mn\+Ct} & \+: son cout en terrain \\
+\hline
+{\em clr} & \+: sa couleur \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_card_a4e05b0b68e43e5e76c6194458cee874f}} 
+\index{Card@{Card}!````~Card@{$\sim$Card}}
+\index{````~Card@{$\sim$Card}!Card@{Card}}
+\doxysubsubsection{$\sim$Card()}
+{\footnotesize\ttfamily Card\+::$\sim$\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\label{class_card_ad72326463fd58f420ef32bd8617f8580}} 
+\index{Card@{Card}!disengage@{disengage}}
+\index{disengage@{disengage}!Card@{Card}}
+\doxysubsubsection{disengage()}
+{\footnotesize\ttfamily void Card\+::disengage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Désengager une carte. 
+
+\mbox{\label{class_card_a44a6e39af94936633332068bfc0941be}} 
+\index{Card@{Card}!engage@{engage}}
+\index{engage@{engage}!Card@{Card}}
+\doxysubsubsection{engage()}
+{\footnotesize\ttfamily void Card\+::engage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Engager une carte. 
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_card_a44a6e39af94936633332068bfc0941be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_card_a18f5cfc2b09777dbf6e46f97c0dc43e7}} 
+\index{Card@{Card}!getColor@{getColor}}
+\index{getColor@{getColor}!Card@{Card}}
+\doxysubsubsection{getColor()}
+{\footnotesize\ttfamily const std\+::string \& Card\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récupérer la couleur. 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+\mbox{\label{class_card_ac1e191a9f676f6682fe9f402425602ef}} 
+\index{Card@{Card}!getColoredName@{getColoredName}}
+\index{getColoredName@{getColoredName}!Card@{Card}}
+\doxysubsubsection{getColoredName()}
+{\footnotesize\ttfamily const std\+::string Card\+::get\+Colored\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récuperer le nomde la couleur de la carte. 
+
+\begin{DoxyReturn}{Renvoie}
+couleur 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_card_ac1e191a9f676f6682fe9f402425602ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_card_a30831cb6c4d2f497ff932f360d6e94c1}} 
+\index{Card@{Card}!getIsDiscarded@{getIsDiscarded}}
+\index{getIsDiscarded@{getIsDiscarded}!Card@{Card}}
+\doxysubsubsection{getIsDiscarded()}
+{\footnotesize\ttfamily bool Card\+::get\+Is\+Discarded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Etat dans le cimetière ou pas. 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+\mbox{\label{class_card_abfd6974c0c932222d382a5fae476512a}} 
+\index{Card@{Card}!getIsEngaged@{getIsEngaged}}
+\index{getIsEngaged@{getIsEngaged}!Card@{Card}}
+\doxysubsubsection{getIsEngaged()}
+{\footnotesize\ttfamily bool Card\+::get\+Is\+Engaged (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Engagé ou pas. 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+\mbox{\label{class_card_a5a078756e3490cb59956bec8abab5494}} 
+\index{Card@{Card}!getManaCost@{getManaCost}}
+\index{getManaCost@{getManaCost}!Card@{Card}}
+\doxysubsubsection{getManaCost()}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Card\+::get\+Mana\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Affiche le nom de la carte coloré 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_card_a5a078756e3490cb59956bec8abab5494_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_card_a1a673dcae309e2f8bdc57a6dcc61505d}} 
+\index{Card@{Card}!getName@{getName}}
+\index{getName@{getName}!Card@{Card}}
+\doxysubsubsection{getName()}
+{\footnotesize\ttfamily const std\+::string \& Card\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récuperer le nom de la carte. 
+
+\begin{DoxyReturn}{Renvoie}
+name 
+\end{DoxyReturn}
+\mbox{\label{class_card_a81304c2d2a220be4d28380d8a971c742}} 
+\index{Card@{Card}!isStillOperational@{isStillOperational}}
+\index{isStillOperational@{isStillOperational}!Card@{Card}}
+\doxysubsubsection{isStillOperational()}
+{\footnotesize\ttfamily void Card\+::is\+Still\+Operational (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{class_card_a2a55d1694a9292b2b46ab9a01fcf975f}} 
+\index{Card@{Card}!manaToString@{manaToString}}
+\index{manaToString@{manaToString}!Card@{Card}}
+\doxysubsubsection{manaToString()}
+{\footnotesize\ttfamily std\+::string Card\+::mana\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cout en terrain en string. 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_card_a2a55d1694a9292b2b46ab9a01fcf975f_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{class_card_a2a55d1694a9292b2b46ab9a01fcf975f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_card_a50cb7f8100fb16db6e4de406d7e5af05}} 
+\index{Card@{Card}!print@{print}}
+\index{print@{print}!Card@{Card}}
+\doxysubsubsection{print()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Card\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction d\textquotesingle{}affichage. 
+
+
+
+Réimplémentée dans \textbf{ Creature\+Card} \doxyref{}{p.}{class_creature_card_a74c0d3710cac9fd4bd33d125f762fe7b}, et \textbf{ Land\+Card} \doxyref{}{p.}{class_land_card_afdb5c3e69662aecf838f6b1a29623eaf}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{class_card_a50cb7f8100fb16db6e4de406d7e5af05_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_card_a50cb7f8100fb16db6e4de406d7e5af05_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_card_aaf9ba482dee7f29131ba2756af3c8a94}} 
+\index{Card@{Card}!print@{print}}
+\index{print@{print}!Card@{Card}}
+\doxysubsubsection{print()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Card\+::print (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \textbf{ Card} $\ast$ $>$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{class_card_ab6d4bf92eefe79fdebb8cd6ff4062c8f}} 
+\index{Card@{Card}!printLine@{printLine}}
+\index{printLine@{printLine}!Card@{Card}}
+\doxysubsubsection{printLine()}
+{\footnotesize\ttfamily void Card\+::print\+Line (\begin{DoxyParamCaption}\item[{int}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction d\textquotesingle{}affichage par ligne Pour l\textquotesingle{}affiche en ligne et non pas en colonne. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em line} & \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée dans \textbf{ Creature\+Card} \doxyref{}{p.}{class_creature_card_ae497df8f788c28bd962ae95dda29450f}, et \textbf{ Land\+Card} \doxyref{}{p.}{class_land_card_a03c634b8e1410f1e8835f583423fe8e3}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{class_card_ab6d4bf92eefe79fdebb8cd6ff4062c8f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_card_a7d4d60d968e846737383dc6e02a1a44c}} 
+\index{Card@{Card}!setColor@{setColor}}
+\index{setColor@{setColor}!Card@{Card}}
+\doxysubsubsection{setColor()}
+{\footnotesize\ttfamily void Card\+::set\+Color (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Saisir la couleur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_card_aebc2702c0db09efc96e11d3f9d7e935b}} 
+\index{Card@{Card}!setIsDiscarded@{setIsDiscarded}}
+\index{setIsDiscarded@{setIsDiscarded}!Card@{Card}}
+\doxysubsubsection{setIsDiscarded()}
+{\footnotesize\ttfamily void Card\+::set\+Is\+Discarded (\begin{DoxyParamCaption}\item[{bool}]{is\+Discarded }\end{DoxyParamCaption})}
+
+
+
+Mettre une carte au cimetière. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em is\+Discarded} & \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_card_a4c293343febfabff2f873d47cb298520}} 
+\index{Card@{Card}!setManaCost@{setManaCost}}
+\index{setManaCost@{setManaCost}!Card@{Card}}
+\doxysubsubsection{setManaCost()}
+{\footnotesize\ttfamily void Card\+::set\+Mana\+Cost (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{mana\+Cost }\end{DoxyParamCaption})}
+
+
+
+Saisir le cout en terrain. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mana\+Cost} & \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_card_a5ff7f5144e9d539ab02ba039ba8be117}} 
+\index{Card@{Card}!setName@{setName}}
+\index{setName@{setName}!Card@{Card}}
+\doxysubsubsection{setName()}
+{\footnotesize\ttfamily void Card\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de saisir le nom d\textquotesingle{}une carte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em name} & le nom de la carte \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\label{class_card_a02954610032324dc59ab56242a7ab048}} 
+\index{Card@{Card}!color@{color}}
+\index{color@{color}!Card@{Card}}
+\doxysubsubsection{color}
+{\footnotesize\ttfamily std\+::string Card\+::color\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_card_a408e439ae50279eccf62cb3aa3b4a436}} 
+\index{Card@{Card}!ColorCode@{ColorCode}}
+\index{ColorCode@{ColorCode}!Card@{Card}}
+\doxysubsubsection{ColorCode}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Card\+::\+Color\+Code = \{\char`\"{}green\char`\"{},\char`\"{}blue\char`\"{},\char`\"{}red\char`\"{},\char`\"{}yellow\char`\"{},\char`\"{}black\char`\"{},\char`\"{}white\char`\"{}\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{class_card_a8004830d75056e94292c97e3397a8a4b}} 
+\index{Card@{Card}!isDiscarded@{isDiscarded}}
+\index{isDiscarded@{isDiscarded}!Card@{Card}}
+\doxysubsubsection{isDiscarded}
+{\footnotesize\ttfamily bool Card\+::is\+Discarded = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_card_a8becc22b17746760f5b45845e5554a25}} 
+\index{Card@{Card}!isEngaged@{isEngaged}}
+\index{isEngaged@{isEngaged}!Card@{Card}}
+\doxysubsubsection{isEngaged}
+{\footnotesize\ttfamily bool Card\+::is\+Engaged = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_card_a1fc628c31d60338f6d6551fd0b0d6334}} 
+\index{Card@{Card}!manaCost@{manaCost}}
+\index{manaCost@{manaCost}!Card@{Card}}
+\doxysubsubsection{manaCost}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Card\+::mana\+Cost\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_card_a1f5013054990456125c82d805744062f}} 
+\index{Card@{Card}!name@{name}}
+\index{name@{name}!Card@{Card}}
+\doxysubsubsection{name}
+{\footnotesize\ttfamily std\+::string Card\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_card_a6a508138c4f8653a77e160ab4b6d7c6f}} 
+\index{Card@{Card}!typeOfCard@{typeOfCard}}
+\index{typeOfCard@{typeOfCard}!Card@{Card}}
+\doxysubsubsection{typeOfCard}
+{\footnotesize\ttfamily std\+::string Card\+::type\+Of\+Card\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Source/header/\textbf{ Card.\+h}\item 
+Source/src/\textbf{ Card.\+cpp}\end{DoxyCompactItemize}

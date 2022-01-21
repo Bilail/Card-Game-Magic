@@ -1,0 +1,51 @@
+\doxysection{Card.\+h}
+\label{_card_8h_source}\index{Source/header/Card.h@{Source/header/Card.h}}
+\textbf{ Aller à la documentation de ce fichier.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by bilai on 04/01/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef MAGIC\_CARD\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define MAGIC\_CARD\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }Card \{}
+\DoxyCodeLine{13 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{14     std::string name;}
+\DoxyCodeLine{15     std::vector<int> manaCost; \textcolor{comment}{// \{ Forest Green , Island Blue , Mountain Red, Plain Yellow, Swamp Black, Other \}}}
+\DoxyCodeLine{16     std::string color;}
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} isDiscarded = \textcolor{keyword}{false};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} isEngaged = \textcolor{keyword}{false};}
+\DoxyCodeLine{19     std::string typeOfCard;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     Card(std::string nm, std::vector<int> mnCt, std::string clr);}
+\DoxyCodeLine{29     \textcolor{keyword}{static} std::vector<std::string> ColorCode;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} setName(\textcolor{keyword}{const} std::string \&name);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} engage();}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} disengage();}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} setManaCost(std::vector<int> manaCost);}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} setColor(\textcolor{keyword}{const} std::string \&color);}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} setIsDiscarded(\textcolor{keywordtype}{bool} isDiscarded);}
+\DoxyCodeLine{62     \textcolor{keyword}{const} std::string \&getName() \textcolor{keyword}{const};}
+\DoxyCodeLine{67     \textcolor{keyword}{const} std::string getColoredName() \textcolor{keyword}{const};}
+\DoxyCodeLine{72     std::vector<int> getManaCost() \textcolor{keyword}{const};}
+\DoxyCodeLine{77     \textcolor{keyword}{const} std::string \&getColor() \textcolor{keyword}{const};}
+\DoxyCodeLine{82     \textcolor{keywordtype}{bool} getIsDiscarded() \textcolor{keyword}{const};}
+\DoxyCodeLine{87     \textcolor{keywordtype}{bool} getIsEngaged() \textcolor{keyword}{const};}
+\DoxyCodeLine{91      \string~Card();}
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} isStillOperational();}
+\DoxyCodeLine{96     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} print();}
+\DoxyCodeLine{102     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} printLine(\textcolor{keywordtype}{int} line);}
+\DoxyCodeLine{107     std::string manaToString();}
+\DoxyCodeLine{108     \textcolor{keyword}{static} \textcolor{keywordtype}{void} print(std::vector<Card*> v);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_CARD\_H}}
+
+\end{DoxyCode}

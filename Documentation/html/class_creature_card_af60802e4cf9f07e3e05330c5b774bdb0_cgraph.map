@@ -1,0 +1,4 @@
+<map id="CreatureCard::attack" name="CreatureCard::attack">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node2" href="$class_card.html#a44a6e39af94936633332068bfc0941be" title="Engager une carte." alt="" coords="196,5,295,32"/>
+</map>

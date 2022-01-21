@@ -1,0 +1,46 @@
+\doxysection{Player.\+h}
+\label{_player_8h_source}\index{Source/header/Player.h@{Source/header/Player.h}}
+\textbf{ Aller à la documentation de ce fichier.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by bilai on 05/01/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef MAGIC\_PLAYER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define MAGIC\_PLAYER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Card.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}Deck.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }Player \{}
+\DoxyCodeLine{15 protected :}
+\DoxyCodeLine{16     std::string name;}
+\DoxyCodeLine{17     std::string printColor;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} isAlive;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} currentHp;}
+\DoxyCodeLine{20     \textcolor{keyword}{static} \textcolor{keywordtype}{int} baseHp;}
+\DoxyCodeLine{21     Deck cards;}
+\DoxyCodeLine{22 public :}
+\DoxyCodeLine{26     Player(std::string, Deck);}
+\DoxyCodeLine{27     \string~Player()\{\};}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} setPrintColor(std::string color);}
+\DoxyCodeLine{37     std::string getName();}
+\DoxyCodeLine{38     std::string getColoredName();}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} getHp();}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} setHp(\textcolor{keywordtype}{int} hp);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{bool} drawCard();}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} disengageCards();}
+\DoxyCodeLine{62     std::vector<Card*> getPlayableCards();}
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} playCard(Card* c);}
+\DoxyCodeLine{68     std::vector<Card*> getAttackCards();}
+\DoxyCodeLine{73     std::vector<Card*> getDefenseCards();}
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} discardCard(Card* c);}
+\DoxyCodeLine{79 \};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_PLAYER\_H}}
+
+\end{DoxyCode}

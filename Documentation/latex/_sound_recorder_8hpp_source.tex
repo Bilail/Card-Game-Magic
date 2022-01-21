@@ -1,0 +1,105 @@
+\hypertarget{_sound_recorder_8hpp_source}{}\doxysection{Sound\+Recorder.\+hpp}
+\label{_sound_recorder_8hpp_source}\index{Source/dependance/SFML/include/SFML/Audio/SoundRecorder.hpp@{Source/dependance/SFML/include/SFML/Audio/SoundRecorder.hpp}}
+\mbox{\hyperlink{_sound_recorder_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_SOUNDRECORDER\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_SOUNDRECORDER\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_audio_2_export_8hpp}{SFML/Audio/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_al_resource_8hpp}{SFML/Audio/AlResource.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_thread_8hpp}{SFML/System/Thread.hpp}}>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_time_8hpp}{SFML/System/Time.hpp}}>}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{45 \textcolor{keyword}{class }\mbox{\hyperlink{_audio_2_export_8hpp_a4d34c0f253824ac49bdd93545913eb89}{SFML\_AUDIO\_API}} \mbox{\hyperlink{classsf_1_1_sound_recorder}{SoundRecorder}} : \mbox{\hyperlink{classsf_1_1_al_resource}{AlResource}}}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47 \textcolor{keyword}{public}:}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53     \textcolor{keyword}{virtual} \mbox{\hyperlink{classsf_1_1_sound_recorder_acc599e61aaa47edaae88cf43f0a43549}{\string~SoundRecorder}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_sound_recorder_a715f0fd2f228c83d79aaedca562ae51f}{start}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sampleRate = 44100);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_recorder_a8d9c8346aa9aa409cfed4a1101159c4c}{stop}}();}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classsf_1_1_sound_recorder_aed292c297a3e0d627db4eb5c18f58c44}{getSampleRate}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{108     \textcolor{keyword}{static} std::vector<std::string> \mbox{\hyperlink{classsf_1_1_sound_recorder_a2a0a831148dcf3d979de42029ec0c280}{getAvailableDevices}}();}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{120     \textcolor{keyword}{static} std::string \mbox{\hyperlink{classsf_1_1_sound_recorder_ad1d450a80642dab4b632999d72a1bf23}{getDefaultDevice}}();}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{137     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_sound_recorder_a8eb3e473292c16e874322815836d3cd3}{setDevice}}(\textcolor{keyword}{const} std::string\& name);}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{145     \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classsf_1_1_sound_recorder_a13d7d97b3ca67efa18f5ee0aa5884f1f}{getDevice}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{160     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_recorder_ae4e22ba67d12a74966eb05fad55a317c}{setChannelCount}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} channelCount);}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{173     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classsf_1_1_sound_recorder_a610e98e7a73b316ce26b7c55234f86e9}{getChannelCount}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{186     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_sound_recorder_aab2bd0fee9e48d6cfd449b1cb078ce5a}{isAvailable}}();}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{196     \mbox{\hyperlink{classsf_1_1_sound_recorder_a50ebad413c4f157408a0fa49f23212a9}{SoundRecorder}}();}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{214     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_recorder_a85b7fb8a86c08b5084f8f142767bccf6}{setProcessingInterval}}(\mbox{\hyperlink{classsf_1_1_time}{Time}} interval);}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{227     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_sound_recorder_a7af418fb036201d3f85745bef78ce77f}{onStart}}();}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{243     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_sound_recorder_a2670124cbe7a87c7e46b4840807f4fd7}{onProcessSamples}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}}* samples, std::size\_t sampleCount) = 0;}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{254     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_recorder_aefc36138ca1e96c658301280e4a31b64}{onStop}}();}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256 \textcolor{keyword}{private}:}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{265     \textcolor{keywordtype}{void} record();}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{275     \textcolor{keywordtype}{void} processCapturedSamples();}
+\DoxyCodeLine{276 }
+\DoxyCodeLine{283     \textcolor{keywordtype}{void} cleanup();}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{286     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{288 \textcolor{comment}{}    \mbox{\hyperlink{classsf_1_1_thread}{Thread}}             m\_thread;             }
+\DoxyCodeLine{289     std::vector<Int16> m\_samples;            }
+\DoxyCodeLine{290     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}       m\_sampleRate;         }
+\DoxyCodeLine{291     \mbox{\hyperlink{classsf_1_1_time}{Time}}               m\_processingInterval; }
+\DoxyCodeLine{292     \textcolor{keywordtype}{bool}               m\_isCapturing;        }
+\DoxyCodeLine{293     std::string        m\_deviceName;         }
+\DoxyCodeLine{294     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}       m\_channelCount;       }
+\DoxyCodeLine{295 \};}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{297 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_SOUNDRECORDER\_HPP}}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{302 }
+
+\end{DoxyCode}

@@ -1,0 +1,6 @@
+<map id="Player::playCard" name="Player::playCard">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,124,57"/>
+<area shape="rect" id="node2" href="$class_deck.html#acec615e3dbd2c22200f74b61d95ddac4" title="Les cartes jouables." alt="" coords="172,31,283,57"/>
+<area shape="rect" id="node3" href="$_util_8h.html#acfb36b6330384dbc3c0733a83da43a70" title=" " alt="" coords="363,5,433,32"/>
+<area shape="rect" id="node4" href="$class_card.html#a5a078756e3490cb59956bec8abab5494" title="Affiche le nom de la carte coloré" alt="" coords="331,56,465,83"/>
+</map>

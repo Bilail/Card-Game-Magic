@@ -1,0 +1,4 @@
+<map id="Deck::getAttackCards" name="Deck::getAttackCards">
+<area shape="rect" id="node1" title="Les cartes qui peuvent attaquer." alt="" coords="211,5,361,32"/>
+<area shape="rect" id="node2" href="$class_player.html#a8c12eeee6d1b4718dd61ebf21750ae30" title="ses cartes qui peuvent attaquer" alt="" coords="5,5,163,32"/>
+</map>

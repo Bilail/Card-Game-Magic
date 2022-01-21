@@ -1,0 +1,228 @@
+.TH "Player" 3 "Vendredi 21 Janvier 2022" "Magic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Player
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Player\&.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP (std::string, \fBDeck\fP)"
+.br
+.RI "Constructeur d'un joueur\&. "
+.ti -1c
+.RI "\fB~Player\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPrintColor\fP (std::string color)"
+.br
+.RI "set la coleur du joueur "
+.ti -1c
+.RI "std::string \fBgetName\fP ()"
+.br
+.RI "Set le nom du joueurs\&. "
+.ti -1c
+.RI "std::string \fBgetColoredName\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetHp\fP ()"
+.br
+.RI "récuperer les hp du joueurs "
+.ti -1c
+.RI "void \fBsetHp\fP (int hp)"
+.br
+.RI "set les hp du joueurs "
+.ti -1c
+.RI "bool \fBdrawCard\fP ()"
+.br
+.RI "piocher une carte "
+.ti -1c
+.RI "void \fBdisengageCards\fP ()"
+.br
+.RI "désengager ses cartes "
+.ti -1c
+.RI "std::vector< \fBCard\fP * > \fBgetPlayableCards\fP ()"
+.br
+.RI "ses cartes jouables "
+.ti -1c
+.RI "void \fBplayCard\fP (\fBCard\fP *c)"
+.br
+.ti -1c
+.RI "std::vector< \fBCard\fP * > \fBgetAttackCards\fP ()"
+.br
+.RI "ses cartes qui peuvent attaquer "
+.ti -1c
+.RI "std::vector< \fBCard\fP * > \fBgetDefenseCards\fP ()"
+.br
+.RI "ses cartes qui peuvent défendre "
+.ti -1c
+.RI "void \fBdiscardCard\fP (\fBCard\fP *c)"
+.br
+.RI "envoyer une carte au cimetière "
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBname\fP"
+.br
+.ti -1c
+.RI "std::string \fBprintColor\fP"
+.br
+.ti -1c
+.RI "bool \fBisAlive\fP"
+.br
+.ti -1c
+.RI "int \fBcurrentHp\fP"
+.br
+.ti -1c
+.RI "\fBDeck\fP \fBcards\fP"
+.br
+.in -1c
+.SS "Attributs protégés statiques"
+
+.in +1c
+.ti -1c
+.RI "static int \fBbaseHp\fP = 4"
+.br
+.in -1c
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Player::Player (std::string name, \fBDeck\fP deck)"
+
+.PP
+Constructeur d'un joueur\&. 
+.SS "Player::~Player ()\fC [inline]\fP"
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void Player::discardCard (\fBCard\fP * c)"
+
+.PP
+envoyer une carte au cimetière 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIc\fP 
+.RE
+.PP
+
+.SS "void Player::disengageCards ()"
+
+.PP
+désengager ses cartes 
+.SS "bool Player::drawCard ()"
+
+.PP
+piocher une carte 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "std::vector< \fBCard\fP * > Player::getAttackCards ()"
+
+.PP
+ses cartes qui peuvent attaquer 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "std::string Player::getColoredName ()"
+
+.SS "std::vector< \fBCard\fP * > Player::getDefenseCards ()"
+
+.PP
+ses cartes qui peuvent défendre 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "int Player::getHp ()"
+
+.PP
+récuperer les hp du joueurs 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "std::string Player::getName ()"
+
+.PP
+Set le nom du joueurs\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "std::vector< \fBCard\fP * > Player::getPlayableCards ()"
+
+.PP
+ses cartes jouables 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void Player::playCard (\fBCard\fP * c)"
+
+.SS "void Player::setHp (int hp)"
+
+.PP
+set les hp du joueurs 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIhp\fP 
+.RE
+.PP
+
+.SS "void Player::setPrintColor (std::string color)"
+
+.PP
+set la coleur du joueur 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcolor\fP 
+.RE
+.PP
+
+.SH "Documentation des données membres"
+.PP 
+.SS "int Player::baseHp = 4\fC [static]\fP, \fC [protected]\fP"
+
+.SS "\fBDeck\fP Player::cards\fC [protected]\fP"
+
+.SS "int Player::currentHp\fC [protected]\fP"
+
+.SS "bool Player::isAlive\fC [protected]\fP"
+
+.SS "std::string Player::name\fC [protected]\fP"
+
+.SS "std::string Player::printColor\fC [protected]\fP"
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Magic à partir du code source\&.

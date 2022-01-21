@@ -19,20 +19,67 @@ protected:
     std::vector<Card*> disCards;
 public:
     static const int DECK_SIZE;
+    /**
+     * Constructeur avec un deck par default
+     */
     Deck();
+    /**
+     * Constructeur avec le choix d'un deck stocké en json
+     * @param nomDeck
+     */
     Deck(std::string nomDeck);
     ~Deck();
+    /**
+     * Affiche toute les cartes du joueurs
+     */
     void printLibrary();
+    /**
+     * Affiche les cartes que le joueur peut jouer
+     */
     void printInPlayCards();
+    /**
+     * Mélange le deck
+     */
     void generateRandomDeck();
+    /**
+     * Piocher une carte
+     * @return
+     */
     bool drawCard();
+    /**
+     * désengager la carte
+     */
     void disengageCards();
+    /**
+     * Obtenir les cartes jouable par le joueurs
+     * @return
+     */
     std::vector<Card*> getPlayableCards();
+    /**
+     * Les cartes qui peuvent attaquer
+     * @return
+     */
     std::vector<Card*> getAttackCards();
+    /**
+     * Les cartes qui peuvent défendre
+     * @return
+     */
     std::vector<Card*> getDefenseCards();
+    /**
+     * Les cartes jouables
+     * @param c
+     */
     void playCard(Card* c);
+    /**
+     * Les cartes dans le cimetière
+     * @param c
+     */
     void discardCard(Card* c);
-    void CardtoJson(std::string nomDeck);
+    /**
+     * Fonction qui convertit un fichier json de carte en deck jouable
+     * @param nomDeck
+     */
+    void JsonToDeck(std::string nomDeck);
 
 };
 

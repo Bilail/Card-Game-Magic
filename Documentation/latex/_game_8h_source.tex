@@ -1,0 +1,39 @@
+\doxysection{Game.\+h}
+\label{_game_8h_source}\index{Source/header/Game.h@{Source/header/Game.h}}
+\textbf{ Aller à la documentation de ce fichier.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by bilai on 05/01/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef MAGIC\_GAME\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define MAGIC\_GAME\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Player.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }Game \{}
+\DoxyCodeLine{12 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} showBanner();*}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} initGame();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} randomDraw();}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} mainPhase();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} fightPhase();}
+\DoxyCodeLine{40     Player* getOpponent();}
+\DoxyCodeLine{41 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{42     Player p1;}
+\DoxyCodeLine{43     Player p2;}
+\DoxyCodeLine{44     Player* playerTurn;}
+\DoxyCodeLine{45     \textcolor{keywordtype}{int} round;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 public :}
+\DoxyCodeLine{48     Game();}
+\DoxyCodeLine{49     \textcolor{comment}{//Game(Game const \&); //reprendre une game}}
+\DoxyCodeLine{53 \textcolor{comment}{}    \textcolor{keywordtype}{void} playGame();}
+\DoxyCodeLine{57     \textcolor{keyword}{static} \textcolor{keywordtype}{int} MAX\_CARDS\_IN\_HAND;}
+\DoxyCodeLine{58 \};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_GAME\_H}}
+
+\end{DoxyCode}

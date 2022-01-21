@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Magic:  Fichier source de Source/header/Player.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo magic resize.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Magic
+   </div>
+   <div id="projectbrief">Jeux de carte Magic - Polytech</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_player_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Player.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_player_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by bilai on 05/01/2022.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef MAGIC_PLAYER_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define MAGIC_PLAYER_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_card_8h.html">Card.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_deck_8h.html">Deck.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_player.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_player.html">Player</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>protected :</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_player.html#af9c920fabaafdeb7961a645315b521ff">   16</a></span>    std::string <a class="code hl_variable" href="class_player.html#af9c920fabaafdeb7961a645315b521ff">name</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_player.html#a3744a191c270a1b9edeb47c1b37e1d10">   17</a></span>    std::string <a class="code hl_variable" href="class_player.html#a3744a191c270a1b9edeb47c1b37e1d10">printColor</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_player.html#a9c0c126f73f78e21fa3473ba42e1d271">   18</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_player.html#a9c0c126f73f78e21fa3473ba42e1d271">isAlive</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_player.html#af88a832f4ef7856ac595ee8dfeff9001">   19</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_player.html#af88a832f4ef7856ac595ee8dfeff9001">currentHp</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_player.html#a5998536f01a94a585937c81f3c5ab4bb">   20</a></span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_player.html#a5998536f01a94a585937c81f3c5ab4bb">baseHp</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_player.html#a8a6eab4cd07b6c75151360ccfb4ad9a1">   21</a></span>    <a class="code hl_class" href="class_deck.html">Deck</a> <a class="code hl_variable" href="class_player.html#a8a6eab4cd07b6c75151360ccfb4ad9a1">cards</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>public :</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_function" href="class_player.html#a4d88b5f1bd0032e70ba7016f8a547c0a">Player</a>(std::string, <a class="code hl_class" href="class_deck.html">Deck</a>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">   27</a></span>    <a class="code hl_function" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a>(){};</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a92c5a1c23490fdbe632aae02e4839454">setPrintColor</a>(std::string color);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    std::string <a class="code hl_function" href="class_player.html#af1aa472885d589516f483e26e786600e">getName</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::string <a class="code hl_function" href="class_player.html#a13c963d763eca10e5527e14f6aa10393">getColoredName</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_player.html#aa6479f194f9bb44b09adaf3b04a5594d">getHp</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a021f86d4c3ff6e81ec19b77c38550fe9">setHp</a>(<span class="keywordtype">int</span> hp);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_player.html#a3b9eb955669297073700bc13b27d27ff">drawCard</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#aa87746929fad46316b1452dd0d9b2b36">disengageCards</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::vector&lt;Card*&gt; <a class="code hl_function" href="class_player.html#ae0f72a15d6130e0469251bc1543cc23a">getPlayableCards</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#aa016a6401d45ac510fd71c5629b0a707">playCard</a>(<a class="code hl_class" href="class_card.html">Card</a>* c);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    std::vector&lt;Card*&gt; <a class="code hl_function" href="class_player.html#a8c12eeee6d1b4718dd61ebf21750ae30">getAttackCards</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    std::vector&lt;Card*&gt; <a class="code hl_function" href="class_player.html#aabe0a76c0767e94328d75a32963b4de6">getDefenseCards</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a3d6549590fb8e154951c873d6bfb412e">discardCard</a>(<a class="code hl_class" href="class_card.html">Card</a>* c);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif </span><span class="comment">//MAGIC_PLAYER_H</span></div>
+<div class="ttc" id="a_card_8h_html"><div class="ttname"><a href="_card_8h.html">Card.h</a></div></div>
+<div class="ttc" id="a_deck_8h_html"><div class="ttname"><a href="_deck_8h.html">Deck.h</a></div></div>
+<div class="ttc" id="aclass_card_html"><div class="ttname"><a href="class_card.html">Card</a></div><div class="ttdef"><b>Definition:</b> Card.h:12</div></div>
+<div class="ttc" id="aclass_deck_html"><div class="ttname"><a href="class_deck.html">Deck</a></div><div class="ttdef"><b>Definition:</b> Deck.h:14</div></div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> Player.h:14</div></div>
+<div class="ttc" id="aclass_player_html_a021f86d4c3ff6e81ec19b77c38550fe9"><div class="ttname"><a href="class_player.html#a021f86d4c3ff6e81ec19b77c38550fe9">Player::setHp</a></div><div class="ttdeci">void setHp(int hp)</div><div class="ttdoc">set les hp du joueurs</div><div class="ttdef"><b>Definition:</b> Player.cpp:34</div></div>
+<div class="ttc" id="aclass_player_html_a13c963d763eca10e5527e14f6aa10393"><div class="ttname"><a href="class_player.html#a13c963d763eca10e5527e14f6aa10393">Player::getColoredName</a></div><div class="ttdeci">std::string getColoredName()</div><div class="ttdef"><b>Definition:</b> Player.cpp:22</div></div>
+<div class="ttc" id="aclass_player_html_a3744a191c270a1b9edeb47c1b37e1d10"><div class="ttname"><a href="class_player.html#a3744a191c270a1b9edeb47c1b37e1d10">Player::printColor</a></div><div class="ttdeci">std::string printColor</div><div class="ttdef"><b>Definition:</b> Player.h:17</div></div>
+<div class="ttc" id="aclass_player_html_a3b9eb955669297073700bc13b27d27ff"><div class="ttname"><a href="class_player.html#a3b9eb955669297073700bc13b27d27ff">Player::drawCard</a></div><div class="ttdeci">bool drawCard()</div><div class="ttdoc">piocher une carte</div><div class="ttdef"><b>Definition:</b> Player.cpp:38</div></div>
+<div class="ttc" id="aclass_player_html_a3d6549590fb8e154951c873d6bfb412e"><div class="ttname"><a href="class_player.html#a3d6549590fb8e154951c873d6bfb412e">Player::discardCard</a></div><div class="ttdeci">void discardCard(Card *c)</div><div class="ttdoc">envoyer une carte au cimetière</div><div class="ttdef"><b>Definition:</b> Player.cpp:62</div></div>
+<div class="ttc" id="aclass_player_html_a4d88b5f1bd0032e70ba7016f8a547c0a"><div class="ttname"><a href="class_player.html#a4d88b5f1bd0032e70ba7016f8a547c0a">Player::Player</a></div><div class="ttdeci">Player(std::string, Deck)</div><div class="ttdoc">Constructeur d'un joueur.</div><div class="ttdef"><b>Definition:</b> Player.cpp:11</div></div>
+<div class="ttc" id="aclass_player_html_a5998536f01a94a585937c81f3c5ab4bb"><div class="ttname"><a href="class_player.html#a5998536f01a94a585937c81f3c5ab4bb">Player::baseHp</a></div><div class="ttdeci">static int baseHp</div><div class="ttdef"><b>Definition:</b> Player.h:20</div></div>
+<div class="ttc" id="aclass_player_html_a749d2c00e1fe0f5c2746f7505a58c062"><div class="ttname"><a href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">Player::~Player</a></div><div class="ttdeci">~Player()</div><div class="ttdef"><b>Definition:</b> Player.h:27</div></div>
+<div class="ttc" id="aclass_player_html_a8a6eab4cd07b6c75151360ccfb4ad9a1"><div class="ttname"><a href="class_player.html#a8a6eab4cd07b6c75151360ccfb4ad9a1">Player::cards</a></div><div class="ttdeci">Deck cards</div><div class="ttdef"><b>Definition:</b> Player.h:21</div></div>
+<div class="ttc" id="aclass_player_html_a8c12eeee6d1b4718dd61ebf21750ae30"><div class="ttname"><a href="class_player.html#a8c12eeee6d1b4718dd61ebf21750ae30">Player::getAttackCards</a></div><div class="ttdeci">std::vector&lt; Card * &gt; getAttackCards()</div><div class="ttdoc">ses cartes qui peuvent attaquer</div><div class="ttdef"><b>Definition:</b> Player.cpp:50</div></div>
+<div class="ttc" id="aclass_player_html_a92c5a1c23490fdbe632aae02e4839454"><div class="ttname"><a href="class_player.html#a92c5a1c23490fdbe632aae02e4839454">Player::setPrintColor</a></div><div class="ttdeci">void setPrintColor(std::string color)</div><div class="ttdoc">set la coleur du joueur</div><div class="ttdef"><b>Definition:</b> Player.cpp:26</div></div>
+<div class="ttc" id="aclass_player_html_a9c0c126f73f78e21fa3473ba42e1d271"><div class="ttname"><a href="class_player.html#a9c0c126f73f78e21fa3473ba42e1d271">Player::isAlive</a></div><div class="ttdeci">bool isAlive</div><div class="ttdef"><b>Definition:</b> Player.h:18</div></div>
+<div class="ttc" id="aclass_player_html_aa016a6401d45ac510fd71c5629b0a707"><div class="ttname"><a href="class_player.html#aa016a6401d45ac510fd71c5629b0a707">Player::playCard</a></div><div class="ttdeci">void playCard(Card *c)</div><div class="ttdef"><b>Definition:</b> Player.cpp:58</div></div>
+<div class="ttc" id="aclass_player_html_aa6479f194f9bb44b09adaf3b04a5594d"><div class="ttname"><a href="class_player.html#aa6479f194f9bb44b09adaf3b04a5594d">Player::getHp</a></div><div class="ttdeci">int getHp()</div><div class="ttdoc">récuperer les hp du joueurs</div><div class="ttdef"><b>Definition:</b> Player.cpp:30</div></div>
+<div class="ttc" id="aclass_player_html_aa87746929fad46316b1452dd0d9b2b36"><div class="ttname"><a href="class_player.html#aa87746929fad46316b1452dd0d9b2b36">Player::disengageCards</a></div><div class="ttdeci">void disengageCards()</div><div class="ttdoc">désengager ses cartes</div><div class="ttdef"><b>Definition:</b> Player.cpp:42</div></div>
+<div class="ttc" id="aclass_player_html_aabe0a76c0767e94328d75a32963b4de6"><div class="ttname"><a href="class_player.html#aabe0a76c0767e94328d75a32963b4de6">Player::getDefenseCards</a></div><div class="ttdeci">std::vector&lt; Card * &gt; getDefenseCards()</div><div class="ttdoc">ses cartes qui peuvent défendre</div><div class="ttdef"><b>Definition:</b> Player.cpp:54</div></div>
+<div class="ttc" id="aclass_player_html_ae0f72a15d6130e0469251bc1543cc23a"><div class="ttname"><a href="class_player.html#ae0f72a15d6130e0469251bc1543cc23a">Player::getPlayableCards</a></div><div class="ttdeci">std::vector&lt; Card * &gt; getPlayableCards()</div><div class="ttdoc">ses cartes jouables</div><div class="ttdef"><b>Definition:</b> Player.cpp:46</div></div>
+<div class="ttc" id="aclass_player_html_af1aa472885d589516f483e26e786600e"><div class="ttname"><a href="class_player.html#af1aa472885d589516f483e26e786600e">Player::getName</a></div><div class="ttdeci">std::string getName()</div><div class="ttdoc">Set le nom du joueurs.</div><div class="ttdef"><b>Definition:</b> Player.cpp:18</div></div>
+<div class="ttc" id="aclass_player_html_af88a832f4ef7856ac595ee8dfeff9001"><div class="ttname"><a href="class_player.html#af88a832f4ef7856ac595ee8dfeff9001">Player::currentHp</a></div><div class="ttdeci">int currentHp</div><div class="ttdef"><b>Definition:</b> Player.h:19</div></div>
+<div class="ttc" id="aclass_player_html_af9c920fabaafdeb7961a645315b521ff"><div class="ttname"><a href="class_player.html#af9c920fabaafdeb7961a645315b521ff">Player::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> Player.h:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_494333d89aed4c0f17b9a3f710ec4cb2.html">header</a></li><li class="navelem"><a class="el" href="_player_8h.html">Player.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

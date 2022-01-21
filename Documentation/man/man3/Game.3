@@ -1,0 +1,73 @@
+.TH "Game" 3 "Vendredi 21 Janvier 2022" "Magic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Game
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Game\&.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBGame\fP ()"
+.br
+.ti -1c
+.RI "void \fBplayGame\fP ()"
+.br
+.RI "Lance la partie\&. "
+.in -1c
+.SS "Attributs publics statiques"
+
+.in +1c
+.ti -1c
+.RI "static int \fBMAX_CARDS_IN_HAND\fP = 7"
+.br
+.RI "Nombre de carte maximum dans la main\&. "
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP \fBp1\fP"
+.br
+.ti -1c
+.RI "\fBPlayer\fP \fBp2\fP"
+.br
+.ti -1c
+.RI "\fBPlayer\fP * \fBplayerTurn\fP"
+.br
+.ti -1c
+.RI "int \fBround\fP"
+.br
+.in -1c
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Game::Game ()"
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void Game::playGame ()"
+
+.PP
+Lance la partie\&. 
+.SH "Documentation des données membres"
+.PP 
+.SS "int Game::MAX_CARDS_IN_HAND = 7\fC [static]\fP"
+
+.PP
+Nombre de carte maximum dans la main\&. 
+.SS "\fBPlayer\fP Game::p1\fC [protected]\fP"
+
+.SS "\fBPlayer\fP Game::p2\fC [protected]\fP"
+
+.SS "\fBPlayer\fP* Game::playerTurn\fC [protected]\fP"
+
+.SS "int Game::round\fC [protected]\fP"
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Magic à partir du code source\&.

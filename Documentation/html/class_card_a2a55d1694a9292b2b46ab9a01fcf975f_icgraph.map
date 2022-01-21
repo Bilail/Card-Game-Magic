@@ -1,0 +1,5 @@
+<map id="Card::manaToString" name="Card::manaToString">
+<area shape="rect" id="node1" title="Cout en terrain en string." alt="" coords="208,31,345,57"/>
+<area shape="rect" id="node2" href="$class_creature_card.html#a74c0d3710cac9fd4bd33d125f762fe7b" title="Affichage." alt="" coords="17,5,148,32"/>
+<area shape="rect" id="node3" href="$class_creature_card.html#ae497df8f788c28bd962ae95dda29450f" title="Affichage par ligne." alt="" coords="5,56,160,83"/>
+</map>

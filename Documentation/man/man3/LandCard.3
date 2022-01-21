@@ -1,0 +1,74 @@
+.TH "LandCard" 3 "Vendredi 21 Janvier 2022" "Magic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LandCard
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LandCard\&.h>\fP
+.PP
+Est dérivée de \fBCard\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBLandCard\fP (std::string nm, std::string clr)"
+.br
+.RI "Constructeur d'une carte terrain\&. "
+.ti -1c
+.RI "\fB~LandCard\fP ()"
+.br
+.ti -1c
+.RI "void \fBprint\fP ()"
+.br
+.RI "Fonction d'affichage\&. "
+.ti -1c
+.RI "void \fBprintLine\fP (int line)"
+.br
+.RI "Fonction d'affichage par ligne Pour l'affiche en ligne et non pas en colonne\&. "
+.in -1c
+.SS "Membres hérités additionnels"
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "LandCard::LandCard (std::string nm, std::string clr)"
+
+.PP
+Constructeur d'une carte terrain\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fInom\fP 
+.br
+\fIcouleur\fP 
+.RE
+.PP
+
+.SS "LandCard::~LandCard ()\fC [inline]\fP"
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void LandCard::print ()\fC [virtual]\fP"
+
+.PP
+Fonction d'affichage\&. 
+.PP
+Réimplémentée à partir de \fBCard\fP\&.
+.SS "void LandCard::printLine (int line)\fC [virtual]\fP"
+
+.PP
+Fonction d'affichage par ligne Pour l'affiche en ligne et non pas en colonne\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIline\fP 
+.RE
+.PP
+
+.PP
+Réimplémentée à partir de \fBCard\fP\&.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Magic à partir du code source\&.

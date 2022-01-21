@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Magic: Référence du fichier Source/dependance/SFML/examples/island/Island.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo magic.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Magic
+   </div>
+   <div id="projectbrief">Jeux de carte Magic - Polytech</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_2ba063dce4211fa360701dc852d294ac.html">dependance</a></li><li class="navelem"><a class="el" href="dir_24ede21236d72fcb44c6022cb1b1ecd9.html">SFML</a></li><li class="navelem"><a class="el" href="dir_40cde96564cb8c4f2231c73f3c8067ad.html">examples</a></li><li class="navelem"><a class="el" href="dir_f6efb1b131660cb39391c1de2942d53d.html">island</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier Island.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;stb_perlin.h&quot;</code><br />
+<code>#include &lt;<a class="el" href="_graphics_8hpp_source.html">SFML/Graphics.hpp</a>&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;deque&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad63bc7e124b44adf37ea9e97fa1bf581"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#ad63bc7e124b44adf37ea9e97fa1bf581">STB_PERLIN_IMPLEMENTATION</a></td></tr>
+<tr class="separator:ad63bc7e124b44adf37ea9e97fa1bf581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a58030615808181acc26b9ea47e0405ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#a58030615808181acc26b9ea47e0405ef">threadFunction</a> ()</td></tr>
+<tr class="separator:a58030615808181acc26b9ea47e0405ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad56ee108fea7db0c2935830adb8d8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#aaad56ee108fea7db0c2935830adb8d8c">generateTerrain</a> (<a class="el" href="classsf_1_1_vertex.html">sf::Vertex</a> *vertexBuffer)</td></tr>
+<tr class="separator:aaad56ee108fea7db0c2935830adb8d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef9257df379ba9fe79102d14dee5cdf9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#aef9257df379ba9fe79102d14dee5cdf9">getElevation</a> (float x, float y)</td></tr>
+<tr class="separator:aef9257df379ba9fe79102d14dee5cdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c20a2787406000d031098087cd6744"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#a30c20a2787406000d031098087cd6744">getMoisture</a> (float x, float y)</td></tr>
+<tr class="separator:a30c20a2787406000d031098087cd6744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a1015eb90d87c84aceccaf36191cd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsf_1_1_color.html">sf::Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#a65a1015eb90d87c84aceccaf36191cd7">getLowlandsTerrainColor</a> (float moisture)</td></tr>
+<tr class="separator:a65a1015eb90d87c84aceccaf36191cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca3410461a3c4cebfd5542cc20e1b18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsf_1_1_color.html">sf::Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#a6ca3410461a3c4cebfd5542cc20e1b18">getHighlandsTerrainColor</a> (float elevation, float moisture)</td></tr>
+<tr class="separator:a6ca3410461a3c4cebfd5542cc20e1b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44ec648e02c291ec5ed3779cbdbd9c92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsf_1_1_color.html">sf::Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#a44ec648e02c291ec5ed3779cbdbd9c92">getSnowcapTerrainColor</a> (float elevation, float moisture)</td></tr>
+<tr class="separator:a44ec648e02c291ec5ed3779cbdbd9c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad42f0af617e224034fd49c16c47927"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsf_1_1_color.html">sf::Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#a1ad42f0af617e224034fd49c16c47927">getTerrainColor</a> (float elevation, float moisture)</td></tr>
+<tr class="separator:a1ad42f0af617e224034fd49c16c47927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15541afd9ffe894778a3cc084cec16d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesf.html#acf03098c2577b869e2fa6836cc48f1a0">sf::Vector2f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#a15541afd9ffe894778a3cc084cec16d6">computeNormal</a> (int x, int y, float left, float right, float bottom, float top)</td></tr>
+<tr class="separator:a15541afd9ffe894778a3cc084cec16d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae562e6fdcd2292b778c8b88369c9290d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_island_8cpp.html#ae562e6fdcd2292b778c8b88369c9290d">processWorkItem</a> (std::vector&lt; <a class="el" href="classsf_1_1_vertex.html">sf::Vertex</a> &gt; &amp;vertices, const WorkItem &amp;workItem)</td></tr>
+<tr class="separator:ae562e6fdcd2292b778c8b88369c9290d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="ad63bc7e124b44adf37ea9e97fa1bf581" name="ad63bc7e124b44adf37ea9e97fa1bf581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad63bc7e124b44adf37ea9e97fa1bf581">&#9670;&nbsp;</a></span>STB_PERLIN_IMPLEMENTATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STB_PERLIN_IMPLEMENTATION</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a15541afd9ffe894778a3cc084cec16d6" name="a15541afd9ffe894778a3cc084cec16d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15541afd9ffe894778a3cc084cec16d6">&#9670;&nbsp;</a></span>computeNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacesf.html#acf03098c2577b869e2fa6836cc48f1a0">sf::Vector2f</a> computeNormal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>top</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Compute a compressed representation of the surface normal based on the given coordinates, and the elevation of the 4 adjacent neighbours. </p>
+
+</div>
+</div>
+<a id="aaad56ee108fea7db0c2935830adb8d8c" name="aaad56ee108fea7db0c2935830adb8d8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad56ee108fea7db0c2935830adb8d8c">&#9670;&nbsp;</a></span>generateTerrain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generateTerrain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsf_1_1_vertex.html">sf::Vertex</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Terrain generation entry point. This queues up the generation work items which the worker threads dequeue and process. </p>
+
+</div>
+</div>
+<a id="aef9257df379ba9fe79102d14dee5cdf9" name="aef9257df379ba9fe79102d14dee5cdf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef9257df379ba9fe79102d14dee5cdf9">&#9670;&nbsp;</a></span>getElevation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getElevation </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get the terrain elevation at the given coordinates. </p>
+
+</div>
+</div>
+<a id="a6ca3410461a3c4cebfd5542cc20e1b18" name="a6ca3410461a3c4cebfd5542cc20e1b18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca3410461a3c4cebfd5542cc20e1b18">&#9670;&nbsp;</a></span>getHighlandsTerrainColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsf_1_1_color.html">sf::Color</a> getHighlandsTerrainColor </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>elevation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>moisture</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get the highlands terrain color for the given elevation and moisture. </p>
+
+</div>
+</div>
+<a id="a65a1015eb90d87c84aceccaf36191cd7" name="a65a1015eb90d87c84aceccaf36191cd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a1015eb90d87c84aceccaf36191cd7">&#9670;&nbsp;</a></span>getLowlandsTerrainColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsf_1_1_color.html">sf::Color</a> getLowlandsTerrainColor </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>moisture</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get the lowlands terrain color for the given moisture. </p>
+
+</div>
+</div>
+<a id="a30c20a2787406000d031098087cd6744" name="a30c20a2787406000d031098087cd6744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30c20a2787406000d031098087cd6744">&#9670;&nbsp;</a></span>getMoisture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getMoisture </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get the terrain moisture at the given coordinates. </p>
+
+</div>
+</div>
+<a id="a44ec648e02c291ec5ed3779cbdbd9c92" name="a44ec648e02c291ec5ed3779cbdbd9c92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ec648e02c291ec5ed3779cbdbd9c92">&#9670;&nbsp;</a></span>getSnowcapTerrainColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsf_1_1_color.html">sf::Color</a> getSnowcapTerrainColor </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>elevation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>moisture</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get the snowcap terrain color for the given elevation and moisture. </p>
+
+</div>
+</div>
+<a id="a1ad42f0af617e224034fd49c16c47927" name="a1ad42f0af617e224034fd49c16c47927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ad42f0af617e224034fd49c16c47927">&#9670;&nbsp;</a></span>getTerrainColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsf_1_1_color.html">sf::Color</a> getTerrainColor </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>elevation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>moisture</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Get the terrain color for the given elevation and moisture. </p>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Entry point of application</p>
+<dl class="section return"><dt>Renvoie</dt><dd>Application exit code </dd></dl>
+
+</div>
+</div>
+<a id="ae562e6fdcd2292b778c8b88369c9290d" name="ae562e6fdcd2292b778c8b88369c9290d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae562e6fdcd2292b778c8b88369c9290d">&#9670;&nbsp;</a></span>processWorkItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processWorkItem </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classsf_1_1_vertex.html">sf::Vertex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WorkItem &amp;&#160;</td>
+          <td class="paramname"><em>workItem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Process a terrain generation work item. Use the vector of vertices as scratch memory and upload the data to the vertex buffer when done. </p>
+
+</div>
+</div>
+<a id="a58030615808181acc26b9ea47e0405ef" name="a58030615808181acc26b9ea47e0405ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58030615808181acc26b9ea47e0405ef">&#9670;&nbsp;</a></span>threadFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void threadFunction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Worker thread entry point. We use a thread pool to avoid the heavy cost of constantly recreating and starting new threads whenever we need to regenerate the terrain. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

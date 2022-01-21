@@ -1,0 +1,4 @@
+<map id="Card::engage" name="Card::engage">
+<area shape="rect" id="node1" title="Engager une carte." alt="" coords="196,5,295,32"/>
+<area shape="rect" id="node2" href="$class_creature_card.html#af60802e4cf9f07e3e05330c5b774bdb0" title=" " alt="" coords="5,5,148,32"/>
+</map>

@@ -1,0 +1,180 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Index hiérarchique}{1}{}%
+\contentsline {section}{\numberline {1.1}Hiérarchie des classes}{1}{}%
+\contentsline {chapter}{\numberline {2}Index des classes}{3}{}%
+\contentsline {section}{\numberline {2.1}Liste des classes}{3}{}%
+\contentsline {chapter}{\numberline {3}Index des fichiers}{5}{}%
+\contentsline {section}{\numberline {3.1}Liste des fichiers}{5}{}%
+\contentsline {chapter}{\numberline {4}Documentation des classes}{7}{}%
+\contentsline {section}{\numberline {4.1}Référence de la classe Card}{7}{}%
+\contentsline {subsection}{\numberline {4.1.1}Documentation des constructeurs et destructeur}{10}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Card()}{10}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}$\sim $Card()}{11}{}%
+\contentsline {subsection}{\numberline {4.1.2}Documentation des fonctions membres}{11}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}disengage()}{11}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}engage()}{11}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}getColor()}{12}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}getColoredName()}{12}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}getIsDiscarded()}{12}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}getIsEngaged()}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.7}getManaCost()}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.8}getName()}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.9}isStillOperational()}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.10}manaToString()}{14}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.11}print()\hspace {0.1cm}{\footnotesize \ttfamilyFB [1/2]}}{14}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.12}print()\hspace {0.1cm}{\footnotesize \ttfamilyFB [2/2]}}{15}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.13}printLine()}{15}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.14}setColor()}{16}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.15}setIsDiscarded()}{16}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.16}setManaCost()}{16}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.17}setName()}{16}{}%
+\contentsline {subsection}{\numberline {4.1.3}Documentation des données membres}{17}{}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}color}{17}{}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}ColorCode}{17}{}%
+\contentsline {subsubsection}{\numberline {4.1.3.3}isDiscarded}{17}{}%
+\contentsline {subsubsection}{\numberline {4.1.3.4}isEngaged}{17}{}%
+\contentsline {subsubsection}{\numberline {4.1.3.5}manaCost}{17}{}%
+\contentsline {subsubsection}{\numberline {4.1.3.6}name}{17}{}%
+\contentsline {subsubsection}{\numberline {4.1.3.7}typeOfCard}{17}{}%
+\contentsline {section}{\numberline {4.2}Référence de la classe Creature\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Card}{18}{}%
+\contentsline {subsection}{\numberline {4.2.1}Documentation des constructeurs et destructeur}{20}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}CreatureCard()}{20}{}%
+\contentsline {subsection}{\numberline {4.2.2}Documentation des fonctions membres}{20}{}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}attack()}{21}{}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}getAttackPower()}{21}{}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}getHp()}{21}{}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}invocate()}{21}{}%
+\contentsline {subsubsection}{\numberline {4.2.2.5}isFirstTurn()}{22}{}%
+\contentsline {subsubsection}{\numberline {4.2.2.6}print()}{22}{}%
+\contentsline {subsubsection}{\numberline {4.2.2.7}printLine()}{22}{}%
+\contentsline {subsubsection}{\numberline {4.2.2.8}setAttackPower()}{23}{}%
+\contentsline {subsubsection}{\numberline {4.2.2.9}setHp()}{23}{}%
+\contentsline {subsection}{\numberline {4.2.3}Documentation des données membres}{23}{}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}attackPower}{23}{}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}defaultHp}{24}{}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}firstTurn}{24}{}%
+\contentsline {subsubsection}{\numberline {4.2.3.4}hp}{24}{}%
+\contentsline {section}{\numberline {4.3}Référence de la classe Deck}{24}{}%
+\contentsline {subsection}{\numberline {4.3.1}Documentation des constructeurs et destructeur}{26}{}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Deck()\hspace {0.1cm}{\footnotesize \ttfamilyFB [1/2]}}{26}{}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}Deck()\hspace {0.1cm}{\footnotesize \ttfamilyFB [2/2]}}{26}{}%
+\contentsline {subsubsection}{\numberline {4.3.1.3}$\sim $Deck()}{27}{}%
+\contentsline {subsection}{\numberline {4.3.2}Documentation des fonctions membres}{27}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}discardCard()}{27}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}disengageCards()}{28}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}drawCard()}{28}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}generateRandomDeck()}{28}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.5}getAttackCards()}{29}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.6}getDefenseCards()}{29}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.7}getPlayableCards()}{30}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.8}JsonToDeck()}{30}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.9}playCard()}{31}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.10}printInPlayCards()}{32}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.11}printLibrary()}{32}{}%
+\contentsline {subsection}{\numberline {4.3.3}Documentation des données membres}{32}{}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}DECK\_SIZE}{32}{}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}disCards}{32}{}%
+\contentsline {subsubsection}{\numberline {4.3.3.3}handCards}{33}{}%
+\contentsline {subsubsection}{\numberline {4.3.3.4}inPlayCards}{33}{}%
+\contentsline {subsubsection}{\numberline {4.3.3.5}library}{33}{}%
+\contentsline {section}{\numberline {4.4}Référence de la classe Game}{33}{}%
+\contentsline {subsection}{\numberline {4.4.1}Documentation des constructeurs et destructeur}{35}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Game()}{35}{}%
+\contentsline {subsection}{\numberline {4.4.2}Documentation des fonctions membres}{35}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}playGame()}{35}{}%
+\contentsline {subsection}{\numberline {4.4.3}Documentation des données membres}{36}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}MAX\_CARDS\_IN\_HAND}{36}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}p1}{36}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.3}p2}{36}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.4}playerTurn}{36}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.5}round}{36}{}%
+\contentsline {section}{\numberline {4.5}Référence de la classe Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cards}{37}{}%
+\contentsline {subsection}{\numberline {4.5.1}Documentation des constructeurs et destructeur}{37}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}GameCards()}{37}{}%
+\contentsline {subsection}{\numberline {4.5.2}Documentation des fonctions membres}{37}{}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}getCreatures()}{38}{}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}getLands()}{38}{}%
+\contentsline {section}{\numberline {4.6}Référence de la classe Land\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Card}{38}{}%
+\contentsline {subsection}{\numberline {4.6.1}Documentation des constructeurs et destructeur}{41}{}%
+\contentsline {subsubsection}{\numberline {4.6.1.1}LandCard()}{41}{}%
+\contentsline {subsubsection}{\numberline {4.6.1.2}$\sim $LandCard()}{41}{}%
+\contentsline {subsection}{\numberline {4.6.2}Documentation des fonctions membres}{41}{}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}print()}{41}{}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}printLine()}{42}{}%
+\contentsline {section}{\numberline {4.7}Référence de la classe Player}{42}{}%
+\contentsline {subsection}{\numberline {4.7.1}Documentation des constructeurs et destructeur}{44}{}%
+\contentsline {subsubsection}{\numberline {4.7.1.1}Player()}{44}{}%
+\contentsline {subsubsection}{\numberline {4.7.1.2}$\sim $Player()}{44}{}%
+\contentsline {subsection}{\numberline {4.7.2}Documentation des fonctions membres}{45}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}discardCard()}{45}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.2}disengageCards()}{45}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.3}drawCard()}{46}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.4}getAttackCards()}{47}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.5}getColoredName()}{47}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.6}getDefenseCards()}{48}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.7}getHp()}{48}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.8}getName()}{49}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.9}getPlayableCards()}{49}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.10}playCard()}{50}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.11}setHp()}{50}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.12}setPrintColor()}{50}{}%
+\contentsline {subsection}{\numberline {4.7.3}Documentation des données membres}{51}{}%
+\contentsline {subsubsection}{\numberline {4.7.3.1}baseHp}{51}{}%
+\contentsline {subsubsection}{\numberline {4.7.3.2}cards}{51}{}%
+\contentsline {subsubsection}{\numberline {4.7.3.3}currentHp}{51}{}%
+\contentsline {subsubsection}{\numberline {4.7.3.4}isAlive}{51}{}%
+\contentsline {subsubsection}{\numberline {4.7.3.5}name}{51}{}%
+\contentsline {subsubsection}{\numberline {4.7.3.6}printColor}{51}{}%
+\contentsline {section}{\numberline {4.8}Référence de la classe Str\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Color}{52}{}%
+\contentsline {subsection}{\numberline {4.8.1}Documentation des fonctions membres}{52}{}%
+\contentsline {subsubsection}{\numberline {4.8.1.1}blue()}{52}{}%
+\contentsline {subsubsection}{\numberline {4.8.1.2}cyan()}{53}{}%
+\contentsline {subsubsection}{\numberline {4.8.1.3}green()}{53}{}%
+\contentsline {subsubsection}{\numberline {4.8.1.4}magenta()}{53}{}%
+\contentsline {subsubsection}{\numberline {4.8.1.5}print()}{53}{}%
+\contentsline {subsubsection}{\numberline {4.8.1.6}red()}{54}{}%
+\contentsline {subsubsection}{\numberline {4.8.1.7}yellow()}{54}{}%
+\contentsline {chapter}{\numberline {5}Documentation des fichiers}{55}{}%
+\contentsline {section}{\numberline {5.1}Référence du fichier Source/data/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Json.cpp}{55}{}%
+\contentsline {subsection}{\numberline {5.1.1}Documentation des définitions de type}{55}{}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}json}{55}{}%
+\contentsline {section}{\numberline {5.2}Référence du fichier Source/header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Card.h}{56}{}%
+\contentsline {section}{\numberline {5.3}Card.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{56}{}%
+\contentsline {section}{\numberline {5.4}Référence du fichier Source/header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creature\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Card.h}{57}{}%
+\contentsline {section}{\numberline {5.5}Creature\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Card.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{58}{}%
+\contentsline {section}{\numberline {5.6}Référence du fichier Source/header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Deck.h}{58}{}%
+\contentsline {section}{\numberline {5.7}Deck.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{59}{}%
+\contentsline {section}{\numberline {5.8}Référence du fichier Source/header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game.h}{60}{}%
+\contentsline {section}{\numberline {5.9}Game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{61}{}%
+\contentsline {section}{\numberline {5.10}Référence du fichier Source/header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cards.h}{61}{}%
+\contentsline {section}{\numberline {5.11}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cards.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{62}{}%
+\contentsline {section}{\numberline {5.12}Référence du fichier Source/header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Land\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Card.h}{63}{}%
+\contentsline {section}{\numberline {5.13}Land\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Card.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{64}{}%
+\contentsline {section}{\numberline {5.14}Référence du fichier Source/header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player.h}{64}{}%
+\contentsline {section}{\numberline {5.15}Player.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{65}{}%
+\contentsline {section}{\numberline {5.16}Référence du fichier Source/header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Str\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Color.h}{66}{}%
+\contentsline {section}{\numberline {5.17}Str\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Color.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{66}{}%
+\contentsline {section}{\numberline {5.18}Référence du fichier Source/header/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Util.h}{67}{}%
+\contentsline {subsection}{\numberline {5.18.1}Documentation des fonctions}{67}{}%
+\contentsline {subsubsection}{\numberline {5.18.1.1}getIndex()}{68}{}%
+\contentsline {subsubsection}{\numberline {5.18.1.2}instanceof()}{68}{}%
+\contentsline {section}{\numberline {5.19}Util.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{68}{}%
+\contentsline {section}{\numberline {5.20}Référence du fichier Source/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Card.cpp}{69}{}%
+\contentsline {section}{\numberline {5.21}Référence du fichier Source/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creature\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Card.cpp}{69}{}%
+\contentsline {section}{\numberline {5.22}Référence du fichier Source/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Deck.cpp}{70}{}%
+\contentsline {subsection}{\numberline {5.22.1}Documentation des définitions de type}{71}{}%
+\contentsline {subsubsection}{\numberline {5.22.1.1}json}{71}{}%
+\contentsline {section}{\numberline {5.23}Référence du fichier Source/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game.cpp}{71}{}%
+\contentsline {subsection}{\numberline {5.23.1}Documentation des fonctions}{71}{}%
+\contentsline {subsubsection}{\numberline {5.23.1.1}centerString()}{72}{}%
+\contentsline {section}{\numberline {5.24}Référence du fichier Source/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cards.cpp}{72}{}%
+\contentsline {section}{\numberline {5.25}Référence du fichier Source/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Land\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Card.cpp}{73}{}%
+\contentsline {section}{\numberline {5.26}Référence du fichier Source/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Main.cpp}{73}{}%
+\contentsline {subsection}{\numberline {5.26.1}Documentation des définitions de type}{74}{}%
+\contentsline {subsubsection}{\numberline {5.26.1.1}json}{74}{}%
+\contentsline {subsection}{\numberline {5.26.2}Documentation des fonctions}{74}{}%
+\contentsline {subsubsection}{\numberline {5.26.2.1}main()}{75}{}%
+\contentsline {section}{\numberline {5.27}Référence du fichier Source/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player.cpp}{75}{}%
+\contentsline {section}{\numberline {5.28}Référence du fichier Source/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Str\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Color.cpp}{76}{}%
+\contentsline {chapter}{Index}{77}{}%

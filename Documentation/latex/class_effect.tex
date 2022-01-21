@@ -1,0 +1,117 @@
+\hypertarget{class_effect}{}\doxysection{Référence de la classe Effect}
+\label{class_effect}\index{Effect@{Effect}}
+
+
+{\ttfamily \#include $<$Effect.\+hpp$>$}
+
+Graphe d\textquotesingle{}héritage de Effect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_effect}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_effect_ab0f471df484d3ef351b704fef39a7072}{$\sim$\+Effect}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{class_effect_a409291db11c835d76ee94a2abfc90983}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{class_effect_a7f926c8c6b21664461745f4c62cf7d0b}{load}} ()
+\item 
+void \mbox{\hyperlink{class_effect_a857a5b45439813ecc71e8e931c98f6a2}{update}} (float time, float x, float y)
+\item 
+void \mbox{\hyperlink{class_effect_a6a3a393e127581c7f84e1278b5be0438}{draw}} (\mbox{\hyperlink{classsf_1_1_render_target}{sf\+::\+Render\+Target}} \&target, \mbox{\hyperlink{classsf_1_1_render_states}{sf\+::\+Render\+States}} states) const
+\begin{DoxyCompactList}\small\item\em Draw the object to a render target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_effect_a2a4eaf667af8ea6498b77fe532c5a43d}{set\+Font}} (const \mbox{\hyperlink{classsf_1_1_font}{sf\+::\+Font}} \&font)
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_effect_a6c1c4ec803a1aa5dcbd34a6cf92fd8d5}{Effect}} (const std\+::string \&name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres protégées statiques}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{classsf_1_1_font}{sf\+::\+Font}} \& \mbox{\hyperlink{class_effect_aa66af317229f52d12619b7e720c500d3}{get\+Font}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_effect_ab0f471df484d3ef351b704fef39a7072}\label{class_effect_ab0f471df484d3ef351b704fef39a7072}} 
+\index{Effect@{Effect}!````~Effect@{$\sim$Effect}}
+\index{````~Effect@{$\sim$Effect}!Effect@{Effect}}
+\doxysubsubsection{\texorpdfstring{$\sim$Effect()}{~Effect()}}
+{\footnotesize\ttfamily virtual Effect\+::$\sim$\+Effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_effect_a6c1c4ec803a1aa5dcbd34a6cf92fd8d5}\label{class_effect_a6c1c4ec803a1aa5dcbd34a6cf92fd8d5}} 
+\index{Effect@{Effect}!Effect@{Effect}}
+\index{Effect@{Effect}!Effect@{Effect}}
+\doxysubsubsection{\texorpdfstring{Effect()}{Effect()}}
+{\footnotesize\ttfamily Effect\+::\+Effect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_effect_a6a3a393e127581c7f84e1278b5be0438}\label{class_effect_a6a3a393e127581c7f84e1278b5be0438}} 
+\index{Effect@{Effect}!draw@{draw}}
+\index{draw@{draw}!Effect@{Effect}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Effect\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_render_target}{sf\+::\+Render\+Target}} \&}]{target,  }\item[{\mbox{\hyperlink{classsf_1_1_render_states}{sf\+::\+Render\+States}}}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draw the object to a render target. 
+
+This is a pure virtual function that has to be implemented by the derived class to define how the drawable should be drawn.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em target} & Render target to draw to \\
+\hline
+{\em states} & Current render states \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{classsf_1_1_drawable_a90d2c88bba9b035a0844eccb380ef631}{sf\+::\+Drawable}}.
+
+\mbox{\Hypertarget{class_effect_aa66af317229f52d12619b7e720c500d3}\label{class_effect_aa66af317229f52d12619b7e720c500d3}} 
+\index{Effect@{Effect}!getFont@{getFont}}
+\index{getFont@{getFont}!Effect@{Effect}}
+\doxysubsubsection{\texorpdfstring{getFont()}{getFont()}}
+{\footnotesize\ttfamily static const \mbox{\hyperlink{classsf_1_1_font}{sf\+::\+Font}} \& Effect\+::get\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_effect_a409291db11c835d76ee94a2abfc90983}\label{class_effect_a409291db11c835d76ee94a2abfc90983}} 
+\index{Effect@{Effect}!getName@{getName}}
+\index{getName@{getName}!Effect@{Effect}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& Effect\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_effect_a7f926c8c6b21664461745f4c62cf7d0b}\label{class_effect_a7f926c8c6b21664461745f4c62cf7d0b}} 
+\index{Effect@{Effect}!load@{load}}
+\index{load@{load}!Effect@{Effect}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Effect\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_effect_a2a4eaf667af8ea6498b77fe532c5a43d}\label{class_effect_a2a4eaf667af8ea6498b77fe532c5a43d}} 
+\index{Effect@{Effect}!setFont@{setFont}}
+\index{setFont@{setFont}!Effect@{Effect}}
+\doxysubsubsection{\texorpdfstring{setFont()}{setFont()}}
+{\footnotesize\ttfamily static void Effect\+::set\+Font (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_font}{sf\+::\+Font}} \&}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_effect_a857a5b45439813ecc71e8e931c98f6a2}\label{class_effect_a857a5b45439813ecc71e8e931c98f6a2}} 
+\index{Effect@{Effect}!update@{update}}
+\index{update@{update}!Effect@{Effect}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Effect\+::update (\begin{DoxyParamCaption}\item[{float}]{time,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Source/dependance/\+SFML/examples/shader/\mbox{\hyperlink{_effect_8hpp}{Effect.\+hpp}}\item 
+Source/dependance/\+SFML/examples/shader/\mbox{\hyperlink{_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

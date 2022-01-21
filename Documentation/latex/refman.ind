@@ -1,0 +1,375 @@
+\begin{theindex}
+
+  \item {$\sim$Card}
+    \subitem {Card}, 11
+  \item {$\sim$Deck}
+    \subitem {Deck}, 27
+  \item {$\sim$LandCard}
+    \subitem {LandCard}, 41
+  \item {$\sim$Player}
+    \subitem {Player}, 44
+
+  \indexspace
+
+  \item {attack}
+    \subitem {CreatureCard}, 20
+  \item {attackPower}
+    \subitem {CreatureCard}, 23
+
+  \indexspace
+
+  \item {baseHp}
+    \subitem {Player}, 51
+  \item {blue}
+    \subitem {StrColor}, 52
+
+  \indexspace
+
+  \item {Card}, 7
+    \subitem {$\sim$Card}, 11
+    \subitem {Card}, 10
+    \subitem {color}, 17
+    \subitem {ColorCode}, 17
+    \subitem {disengage}, 11
+    \subitem {engage}, 11
+    \subitem {getColor}, 11
+    \subitem {getColoredName}, 12
+    \subitem {getIsDiscarded}, 12
+    \subitem {getIsEngaged}, 12
+    \subitem {getManaCost}, 13
+    \subitem {getName}, 13
+    \subitem {isDiscarded}, 17
+    \subitem {isEngaged}, 17
+    \subitem {isStillOperational}, 13
+    \subitem {manaCost}, 17
+    \subitem {manaToString}, 13
+    \subitem {name}, 17
+    \subitem {print}, 14, 15
+    \subitem {printLine}, 15
+    \subitem {setColor}, 15
+    \subitem {setIsDiscarded}, 16
+    \subitem {setManaCost}, 16
+    \subitem {setName}, 16
+    \subitem {typeOfCard}, 17
+  \item {cards}
+    \subitem {Player}, 51
+  \item {centerString}
+    \subitem {Game.cpp}, 71
+  \item {color}
+    \subitem {Card}, 17
+  \item {ColorCode}
+    \subitem {Card}, 17
+  \item {CreatureCard}, 18
+    \subitem {attack}, 20
+    \subitem {attackPower}, 23
+    \subitem {CreatureCard}, 20
+    \subitem {defaultHp}, 23
+    \subitem {firstTurn}, 24
+    \subitem {getAttackPower}, 21
+    \subitem {getHp}, 21
+    \subitem {hp}, 24
+    \subitem {invocate}, 21
+    \subitem {isFirstTurn}, 21
+    \subitem {print}, 22
+    \subitem {printLine}, 22
+    \subitem {setAttackPower}, 23
+    \subitem {setHp}, 23
+  \item {currentHp}
+    \subitem {Player}, 51
+  \item {cyan}
+    \subitem {StrColor}, 52
+
+  \indexspace
+
+  \item {Deck}, 24
+    \subitem {$\sim$Deck}, 27
+    \subitem {Deck}, 26
+    \subitem {DECK\_SIZE}, 32
+    \subitem {discardCard}, 27
+    \subitem {disCards}, 32
+    \subitem {disengageCards}, 28
+    \subitem {drawCard}, 28
+    \subitem {generateRandomDeck}, 28
+    \subitem {getAttackCards}, 28
+    \subitem {getDefenseCards}, 29
+    \subitem {getPlayableCards}, 29
+    \subitem {handCards}, 32
+    \subitem {inPlayCards}, 33
+    \subitem {JsonToDeck}, 30
+    \subitem {library}, 33
+    \subitem {playCard}, 31
+    \subitem {printInPlayCards}, 31
+    \subitem {printLibrary}, 32
+  \item {Deck.cpp}
+    \subitem {json}, 71
+  \item {DECK\_SIZE}
+    \subitem {Deck}, 32
+  \item {defaultHp}
+    \subitem {CreatureCard}, 23
+  \item {discardCard}
+    \subitem {Deck}, 27
+    \subitem {Player}, 45
+  \item {disCards}
+    \subitem {Deck}, 32
+  \item {disengage}
+    \subitem {Card}, 11
+  \item {disengageCards}
+    \subitem {Deck}, 28
+    \subitem {Player}, 45
+  \item {drawCard}
+    \subitem {Deck}, 28
+    \subitem {Player}, 46
+
+  \indexspace
+
+  \item {engage}
+    \subitem {Card}, 11
+
+  \indexspace
+
+  \item {firstTurn}
+    \subitem {CreatureCard}, 24
+
+  \indexspace
+
+  \item {Game}, 33
+    \subitem {Game}, 35
+    \subitem {MAX\_CARDS\_IN\_HAND}, 36
+    \subitem {p1}, 36
+    \subitem {p2}, 36
+    \subitem {playerTurn}, 36
+    \subitem {playGame}, 35
+    \subitem {round}, 36
+  \item {Game.cpp}
+    \subitem {centerString}, 71
+  \item {GameCards}, 37
+    \subitem {GameCards}, 37
+    \subitem {getCreatures}, 37
+    \subitem {getLands}, 38
+  \item {generateRandomDeck}
+    \subitem {Deck}, 28
+  \item {getAttackCards}
+    \subitem {Deck}, 28
+    \subitem {Player}, 46
+  \item {getAttackPower}
+    \subitem {CreatureCard}, 21
+  \item {getColor}
+    \subitem {Card}, 11
+  \item {getColoredName}
+    \subitem {Card}, 12
+    \subitem {Player}, 47
+  \item {getCreatures}
+    \subitem {GameCards}, 37
+  \item {getDefenseCards}
+    \subitem {Deck}, 29
+    \subitem {Player}, 47
+  \item {getHp}
+    \subitem {CreatureCard}, 21
+    \subitem {Player}, 48
+  \item {getIndex}
+    \subitem {Util.h}, 67
+  \item {getIsDiscarded}
+    \subitem {Card}, 12
+  \item {getIsEngaged}
+    \subitem {Card}, 12
+  \item {getLands}
+    \subitem {GameCards}, 38
+  \item {getManaCost}
+    \subitem {Card}, 13
+  \item {getName}
+    \subitem {Card}, 13
+    \subitem {Player}, 48
+  \item {getPlayableCards}
+    \subitem {Deck}, 29
+    \subitem {Player}, 49
+  \item {green}
+    \subitem {StrColor}, 53
+
+  \indexspace
+
+  \item {handCards}
+    \subitem {Deck}, 32
+  \item {hp}
+    \subitem {CreatureCard}, 24
+
+  \indexspace
+
+  \item {inPlayCards}
+    \subitem {Deck}, 33
+  \item {instanceof}
+    \subitem {Util.h}, 68
+  \item {invocate}
+    \subitem {CreatureCard}, 21
+  \item {isAlive}
+    \subitem {Player}, 51
+  \item {isDiscarded}
+    \subitem {Card}, 17
+  \item {isEngaged}
+    \subitem {Card}, 17
+  \item {isFirstTurn}
+    \subitem {CreatureCard}, 21
+  \item {isStillOperational}
+    \subitem {Card}, 13
+
+  \indexspace
+
+  \item {json}
+    \subitem {Deck.cpp}, 71
+    \subitem {Main.cpp}, 74
+    \subitem {testJson.cpp}, 55
+  \item {JsonToDeck}
+    \subitem {Deck}, 30
+
+  \indexspace
+
+  \item {LandCard}, 38
+    \subitem {$\sim$LandCard}, 41
+    \subitem {LandCard}, 41
+    \subitem {print}, 41
+    \subitem {printLine}, 41
+  \item {library}
+    \subitem {Deck}, 33
+
+  \indexspace
+
+  \item {magenta}
+    \subitem {StrColor}, 53
+  \item {main}
+    \subitem {Main.cpp}, 74
+  \item {Main.cpp}
+    \subitem {json}, 74
+    \subitem {main}, 74
+  \item {manaCost}
+    \subitem {Card}, 17
+  \item {manaToString}
+    \subitem {Card}, 13
+  \item {MAX\_CARDS\_IN\_HAND}
+    \subitem {Game}, 36
+
+  \indexspace
+
+  \item {name}
+    \subitem {Card}, 17
+    \subitem {Player}, 51
+
+  \indexspace
+
+  \item {p1}
+    \subitem {Game}, 36
+  \item {p2}
+    \subitem {Game}, 36
+  \item {playCard}
+    \subitem {Deck}, 31
+    \subitem {Player}, 49
+  \item {Player}, 42
+    \subitem {$\sim$Player}, 44
+    \subitem {baseHp}, 51
+    \subitem {cards}, 51
+    \subitem {currentHp}, 51
+    \subitem {discardCard}, 45
+    \subitem {disengageCards}, 45
+    \subitem {drawCard}, 46
+    \subitem {getAttackCards}, 46
+    \subitem {getColoredName}, 47
+    \subitem {getDefenseCards}, 47
+    \subitem {getHp}, 48
+    \subitem {getName}, 48
+    \subitem {getPlayableCards}, 49
+    \subitem {isAlive}, 51
+    \subitem {name}, 51
+    \subitem {playCard}, 49
+    \subitem {Player}, 44
+    \subitem {printColor}, 51
+    \subitem {setHp}, 50
+    \subitem {setPrintColor}, 50
+  \item {playerTurn}
+    \subitem {Game}, 36
+  \item {playGame}
+    \subitem {Game}, 35
+  \item {print}
+    \subitem {Card}, 14, 15
+    \subitem {CreatureCard}, 22
+    \subitem {LandCard}, 41
+    \subitem {StrColor}, 53
+  \item {printColor}
+    \subitem {Player}, 51
+  \item {printInPlayCards}
+    \subitem {Deck}, 31
+  \item {printLibrary}
+    \subitem {Deck}, 32
+  \item {printLine}
+    \subitem {Card}, 15
+    \subitem {CreatureCard}, 22
+    \subitem {LandCard}, 41
+
+  \indexspace
+
+  \item {red}
+    \subitem {StrColor}, 53
+  \item {round}
+    \subitem {Game}, 36
+
+  \indexspace
+
+  \item {setAttackPower}
+    \subitem {CreatureCard}, 23
+  \item {setColor}
+    \subitem {Card}, 15
+  \item {setHp}
+    \subitem {CreatureCard}, 23
+    \subitem {Player}, 50
+  \item {setIsDiscarded}
+    \subitem {Card}, 16
+  \item {setManaCost}
+    \subitem {Card}, 16
+  \item {setName}
+    \subitem {Card}, 16
+  \item {setPrintColor}
+    \subitem {Player}, 50
+  \item {Source/data/testJson.cpp}, 55
+  \item {Source/header/Card.h}, 56
+  \item {Source/header/CreatureCard.h}, 57, 58
+  \item {Source/header/Deck.h}, 58, 59
+  \item {Source/header/Game.h}, 60, 61
+  \item {Source/header/GameCards.h}, 61, 62
+  \item {Source/header/LandCard.h}, 63, 64
+  \item {Source/header/Player.h}, 64, 65
+  \item {Source/header/StrColor.h}, 66
+  \item {Source/header/Util.h}, 67, 68
+  \item {Source/src/Card.cpp}, 69
+  \item {Source/src/CreatureCard.cpp}, 69
+  \item {Source/src/Deck.cpp}, 70
+  \item {Source/src/Game.cpp}, 71
+  \item {Source/src/GameCards.cpp}, 72
+  \item {Source/src/LandCard.cpp}, 73
+  \item {Source/src/Main.cpp}, 73
+  \item {Source/src/Player.cpp}, 75
+  \item {Source/src/StrColor.cpp}, 76
+  \item {StrColor}, 52
+    \subitem {blue}, 52
+    \subitem {cyan}, 52
+    \subitem {green}, 53
+    \subitem {magenta}, 53
+    \subitem {print}, 53
+    \subitem {red}, 53
+    \subitem {yellow}, 54
+
+  \indexspace
+
+  \item {testJson.cpp}
+    \subitem {json}, 55
+  \item {typeOfCard}
+    \subitem {Card}, 17
+
+  \indexspace
+
+  \item {Util.h}
+    \subitem {getIndex}, 67
+    \subitem {instanceof}, 68
+
+  \indexspace
+
+  \item {yellow}
+    \subitem {StrColor}, 54
+
+\end{theindex}

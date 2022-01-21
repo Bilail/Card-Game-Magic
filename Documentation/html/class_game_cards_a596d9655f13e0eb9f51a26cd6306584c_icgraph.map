@@ -1,0 +1,4 @@
+<map id="GameCards::getCreatures" name="GameCards::getCreatures">
+<area shape="rect" id="node1" title=" " alt="" coords="144,5,317,32"/>
+<area shape="rect" id="node2" href="$class_deck.html#a57ae1cb4ac6fd61c249cefb2db85eb99" title="Constructeur avec un deck par default." alt="" coords="5,5,96,32"/>
+</map>

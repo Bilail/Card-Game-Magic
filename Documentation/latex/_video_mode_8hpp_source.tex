@@ -1,0 +1,77 @@
+\hypertarget{_video_mode_8hpp_source}{}\doxysection{Video\+Mode.\+hpp}
+\label{_video_mode_8hpp_source}\index{Source/dependance/SFML/include/SFML/Window/VideoMode.hpp@{Source/dependance/SFML/include/SFML/Window/VideoMode.hpp}}
+\mbox{\hyperlink{_video_mode_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_VIDEOMODE\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_VIDEOMODE\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_window_2_export_8hpp}{SFML/Window/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{41 \textcolor{keyword}{class }\mbox{\hyperlink{_window_2_export_8hpp_a1ab885b7907ee088350359516d68be64}{SFML\_WINDOW\_API}} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43 \textcolor{keyword}{public}:}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{51     \mbox{\hyperlink{classsf_1_1_video_mode_a04c9417e5c304510bef5f6aeb03f6ce1}{VideoMode}}();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{61     \mbox{\hyperlink{classsf_1_1_video_mode_a46c35ed41de9e115661dcd529d64e9d3}{VideoMode}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} modeWidth, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} modeHeight, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} modeBitsPerPixel = 32);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{69     \textcolor{keyword}{static} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}} \mbox{\hyperlink{classsf_1_1_video_mode_ac1be160a4342e6eafb2cb0e8c9b18d44}{getDesktopMode}}();}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{85     \textcolor{keyword}{static} \textcolor{keyword}{const} std::vector<VideoMode>\& \mbox{\hyperlink{classsf_1_1_video_mode_a0f99e67ef2b51fbdc335d9991232609e}{getFullscreenModes}}();}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_video_mode_ad5e04c044b0925523c75ecb173d2129a}{isValid}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{100     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{102 \textcolor{comment}{}    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classsf_1_1_video_mode_a9b3b2ad2cac6b9c266823fb5ed506d90}{width}};        }
+\DoxyCodeLine{103     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classsf_1_1_video_mode_a5a88d44c9470db7474361a42a189342d}{height}};       }
+\DoxyCodeLine{104     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classsf_1_1_video_mode_aa080f1ef96a1008d58b1920eceb189df}{bitsPerPixel}}; }
+\DoxyCodeLine{105 \};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{117 \mbox{\hyperlink{_window_2_export_8hpp_a1ab885b7907ee088350359516d68be64}{SFML\_WINDOW\_API}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacesf_ac911326160206c1038ceff6face28b89}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& right);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{129 \mbox{\hyperlink{_window_2_export_8hpp_a1ab885b7907ee088350359516d68be64}{SFML\_WINDOW\_API}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacesf_ad68fc42c15ea415b59023a4a277f8946}{operator !=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& right);}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{141 \mbox{\hyperlink{_window_2_export_8hpp_a1ab885b7907ee088350359516d68be64}{SFML\_WINDOW\_API}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacesf_a62e90a478e790defc429ecd94ad67ab3}{operator <}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& right);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{153 \mbox{\hyperlink{_window_2_export_8hpp_a1ab885b7907ee088350359516d68be64}{SFML\_WINDOW\_API}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacesf_a7344fe65b9ee438bab496c9889a34202}{operator >}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& right);}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{165 \mbox{\hyperlink{_window_2_export_8hpp_a1ab885b7907ee088350359516d68be64}{SFML\_WINDOW\_API}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacesf_aeb411e03dd15af718fe95ed4626190ad}{operator <=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& right);}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{177 \mbox{\hyperlink{_window_2_export_8hpp_a1ab885b7907ee088350359516d68be64}{SFML\_WINDOW\_API}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacesf_a457fb40b390861abae4234f6059d1c48}{operator >=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}}\& right);}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_VIDEOMODE\_HPP}}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 }
+
+\end{DoxyCode}

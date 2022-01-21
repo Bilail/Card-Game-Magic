@@ -1,0 +1,46 @@
+\doxysection{Deck.\+h}
+\label{_deck_8h_source}\index{Source/header/Deck.h@{Source/header/Deck.h}}
+\textbf{ Aller à la documentation de ce fichier.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by bilai on 05/01/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef MAGIC\_DECK\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define MAGIC\_DECK\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <bits/stdc++.h>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Card.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}GameCards.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }Deck \{}
+\DoxyCodeLine{15 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{16     std::vector<Card*> inPlayCards;}
+\DoxyCodeLine{17     std::vector<Card*> handCards;}
+\DoxyCodeLine{18     std::vector<Card*> library;}
+\DoxyCodeLine{19     std::vector<Card*> disCards;}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} DECK\_SIZE;}
+\DoxyCodeLine{25     Deck();}
+\DoxyCodeLine{30     Deck(std::string nomDeck);}
+\DoxyCodeLine{31     \string~Deck();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} printLibrary();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} printInPlayCards();}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} generateRandomDeck();}
+\DoxyCodeLine{48     \textcolor{keywordtype}{bool} drawCard();}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} disengageCards();}
+\DoxyCodeLine{57     std::vector<Card*> getPlayableCards();}
+\DoxyCodeLine{62     std::vector<Card*> getAttackCards();}
+\DoxyCodeLine{67     std::vector<Card*> getDefenseCards();}
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} playCard(Card* c);}
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} discardCard(Card* c);}
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} JsonToDeck(std::string nomDeck);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_DECK\_H}}
+
+\end{DoxyCode}

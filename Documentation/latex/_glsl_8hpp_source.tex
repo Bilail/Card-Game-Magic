@@ -1,0 +1,98 @@
+\hypertarget{_glsl_8hpp_source}{}\doxysection{Glsl.\+hpp}
+\label{_glsl_8hpp_source}\index{Source/dependance/SFML/include/SFML/Graphics/Glsl.hpp@{Source/dependance/SFML/include/SFML/Graphics/Glsl.hpp}}
+\mbox{\hyperlink{_glsl_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_GLSL\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_GLSL\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_transform_8hpp}{SFML/Graphics/Transform.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_color_8hpp}{SFML/Graphics/Color.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_vector2_8hpp}{SFML/System/Vector2.hpp}}>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_vector3_8hpp}{SFML/System/Vector3.hpp}}>}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacepriv}{priv}}}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     \textcolor{comment}{// Forward declarations}}
+\DoxyCodeLine{42     \textcolor{keyword}{template} <std::\textcolor{keywordtype}{size\_t} Columns, std::\textcolor{keywordtype}{size\_t} Rows>}
+\DoxyCodeLine{43     \textcolor{keyword}{struct }\mbox{\hyperlink{structsf_1_1priv_1_1_matrix}{Matrix}};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{46     \textcolor{keyword}{struct }\mbox{\hyperlink{structsf_1_1priv_1_1_vector4}{Vector4}};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_glsl_8inl}{SFML/Graphics/Glsl.inl}}>}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \} \textcolor{comment}{// namespace priv}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{57 \textcolor{keyword}{namespace }Glsl}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{64     \textcolor{keyword}{typedef} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2<float>}} \mbox{\hyperlink{namespacesf_1_1_glsl_adeed356d346d87634b4c197a530e4edf}{Vec2}};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{70     \textcolor{keyword}{typedef} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2<int>}} \mbox{\hyperlink{namespacesf_1_1_glsl_aab803ee70c4b7bfcd63ec09e10408fd3}{Ivec2}};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{76     \textcolor{keyword}{typedef} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2<bool>}} \mbox{\hyperlink{namespacesf_1_1_glsl_a59d8cf909c3d71ebf3db057480b464da}{Bvec2}};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{82     \textcolor{keyword}{typedef} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<float>}} \mbox{\hyperlink{namespacesf_1_1_glsl_a9bdd0463b7cb5316244a082007bd50f0}{Vec3}};}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88     \textcolor{keyword}{typedef} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<int>}} \mbox{\hyperlink{namespacesf_1_1_glsl_a64f403dd0219e7f128ffddca641394df}{Ivec3}};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{94     \textcolor{keyword}{typedef} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<bool>}} \mbox{\hyperlink{namespacesf_1_1_glsl_a4166ffc506619b4912d576e6eba2c957}{Bvec3}};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#ifdef SFML\_DOXYGEN}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{110     \textcolor{keyword}{typedef} implementation-\/defined \mbox{\hyperlink{namespacesf_1_1_glsl_a862f8df4771d2403de28653328fac5d0}{Vec4}};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{124     \textcolor{keyword}{typedef} implementation-\/defined \mbox{\hyperlink{namespacesf_1_1_glsl_abcba8791f75382199ea03f6932a91d9b}{Ivec4}};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{130     \textcolor{keyword}{typedef} implementation-\/defined \mbox{\hyperlink{namespacesf_1_1_glsl_a5f4f38e06558ae1baa610b119e45ea0b}{Bvec4}};}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{155     \textcolor{keyword}{typedef} implementation-\/defined \mbox{\hyperlink{namespacesf_1_1_glsl_a1bf4595b60b08c79473a882e2c1dbff8}{Mat3}};}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{181     \textcolor{keyword}{typedef} implementation-\/defined \mbox{\hyperlink{namespacesf_1_1_glsl_aab545f0a373a3ea8ad145811b747f3e4}{Mat4}};}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#else }\textcolor{comment}{// SFML\_DOXYGEN}}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185     \textcolor{keyword}{typedef} \mbox{\hyperlink{structsf_1_1priv_1_1_vector4}{priv::Vector4<float>}} \mbox{\hyperlink{namespacesf_1_1_glsl_a862f8df4771d2403de28653328fac5d0}{Vec4}};}
+\DoxyCodeLine{186     \textcolor{keyword}{typedef} \mbox{\hyperlink{structsf_1_1priv_1_1_vector4}{priv::Vector4<int>}} \mbox{\hyperlink{namespacesf_1_1_glsl_abcba8791f75382199ea03f6932a91d9b}{Ivec4}};}
+\DoxyCodeLine{187     \textcolor{keyword}{typedef} \mbox{\hyperlink{structsf_1_1priv_1_1_vector4}{priv::Vector4<bool>}} \mbox{\hyperlink{namespacesf_1_1_glsl_a5f4f38e06558ae1baa610b119e45ea0b}{Bvec4}};}
+\DoxyCodeLine{188     \textcolor{keyword}{typedef} \mbox{\hyperlink{structsf_1_1priv_1_1_matrix}{priv::Matrix<3, 3>}} \mbox{\hyperlink{namespacesf_1_1_glsl_a1bf4595b60b08c79473a882e2c1dbff8}{Mat3}};}
+\DoxyCodeLine{189     \textcolor{keyword}{typedef} \mbox{\hyperlink{structsf_1_1priv_1_1_matrix}{priv::Matrix<4, 4>}} \mbox{\hyperlink{namespacesf_1_1_glsl_aab545f0a373a3ea8ad145811b747f3e4}{Mat4}};}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_DOXYGEN}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \} \textcolor{comment}{// namespace Glsl}}
+\DoxyCodeLine{194 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_GLSL\_HPP}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198 }
+
+\end{DoxyCode}

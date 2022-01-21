@@ -1,0 +1,5 @@
+<map id="Deck::printLibrary" name="Deck::printLibrary">
+<area shape="rect" id="node1" title="Affiche toute les cartes du joueurs." alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node2" href="$class_card.html#a50cb7f8100fb16db6e4de406d7e5af05" title="Fonction d&#39;affichage." alt="" coords="177,5,260,32"/>
+<area shape="rect" id="node3" href="$class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="308,5,411,32"/>
+</map>

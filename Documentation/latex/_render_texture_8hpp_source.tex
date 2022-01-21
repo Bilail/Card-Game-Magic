@@ -1,0 +1,91 @@
+\hypertarget{_render_texture_8hpp_source}{}\doxysection{Render\+Texture.\+hpp}
+\label{_render_texture_8hpp_source}\index{Source/dependance/SFML/include/SFML/Graphics/RenderTexture.hpp@{Source/dependance/SFML/include/SFML/Graphics/RenderTexture.hpp}}
+\mbox{\hyperlink{_render_texture_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_RENDERTEXTURE\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_RENDERTEXTURE\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_graphics_2_export_8hpp}{SFML/Graphics/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_texture_8hpp}{SFML/Graphics/Texture.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_render_target_8hpp}{SFML/Graphics/RenderTarget.hpp}}>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_context_settings_8hpp}{SFML/Window/ContextSettings.hpp}}>}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacepriv}{priv}}}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     \textcolor{keyword}{class }RenderTextureImpl;}
+\DoxyCodeLine{42 \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{48 \textcolor{keyword}{class }\mbox{\hyperlink{_graphics_2_export_8hpp_ab84c9f1035e146917de3bc0f98d72b35}{SFML\_GRAPHICS\_API}} \mbox{\hyperlink{classsf_1_1_render_texture}{RenderTexture}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsf_1_1_render_target}{RenderTarget}}}
+\DoxyCodeLine{49 \{}
+\DoxyCodeLine{50 \textcolor{keyword}{public}:}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{61     \mbox{\hyperlink{classsf_1_1_render_texture_a19ee6e5b4c40ad251803389b3953a9c6}{RenderTexture}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{67     \textcolor{keyword}{virtual} \mbox{\hyperlink{classsf_1_1_render_texture_a94b84ab9335be84d2a014c964d973304}{\string~RenderTexture}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{89     \mbox{\hyperlink{_config_8hpp_a9d22ae32bba2961ae9abc7e40f035fc7}{SFML\_DEPRECATED}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_render_texture_aaec1fb8ee77844da50b0143cb41c8a71}{create}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height, \textcolor{keywordtype}{bool} depthBuffer);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{109     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_render_texture_a49b7b723a80f89bc409a942364351dc3}{create}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height, \textcolor{keyword}{const} \mbox{\hyperlink{structsf_1_1_context_settings}{ContextSettings}}\& settings = \mbox{\hyperlink{structsf_1_1_context_settings}{ContextSettings}}());}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{117     \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classsf_1_1_render_texture_ab0849fc3e064b744ffae1ab1d85ee12b}{getMaximumAntialiasingLevel}}();}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{130     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_render_texture_af08991e63c6020865dd07b20e27305b6}{setSmooth}}(\textcolor{keywordtype}{bool} smooth);}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{140     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_render_texture_a5b43c007ab6643accc5dae84b5bc8f61}{isSmooth}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{153     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_render_texture_af8f97b33512bf7d5b6be3da6f65f7365}{setRepeated}}(\textcolor{keywordtype}{bool} repeated);}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{163     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_render_texture_a81c5a453a21c7e78299b062b97dc8c87}{isRepeated}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{179     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_render_texture_a8ca34c8b7e00793c1d3ef4f9a834f8cc}{generateMipmap}}();}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{196     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_render_texture_a5da95ecdbce615a80bb78399012508cf}{setActive}}(\textcolor{keywordtype}{bool} active = \textcolor{keyword}{true});}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{207     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_render_texture_af92886d5faef3916caff9fa9ab32c555}{display}}();}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{218     \textcolor{keyword}{virtual} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2u}} \mbox{\hyperlink{classsf_1_1_render_texture_a6685315b5c4c25a5dcb75b4280b381ba}{getSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{234     \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_texture}{Texture}}\& \mbox{\hyperlink{classsf_1_1_render_texture_a61a6eba45d5c9e5c913aebeccb7b7eda}{getTexture}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{236 \textcolor{keyword}{private}:}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{239     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{241 \textcolor{comment}{}    priv::RenderTextureImpl* m\_impl;    }
+\DoxyCodeLine{242     \mbox{\hyperlink{classsf_1_1_texture}{Texture}}                  m\_texture; }
+\DoxyCodeLine{243 \};}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_RENDERTEXTURE\_HPP}}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250 }
+
+\end{DoxyCode}

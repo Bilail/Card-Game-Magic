@@ -1,0 +1,93 @@
+\hypertarget{_image_8hpp_source}{}\doxysection{Image.\+hpp}
+\label{_image_8hpp_source}\index{Source/dependance/SFML/include/SFML/Graphics/Image.hpp@{Source/dependance/SFML/include/SFML/Graphics/Image.hpp}}
+\mbox{\hyperlink{_image_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_IMAGE\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_IMAGE\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_graphics_2_export_8hpp}{SFML/Graphics/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_color_8hpp}{SFML/Graphics/Color.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_rect_8hpp}{SFML/Graphics/Rect.hpp}}>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40 \textcolor{keyword}{class }InputStream;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46 \textcolor{keyword}{class }\mbox{\hyperlink{_graphics_2_export_8hpp_ab84c9f1035e146917de3bc0f98d72b35}{SFML\_GRAPHICS\_API}} \mbox{\hyperlink{classsf_1_1_image}{Image}}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48 \textcolor{keyword}{public}:}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{56     \mbox{\hyperlink{classsf_1_1_image_abb4caf3cb167b613345ebe36fc883f12}{Image}}();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{62     \mbox{\hyperlink{classsf_1_1_image_a0ba22a38e6c96e3b37dd88198046de83}{\string~Image}}();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_image_a2a67930e2fd9ad97cf004e918cf5832b}{create}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_color}{Color}}\& color = \mbox{\hyperlink{classsf_1_1_color}{Color}}(0, 0, 0));}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_image_a1c2b960ea12bdbb29e80934ce5268ebf}{create}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height, \textcolor{keyword}{const} \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}}* pixels);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_image_a9e4f2aa8e36d0cabde5ed5a4ef80290b}{loadFromFile}}(\textcolor{keyword}{const} std::string\& filename);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{122     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_image_aaa6c7afa5851a51cec6ab438faa7354c}{loadFromMemory}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* data, std::size\_t size);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{139     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_image_a21122ded0e8368bb06ed3b9acfbfb501}{loadFromStream}}(\mbox{\hyperlink{classsf_1_1_input_stream}{InputStream}}\& stream);}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{156     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_image_a51537fb667f47cbe80395cfd7f9e72a4}{saveToFile}}(\textcolor{keyword}{const} std::string\& filename) \textcolor{keyword}{const};}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{164     \mbox{\hyperlink{classsf_1_1_vector2}{Vector2u}} \mbox{\hyperlink{classsf_1_1_image_a85409951b05369813069ed64393391ce}{getSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{177     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_image_a22f13f8c242a6b38eb73cc176b37ae34}{createMaskFromColor}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_color}{Color}}\& color, \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}} alpha = 0);}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{199     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_image_ab2fa337c956f85f93377dcb52153a45a}{copy}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_image}{Image}}\& source, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} destX, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} destY, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_rect}{IntRect}}\& sourceRect = \mbox{\hyperlink{namespacesf_aae67411782674934f78d55fa3af18403}{IntRect}}(0, 0, 0, 0), \textcolor{keywordtype}{bool} applyAlpha = \textcolor{keyword}{false});}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{215     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_image_a9fd329b8cd7d4439e07fb5d3bb2d9744}{setPixel}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_color}{Color}}\& color);}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{232     \mbox{\hyperlink{classsf_1_1_color}{Color}} \mbox{\hyperlink{classsf_1_1_image_acf278760458433b2c3626a6980388a95}{getPixel}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y) \textcolor{keyword}{const};}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{247     \textcolor{keyword}{const} \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}}* \mbox{\hyperlink{classsf_1_1_image_a2f49e69b6c6257b19b4d911993075c40}{getPixelsPtr}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{253     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_image_a57168e7bc29190e08bbd6c9c19f4bb2c}{flipHorizontally}}();}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{259     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_image_a78a702a7e49d1de2dec9894da99d279c}{flipVertically}}();}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261 \textcolor{keyword}{private}:}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{264     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{266 \textcolor{comment}{}    \mbox{\hyperlink{classsf_1_1_vector2}{Vector2u}}           m\_size;   }
+\DoxyCodeLine{267     std::vector<Uint8> m\_pixels; }
+\DoxyCodeLine{268 \};}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_IMAGE\_HPP}}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{275 }
+
+\end{DoxyCode}

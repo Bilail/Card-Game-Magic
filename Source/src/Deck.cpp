@@ -27,7 +27,7 @@ Deck::Deck() {
 }
 
 Deck::Deck(std::string nomDeck){
-    CardtoJson(nomDeck);
+    JsonToDeck(nomDeck);
 }
 
 Deck::~Deck() {
@@ -157,7 +157,7 @@ void Deck::discardCard(Card *c) {
 }
 
 
-void Deck::CardtoJson(std::string nomDeck) {
+void Deck::JsonToDeck(std::string nomDeck) {
     std::vector<Card*> r = {};
     std::ifstream ifs(nomDeck+".json");
     json deck;

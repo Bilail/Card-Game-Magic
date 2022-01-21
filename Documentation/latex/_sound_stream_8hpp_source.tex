@@ -1,0 +1,128 @@
+\hypertarget{_sound_stream_8hpp_source}{}\doxysection{Sound\+Stream.\+hpp}
+\label{_sound_stream_8hpp_source}\index{Source/dependance/SFML/include/SFML/Audio/SoundStream.hpp@{Source/dependance/SFML/include/SFML/Audio/SoundStream.hpp}}
+\mbox{\hyperlink{_sound_stream_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_SOUNDSTREAM\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_SOUNDSTREAM\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_audio_2_export_8hpp}{SFML/Audio/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_sound_source_8hpp}{SFML/Audio/SoundSource.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_thread_8hpp}{SFML/System/Thread.hpp}}>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_time_8hpp}{SFML/System/Time.hpp}}>}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_mutex_8hpp}{SFML/System/Mutex.hpp}}>}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{45 \textcolor{keyword}{class }\mbox{\hyperlink{_audio_2_export_8hpp_a4d34c0f253824ac49bdd93545913eb89}{SFML\_AUDIO\_API}} \mbox{\hyperlink{classsf_1_1_sound_stream}{SoundStream}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsf_1_1_sound_source}{SoundSource}}}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47 \textcolor{keyword}{public}:}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53     \textcolor{keyword}{struct }\mbox{\hyperlink{structsf_1_1_sound_stream_1_1_chunk}{Chunk}}}
+\DoxyCodeLine{54     \{}
+\DoxyCodeLine{55         \textcolor{keyword}{const} \mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}}* \mbox{\hyperlink{structsf_1_1_sound_stream_1_1_chunk_aa3b84d69adbe663a17a7671626076df4}{samples}};     }
+\DoxyCodeLine{56         std::size\_t  \mbox{\hyperlink{structsf_1_1_sound_stream_1_1_chunk_af47f5d94012acf8b11f056ba77aff97a}{sampleCount}}; }
+\DoxyCodeLine{57     \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63     \textcolor{keyword}{virtual} \mbox{\hyperlink{classsf_1_1_sound_stream_a1fafb9f1ca572d23d7d6a17921860d85}{\string~SoundStream}}();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_stream_afdc08b69cab5f243d9324940a85a1144}{play}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_stream_a932ff181e661503cad288b4bb6fe45ca}{pause}}();}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_stream_a16cc6a0404b32e42c4dce184bb94d0f4}{stop}}();}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{110     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classsf_1_1_sound_stream_a1f70933912dd9498f4dc99feefed27f3}{getChannelCount}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classsf_1_1_sound_stream_a7da448dc40d81a33b8dc555fbf0d3fbf}{getSampleRate}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{129     \mbox{\hyperlink{classsf_1_1_sound_source_ac43af72c98c077500b239bc75b812f03}{Status}} \mbox{\hyperlink{classsf_1_1_sound_stream_a64a8193ed728da37c115c65de015849f}{getStatus}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{144     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_stream_af416a5f84c8750d2acb9821d78bc8646}{setPlayingOffset}}(\mbox{\hyperlink{classsf_1_1_time}{Time}} timeOffset);}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{154     \mbox{\hyperlink{classsf_1_1_time}{Time}} \mbox{\hyperlink{classsf_1_1_sound_stream_ae288f3c72edbad9cc7ee938ce5b907c1}{getPlayingOffset}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{169     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_stream_a43fade018ffba7e4f847a9f00b353f3d}{setLoop}}(\textcolor{keywordtype}{bool} loop);}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{179     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_sound_stream_a49d263f9bbaefec4b019bd05fda59b25}{getLoop}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183     \textcolor{keyword}{enum}}
+\DoxyCodeLine{184     \{}
+\DoxyCodeLine{185         NoLoop = -\/1 }
+\DoxyCodeLine{186     \};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{194     \mbox{\hyperlink{classsf_1_1_sound_stream_a769d08f4c3c6b4340ef3a838329d2e5c}{SoundStream}}();}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{210     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_stream_a9c351711198ee1aa77c2fefd3ced4d2c}{initialize}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} channelCount, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sampleRate);}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{229     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_sound_stream_a968ec024a6e45490962c8a1121cb7c5f}{onGetData}}(\mbox{\hyperlink{structsf_1_1_sound_stream_1_1_chunk}{Chunk}}\& data) = 0;}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{240     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_stream_a907036dd2ca7d3af5ead316e54b75997}{onSeek}}(\mbox{\hyperlink{classsf_1_1_time}{Time}} timeOffset) = 0;}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{252     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} \mbox{\hyperlink{classsf_1_1_sound_stream_a3f717d18846f261fc375d71d6c7e41da}{onLoop}}();}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254 \textcolor{keyword}{private}:}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{263     \textcolor{keywordtype}{void} streamData();}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{279     \textcolor{keywordtype}{bool} fillAndPushBuffer(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bufferNum, \textcolor{keywordtype}{bool} immediateLoop = \textcolor{keyword}{false});}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{290     \textcolor{keywordtype}{bool} fillQueue();}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{298     \textcolor{keywordtype}{void} clearQueue();}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300     \textcolor{keyword}{enum}}
+\DoxyCodeLine{301     \{}
+\DoxyCodeLine{302         BufferCount = 3,    }
+\DoxyCodeLine{303         BufferRetries = 2   }
+\DoxyCodeLine{304     \};}
+\DoxyCodeLine{305 }
+\DoxyCodeLine{307     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{309 \textcolor{comment}{}    \mbox{\hyperlink{classsf_1_1_thread}{Thread}}        m\_thread;                   }
+\DoxyCodeLine{310     \textcolor{keyword}{mutable} \mbox{\hyperlink{classsf_1_1_mutex}{Mutex}} m\_threadMutex;              }
+\DoxyCodeLine{311     Status        m\_threadStartState;         }
+\DoxyCodeLine{312     \textcolor{keywordtype}{bool}          m\_isStreaming;              }
+\DoxyCodeLine{313     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  m\_buffers[BufferCount];     }
+\DoxyCodeLine{314     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  m\_channelCount;             }
+\DoxyCodeLine{315     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  m\_sampleRate;               }
+\DoxyCodeLine{316     \mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}}        m\_format;                   }
+\DoxyCodeLine{317     \textcolor{keywordtype}{bool}          m\_loop;                     }
+\DoxyCodeLine{318     \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}}        m\_samplesProcessed;         }
+\DoxyCodeLine{319     \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}}         m\_bufferSeeks[BufferCount]; }
+\DoxyCodeLine{320 \};}
+\DoxyCodeLine{321 }
+\DoxyCodeLine{322 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324 }
+\DoxyCodeLine{325 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_SOUNDSTREAM\_HPP}}
+\DoxyCodeLine{326 }
+\DoxyCodeLine{327 }
+
+\end{DoxyCode}

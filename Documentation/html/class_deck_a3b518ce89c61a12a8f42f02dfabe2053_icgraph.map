@@ -1,0 +1,4 @@
+<map id="Deck::getPlayableCards" name="Deck::getPlayableCards">
+<area shape="rect" id="node1" title="Obtenir les cartes jouable par le joueurs." alt="" coords="223,5,385,32"/>
+<area shape="rect" id="node2" href="$class_player.html#ae0f72a15d6130e0469251bc1543cc23a" title="ses cartes jouables" alt="" coords="5,5,175,32"/>
+</map>

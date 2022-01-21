@@ -10,11 +10,33 @@
 
 class Game {
 private:
-    void showBanner();
+    /**
+     * Affiche le titre du jeux
+     */
+    void showBanner();*
+    /**
+     * Initialise la game
+     * les joueurs et les decks
+     */
     void initGame();
+    /**
+     * Tirage au sort du joueurs qui commencent
+     */
     void randomDraw();
+    /**
+     * Phase de jeux principale
+     * picoher, poser les cartes,..
+     */
     void mainPhase();
+    /**
+     * Phase de combat
+     * Attaque et défense
+     */
     void fightPhase();
+    /**
+     * Retourne le joueur ennemie
+     * @return joueur ennemeie
+     */
     Player* getOpponent();
 protected:
     Player p1;
@@ -25,7 +47,13 @@ protected:
 public :
     Game();
     //Game(Game const &); //reprendre une game
+    /**
+     * Lance la partie
+     */
     void playGame();
+    /**
+     * Nombre de carte maximum dans la main
+     */
     static int MAX_CARDS_IN_HAND;
 };
 

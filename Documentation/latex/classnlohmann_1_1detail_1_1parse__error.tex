@@ -1,0 +1,94 @@
+\hypertarget{classnlohmann_1_1detail_1_1parse__error}{}\doxysection{Référence de la classe nlohmann\+::detail\+::parse\+\_\+error}
+\label{classnlohmann_1_1detail_1_1parse__error}\index{nlohmann::detail::parse\_error@{nlohmann::detail::parse\_error}}
+
+
+exception indicating a parse error  
+
+
+
+
+{\ttfamily \#include $<$json.\+hpp$>$}
+
+Graphe d\textquotesingle{}héritage de nlohmann\+::detail\+::parse\+\_\+error\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnlohmann_1_1detail_1_1parse__error}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Basic\+Json\+Type $>$ }\\static \mbox{\hyperlink{classnlohmann_1_1detail_1_1parse__error}{parse\+\_\+error}} \mbox{\hyperlink{classnlohmann_1_1detail_1_1parse__error_ae77bd584cb9101140790219af7fec1ce}{create}} (int id\+\_\+, const \mbox{\hyperlink{structnlohmann_1_1detail_1_1position__t}{position\+\_\+t}} \&pos, const std\+::string \&what\+\_\+arg, const Basic\+Json\+Type \&context)
+\begin{DoxyCompactList}\small\item\em create a parse error exception \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Basic\+Json\+Type $>$ }\\static \mbox{\hyperlink{classnlohmann_1_1detail_1_1parse__error}{parse\+\_\+error}} \mbox{\hyperlink{classnlohmann_1_1detail_1_1parse__error_a90fbaaeeb00838e65b8d04885017ef0c}{create}} (int id\+\_\+, std\+::size\+\_\+t byte\+\_\+, const std\+::string \&what\+\_\+arg, const Basic\+Json\+Type \&context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::size\+\_\+t \mbox{\hyperlink{classnlohmann_1_1detail_1_1parse__error_a9505aaa1ca943be927eec7cc579592ff}{byte}}
+\begin{DoxyCompactList}\small\item\em byte index of the parse error \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Description détaillée}
+exception indicating a parse error 
+
+\begin{DoxySeeAlso}{Voir également}
+\href{https://json.nlohmann.me/api/basic_json/parse_error/}{\texttt{ https\+://json.\+nlohmann.\+me/api/basic\+\_\+json/parse\+\_\+error/}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classnlohmann_1_1detail_1_1parse__error_ae77bd584cb9101140790219af7fec1ce}\label{classnlohmann_1_1detail_1_1parse__error_ae77bd584cb9101140790219af7fec1ce}} 
+\index{nlohmann::detail::parse\_error@{nlohmann::detail::parse\_error}!create@{create}}
+\index{create@{create}!nlohmann::detail::parse\_error@{nlohmann::detail::parse\_error}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
+static \mbox{\hyperlink{classnlohmann_1_1detail_1_1parse__error}{parse\+\_\+error}} nlohmann\+::detail\+::parse\+\_\+error\+::create (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+,  }\item[{const \mbox{\hyperlink{structnlohmann_1_1detail_1_1position__t}{position\+\_\+t}} \&}]{pos,  }\item[{const std\+::string \&}]{what\+\_\+arg,  }\item[{const Basic\+Json\+Type \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+create a parse error exception 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em id\+\_\+} & the id of the exception \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos} & the position where the error occurred (or with chars\+\_\+read\+\_\+total=0 if the position cannot be determined) \\
+\hline
+\mbox{\texttt{ in}}  & {\em what\+\_\+arg} & the explanatory string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classnlohmann_1_1detail_1_1parse__error}{parse\+\_\+error}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnlohmann_1_1detail_1_1parse__error_a90fbaaeeb00838e65b8d04885017ef0c}\label{classnlohmann_1_1detail_1_1parse__error_a90fbaaeeb00838e65b8d04885017ef0c}} 
+\index{nlohmann::detail::parse\_error@{nlohmann::detail::parse\_error}!create@{create}}
+\index{create@{create}!nlohmann::detail::parse\_error@{nlohmann::detail::parse\_error}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Basic\+Json\+Type $>$ \\
+static \mbox{\hyperlink{classnlohmann_1_1detail_1_1parse__error}{parse\+\_\+error}} nlohmann\+::detail\+::parse\+\_\+error\+::create (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+,  }\item[{std\+::size\+\_\+t}]{byte\+\_\+,  }\item[{const std\+::string \&}]{what\+\_\+arg,  }\item[{const Basic\+Json\+Type \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{classnlohmann_1_1detail_1_1parse__error_a9505aaa1ca943be927eec7cc579592ff}\label{classnlohmann_1_1detail_1_1parse__error_a9505aaa1ca943be927eec7cc579592ff}} 
+\index{nlohmann::detail::parse\_error@{nlohmann::detail::parse\_error}!byte@{byte}}
+\index{byte@{byte}!nlohmann::detail::parse\_error@{nlohmann::detail::parse\_error}}
+\doxysubsubsection{\texorpdfstring{byte}{byte}}
+{\footnotesize\ttfamily const std\+::size\+\_\+t nlohmann\+::detail\+::parse\+\_\+error\+::byte}
+
+
+
+byte index of the parse error 
+
+The byte index of the last read character in the input file.
+
+\begin{DoxyNote}{Note}
+For an input with n bytes, 1 is the index of the first character and n+1 is the index of the terminating null byte or the end of file. This also holds true when reading a byte vector (CBOR or Message\+Pack). 
+\end{DoxyNote}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Source/dependance/\mbox{\hyperlink{json_8hpp}{json.\+hpp}}\end{DoxyCompactItemize}

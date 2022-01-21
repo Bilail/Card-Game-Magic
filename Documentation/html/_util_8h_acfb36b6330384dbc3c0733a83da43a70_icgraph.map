@@ -1,0 +1,7 @@
+<map id="getIndex" name="getIndex">
+<area shape="rect" id="node1" title=" " alt="" coords="433,31,504,57"/>
+<area shape="rect" id="node2" href="$class_deck.html#a3b518ce89c61a12a8f42f02dfabe2053" title="Obtenir les cartes jouable par le joueurs." alt="" coords="223,5,385,32"/>
+<area shape="rect" id="node4" href="$class_deck.html#acec615e3dbd2c22200f74b61d95ddac4" title="Les cartes jouables." alt="" coords="249,56,359,83"/>
+<area shape="rect" id="node3" href="$class_player.html#ae0f72a15d6130e0469251bc1543cc23a" title="ses cartes jouables" alt="" coords="5,5,175,32"/>
+<area shape="rect" id="node5" href="$class_player.html#aa016a6401d45ac510fd71c5629b0a707" title=" " alt="" coords="31,56,149,83"/>
+</map>

@@ -11,6 +11,11 @@
 
 class LandCard : public Card {
 public :
+    /**
+     * Constructeur d'une carte terrain
+     * @param nom
+     * @param couleur
+     */
     LandCard(std::string nm, std::string clr);
     ~LandCard(){};
     void print();

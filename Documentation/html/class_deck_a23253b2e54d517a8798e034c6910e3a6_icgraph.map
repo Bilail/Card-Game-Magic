@@ -1,0 +1,4 @@
+<map id="Deck::JsonToDeck" name="Deck::JsonToDeck">
+<area shape="rect" id="node1" title="Fonction qui convertit un fichier json de carte en deck jouable." alt="" coords="144,5,275,32"/>
+<area shape="rect" id="node2" href="$class_deck.html#a424bb7c52fbe40c047ef2f54ad0afadf" title="Constructeur avec le choix d&#39;un deck stocké en json." alt="" coords="5,5,96,32"/>
+</map>

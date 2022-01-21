@@ -1,0 +1,374 @@
+\doxysection{Référence de la classe Player}
+\label{class_player}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+
+
+Graphe de collaboration de Player\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_player__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Player} (std\+::string, \textbf{ Deck})
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}un joueur. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Player} ()
+\item 
+void \textbf{ set\+Print\+Color} (std\+::string color)
+\begin{DoxyCompactList}\small\item\em set la coleur du joueur \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Set le nom du joueurs. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Colored\+Name} ()
+\item 
+int \textbf{ get\+Hp} ()
+\begin{DoxyCompactList}\small\item\em récuperer les hp du joueurs \end{DoxyCompactList}\item 
+void \textbf{ set\+Hp} (int hp)
+\begin{DoxyCompactList}\small\item\em set les hp du joueurs \end{DoxyCompactList}\item 
+bool \textbf{ draw\+Card} ()
+\begin{DoxyCompactList}\small\item\em piocher une carte \end{DoxyCompactList}\item 
+void \textbf{ disengage\+Cards} ()
+\begin{DoxyCompactList}\small\item\em désengager ses cartes \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ get\+Playable\+Cards} ()
+\begin{DoxyCompactList}\small\item\em ses cartes jouables \end{DoxyCompactList}\item 
+void \textbf{ play\+Card} (\textbf{ Card} $\ast$c)
+\item 
+std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ get\+Attack\+Cards} ()
+\begin{DoxyCompactList}\small\item\em ses cartes qui peuvent attaquer \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ get\+Defense\+Cards} ()
+\begin{DoxyCompactList}\small\item\em ses cartes qui peuvent défendre \end{DoxyCompactList}\item 
+void \textbf{ discard\+Card} (\textbf{ Card} $\ast$c)
+\begin{DoxyCompactList}\small\item\em envoyer une carte au cimetière \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \textbf{ name}
+\item 
+std\+::string \textbf{ print\+Color}
+\item 
+bool \textbf{ is\+Alive}
+\item 
+int \textbf{ current\+Hp}
+\item 
+\textbf{ Deck} \textbf{ cards}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés statiques}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ base\+Hp} = 4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\label{class_player_a4d88b5f1bd0032e70ba7016f8a547c0a}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{Player()}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\textbf{ Deck}}]{deck }\end{DoxyParamCaption})}
+
+
+
+Constructeur d\textquotesingle{}un joueur. 
+
+\mbox{\label{class_player_a749d2c00e1fe0f5c2746f7505a58c062}} 
+\index{Player@{Player}!````~Player@{$\sim$Player}}
+\index{````~Player@{$\sim$Player}!Player@{Player}}
+\doxysubsubsection{$\sim$Player()}
+{\footnotesize\ttfamily Player\+::$\sim$\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\label{class_player_a3d6549590fb8e154951c873d6bfb412e}} 
+\index{Player@{Player}!discardCard@{discardCard}}
+\index{discardCard@{discardCard}!Player@{Player}}
+\doxysubsubsection{discardCard()}
+{\footnotesize\ttfamily void Player\+::discard\+Card (\begin{DoxyParamCaption}\item[{\textbf{ Card} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+envoyer une carte au cimetière 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_player_a3d6549590fb8e154951c873d6bfb412e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_aa87746929fad46316b1452dd0d9b2b36}} 
+\index{Player@{Player}!disengageCards@{disengageCards}}
+\index{disengageCards@{disengageCards}!Player@{Player}}
+\doxysubsubsection{disengageCards()}
+{\footnotesize\ttfamily void Player\+::disengage\+Cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+désengager ses cartes 
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_aa87746929fad46316b1452dd0d9b2b36_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_aa87746929fad46316b1452dd0d9b2b36_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_a3b9eb955669297073700bc13b27d27ff}} 
+\index{Player@{Player}!drawCard@{drawCard}}
+\index{drawCard@{drawCard}!Player@{Player}}
+\doxysubsubsection{drawCard()}
+{\footnotesize\ttfamily bool Player\+::draw\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+piocher une carte 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{class_player_a3b9eb955669297073700bc13b27d27ff_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a3b9eb955669297073700bc13b27d27ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_a8c12eeee6d1b4718dd61ebf21750ae30}} 
+\index{Player@{Player}!getAttackCards@{getAttackCards}}
+\index{getAttackCards@{getAttackCards}!Player@{Player}}
+\doxysubsubsection{getAttackCards()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Card} $\ast$ $>$ Player\+::get\+Attack\+Cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ses cartes qui peuvent attaquer 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_player_a8c12eeee6d1b4718dd61ebf21750ae30_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_a13c963d763eca10e5527e14f6aa10393}} 
+\index{Player@{Player}!getColoredName@{getColoredName}}
+\index{getColoredName@{getColoredName}!Player@{Player}}
+\doxysubsubsection{getColoredName()}
+{\footnotesize\ttfamily std\+::string Player\+::get\+Colored\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_player_a13c963d763eca10e5527e14f6aa10393_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a13c963d763eca10e5527e14f6aa10393_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_aabe0a76c0767e94328d75a32963b4de6}} 
+\index{Player@{Player}!getDefenseCards@{getDefenseCards}}
+\index{getDefenseCards@{getDefenseCards}!Player@{Player}}
+\doxysubsubsection{getDefenseCards()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Card} $\ast$ $>$ Player\+::get\+Defense\+Cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ses cartes qui peuvent défendre 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_aabe0a76c0767e94328d75a32963b4de6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_aa6479f194f9bb44b09adaf3b04a5594d}} 
+\index{Player@{Player}!getHp@{getHp}}
+\index{getHp@{getHp}!Player@{Player}}
+\doxysubsubsection{getHp()}
+{\footnotesize\ttfamily int Player\+::get\+Hp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+récuperer les hp du joueurs 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_aa6479f194f9bb44b09adaf3b04a5594d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_af1aa472885d589516f483e26e786600e}} 
+\index{Player@{Player}!getName@{getName}}
+\index{getName@{getName}!Player@{Player}}
+\doxysubsubsection{getName()}
+{\footnotesize\ttfamily std\+::string Player\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set le nom du joueurs. 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_af1aa472885d589516f483e26e786600e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_ae0f72a15d6130e0469251bc1543cc23a}} 
+\index{Player@{Player}!getPlayableCards@{getPlayableCards}}
+\index{getPlayableCards@{getPlayableCards}!Player@{Player}}
+\doxysubsubsection{getPlayableCards()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Card} $\ast$ $>$ Player\+::get\+Playable\+Cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ses cartes jouables 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_ae0f72a15d6130e0469251bc1543cc23a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_aa016a6401d45ac510fd71c5629b0a707}} 
+\index{Player@{Player}!playCard@{playCard}}
+\index{playCard@{playCard}!Player@{Player}}
+\doxysubsubsection{playCard()}
+{\footnotesize\ttfamily void Player\+::play\+Card (\begin{DoxyParamCaption}\item[{\textbf{ Card} $\ast$}]{c }\end{DoxyParamCaption})}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_aa016a6401d45ac510fd71c5629b0a707_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_a021f86d4c3ff6e81ec19b77c38550fe9}} 
+\index{Player@{Player}!setHp@{setHp}}
+\index{setHp@{setHp}!Player@{Player}}
+\doxysubsubsection{setHp()}
+{\footnotesize\ttfamily void Player\+::set\+Hp (\begin{DoxyParamCaption}\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+set les hp du joueurs 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em hp} & \\
+\hline
+\end{DoxyParams}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a021f86d4c3ff6e81ec19b77c38550fe9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_a92c5a1c23490fdbe632aae02e4839454}} 
+\index{Player@{Player}!setPrintColor@{setPrintColor}}
+\index{setPrintColor@{setPrintColor}!Player@{Player}}
+\doxysubsubsection{setPrintColor()}
+{\footnotesize\ttfamily void Player\+::set\+Print\+Color (\begin{DoxyParamCaption}\item[{std\+::string}]{color }\end{DoxyParamCaption})}
+
+
+
+set la coleur du joueur 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\label{class_player_a5998536f01a94a585937c81f3c5ab4bb}} 
+\index{Player@{Player}!baseHp@{baseHp}}
+\index{baseHp@{baseHp}!Player@{Player}}
+\doxysubsubsection{baseHp}
+{\footnotesize\ttfamily int Player\+::base\+Hp = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\label{class_player_a8a6eab4cd07b6c75151360ccfb4ad9a1}} 
+\index{Player@{Player}!cards@{cards}}
+\index{cards@{cards}!Player@{Player}}
+\doxysubsubsection{cards}
+{\footnotesize\ttfamily \textbf{ Deck} Player\+::cards\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_player_af88a832f4ef7856ac595ee8dfeff9001}} 
+\index{Player@{Player}!currentHp@{currentHp}}
+\index{currentHp@{currentHp}!Player@{Player}}
+\doxysubsubsection{currentHp}
+{\footnotesize\ttfamily int Player\+::current\+Hp\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_player_a9c0c126f73f78e21fa3473ba42e1d271}} 
+\index{Player@{Player}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!Player@{Player}}
+\doxysubsubsection{isAlive}
+{\footnotesize\ttfamily bool Player\+::is\+Alive\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_player_af9c920fabaafdeb7961a645315b521ff}} 
+\index{Player@{Player}!name@{name}}
+\index{name@{name}!Player@{Player}}
+\doxysubsubsection{name}
+{\footnotesize\ttfamily std\+::string Player\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_player_a3744a191c270a1b9edeb47c1b37e1d10}} 
+\index{Player@{Player}!printColor@{printColor}}
+\index{printColor@{printColor}!Player@{Player}}
+\doxysubsubsection{printColor}
+{\footnotesize\ttfamily std\+::string Player\+::print\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Source/header/\textbf{ Player.\+h}\item 
+Source/src/\textbf{ Player.\+cpp}\end{DoxyCompactItemize}

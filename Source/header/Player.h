@@ -20,19 +20,61 @@ protected :
     static int baseHp;
     Deck cards;
 public :
+    /**
+     * Constructeur d'un joueur
+     */
     Player(std::string, Deck);
     ~Player(){};
+    /**
+     * set la coleur du joueur
+     * @param color
+     */
     void setPrintColor(std::string color);
+    /**
+     * Set le nom du joueurs
+     * @return
+     */
     std::string getName();
     std::string getColoredName();
+    /**
+     * récuperer les hp du joueurs
+     * @return
+     */
     int getHp();
+    /**
+     * set les hp du joueurs
+     * @param hp
+     */
     void setHp(int hp);
+    /**
+     * piocher une carte
+     * @return
+     */
     bool drawCard();
+    /**
+     * désengager ses cartes
+     */
     void disengageCards();
+    /**
+     * ses cartes jouables
+     * @return
+     */
     std::vector<Card*> getPlayableCards();
     void playCard(Card* c);
+    /**
+     * ses cartes qui peuvent attaquer
+     * @return
+     */
     std::vector<Card*> getAttackCards();
+    /**
+     * ses cartes qui peuvent défendre
+     * @return
+     */
     std::vector<Card*> getDefenseCards();
+    /**
+     * envoyer une carte au cimetière
+     * @param c
+     */
     void discardCard(Card* c);
 };
 

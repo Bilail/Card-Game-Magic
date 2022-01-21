@@ -1,0 +1,318 @@
+.TH "Card" 3 "Vendredi 21 Janvier 2022" "Magic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Card
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Card\&.h>\fP
+.PP
+Dérivée par \fBCreatureCard\fP, et \fBLandCard\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBCard\fP (std::string nm, std::vector< int > mnCt, std::string clr)"
+.br
+.RI "Constructeur de card\&. "
+.ti -1c
+.RI "void \fBsetName\fP (const std::string &\fBname\fP)"
+.br
+.RI "Fonction qui permet de saisir le nom d'une carte\&. "
+.ti -1c
+.RI "void \fBengage\fP ()"
+.br
+.RI "Engager une carte\&. "
+.ti -1c
+.RI "void \fBdisengage\fP ()"
+.br
+.RI "Désengager une carte\&. "
+.ti -1c
+.RI "void \fBsetManaCost\fP (std::vector< int > \fBmanaCost\fP)"
+.br
+.RI "Saisir le cout en terrain\&. "
+.ti -1c
+.RI "void \fBsetColor\fP (const std::string &\fBcolor\fP)"
+.br
+.RI "Saisir la couleur\&. "
+.ti -1c
+.RI "void \fBsetIsDiscarded\fP (bool \fBisDiscarded\fP)"
+.br
+.RI "Mettre une carte au cimetière\&. "
+.ti -1c
+.RI "const std::string & \fBgetName\fP () const"
+.br
+.RI "Récuperer le nom de la carte\&. "
+.ti -1c
+.RI "const std::string \fBgetColoredName\fP () const"
+.br
+.RI "Récuperer le nomde la couleur de la carte\&. "
+.ti -1c
+.RI "std::vector< int > \fBgetManaCost\fP () const"
+.br
+.RI "Récupérer le coût en terrain\&. "
+.ti -1c
+.RI "const std::string & \fBgetColor\fP () const"
+.br
+.RI "Récupérer la couleur\&. "
+.ti -1c
+.RI "bool \fBgetIsDiscarded\fP () const"
+.br
+.RI "Etat dans le cimetière ou pas\&. "
+.ti -1c
+.RI "bool \fBgetIsEngaged\fP () const"
+.br
+.RI "Engagé ou pas\&. "
+.ti -1c
+.RI "\fB~Card\fP ()"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "void \fBisStillOperational\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBprint\fP ()"
+.br
+.RI "Fonction d'affichage\&. "
+.ti -1c
+.RI "virtual void \fBprintLine\fP (int line)"
+.br
+.RI "Fonction d'affichage par ligne Pour l'affiche en ligne et non pas en colonne\&. "
+.ti -1c
+.RI "std::string \fBmanaToString\fP ()"
+.br
+.RI "Cout en terrain en string\&. "
+.in -1c
+.SS "Fonctions membres publiques statiques"
+
+.in +1c
+.ti -1c
+.RI "static void \fBprint\fP (std::vector< \fBCard\fP * > v)"
+.br
+.in -1c
+.SS "Attributs publics statiques"
+
+.in +1c
+.ti -1c
+.RI "static std::vector< std::string > \fBColorCode\fP = {'green','blue','red','yellow','black','white'}"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBname\fP"
+.br
+.ti -1c
+.RI "std::vector< int > \fBmanaCost\fP"
+.br
+.ti -1c
+.RI "std::string \fBcolor\fP"
+.br
+.ti -1c
+.RI "bool \fBisDiscarded\fP = false"
+.br
+.ti -1c
+.RI "bool \fBisEngaged\fP = false"
+.br
+.ti -1c
+.RI "std::string \fBtypeOfCard\fP"
+.br
+.in -1c
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Card::Card (std::string nm, std::vector< int > mnCt, std::string clr)"
+
+.PP
+Constructeur de card\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fInm\fP : le nom de la carte 
+.br
+\fImnCt\fP : son cout en terrain 
+.br
+\fIclr\fP : sa couleur 
+.RE
+.PP
+
+.SS "Card::~Card ()"
+
+.PP
+Destructeur\&. 
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void Card::disengage ()"
+
+.PP
+Désengager une carte\&. 
+.SS "void Card::engage ()"
+
+.PP
+Engager une carte\&. 
+.SS "const std::string & Card::getColor () const"
+
+.PP
+Récupérer la couleur\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "const std::string Card::getColoredName () const"
+
+.PP
+Récuperer le nomde la couleur de la carte\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+couleur 
+.RE
+.PP
+
+.SS "bool Card::getIsDiscarded () const"
+
+.PP
+Etat dans le cimetière ou pas\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "bool Card::getIsEngaged () const"
+
+.PP
+Engagé ou pas\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "std::vector< int > Card::getManaCost () const"
+
+.PP
+Récupérer le coût en terrain\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "const std::string & Card::getName () const"
+
+.PP
+Récuperer le nom de la carte\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+name 
+.RE
+.PP
+
+.SS "void Card::isStillOperational ()"
+
+.SS "std::string Card::manaToString ()"
+
+.PP
+Cout en terrain en string\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void Card::print ()\fC [virtual]\fP"
+
+.PP
+Fonction d'affichage\&. 
+.PP
+Réimplémentée dans \fBCreatureCard\fP, et \fBLandCard\fP\&.
+.SS "void Card::print (std::vector< \fBCard\fP * > v)\fC [static]\fP"
+
+.SS "void Card::printLine (int line)\fC [virtual]\fP"
+
+.PP
+Fonction d'affichage par ligne Pour l'affiche en ligne et non pas en colonne\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIline\fP 
+.RE
+.PP
+
+.PP
+Réimplémentée dans \fBCreatureCard\fP, et \fBLandCard\fP\&.
+.SS "void Card::setColor (const std::string & color)"
+
+.PP
+Saisir la couleur\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcolor\fP 
+.RE
+.PP
+
+.SS "void Card::setIsDiscarded (bool isDiscarded)"
+
+.PP
+Mettre une carte au cimetière\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIisDiscarded\fP 
+.RE
+.PP
+
+.SS "void Card::setManaCost (std::vector< int > manaCost)"
+
+.PP
+Saisir le cout en terrain\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fImanaCost\fP 
+.RE
+.PP
+
+.SS "void Card::setName (const std::string & name)"
+
+.PP
+Fonction qui permet de saisir le nom d'une carte\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIname\fP le nom de la carte 
+.RE
+.PP
+
+.SH "Documentation des données membres"
+.PP 
+.SS "std::string Card::color\fC [protected]\fP"
+
+.SS "std::vector< std::string > Card::ColorCode = {'green','blue','red','yellow','black','white'}\fC [static]\fP"
+
+.SS "bool Card::isDiscarded = false\fC [protected]\fP"
+
+.SS "bool Card::isEngaged = false\fC [protected]\fP"
+
+.SS "std::vector<int> Card::manaCost\fC [protected]\fP"
+
+.SS "std::string Card::name\fC [protected]\fP"
+
+.SS "std::string Card::typeOfCard\fC [protected]\fP"
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Magic à partir du code source\&.

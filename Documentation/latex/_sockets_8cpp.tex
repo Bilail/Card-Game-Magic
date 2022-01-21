@@ -1,0 +1,56 @@
+\hypertarget{_sockets_8cpp}{}\doxysection{Référence du fichier Source/dependance/\+SFML/examples/sockets/\+Sockets.cpp}
+\label{_sockets_8cpp}\index{Source/dependance/SFML/examples/sockets/Sockets.cpp@{Source/dependance/SFML/examples/sockets/Sockets.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_sockets_8cpp_a918906a98ab06440251f6920f5fc4bbb}{run\+Tcp\+Server}} (unsigned short port)
+\item 
+void \mbox{\hyperlink{_sockets_8cpp_acab1386c826ab10447f392c272e70a86}{run\+Tcp\+Client}} (unsigned short port)
+\item 
+void \mbox{\hyperlink{_sockets_8cpp_a23006522225bb4fcc4fc1a803eb0f634}{run\+Udp\+Server}} (unsigned short port)
+\item 
+void \mbox{\hyperlink{_sockets_8cpp_acdcf868ca96e00cd5a6b3fbca14e84f6}{run\+Udp\+Client}} (unsigned short port)
+\item 
+int \mbox{\hyperlink{_sockets_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{_sockets_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_sockets_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Sockets.cpp@{Sockets.cpp}!main@{main}}
+\index{main@{main}!Sockets.cpp@{Sockets.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Entry point of application
+
+\begin{DoxyReturn}{Renvoie}
+Application exit code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_sockets_8cpp_acab1386c826ab10447f392c272e70a86}\label{_sockets_8cpp_acab1386c826ab10447f392c272e70a86}} 
+\index{Sockets.cpp@{Sockets.cpp}!runTcpClient@{runTcpClient}}
+\index{runTcpClient@{runTcpClient}!Sockets.cpp@{Sockets.cpp}}
+\doxysubsubsection{\texorpdfstring{runTcpClient()}{runTcpClient()}}
+{\footnotesize\ttfamily void run\+Tcp\+Client (\begin{DoxyParamCaption}\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+Create a client, connect it to a server, display the welcome message and send an answer. \mbox{\Hypertarget{_sockets_8cpp_a918906a98ab06440251f6920f5fc4bbb}\label{_sockets_8cpp_a918906a98ab06440251f6920f5fc4bbb}} 
+\index{Sockets.cpp@{Sockets.cpp}!runTcpServer@{runTcpServer}}
+\index{runTcpServer@{runTcpServer}!Sockets.cpp@{Sockets.cpp}}
+\doxysubsubsection{\texorpdfstring{runTcpServer()}{runTcpServer()}}
+{\footnotesize\ttfamily void run\+Tcp\+Server (\begin{DoxyParamCaption}\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+Launch a server, wait for an incoming connection, send a message and wait for the answer. \mbox{\Hypertarget{_sockets_8cpp_acdcf868ca96e00cd5a6b3fbca14e84f6}\label{_sockets_8cpp_acdcf868ca96e00cd5a6b3fbca14e84f6}} 
+\index{Sockets.cpp@{Sockets.cpp}!runUdpClient@{runUdpClient}}
+\index{runUdpClient@{runUdpClient}!Sockets.cpp@{Sockets.cpp}}
+\doxysubsubsection{\texorpdfstring{runUdpClient()}{runUdpClient()}}
+{\footnotesize\ttfamily void run\+Udp\+Client (\begin{DoxyParamCaption}\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+Send a message to the server, wait for the answer \mbox{\Hypertarget{_sockets_8cpp_a23006522225bb4fcc4fc1a803eb0f634}\label{_sockets_8cpp_a23006522225bb4fcc4fc1a803eb0f634}} 
+\index{Sockets.cpp@{Sockets.cpp}!runUdpServer@{runUdpServer}}
+\index{runUdpServer@{runUdpServer}!Sockets.cpp@{Sockets.cpp}}
+\doxysubsubsection{\texorpdfstring{runUdpServer()}{runUdpServer()}}
+{\footnotesize\ttfamily void run\+Udp\+Server (\begin{DoxyParamCaption}\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+Launch a server, wait for a message, send an answer. 

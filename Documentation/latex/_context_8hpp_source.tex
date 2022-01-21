@@ -1,0 +1,81 @@
+\hypertarget{_context_8hpp_source}{}\doxysection{Context.\+hpp}
+\label{_context_8hpp_source}\index{Source/dependance/SFML/include/SFML/Window/Context.hpp@{Source/dependance/SFML/include/SFML/Window/Context.hpp}}
+\mbox{\hyperlink{_context_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_CONTEXT\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_CONTEXT\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_window_2_export_8hpp}{SFML/Window/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_gl_resource_8hpp}{SFML/Window/GlResource.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_context_settings_8hpp}{SFML/Window/ContextSettings.hpp}}>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_non_copyable_8hpp}{SFML/System/NonCopyable.hpp}}>}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacepriv}{priv}}}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     \textcolor{keyword}{class }GlContext;}
+\DoxyCodeLine{42 \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{keyword}{typedef} void (*\mbox{\hyperlink{namespacesf_a0187a0b60bae499f24a4949973657f60}{GlFunctionPointer}})();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{50 \textcolor{keyword}{class }\mbox{\hyperlink{_window_2_export_8hpp_a1ab885b7907ee088350359516d68be64}{SFML\_WINDOW\_API}} \mbox{\hyperlink{classsf_1_1_context}{Context}} : \mbox{\hyperlink{classsf_1_1_gl_resource}{GlResource}}, \mbox{\hyperlink{classsf_1_1_non_copyable}{NonCopyable}}}
+\DoxyCodeLine{51 \{}
+\DoxyCodeLine{52 \textcolor{keyword}{public}:}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{60     \mbox{\hyperlink{classsf_1_1_context_aba22797a790706ca2c5c04ee39f2b555}{Context}}();}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{68     \mbox{\hyperlink{classsf_1_1_context_a805b1bbdb3e52b1fda7c9bf2cd6ca86b}{\string~Context}}();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{78     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_context_a0806f915ea81ae1f4e8135a7a3696562}{setActive}}(\textcolor{keywordtype}{bool} active);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{90     \textcolor{keyword}{const} \mbox{\hyperlink{structsf_1_1_context_settings}{ContextSettings}}\& \mbox{\hyperlink{classsf_1_1_context_a5aace0ecfcf9552e97eed9ae88d01f71}{getSettings}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{100     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_context_a163c7f72c0c20133606657d895faa147}{isExtensionAvailable}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{110     \textcolor{keyword}{static} \mbox{\hyperlink{namespacesf_a0187a0b60bae499f24a4949973657f60}{GlFunctionPointer}} \mbox{\hyperlink{classsf_1_1_context_a998980d311effdf6223ce40d934c23c3}{getFunction}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name);}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{122     \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_context}{Context}}* \mbox{\hyperlink{classsf_1_1_context_a31bc6509779067b21d13208ffe85d5ca}{getActiveContext}}();}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{133     \textcolor{keyword}{static} \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} \mbox{\hyperlink{classsf_1_1_context_a61b1cb0a99b8e3ce56579d70aa41fb70}{getActiveContextId}}();}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{146     \mbox{\hyperlink{classsf_1_1_context_a2a9e3529e48919120e6b6fc10bad296c}{Context}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsf_1_1_context_settings}{ContextSettings}}\& settings, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148 \textcolor{keyword}{private}:}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{151     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{153 \textcolor{comment}{}    priv::GlContext* m\_context; }
+\DoxyCodeLine{154 \};}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_CONTEXT\_HPP}}
+\DoxyCodeLine{160 }
+
+\end{DoxyCode}

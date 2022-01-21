@@ -1,0 +1,30 @@
+\doxysection{Game\+Cards.\+h}
+\label{_game_cards_8h_source}\index{Source/header/GameCards.h@{Source/header/GameCards.h}}
+\textbf{ Aller à la documentation de ce fichier.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by dope on 08/01/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef MAGIC\_GAMECARDS\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define MAGIC\_GAMECARDS\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Card.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}CreatureCard.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}LandCard.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }GameCards \{}
+\DoxyCodeLine{14 \textcolor{keyword}{private}:}
+\DoxyCodeLine{15     std::vector<CreatureCard> creatures;}
+\DoxyCodeLine{16     std::vector<LandCard> lands;}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     GameCards();}
+\DoxyCodeLine{22     \textcolor{keyword}{const} std::vector<CreatureCard>\& getCreatures();}
+\DoxyCodeLine{23     \textcolor{keyword}{const} std::vector<LandCard>\& getLands();}
+\DoxyCodeLine{24 \};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_GAMECARDS\_H}}
+
+\end{DoxyCode}

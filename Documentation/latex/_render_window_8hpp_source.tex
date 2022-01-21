@@ -1,0 +1,73 @@
+\hypertarget{_render_window_8hpp_source}{}\doxysection{Render\+Window.\+hpp}
+\label{_render_window_8hpp_source}\index{Source/dependance/SFML/include/SFML/Graphics/RenderWindow.hpp@{Source/dependance/SFML/include/SFML/Graphics/RenderWindow.hpp}}
+\mbox{\hyperlink{_render_window_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_RENDERWINDOW\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_RENDERWINDOW\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_graphics_2_export_8hpp}{SFML/Graphics/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_render_target_8hpp}{SFML/Graphics/RenderTarget.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_image_8hpp}{SFML/Graphics/Image.hpp}}>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_window_2_window_8hpp}{SFML/Window/Window.hpp}}>}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{44 \textcolor{keyword}{class }\mbox{\hyperlink{_graphics_2_export_8hpp_ab84c9f1035e146917de3bc0f98d72b35}{SFML\_GRAPHICS\_API}} \mbox{\hyperlink{classsf_1_1_render_window}{RenderWindow}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsf_1_1_window}{Window}}, \textcolor{keyword}{public} \mbox{\hyperlink{classsf_1_1_render_target}{RenderTarget}}}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46 \textcolor{keyword}{public}:}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{55     \mbox{\hyperlink{classsf_1_1_render_window_a839bbf336bdcafb084dafc3076fc9021}{RenderWindow}}();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{76     \mbox{\hyperlink{classsf_1_1_render_window_aebef983e01f677bf5a66cefc4d547647}{RenderWindow}}(\mbox{\hyperlink{classsf_1_1_video_mode}{VideoMode}} mode, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_string}{String}}\& title, \mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} style = \mbox{\hyperlink{group__window_ggae68d40cf798e1b49092a4e4d04f4866ea5597cd420fc461807e4a201c92adea37}{Style::Default}}, \textcolor{keyword}{const} \mbox{\hyperlink{structsf_1_1_context_settings}{ContextSettings}}\& settings = \mbox{\hyperlink{structsf_1_1_context_settings}{ContextSettings}}());}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{94     \textcolor{keyword}{explicit} \mbox{\hyperlink{classsf_1_1_render_window_a25c0af7d515e710b6eebc9c6be952aa5}{RenderWindow}}(WindowHandle handle, \textcolor{keyword}{const} \mbox{\hyperlink{structsf_1_1_context_settings}{ContextSettings}}\& settings = \mbox{\hyperlink{structsf_1_1_context_settings}{ContextSettings}}());}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{102     \textcolor{keyword}{virtual} \mbox{\hyperlink{classsf_1_1_render_window_a3407e36bfc1752d723140438a825365c}{\string~RenderWindow}}();}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{113     \textcolor{keyword}{virtual} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2u}} \mbox{\hyperlink{classsf_1_1_render_window_ae3eacf93661c8068fca7a78d57dc7e14}{getSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{131     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_render_window_aee6c53eced675e885931eb3e91f11155}{setActive}}(\textcolor{keywordtype}{bool} active = \textcolor{keyword}{true});}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{158     \mbox{\hyperlink{_config_8hpp_a9d22ae32bba2961ae9abc7e40f035fc7}{SFML\_DEPRECATED}} \mbox{\hyperlink{classsf_1_1_image}{Image}} \mbox{\hyperlink{classsf_1_1_render_window_a370137abe81f6b7d62b600ceeccd54d3}{capture}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{170     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_render_window_a5bef0040b0fa87bed9fbd459c980d53a}{onCreate}}();}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{179     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_render_window_a5c85fe482313562d33ffd24a194b6fef}{onResize}}();}
+\DoxyCodeLine{180 \};}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_RENDERWINDOW\_HPP}}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 }
+
+\end{DoxyCode}

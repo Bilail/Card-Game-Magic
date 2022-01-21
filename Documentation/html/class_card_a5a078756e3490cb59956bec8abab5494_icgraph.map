@@ -1,0 +1,5 @@
+<map id="Card::getManaCost" name="Card::getManaCost">
+<area shape="rect" id="node1" title="Affiche le nom de la carte coloré" alt="" coords="331,5,465,32"/>
+<area shape="rect" id="node2" href="$class_deck.html#acec615e3dbd2c22200f74b61d95ddac4" title="Les cartes jouables." alt="" coords="172,5,283,32"/>
+<area shape="rect" id="node3" href="$class_player.html#aa016a6401d45ac510fd71c5629b0a707" title=" " alt="" coords="5,5,124,32"/>
+</map>

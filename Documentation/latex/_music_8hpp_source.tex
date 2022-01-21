@@ -1,0 +1,117 @@
+\hypertarget{_music_8hpp_source}{}\doxysection{Music.\+hpp}
+\label{_music_8hpp_source}\index{Source/dependance/SFML/include/SFML/Audio/Music.hpp@{Source/dependance/SFML/include/SFML/Audio/Music.hpp}}
+\mbox{\hyperlink{_music_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_MUSIC\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_MUSIC\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_audio_2_export_8hpp}{SFML/Audio/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_sound_stream_8hpp}{SFML/Audio/SoundStream.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_input_sound_file_8hpp}{SFML/Audio/InputSoundFile.hpp}}>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_mutex_8hpp}{SFML/System/Mutex.hpp}}>}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_time_8hpp}{SFML/System/Time.hpp}}>}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42 \textcolor{keyword}{class }InputStream;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{48 \textcolor{keyword}{class }\mbox{\hyperlink{_audio_2_export_8hpp_a4d34c0f253824ac49bdd93545913eb89}{SFML\_AUDIO\_API}} \mbox{\hyperlink{classsf_1_1_music}{Music}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsf_1_1_sound_stream}{SoundStream}}}
+\DoxyCodeLine{49 \{}
+\DoxyCodeLine{50 \textcolor{keyword}{public}:}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{56     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{57     \textcolor{keyword}{struct }\mbox{\hyperlink{structsf_1_1_music_1_1_span}{Span}}}
+\DoxyCodeLine{58     \{}
+\DoxyCodeLine{63         \mbox{\hyperlink{structsf_1_1_music_1_1_span_a71e6200a586f650ce002e7e99929ae85}{Span}}()}
+\DoxyCodeLine{64         \{}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66         \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{75         \mbox{\hyperlink{structsf_1_1_music_1_1_span_a935db12207fa3da4c2461cd5e1f9fa0d}{Span}}(T off, T len):}
+\DoxyCodeLine{76         offset(off),}
+\DoxyCodeLine{77         length(len)}
+\DoxyCodeLine{78         \{}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82         T \mbox{\hyperlink{structsf_1_1_music_1_1_span_a49bb6a3c4239288cf47c1298c3e5e1a3}{offset}}; }
+\DoxyCodeLine{83         T \mbox{\hyperlink{structsf_1_1_music_1_1_span_a509fdbef69a8fc0f8430ecb7b9e76221}{length}}; }
+\DoxyCodeLine{84     \};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     \textcolor{comment}{// Define the relevant Span types}}
+\DoxyCodeLine{87     \textcolor{keyword}{typedef} \mbox{\hyperlink{structsf_1_1_music_1_1_span}{Span<Time>}} \mbox{\hyperlink{classsf_1_1_music_a87625c59543125c81c380aa37aeb93e7}{TimeSpan}};}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{93     \mbox{\hyperlink{classsf_1_1_music_a0bc787d8e022b3a9b89cf2c28befd42e}{Music}}();}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{99     \mbox{\hyperlink{classsf_1_1_music_a4c65860fed2f01d0eaa6c4199870414b}{\string~Music}}();}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{120     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_music_a3edc66e5f5b3f11e84b90eaec9c7d7c0}{openFromFile}}(\textcolor{keyword}{const} std::string\& filename);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{143     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_music_ae93b21bcf28ff0b5fec458039111386e}{openFromMemory}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* data, std::size\_t sizeInBytes);}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{164     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_music_a4e55d1910a26858b44778c26b237d673}{openFromStream}}(\mbox{\hyperlink{classsf_1_1_input_stream}{InputStream}}\& stream);}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{172     \mbox{\hyperlink{classsf_1_1_time}{Time}} \mbox{\hyperlink{classsf_1_1_music_a288ef6f552a136b0e56952dcada3d672}{getDuration}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{189     \mbox{\hyperlink{structsf_1_1_music_1_1_span}{TimeSpan}} \mbox{\hyperlink{classsf_1_1_music_aae3451cad5c16ee6a6e124e62ed61361}{getLoopPoints}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{211     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_music_ae7b339f0a957dfad045f3f28083a015e}{setLoopPoints}}(\mbox{\hyperlink{structsf_1_1_music_1_1_span}{TimeSpan}} timePoints);}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{226     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_music_aca1bcb4e5d56a854133e74bd86374463}{onGetData}}(\mbox{\hyperlink{structsf_1_1_sound_stream_1_1_chunk}{Chunk}}\& data);}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{234     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_music_a15119cc0419c16bb334fa0698699c02e}{onSeek}}(\mbox{\hyperlink{classsf_1_1_time}{Time}} timeOffset);}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{246     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} \mbox{\hyperlink{classsf_1_1_music_aa68a64bdaf5d16e9ed64f202f5c45e03}{onLoop}}();}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248 \textcolor{keyword}{private}:}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{254     \textcolor{keywordtype}{void} initialize();}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{264     \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} timeToSamples(\mbox{\hyperlink{classsf_1_1_time}{Time}} position) \textcolor{keyword}{const};}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{274     \mbox{\hyperlink{classsf_1_1_time}{Time}} samplesToTime(\mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} samples) \textcolor{keyword}{const};}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{277     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{279 \textcolor{comment}{}    \mbox{\hyperlink{classsf_1_1_input_sound_file}{InputSoundFile}}     m\_file;     }
+\DoxyCodeLine{280     std::vector<Int16> m\_samples;  }
+\DoxyCodeLine{281     \mbox{\hyperlink{classsf_1_1_mutex}{Mutex}}              m\_mutex;    }
+\DoxyCodeLine{282     \mbox{\hyperlink{structsf_1_1_music_1_1_span}{Span<Uint64>}}       m\_loopSpan; }
+\DoxyCodeLine{283 \};}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_MUSIC\_HPP}}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{290 }
+
+\end{DoxyCode}

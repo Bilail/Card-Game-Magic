@@ -1,0 +1,186 @@
+.TH "CreatureCard" 3 "Vendredi 21 Janvier 2022" "Magic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CreatureCard
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CreatureCard\&.h>\fP
+.PP
+Est dérivée de \fBCard\fP\&.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBCreatureCard\fP (std::string nam, std::vector< int > mC, std::string cl, int ap, int \fBhp\fP)"
+.br
+.RI "Constructeurs des cartes créatures\&. "
+.ti -1c
+.RI "int \fBgetHp\fP () const"
+.br
+.RI "Récuper les point de vie\&. "
+.ti -1c
+.RI "int \fBgetAttackPower\fP () const"
+.br
+.RI "Recuper les points d'attaques\&. "
+.ti -1c
+.RI "void \fBsetHp\fP (int \fBhp\fP)"
+.br
+.RI "Set les hp\&. "
+.ti -1c
+.RI "void \fBsetAttackPower\fP (int \fBattackPower\fP)"
+.br
+.RI "Set l'attaque\&. "
+.ti -1c
+.RI "void \fBinvocate\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisFirstTurn\fP ()"
+.br
+.RI "boolean si premier tour "
+.ti -1c
+.RI "void \fBprint\fP ()"
+.br
+.RI "Affichage\&. "
+.ti -1c
+.RI "void \fBprintLine\fP (int line)"
+.br
+.RI "Affichage par ligne\&. "
+.ti -1c
+.RI "void \fBattack\fP ()"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "int \fBhp\fP"
+.br
+.ti -1c
+.RI "int \fBdefaultHp\fP"
+.br
+.ti -1c
+.RI "int \fBattackPower\fP"
+.br
+.ti -1c
+.RI "bool \fBfirstTurn\fP"
+.br
+.in -1c
+.SS "Membres hérités additionnels"
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "CreatureCard::CreatureCard (std::string nam, std::vector< int > mC, std::string cl, int ap, int hp)"
+
+.PP
+Constructeurs des cartes créatures\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fInam\fP 
+.br
+\fIcout\fP en terrain 
+.br
+\fIcouelur\fP 
+.br
+\fIattaque\fP 
+.br
+\fIpoint\fP de vie 
+.RE
+.PP
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void CreatureCard::attack ()"
+
+.SS "int CreatureCard::getAttackPower () const"
+
+.PP
+Recuper les points d'attaques\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+attaque 
+.RE
+.PP
+
+.SS "int CreatureCard::getHp () const"
+
+.PP
+Récuper les point de vie\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+hp 
+.RE
+.PP
+
+.SS "void CreatureCard::invocate ()"
+
+.SS "bool CreatureCard::isFirstTurn ()"
+
+.PP
+boolean si premier tour 
+.PP
+\fBRenvoie\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void CreatureCard::print ()\fC [virtual]\fP"
+
+.PP
+Affichage\&. 
+.PP
+Réimplémentée à partir de \fBCard\fP\&.
+.SS "void CreatureCard::printLine (int line)\fC [virtual]\fP"
+
+.PP
+Affichage par ligne\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIline\fP 
+.RE
+.PP
+
+.PP
+Réimplémentée à partir de \fBCard\fP\&.
+.SS "void CreatureCard::setAttackPower (int attackPower)"
+
+.PP
+Set l'attaque\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIattackPower\fP 
+.RE
+.PP
+
+.SS "void CreatureCard::setHp (int hp)"
+
+.PP
+Set les hp\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIhp\fP 
+.RE
+.PP
+
+.SH "Documentation des données membres"
+.PP 
+.SS "int CreatureCard::attackPower\fC [protected]\fP"
+
+.SS "int CreatureCard::defaultHp\fC [protected]\fP"
+
+.SS "bool CreatureCard::firstTurn\fC [protected]\fP"
+
+.SS "int CreatureCard::hp\fC [protected]\fP"
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Magic à partir du code source\&.

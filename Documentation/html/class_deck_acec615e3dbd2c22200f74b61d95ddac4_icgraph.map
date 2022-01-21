@@ -1,0 +1,4 @@
+<map id="Deck::playCard" name="Deck::playCard">
+<area shape="rect" id="node1" title="Les cartes jouables." alt="" coords="172,5,283,32"/>
+<area shape="rect" id="node2" href="$class_player.html#aa016a6401d45ac510fd71c5629b0a707" title=" " alt="" coords="5,5,124,32"/>
+</map>

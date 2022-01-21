@@ -1,0 +1,104 @@
+\hypertarget{_view_8hpp_source}{}\doxysection{View.\+hpp}
+\label{_view_8hpp_source}\index{Source/dependance/SFML/include/SFML/Graphics/View.hpp@{Source/dependance/SFML/include/SFML/Graphics/View.hpp}}
+\mbox{\hyperlink{_view_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_VIEW\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_VIEW\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_graphics_2_export_8hpp}{SFML/Graphics/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_rect_8hpp}{SFML/Graphics/Rect.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_transform_8hpp}{SFML/Graphics/Transform.hpp}}>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_vector2_8hpp}{SFML/System/Vector2.hpp}}>}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{43 \textcolor{keyword}{class }\mbox{\hyperlink{_graphics_2_export_8hpp_ab84c9f1035e146917de3bc0f98d72b35}{SFML\_GRAPHICS\_API}} \mbox{\hyperlink{classsf_1_1_view}{View}}}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45 \textcolor{keyword}{public}:}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{53     \mbox{\hyperlink{classsf_1_1_view_a28c38308ff089ae5bdacd001d12286d3}{View}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{61     \textcolor{keyword}{explicit} \mbox{\hyperlink{classsf_1_1_view_a1d63bc49e041b3b1ff992bb6430e1326}{View}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_rect}{FloatRect}}\& rectangle);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{70     \mbox{\hyperlink{classsf_1_1_view_afdaf84cfc910ef160450d63603457ea4}{View}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2f}}\& center, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2f}}\& size);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_view_aa8e3fedb008306ff9811163545fb75f2}{setCenter}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_view_ab0296b03793e0873e6ae9e15311f3e78}{setCenter}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2f}}\& center);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_view_a9525b73fe9fbaceb9568faf56b399dab}{setSize}}(\textcolor{keywordtype}{float} width, \textcolor{keywordtype}{float} height);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_view_a9e08d471ce21aa0e69ce55ff9de66d29}{setSize}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2f}}\& size);}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{124     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_view_a24d0503c9c51f5ef5918612786d325c1}{setRotation}}(\textcolor{keywordtype}{float} angle);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{141     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_view_a8eaec46b7d332fe834f016d0187d4b4a}{setViewport}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_rect}{FloatRect}}\& viewport);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{153     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_view_ac95b636eafab3922b7e8304fb6c00d7d}{reset}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_rect}{FloatRect}}\& rectangle);}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{163     \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2f}}\& \mbox{\hyperlink{classsf_1_1_view_a8bd01cd2bcad03e547232b190c215b09}{getCenter}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{173     \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2f}}\& \mbox{\hyperlink{classsf_1_1_view_a57e4a87cf0d724678675d22a0093719a}{getSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{183     \textcolor{keywordtype}{float} \mbox{\hyperlink{classsf_1_1_view_a324d8885f4ab17f1f7b0313580c9b84e}{getRotation}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{193     \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_rect}{FloatRect}}\& \mbox{\hyperlink{classsf_1_1_view_aa2006fa4269078be4fd5ca999dcb6244}{getViewport}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{204     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_view_a0c82144b837caf812f7cb25a43d80c41}{move}}(\textcolor{keywordtype}{float} offsetX, \textcolor{keywordtype}{float} offsetY);}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{214     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_view_a4c98a6e04fed756dfaff8f629de50862}{move}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector2}{Vector2f}}\& offset);}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{224     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_view_a5fd3901aae1845586ca40add94faa378}{rotate}}(\textcolor{keywordtype}{float} angle);}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{241     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_view_a4a72a360a5792fbe4e99cd6feaf7726e}{zoom}}(\textcolor{keywordtype}{float} factor);}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{253     \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_transform}{Transform}}\& \mbox{\hyperlink{classsf_1_1_view_ac9c1dab0cb8c1ac143b031035d821ce5}{getTransform}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{265     \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_transform}{Transform}}\& \mbox{\hyperlink{classsf_1_1_view_aa685c17a56aae7c7df4c90ea6285fd46}{getInverseTransform}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267 \textcolor{keyword}{private}:}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{270     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{272 \textcolor{comment}{}    \mbox{\hyperlink{classsf_1_1_vector2}{Vector2f}}          m\_center;              }
+\DoxyCodeLine{273     \mbox{\hyperlink{classsf_1_1_vector2}{Vector2f}}          m\_size;                }
+\DoxyCodeLine{274     \textcolor{keywordtype}{float}             m\_rotation;            }
+\DoxyCodeLine{275     \mbox{\hyperlink{classsf_1_1_rect}{FloatRect}}         m\_viewport;            }
+\DoxyCodeLine{276     \textcolor{keyword}{mutable} \mbox{\hyperlink{classsf_1_1_transform}{Transform}} m\_transform;           }
+\DoxyCodeLine{277     \textcolor{keyword}{mutable} \mbox{\hyperlink{classsf_1_1_transform}{Transform}} m\_inverseTransform;    }
+\DoxyCodeLine{278     \textcolor{keyword}{mutable} \textcolor{keywordtype}{bool}      m\_transformUpdated;    }
+\DoxyCodeLine{279     \textcolor{keyword}{mutable} \textcolor{keywordtype}{bool}      m\_invTransformUpdated; }
+\DoxyCodeLine{280 \};}
+\DoxyCodeLine{281 }
+\DoxyCodeLine{282 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_VIEW\_HPP}}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287 }
+
+\end{DoxyCode}

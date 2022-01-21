@@ -1,0 +1,101 @@
+\hypertarget{_vector3_8hpp_source}{}\doxysection{Vector3.\+hpp}
+\label{_vector3_8hpp_source}\index{Source/dependance/SFML/include/SFML/System/Vector3.hpp@{Source/dependance/SFML/include/SFML/System/Vector3.hpp}}
+\mbox{\hyperlink{_vector3_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_VECTOR3\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_VECTOR3\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{30 \{}
+\DoxyCodeLine{36 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{37 \textcolor{keyword}{class }\mbox{\hyperlink{classsf_1_1_vector3}{Vector3}}}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39 \textcolor{keyword}{public}:}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{47     \mbox{\hyperlink{classsf_1_1_vector3_aee8be1985c6e45e381ad4071265636f9}{Vector3}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{57     \mbox{\hyperlink{classsf_1_1_vector3_a99ed75b68f58adfa3e9fa0561b424bf6}{Vector3}}(T X, T Y, T Z);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{70     \textcolor{keyword}{template} <\textcolor{keyword}{typename} U>}
+\DoxyCodeLine{71     \textcolor{keyword}{explicit} \mbox{\hyperlink{classsf_1_1_vector3_adb2b2e150025e97ccfa96219bbed59d1}{Vector3}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<U>}}\& vector);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{74     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{76 \textcolor{comment}{}    T \mbox{\hyperlink{classsf_1_1_vector3_a3cb0c769390bc37c346bb1a69e510d16}{x}}; }
+\DoxyCodeLine{77     T \mbox{\hyperlink{classsf_1_1_vector3_a6590d50ccb862c5efc5512e974e9b794}{y}}; }
+\DoxyCodeLine{78     T \mbox{\hyperlink{classsf_1_1_vector3_a2f36ab4b552c028e3a9734c1ad4df7d1}{z}}; }
+\DoxyCodeLine{79 \};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{90 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{91 \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}} \mbox{\hyperlink{_vector2_8inl_a3885c2e66dc427cec7eaa178d59d8e8b}{operator -\/}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& left);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{106 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{107 \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& \mbox{\hyperlink{_vector2_8inl_ad4b7a9d355d57790bfc7df0ade8bb628}{operator +=}}(\mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& right);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{122 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{123 \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& \mbox{\hyperlink{_vector2_8inl_a30a5a12ad03c9a3a982a0a313bf84e6f}{operator -\/=}}(\mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& right);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{135 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{136 \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}} \mbox{\hyperlink{_vector2_8inl_a72421239823c38a6b780c86a710ead07}{operator +}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& right);}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{148 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{149 \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}} \mbox{\hyperlink{_vector2_8inl_a3885c2e66dc427cec7eaa178d59d8e8b}{operator -\/}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& right);}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{161 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{162 \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}} \mbox{\hyperlink{_vector2_8inl_a5f48ca928995b41c89f155afe8d16b02}{operator *}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& left, T right);}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{174 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{175 \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}} \mbox{\hyperlink{_vector2_8inl_a5f48ca928995b41c89f155afe8d16b02}{operator *}}(T left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& right);}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{190 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{191 \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& \mbox{\hyperlink{_vector2_8inl_abea24cb28c0d6e2957e259ba4e65d70e}{operator *=}}(\mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& left, T right);}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{203 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{204 \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}} \mbox{\hyperlink{_vector2_8inl_a7409dd89cb3aad6c3bc6622311107311}{operator /}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& left, T right);}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{219 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{220 \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& \mbox{\hyperlink{_vector2_8inl_ac4d293c9dc7954ccfd5e373972f38b03}{operator /=}}(\mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& left, T right);}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{234 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{235 \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacesf_ac911326160206c1038ceff6face28b89}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& right);}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{249 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{250 \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacesf_ad68fc42c15ea415b59023a4a277f8946}{operator !=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& left, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<T>}}\& right);}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_vector3_8inl}{SFML/System/Vector3.inl}}>}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254 \textcolor{comment}{// Define the most common types}}
+\DoxyCodeLine{255 \textcolor{keyword}{typedef} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<int>}}   \mbox{\hyperlink{namespacesf_ad066a8774efaf7b623df8909ba219dc7}{Vector3i}};}
+\DoxyCodeLine{256 \textcolor{keyword}{typedef} \mbox{\hyperlink{classsf_1_1_vector3}{Vector3<float>}} \mbox{\hyperlink{namespacesf_af97357d7d32e7d6a700d03be2f3b4811}{Vector3f}};}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{258 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_VECTOR3\_HPP}}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{263 }
+
+\end{DoxyCode}

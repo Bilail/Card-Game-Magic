@@ -1,0 +1,67 @@
+\hypertarget{_sound_file_reader_8hpp_source}{}\doxysection{Sound\+File\+Reader.\+hpp}
+\label{_sound_file_reader_8hpp_source}\index{Source/dependance/SFML/include/SFML/Audio/SoundFileReader.hpp@{Source/dependance/SFML/include/SFML/Audio/SoundFileReader.hpp}}
+\mbox{\hyperlink{_sound_file_reader_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_SOUNDFILEREADER\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_SOUNDFILEREADER\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_audio_2_export_8hpp}{SFML/Audio/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37 \textcolor{keyword}{class }InputStream;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{43 \textcolor{keyword}{class }\mbox{\hyperlink{_audio_2_export_8hpp_a4d34c0f253824ac49bdd93545913eb89}{SFML\_AUDIO\_API}} \mbox{\hyperlink{classsf_1_1_sound_file_reader}{SoundFileReader}}}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45 \textcolor{keyword}{public}:}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{51     \textcolor{keyword}{struct }\mbox{\hyperlink{structsf_1_1_sound_file_reader_1_1_info}{Info}}}
+\DoxyCodeLine{52     \{}
+\DoxyCodeLine{53         \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}}       \mbox{\hyperlink{structsf_1_1_sound_file_reader_1_1_info_a74b40b4693d7000571484736d1367167}{sampleCount}};  }
+\DoxyCodeLine{54         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{structsf_1_1_sound_file_reader_1_1_info_ac748bb30768d1a3caf329e95d31d6d2a}{channelCount}}; }
+\DoxyCodeLine{55         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{structsf_1_1_sound_file_reader_1_1_info_a06ef71c19e7de190b294ae02c361f752}{sampleRate}};   }
+\DoxyCodeLine{56     \};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{62     \textcolor{keyword}{virtual} \mbox{\hyperlink{classsf_1_1_sound_file_reader_a34163297f302d15818c76b54f815acc8}{\string~SoundFileReader}}() \{\}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{77     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_sound_file_reader_aa1d2fee2ba8f359c833ab74590d55935}{open}}(\mbox{\hyperlink{classsf_1_1_input_stream}{InputStream}}\& stream, \mbox{\hyperlink{structsf_1_1_sound_file_reader_1_1_info}{Info}}\& info) = 0;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{92     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_sound_file_reader_a1e18ade5ffe882bdfa20a2ebe7e2b015}{seek}}(\mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} sampleOffset) = 0;}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{103     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} \mbox{\hyperlink{classsf_1_1_sound_file_reader_a3b7d86769ea07e24e7b0f0486bed7591}{read}}(\mbox{\hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16}}* samples, \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}} maxCount) = 0;}
+\DoxyCodeLine{104 \};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_SOUNDFILEREADER\_HPP}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 }
+
+\end{DoxyCode}

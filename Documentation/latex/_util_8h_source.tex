@@ -1,0 +1,32 @@
+\doxysection{Util.\+h}
+\label{_util_8h_source}\index{Source/header/Util.h@{Source/header/Util.h}}
+\textbf{ Aller à la documentation de ce fichier.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by dope on 12/01/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef MAGIC\_UTIL\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define MAGIC\_UTIL\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <bits/stdc++.h>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{template}<\textcolor{keyword}{typename} Base, \textcolor{keyword}{typename} T>}
+\DoxyCodeLine{13 \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} instanceof(\textcolor{keyword}{const} T*) \{}
+\DoxyCodeLine{14     \textcolor{keywordflow}{return} std::is\_base\_of<Base, T>::value;}
+\DoxyCodeLine{15 \}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{18 \textcolor{keywordtype}{int} getIndex(std::vector<T> v, T K) \{}
+\DoxyCodeLine{19     \textcolor{keyword}{auto} it = find(v.begin(), v.end(), K);}
+\DoxyCodeLine{20     \textcolor{keywordflow}{if} (it != v.end())}
+\DoxyCodeLine{21         \textcolor{keywordflow}{return} it -\/ v.begin();}
+\DoxyCodeLine{22     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{23         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{24 \}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_UTIL\_H}}
+
+\end{DoxyCode}

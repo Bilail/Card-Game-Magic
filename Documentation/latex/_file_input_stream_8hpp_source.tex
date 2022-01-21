@@ -1,0 +1,86 @@
+\hypertarget{_file_input_stream_8hpp_source}{}\doxysection{File\+Input\+Stream.\+hpp}
+\label{_file_input_stream_8hpp_source}\index{Source/dependance/SFML/include/SFML/System/FileInputStream.hpp@{Source/dependance/SFML/include/SFML/System/FileInputStream.hpp}}
+\mbox{\hyperlink{_file_input_stream_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_FILEINPUTSTREAM\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_FILEINPUTSTREAM\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_config_8hpp}{SFML/Config.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_system_2_export_8hpp}{SFML/System/Export.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_input_stream_8hpp}{SFML/System/InputStream.hpp}}>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_non_copyable_8hpp}{SFML/System/NonCopyable.hpp}}>}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <cstdio>}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifdef SFML\_SYSTEM\_ANDROID}}
+\DoxyCodeLine{39 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacepriv}{priv}}}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43 \textcolor{keyword}{class }\mbox{\hyperlink{_system_2_export_8hpp_a6476c9e422606477a4c23d92b1d79a1f}{SFML\_SYSTEM\_API}} ResourceStream;}
+\DoxyCodeLine{44 \}}
+\DoxyCodeLine{45 \}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{55 \textcolor{keyword}{class }\mbox{\hyperlink{_system_2_export_8hpp_a6476c9e422606477a4c23d92b1d79a1f}{SFML\_SYSTEM\_API}} \mbox{\hyperlink{classsf_1_1_file_input_stream}{FileInputStream}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsf_1_1_input_stream}{InputStream}}, \mbox{\hyperlink{classsf_1_1_non_copyable}{NonCopyable}}}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57 \textcolor{keyword}{public}:}
+\DoxyCodeLine{62     \mbox{\hyperlink{classsf_1_1_file_input_stream_a9a321e273f41ff7f187899061fcae9be}{FileInputStream}}();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{68     \textcolor{keyword}{virtual} \mbox{\hyperlink{classsf_1_1_file_input_stream_ad49ae2025ff2183f80067943a7d0276d}{\string~FileInputStream}}();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{78     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_file_input_stream_a87a95dc3a71746097a99c86ee58bb353}{open}}(\textcolor{keyword}{const} std::string\& filename);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{92     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} \mbox{\hyperlink{classsf_1_1_file_input_stream_ad1e94c4152429f485db224c44ee1eb50}{read}}(\textcolor{keywordtype}{void}* data, \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} size);}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{102     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} \mbox{\hyperlink{classsf_1_1_file_input_stream_abdaf5700d4e1de07568e7829106b4eb9}{seek}}(\mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} position);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{110     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} \mbox{\hyperlink{classsf_1_1_file_input_stream_a768c5fdb3be79e2d71d1bce911f8741c}{tell}}();}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{118     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64}} \mbox{\hyperlink{classsf_1_1_file_input_stream_aabdcaa315e088e008eeb9711ecc796e8}{getSize}}();}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 \textcolor{keyword}{private}:}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{123     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{125 \textcolor{comment}{}\textcolor{preprocessor}{\#ifdef SFML\_SYSTEM\_ANDROID}}
+\DoxyCodeLine{126     priv::ResourceStream* m\_file;}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{128     std::FILE* m\_file; }
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{130 \};}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_FILEINPUTSTREAM\_HPP}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 }
+
+\end{DoxyCode}

@@ -1,0 +1,146 @@
+\hypertarget{_texture_8hpp_source}{}\doxysection{Texture.\+hpp}
+\label{_texture_8hpp_source}\index{Source/dependance/SFML/include/SFML/Graphics/Texture.hpp@{Source/dependance/SFML/include/SFML/Graphics/Texture.hpp}}
+\mbox{\hyperlink{_texture_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_TEXTURE\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_TEXTURE\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_graphics_2_export_8hpp}{SFML/Graphics/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_image_8hpp}{SFML/Graphics/Image.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_gl_resource_8hpp}{SFML/Window/GlResource.hpp}}>}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38 \textcolor{keyword}{class }InputStream;}
+\DoxyCodeLine{39 \textcolor{keyword}{class }RenderTarget;}
+\DoxyCodeLine{40 \textcolor{keyword}{class }RenderTexture;}
+\DoxyCodeLine{41 \textcolor{keyword}{class }Text;}
+\DoxyCodeLine{42 \textcolor{keyword}{class }Window;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{48 \textcolor{keyword}{class }\mbox{\hyperlink{_graphics_2_export_8hpp_ab84c9f1035e146917de3bc0f98d72b35}{SFML\_GRAPHICS\_API}} \mbox{\hyperlink{classsf_1_1_texture}{Texture}} : \mbox{\hyperlink{classsf_1_1_gl_resource}{GlResource}}}
+\DoxyCodeLine{49 \{}
+\DoxyCodeLine{50 \textcolor{keyword}{public}:}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{56     \textcolor{keyword}{enum} \mbox{\hyperlink{classsf_1_1_texture_aa6fd3bbe3c334b3c4428edfb2765a82e}{CoordinateType}}}
+\DoxyCodeLine{57     \{}
+\DoxyCodeLine{58         \mbox{\hyperlink{classsf_1_1_texture_aa6fd3bbe3c334b3c4428edfb2765a82ea69d6228950882e4d68be4ba4dbe7df73}{Normalized}}, }
+\DoxyCodeLine{59         Pixels      }
+\DoxyCodeLine{60     \};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{keyword}{public}:}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{70     \mbox{\hyperlink{classsf_1_1_texture_a3e04674853b8533bf981db3173e3a4a7}{Texture}}();}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{78     \mbox{\hyperlink{classsf_1_1_texture_a524855cbf89de3b74be84d385fd229de}{Texture}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_texture}{Texture}}\& copy);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{84     \mbox{\hyperlink{classsf_1_1_texture_a9c5354ad40eb1c5aeeeb21f57ccd7e6c}{\string~Texture}}();}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_texture_a89b4c7d204acf1033c3a1b6e0a3ad0a3}{create}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{128     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_texture_a8e1b56eabfe33e2e0e1cb03712c7fcc7}{loadFromFile}}(\textcolor{keyword}{const} std::string\& filename, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_rect}{IntRect}}\& area = \mbox{\hyperlink{namespacesf_aae67411782674934f78d55fa3af18403}{IntRect}}());}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{160     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_texture_a2c4adb19dd4cbee0a588eeb85e52a249}{loadFromMemory}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* data, std::size\_t size, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_rect}{IntRect}}\& area = \mbox{\hyperlink{namespacesf_aae67411782674934f78d55fa3af18403}{IntRect}}());}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{191     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_texture_a786b486a46b1c6d1c16ff4af61ecc601}{loadFromStream}}(\mbox{\hyperlink{classsf_1_1_input_stream}{InputStream}}\& stream, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_rect}{IntRect}}\& area = \mbox{\hyperlink{namespacesf_aae67411782674934f78d55fa3af18403}{IntRect}}());}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{215     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_texture_abec4567ad9856a3596dc74803f26fba2}{loadFromImage}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_image}{Image}}\& image, \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_rect}{IntRect}}\& area = \mbox{\hyperlink{namespacesf_aae67411782674934f78d55fa3af18403}{IntRect}}());}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{223     \mbox{\hyperlink{classsf_1_1_vector2}{Vector2u}} \mbox{\hyperlink{classsf_1_1_texture_a9f86b8cc670c6399c539d4ce07ae5c8a}{getSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{238     \mbox{\hyperlink{classsf_1_1_image}{Image}} \mbox{\hyperlink{classsf_1_1_texture_a77e18a70de2e525ac5e4a7cd95f614b9}{copyToImage}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{256     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_ae4eab5c6781316840b0c50ad08370963}{update}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}}* pixels);}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{278     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_a1352d8e16c2aeb4df586ed65dd2c36b9}{update}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacesf_a4ef3d630785c4f296f9b4f274c33d78e}{Uint8}}* pixels, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{298     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_af9885ca00b74950d60feea28132d9691}{update}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_texture}{Texture}}\& texture);}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{315     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_a89beb474da1da84b5e38c9fc0b441fe4}{update}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_texture}{Texture}}\& texture, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{335     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_a037cdf171af0fb392d07626a44a4ea17}{update}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_image}{Image}}\& image);}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{352     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_a87f916490b757fe900798eedf3abf3ba}{update}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_image}{Image}}\& image, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{372     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_ad3cceef238f7d5d2108a98dd38c17fc5}{update}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_window}{Window}}\& window);}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{389     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_a154f246eb8059b602076009ab1cfd175}{update}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_window}{Window}}\& window, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{390 }
+\DoxyCodeLine{405     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_a0c3bd6825b9a99714f10d44179d74324}{setSmooth}}(\textcolor{keywordtype}{bool} smooth);}
+\DoxyCodeLine{406 }
+\DoxyCodeLine{415     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_texture_a3ebb050b5a71e1d40ba66eb1a060e103}{isSmooth}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{416 }
+\DoxyCodeLine{440     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_af8a38872c50a33ff074bd0865db19dd4}{setSrgb}}(\textcolor{keywordtype}{bool} sRgb);}
+\DoxyCodeLine{441 }
+\DoxyCodeLine{450     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_texture_a9d77ce4f8124abfda96900a6bd53bfe9}{isSrgb}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{451 }
+\DoxyCodeLine{474     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_aaa87d1eff053b9d4d34a24c784a28658}{setRepeated}}(\textcolor{keywordtype}{bool} repeated);}
+\DoxyCodeLine{475 }
+\DoxyCodeLine{484     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_texture_af1a1a32ca5c799204b2bea4040df7647}{isRepeated}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{485 }
+\DoxyCodeLine{509     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_texture_a7779a75c0324b5faff77602f871710a9}{generateMipmap}}();}
+\DoxyCodeLine{510 }
+\DoxyCodeLine{519     \mbox{\hyperlink{classsf_1_1_texture}{Texture}}\& operator =(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_texture}{Texture}}\& right);}
+\DoxyCodeLine{520 }
+\DoxyCodeLine{527     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_a9243470c64b7ff0d231e00663e495798}{swap}}(\mbox{\hyperlink{classsf_1_1_texture}{Texture}}\& right);}
+\DoxyCodeLine{528 }
+\DoxyCodeLine{539     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classsf_1_1_texture_a674b632608747bfc27b53a4935c835b0}{getNativeHandle}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{540 }
+\DoxyCodeLine{572     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_texture_ae9a4274e7b95ebf7244d09c7445833b0}{bind}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_texture}{Texture}}* texture, \mbox{\hyperlink{classsf_1_1_texture_aa6fd3bbe3c334b3c4428edfb2765a82e}{CoordinateType}} coordinateType = Normalized);}
+\DoxyCodeLine{573 }
+\DoxyCodeLine{584     \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classsf_1_1_texture_a0bf905d487b104b758549c2e9e20a3fb}{getMaximumSize}}();}
+\DoxyCodeLine{585 }
+\DoxyCodeLine{586 \textcolor{keyword}{private}:}
+\DoxyCodeLine{587 }
+\DoxyCodeLine{588     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classsf_1_1_text}{Text}};}
+\DoxyCodeLine{589     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classsf_1_1_render_texture}{RenderTexture}};}
+\DoxyCodeLine{590     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classsf_1_1_render_target}{RenderTarget}};}
+\DoxyCodeLine{591 }
+\DoxyCodeLine{605     \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getValidSize(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{606 }
+\DoxyCodeLine{614     \textcolor{keywordtype}{void} invalidateMipmap();}
+\DoxyCodeLine{615 }
+\DoxyCodeLine{617     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{619 \textcolor{comment}{}    \mbox{\hyperlink{classsf_1_1_vector2}{Vector2u}}     m\_size;          }
+\DoxyCodeLine{620     \mbox{\hyperlink{classsf_1_1_vector2}{Vector2u}}     m\_actualSize;    }
+\DoxyCodeLine{621     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} m\_texture;       }
+\DoxyCodeLine{622     \textcolor{keywordtype}{bool}         m\_isSmooth;      }
+\DoxyCodeLine{623     \textcolor{keywordtype}{bool}         m\_sRgb;          }
+\DoxyCodeLine{624     \textcolor{keywordtype}{bool}         m\_isRepeated;    }
+\DoxyCodeLine{625     \textcolor{keyword}{mutable} \textcolor{keywordtype}{bool} m\_pixelsFlipped; }
+\DoxyCodeLine{626     \textcolor{keywordtype}{bool}         m\_fboAttachment; }
+\DoxyCodeLine{627     \textcolor{keywordtype}{bool}         m\_hasMipmap;     }
+\DoxyCodeLine{628     \mbox{\hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64}}       m\_cacheId;       }
+\DoxyCodeLine{629 \};}
+\DoxyCodeLine{630 }
+\DoxyCodeLine{631 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{632 }
+\DoxyCodeLine{633 }
+\DoxyCodeLine{634 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_TEXTURE\_HPP}}
+\DoxyCodeLine{635 }
+
+\end{DoxyCode}

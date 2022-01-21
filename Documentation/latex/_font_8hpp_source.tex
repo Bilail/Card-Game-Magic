@@ -1,0 +1,142 @@
+\hypertarget{_font_8hpp_source}{}\doxysection{Font.\+hpp}
+\label{_font_8hpp_source}\index{Source/dependance/SFML/include/SFML/Graphics/Font.hpp@{Source/dependance/SFML/include/SFML/Graphics/Font.hpp}}
+\mbox{\hyperlink{_font_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_FONT\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_FONT\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_graphics_2_export_8hpp}{SFML/Graphics/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_glyph_8hpp}{SFML/Graphics/Glyph.hpp}}>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_texture_8hpp}{SFML/Graphics/Texture.hpp}}>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_rect_8hpp}{SFML/Graphics/Rect.hpp}}>}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_vector2_8hpp}{SFML/System/Vector2.hpp}}>}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_string_8hpp}{SFML/System/String.hpp}}>}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{43 \{}
+\DoxyCodeLine{44 \textcolor{keyword}{class }InputStream;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{50 \textcolor{keyword}{class }\mbox{\hyperlink{_graphics_2_export_8hpp_ab84c9f1035e146917de3bc0f98d72b35}{SFML\_GRAPHICS\_API}} \mbox{\hyperlink{classsf_1_1_font}{Font}}}
+\DoxyCodeLine{51 \{}
+\DoxyCodeLine{52 \textcolor{keyword}{public}:}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{58     \textcolor{keyword}{struct }\mbox{\hyperlink{structsf_1_1_font_1_1_info}{Info}}}
+\DoxyCodeLine{59     \{}
+\DoxyCodeLine{60         std::string \mbox{\hyperlink{structsf_1_1_font_1_1_info_a008413b4b6cf621eb92668a11098a519}{family}}; }
+\DoxyCodeLine{61     \};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keyword}{public}:}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{71     \mbox{\hyperlink{classsf_1_1_font_a506404655b8869ed60d1e7709812f583}{Font}}();}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{79     \mbox{\hyperlink{classsf_1_1_font_a72d7322b355ee2f1be4500f530e98081}{Font}}(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_font}{Font}}\& copy);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{87     \mbox{\hyperlink{classsf_1_1_font_aa18a3c62e6e01e9a21c531b5cad4b7f2}{\string~Font}}();}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{109     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_font_ab020052ef4e01f6c749a85571c0f3fd1}{loadFromFile}}(\textcolor{keyword}{const} std::string\& filename);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{130     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_font_abf2f8d6de31eb4e1db02e061c323e346}{loadFromMemory}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* data, std::size\_t sizeInBytes);}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{152     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_font_abc3f37a354ce8b9a21f8eb93bd9fdafb}{loadFromStream}}(\mbox{\hyperlink{classsf_1_1_input_stream}{InputStream}}\& stream);}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{160     \textcolor{keyword}{const} \mbox{\hyperlink{structsf_1_1_font_1_1_info}{Info}}\& \mbox{\hyperlink{classsf_1_1_font_a86f7a72943c428cac8fa6adaaa69c722}{getInfo}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{180     \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_glyph}{Glyph}}\& \mbox{\hyperlink{classsf_1_1_font_a4fa68953025b5357b5683297a3104070}{getGlyph}}(\mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} codePoint, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} characterSize, \textcolor{keywordtype}{bool} bold, \textcolor{keywordtype}{float} outlineThickness = 0) \textcolor{keyword}{const};}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{198     \textcolor{keywordtype}{float} \mbox{\hyperlink{classsf_1_1_font_a5e1d5aca772d4765ce940670c2f786a6}{getKerning}}(\mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} first, \mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} second, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} characterSize) \textcolor{keyword}{const};}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{211     \textcolor{keywordtype}{float} \mbox{\hyperlink{classsf_1_1_font_a4538cc8af337393208a87675fe1c3e59}{getLineSpacing}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} characterSize) \textcolor{keyword}{const};}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{226     \textcolor{keywordtype}{float} \mbox{\hyperlink{classsf_1_1_font_a726a55f40c19ac108e348b103190caad}{getUnderlinePosition}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} characterSize) \textcolor{keyword}{const};}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{240     \textcolor{keywordtype}{float} \mbox{\hyperlink{classsf_1_1_font_ad6d0a5bc6c026fe85c239f1f822b54e6}{getUnderlineThickness}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} characterSize) \textcolor{keyword}{const};}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{254     \textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_texture}{Texture}}\& \mbox{\hyperlink{classsf_1_1_font_a649982b4d0928d76a6f45b21719a6601}{getTexture}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} characterSize) \textcolor{keyword}{const};}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{264     \mbox{\hyperlink{classsf_1_1_font}{Font}}\& operator =(\textcolor{keyword}{const} \mbox{\hyperlink{classsf_1_1_font}{Font}}\& right);}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266 \textcolor{keyword}{private}:}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{272     \textcolor{keyword}{struct }Row}
+\DoxyCodeLine{273     \{}
+\DoxyCodeLine{274         Row(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} rowTop, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} rowHeight) : width(0), top(rowTop), height(rowHeight) \{\}}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width;  }
+\DoxyCodeLine{277         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} top;    }
+\DoxyCodeLine{278         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height; }
+\DoxyCodeLine{279     \};}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{282     \textcolor{comment}{// Types}}
+\DoxyCodeLine{284 \textcolor{comment}{}    \textcolor{keyword}{typedef} std::map<Uint64, Glyph> GlyphTable; }
+\DoxyCodeLine{285 }
+\DoxyCodeLine{290     \textcolor{keyword}{struct }Page}
+\DoxyCodeLine{291     \{}
+\DoxyCodeLine{292         Page();}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294         GlyphTable       glyphs;  }
+\DoxyCodeLine{295         Texture          texture; }
+\DoxyCodeLine{296         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}     nextRow; }
+\DoxyCodeLine{297         std::vector<Row> rows;    }
+\DoxyCodeLine{298     \};}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{304     \textcolor{keywordtype}{void} cleanup();}
+\DoxyCodeLine{305 }
+\DoxyCodeLine{317     Glyph loadGlyph(\mbox{\hyperlink{namespacesf_aa746fb1ddef4410bddf198ebb27e727c}{Uint32}} codePoint, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} characterSize, \textcolor{keywordtype}{bool} bold, \textcolor{keywordtype}{float} outlineThickness) \textcolor{keyword}{const};}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{329     \mbox{\hyperlink{namespacesf_aae67411782674934f78d55fa3af18403}{IntRect}} findGlyphRect(Page\& page, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height) \textcolor{keyword}{const};}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{339     \textcolor{keywordtype}{bool} setCurrentSize(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} characterSize) \textcolor{keyword}{const};}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{342     \textcolor{comment}{// Types}}
+\DoxyCodeLine{344 \textcolor{comment}{}    \textcolor{keyword}{typedef} std::map<unsigned int, Page> PageTable; }
+\DoxyCodeLine{345 }
+\DoxyCodeLine{347     \textcolor{comment}{// Member data}}
+\DoxyCodeLine{349 \textcolor{comment}{}    \textcolor{keywordtype}{void}*                      m\_library;     }
+\DoxyCodeLine{350     \textcolor{keywordtype}{void}*                      m\_face;        }
+\DoxyCodeLine{351     \textcolor{keywordtype}{void}*                      m\_streamRec;   }
+\DoxyCodeLine{352     \textcolor{keywordtype}{void}*                      m\_stroker;     }
+\DoxyCodeLine{353     \textcolor{keywordtype}{int}*                       m\_refCount;    }
+\DoxyCodeLine{354     Info                       m\_info;        }
+\DoxyCodeLine{355     \textcolor{keyword}{mutable} PageTable          m\_pages;       }
+\DoxyCodeLine{356     \textcolor{keyword}{mutable} std::vector<Uint8> m\_pixelBuffer; }
+\DoxyCodeLine{357 \textcolor{preprocessor}{    \#ifdef SFML\_SYSTEM\_ANDROID}}
+\DoxyCodeLine{358     \textcolor{keywordtype}{void}*                      m\_stream; }
+\DoxyCodeLine{359 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{360 \};}
+\DoxyCodeLine{361 }
+\DoxyCodeLine{362 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{363 }
+\DoxyCodeLine{364 }
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_FONT\_HPP}}
+\DoxyCodeLine{366 }
+\DoxyCodeLine{367 }
+
+\end{DoxyCode}

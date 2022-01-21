@@ -1,0 +1,169 @@
+\hypertarget{_keyboard_8hpp_source}{}\doxysection{Keyboard.\+hpp}
+\label{_keyboard_8hpp_source}\index{Source/dependance/SFML/include/SFML/Window/Keyboard.hpp@{Source/dependance/SFML/include/SFML/Window/Keyboard.hpp}}
+\mbox{\hyperlink{_keyboard_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_KEYBOARD\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_KEYBOARD\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_window_2_export_8hpp}{SFML/Window/Export.hpp}}>}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{40 \textcolor{keyword}{class }\mbox{\hyperlink{_window_2_export_8hpp_a1ab885b7907ee088350359516d68be64}{SFML\_WINDOW\_API}} \mbox{\hyperlink{classsf_1_1_keyboard}{Keyboard}}}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42 \textcolor{keyword}{public}:}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{48     \textcolor{keyword}{enum} \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Key}}}
+\DoxyCodeLine{49     \{}
+\DoxyCodeLine{50         Unknown = -\/1, }
+\DoxyCodeLine{51         A = 0,        }
+\DoxyCodeLine{52         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142aca3142235e5c4199f0b8b45d8368ef94}{B}},            }
+\DoxyCodeLine{53         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a0d586c4ec0cd6b537cb6f49180fedecc}{C}},            }
+\DoxyCodeLine{54         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ae778600bd3e878b59df1dbdd5877ba7a}{D}},            }
+\DoxyCodeLine{55         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a0e027c08438a8bf77e2e1e5d5d75bd84}{E}},            }
+\DoxyCodeLine{56         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab8021fbbe5483bc98f124df6f7090002}{F}},            }
+\DoxyCodeLine{57         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142aafb9e3d7679d88d86afc608d79c251f7}{G}},            }
+\DoxyCodeLine{58         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142adfa19328304890e17f4a3f4263eed04d}{H}},            }
+\DoxyCodeLine{59         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142abaef09665b4d94ebbed50345cab3981e}{I}},            }
+\DoxyCodeLine{60         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a948c634009beacdab42c3419253a5e85}{J}},            }
+\DoxyCodeLine{61         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a25beb62393ff666a4bec18ea2a66f3f2}{K}},            }
+\DoxyCodeLine{62         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a5ef1839ffe19b7e9c24f2ca017614ff9}{L}},            }
+\DoxyCodeLine{63         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a9718de9940f723c956587dcb90450a0a}{M}},            }
+\DoxyCodeLine{64         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab652ed6b308db95a74dc4ff5229ac9c8}{N}},            }
+\DoxyCodeLine{65         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a7739288cc628dfa8c50ba712be7c03e1}{O}},            }
+\DoxyCodeLine{66         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142aaeac1db209a64a0221277a835de986e6}{P}},            }
+\DoxyCodeLine{67         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a27e3d50587c9789d2592d275d22fbada}{Q}},            }
+\DoxyCodeLine{68         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142add852cadaa6fff2d982bbab3551c31d0}{R}},            }
+\DoxyCodeLine{69         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142aca13014bf9ed5887d347060a0334ea5a}{S}},            }
+\DoxyCodeLine{70         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a19f59109111fc5271d3581bcd0c43187}{T}},            }
+\DoxyCodeLine{71         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab4f30ae34848ee934dd4f5496a8fb4a1}{U}},            }
+\DoxyCodeLine{72         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142aec9074abd2d41628d1ecdc14e1b2cd96}{V}},            }
+\DoxyCodeLine{73         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a258aa89e9c6c9aad1ccbaeb41839c5e0}{W}},            }
+\DoxyCodeLine{74         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a012f5ee9d518e9e24caa087fbddc0594}{X}},            }
+\DoxyCodeLine{75         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a5d877e63d1353e0fc0a0757a87a7bd0e}{Y}},            }
+\DoxyCodeLine{76         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a4e12efd6478a2d174264f29b0b41ab43}{Z}},            }
+\DoxyCodeLine{77         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142af026fd133ee93a0bd8c70762cc3be4bc}{Num0}},         }
+\DoxyCodeLine{78         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a506bd962cab80722a8c5a4b178912c59}{Num1}},         }
+\DoxyCodeLine{79         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a2d6eb5118179bb140fdb3485bb08c182}{Num2}},         }
+\DoxyCodeLine{80         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142aee78e5ed27d31598fc285400166c0dd5}{Num3}},         }
+\DoxyCodeLine{81         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a5fbd8a089460dc33c22f68b36e1fdc98}{Num4}},         }
+\DoxyCodeLine{82         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a1dc7e87810b8d4b7039e202b0adcc4ee}{Num5}},         }
+\DoxyCodeLine{83         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142af86dafb69d922ad2b0f4bd4c37696575}{Num6}},         }
+\DoxyCodeLine{84         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a8fa0056a0a6f5a7d9fcef3402c9c916d}{Num7}},         }
+\DoxyCodeLine{85         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142adb9f2549fd57bfd99d4713ff1845c530}{Num8}},         }
+\DoxyCodeLine{86         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a9bc0d0727958bef97e2b6a58e23743db}{Num9}},         }
+\DoxyCodeLine{87         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a64b7ecb543c5d03bec8383dde123c95d}{Escape}},       }
+\DoxyCodeLine{88         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142acc76c9dec76d8ae806ae9d6515066e53}{LControl}},     }
+\DoxyCodeLine{89         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a270db49f76cb4dbe72da36153d3aa45c}{LShift}},       }
+\DoxyCodeLine{90         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a000ecf5145296d7d52b6871c54e6718d}{LAlt}},         }
+\DoxyCodeLine{91         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a718171426307a0f5f26b4ae82a322b24}{LSystem}},      }
+\DoxyCodeLine{92         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a275d3fd207a9c0b22ce404012c71dc17}{RControl}},     }
+\DoxyCodeLine{93         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a5be69e3b2f25bd5f4eed75d063f42b90}{RShift}},       }
+\DoxyCodeLine{94         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a21dcf098233296462bc7c632b93369cc}{RAlt}},         }
+\DoxyCodeLine{95         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ac1b3fd7424feeda242cedbb64f3f5a7f}{RSystem}},      }
+\DoxyCodeLine{96         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a4aac50ce7c4923f96323fe84d592b139}{Menu}},         }
+\DoxyCodeLine{97         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142afbe21cad5f264d685cf7f25060004184}{LBracket}},     }
+\DoxyCodeLine{98         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a578253a70b48e61830aa08292d44680f}{RBracket}},     }
+\DoxyCodeLine{99         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab50635b9c913837d1bd4453eec7cb506}{Semicolon}},    }
+\DoxyCodeLine{100         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab7374f48cc79e3085739160b8e3ef2f9}{Comma}},        }
+\DoxyCodeLine{101         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ac72ba959ab1946957e8dfd4f81ea811d}{Period}},       }
+\DoxyCodeLine{102         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142af031edb6bcf319734a6664388958c475}{Quote}},        }
+\DoxyCodeLine{103         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a7424bf901434a587a6c202c423e6786c}{Slash}},        }
+\DoxyCodeLine{104         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142adbd7d6f90a1009e91acf7bb1dc068512}{Backslash}},    }
+\DoxyCodeLine{105         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a90be0882086bccb516e3afc5c7fb82eb}{Tilde}},        }
+\DoxyCodeLine{106         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ae55c35f6b6417e1dbbfa351c64dfc743}{Equal}},        }
+\DoxyCodeLine{107         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a5bde2cf47e6182e6f45d0d2197223c35}{Hyphen}},       }
+\DoxyCodeLine{108         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a6fdaa93b6b8d1a2b73bc239e9ada94ef}{Space}},        }
+\DoxyCodeLine{109         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a59e26db0965305492875d7da68f6a990}{Enter}},        }
+\DoxyCodeLine{110         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142aa7c1581bac0f20164512572e6c60e98e}{Backspace}},    }
+\DoxyCodeLine{111         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a20c552c39c8356b1078f1cfff7936b4a}{Tab}},          }
+\DoxyCodeLine{112         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142aa24fe33bba1c3639c3aeaa317bd89d7e}{PageUp}},       }
+\DoxyCodeLine{113         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a21c73323d9a8b6017f3bac0cb8c8ac1a}{PageDown}},     }
+\DoxyCodeLine{114         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a4478343b2b7efc310f995fd4251a264d}{End}},          }
+\DoxyCodeLine{115         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142af41ae7c3927cc5ea8b43ee2fefe890e8}{Home}},         }
+\DoxyCodeLine{116         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a616c8cae362d229155c5c6e10b969943}{Insert}},       }
+\DoxyCodeLine{117         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab66187002fc7f6695ef3d05237b93a38}{Delete}},       }
+\DoxyCodeLine{118         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a158c586cbe8609031d1a7932e1a8dba2}{Add}},          }
+\DoxyCodeLine{119         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a68983f67bd30d27b27c90d6794c78aa2}{Subtract}},     }
+\DoxyCodeLine{120         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a10623ae71db8a6b5d97189fc21fb91ae}{Multiply}},     }
+\DoxyCodeLine{121         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142afae3dc28752954f0bfe298ac52f58cb6}{Divide}},       }
+\DoxyCodeLine{122         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ac3fe5df11d15b57317c053a2ae13d9a9}{Left}},         }
+\DoxyCodeLine{123         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a2aeb083dea103a8e36b6850b51ef3632}{Right}},        }
+\DoxyCodeLine{124         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ac4cf6ef2d2632445e9e26c8f2b70e82d}{Up}},           }
+\DoxyCodeLine{125         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a33dd676edbdf0817d7a65b21df3d0dca}{Down}},         }
+\DoxyCodeLine{126         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142af0b2af83a7a8c358f7b8f7c403089a4e}{Numpad0}},      }
+\DoxyCodeLine{127         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a03536d369ae55cc18024f7e4a341a5ac}{Numpad1}},      }
+\DoxyCodeLine{128         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a8ad9ccf62631d583f44f06aebd662093}{Numpad2}},      }
+\DoxyCodeLine{129         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ab63ae26e90126b1842bde25d6dedb205}{Numpad3}},      }
+\DoxyCodeLine{130         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a65336d823bd823a0d246a872ff90e08a}{Numpad4}},      }
+\DoxyCodeLine{131         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a8bc5041f12fdfbefba1dbd823c7e1054}{Numpad5}},      }
+\DoxyCodeLine{132         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142aaf28fdf0d3da6a18030e685478e3a713}{Numpad6}},      }
+\DoxyCodeLine{133         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a3f9bf9835d65a0df5cce2d3842a40541}{Numpad7}},      }
+\DoxyCodeLine{134         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a25dcd4e4183ceceb3ac06c72995bae49}{Numpad8}},      }
+\DoxyCodeLine{135         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a365eb80f54003670a78e3b850c28df21}{Numpad9}},      }
+\DoxyCodeLine{136         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ae59c7e28858e970c9d4f0e418179b632}{F1}},           }
+\DoxyCodeLine{137         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a6a2faa5f876a1e75f24a596b658ff413}{F2}},           }
+\DoxyCodeLine{138         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a1fb58d66f9c0183db3e70b2b0576074e}{F3}},           }
+\DoxyCodeLine{139         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a71311e21238cf2c0df1bbf096bba68f2}{F4}},           }
+\DoxyCodeLine{140         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a01fd2f93eddf2887186ea91180a789a8}{F5}},           }
+\DoxyCodeLine{141         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ac756a19b31eb28cd2c35c29d8e54ea04}{F6}},           }
+\DoxyCodeLine{142         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a060d30d36a3e08208b2bc46d0f549b6c}{F7}},           }
+\DoxyCodeLine{143         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142ade468cd27716b9c2a0d0158afa2f8621}{F8}},           }
+\DoxyCodeLine{144         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a3c5c2342003a7191de6636b5ef44e1b9}{F9}},           }
+\DoxyCodeLine{145         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142aec695ecf296e7084a8f7f3ec408e16ac}{F10}},          }
+\DoxyCodeLine{146         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142af9a8de90d90a7a7582269bc5c41f5afd}{F11}},          }
+\DoxyCodeLine{147         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142af9d8807117d946de5e403bcbd4d7161d}{F12}},          }
+\DoxyCodeLine{148         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a9e28e971941ca2900c1eea17cda50a04}{F13}},          }
+\DoxyCodeLine{149         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a9a0327a4ef876338d5f3c34c514f190c}{F14}},          }
+\DoxyCodeLine{150         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a8949ce79077cc8bf64f4fa42bb6a2808}{F15}},          }
+\DoxyCodeLine{151         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a95daf340fcc3d5c2846f69d184170d9b}{Pause}},        }
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153         \mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142a93e6ffa0320fe9b2f29aec14a58be36b}{KeyCount}},     }
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155         \textcolor{comment}{// Deprecated values:}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157         Dash      = Hyphen,       }
+\DoxyCodeLine{158         BackSpace = Backspace,    }
+\DoxyCodeLine{159         BackSlash = Backslash,    }
+\DoxyCodeLine{160         SemiColon = Semicolon,    }
+\DoxyCodeLine{161         Return    = Enter         }
+\DoxyCodeLine{162     \};}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{172     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsf_1_1_keyboard_a80a04b2f53005886957f49eee3531599}{isKeyPressed}}(\mbox{\hyperlink{classsf_1_1_keyboard_acb4cacd7cc5802dec45724cf3314a142}{Key}} key);}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{187     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsf_1_1_keyboard_ad61fee7e793242d444a8c5acd662fe5b}{setVirtualKeyboardVisible}}(\textcolor{keywordtype}{bool} visible);}
+\DoxyCodeLine{188 \};}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_KEYBOARD\_HPP}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195 }
+
+\end{DoxyCode}

@@ -1,0 +1,6 @@
+<map id="Deck::disengageCards" name="Deck::disengageCards">
+<area shape="rect" id="node1" title="désengager la carte" alt="" coords="484,5,637,32"/>
+<area shape="rect" id="node2" href="$class_player.html#aa87746929fad46316b1452dd0d9b2b36" title="désengager ses cartes" alt="" coords="276,5,436,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a9a705e31bcc5c3d5778e3136ccc15489" title="Lance la partie." alt="" coords="104,5,228,32"/>
+<area shape="rect" id="node4" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>

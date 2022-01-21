@@ -15,6 +15,9 @@ private:
     std::vector<CreatureCard> creatures;
     std::vector<LandCard> lands;
 public:
+    /**
+     * Créer un deck par défaut
+     */
     GameCards();
     const std::vector<CreatureCard>& getCreatures();
     const std::vector<LandCard>& getLands();

@@ -1,0 +1,97 @@
+\hypertarget{_sound_file_factory_8hpp_source}{}\doxysection{Sound\+File\+Factory.\+hpp}
+\label{_sound_file_factory_8hpp_source}\index{Source/dependance/SFML/include/SFML/Audio/SoundFileFactory.hpp@{Source/dependance/SFML/include/SFML/Audio/SoundFileFactory.hpp}}
+\mbox{\hyperlink{_sound_file_factory_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// SFML -\/ Simple and Fast Multimedia Library}}
+\DoxyCodeLine{4 \textcolor{comment}{// Copyright (C) 2007-\/2018 Laurent Gomila (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 \textcolor{comment}{// This software is provided 'as-\/is', without any express or implied warranty.}}
+\DoxyCodeLine{7 \textcolor{comment}{// In no event will the authors be held liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{8 \textcolor{comment}{//}}
+\DoxyCodeLine{9 \textcolor{comment}{// Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{10 \textcolor{comment}{// including commercial applications, and to alter it and redistribute it freely,}}
+\DoxyCodeLine{11 \textcolor{comment}{// subject to the following restrictions:}}
+\DoxyCodeLine{12 \textcolor{comment}{//}}
+\DoxyCodeLine{13 \textcolor{comment}{// 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{14 \textcolor{comment}{//    you must not claim that you wrote the original software.}}
+\DoxyCodeLine{15 \textcolor{comment}{//    If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{16 \textcolor{comment}{//    in the product documentation would be appreciated but is not required.}}
+\DoxyCodeLine{17 \textcolor{comment}{//}}
+\DoxyCodeLine{18 \textcolor{comment}{// 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// 3. This notice may not be removed or altered from any source distribution.}}
+\DoxyCodeLine{22 \textcolor{comment}{//}}
+\DoxyCodeLine{24 \textcolor{comment}{}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef SFML\_SOUNDFILEFACTORY\_HPP}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SFML\_SOUNDFILEFACTORY\_HPP}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29 \textcolor{comment}{// Headers}}
+\DoxyCodeLine{31 \textcolor{comment}{}\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_audio_2_export_8hpp}{SFML/Audio/Export.hpp}}>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38 \textcolor{keyword}{class }InputStream;}
+\DoxyCodeLine{39 \textcolor{keyword}{class }SoundFileReader;}
+\DoxyCodeLine{40 \textcolor{keyword}{class }SoundFileWriter;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46 \textcolor{keyword}{class }\mbox{\hyperlink{_audio_2_export_8hpp_a4d34c0f253824ac49bdd93545913eb89}{SFML\_AUDIO\_API}} \mbox{\hyperlink{classsf_1_1_sound_file_factory}{SoundFileFactory}}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48 \textcolor{keyword}{public}:}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{56     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{57     \textcolor{keyword}{static} \textcolor{keywordtype}{void} registerReader();}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{65     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{66     \textcolor{keyword}{static} \textcolor{keywordtype}{void} unregisterReader();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{74     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{75     \textcolor{keyword}{static} \textcolor{keywordtype}{void} registerWriter();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{83     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{84     \textcolor{keyword}{static} \textcolor{keywordtype}{void} unregisterWriter();}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{98     \textcolor{keyword}{static} \mbox{\hyperlink{classsf_1_1_sound_file_reader}{SoundFileReader}}* \mbox{\hyperlink{classsf_1_1_sound_file_factory_ae68185540db5e2a451d626be45036fe0}{createReaderFromFilename}}(\textcolor{keyword}{const} std::string\& filename);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{113     \textcolor{keyword}{static} \mbox{\hyperlink{classsf_1_1_sound_file_reader}{SoundFileReader}}* \mbox{\hyperlink{classsf_1_1_sound_file_factory_a2384ed647b08c5b2bbf43566d5d7b5fd}{createReaderFromMemory}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* data, std::size\_t sizeInBytes);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{127     \textcolor{keyword}{static} \mbox{\hyperlink{classsf_1_1_sound_file_reader}{SoundFileReader}}* \mbox{\hyperlink{classsf_1_1_sound_file_factory_af64ce454cde415ebd3ca5442801d87d8}{createReaderFromStream}}(\mbox{\hyperlink{classsf_1_1_input_stream}{InputStream}}\& stream);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{139     \textcolor{keyword}{static} \mbox{\hyperlink{classsf_1_1_sound_file_writer}{SoundFileWriter}}* \mbox{\hyperlink{classsf_1_1_sound_file_factory_a2bc9da55d78be2c41a273bbbea4c0978}{createWriterFromFilename}}(\textcolor{keyword}{const} std::string\& filename);}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 \textcolor{keyword}{private}:}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{144     \textcolor{comment}{// Types}}
+\DoxyCodeLine{146 \textcolor{comment}{}    \textcolor{keyword}{struct }ReaderFactory}
+\DoxyCodeLine{147     \{}
+\DoxyCodeLine{148         bool (*check)(\mbox{\hyperlink{classsf_1_1_input_stream}{InputStream}}\&);}
+\DoxyCodeLine{149         \mbox{\hyperlink{classsf_1_1_sound_file_reader}{SoundFileReader}}* (*create)();}
+\DoxyCodeLine{150     \};}
+\DoxyCodeLine{151     \textcolor{keyword}{typedef} std::vector<ReaderFactory> ReaderFactoryArray;}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153     \textcolor{keyword}{struct }WriterFactory}
+\DoxyCodeLine{154     \{}
+\DoxyCodeLine{155         bool (*check)(\textcolor{keyword}{const} std::string\&);}
+\DoxyCodeLine{156         \mbox{\hyperlink{classsf_1_1_sound_file_writer}{SoundFileWriter}}* (*create)();}
+\DoxyCodeLine{157     \};}
+\DoxyCodeLine{158     \textcolor{keyword}{typedef} std::vector<WriterFactory> WriterFactoryArray;}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{161     \textcolor{comment}{// Static member data}}
+\DoxyCodeLine{163 \textcolor{comment}{}    \textcolor{keyword}{static} ReaderFactoryArray s\_readers; }
+\DoxyCodeLine{164     \textcolor{keyword}{static} WriterFactoryArray s\_writers; }
+\DoxyCodeLine{165 \};}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 \} \textcolor{comment}{// namespace sf}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_sound_file_factory_8inl}{SFML/Audio/SoundFileFactory.inl}}>}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML\_SOUNDFILEFACTORY\_HPP}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 }
+
+\end{DoxyCode}
