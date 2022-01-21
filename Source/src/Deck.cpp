@@ -2,13 +2,12 @@
 // Created by bilai on 05/01/2022.
 //
 
-#include "../header/Card.h"
-#include "../header/Deck.h"
-#include "../header/Util.h"
 #include <vector>
 #include <string>
-#include <iostream>
 #include <fstream>
+#include "../header/Util.h"
+#include "../header/Card.h"
+#include "../header/Deck.h"
 
 #include "../dependance/json.hpp"
 using json = nlohmann::json;
@@ -41,11 +40,7 @@ void Deck::printInPlayCards() {
     Card::print(inPlayCards);
 }
 
-void Deck::generateRandomDeck(){
-
-    // Initialize seed randomly
-    srand(time(0));
-
+void Deck::generateRandomDeck() {
     for (int i=0; i<library.size() ;i++)
     {
         // Random for remaining positions.
@@ -156,6 +151,9 @@ void Deck::discardCard(Card *c) {
     }
 }
 
+std::vector<Card*> Deck::getHandCards() {
+    return handCards;
+}
 
 void Deck::JsonToDeck(std::string nomDeck) {
     std::vector<Card*> r = {};
@@ -182,6 +180,38 @@ void Deck::JsonToDeck(std::string nomDeck) {
         std::string color = land.value()["color"];
         library.push_back(new LandCard(name, color));
     }
+}
 
-
+void Deck::exportToJson(std::string filename) {
+    json jsonfile;
+    jsonfile["Deck"]["Creature"] = json::array({});
+    jsonfile["Deck"]["Land"] = json::array({});
+    for (Card* c : library) {
+        if (CreatureCard* cc = dynamic_cast<CreatureCard*>(c)) {
+            json j = {
+                    {"name", cc->getName()},
+                    {"cost", {
+                        cc->getManaCost()[0],
+                        cc->getManaCost()[1],
+                        cc->getManaCost()[2],
+                        cc->getManaCost()[3],
+                        cc->getManaCost()[4],
+                        cc->getManaCost()[5]
+                    }},
+                    {"color", cc->getColor()},
+                    {"attack", cc->getAttackPower()},
+                    {"hp", cc->getHp()}
+            };
+            jsonfile["Deck"]["Creature"].push_back(j);
+        }
+        else if (LandCard* lc = dynamic_cast<LandCard*>(c)) {
+            json j = {
+                    {"name", lc->getName()},
+                    {"color", lc->getColor()}
+            };
+            jsonfile["Deck"]["Land"].push_back(j);
+        }
+    }
+    std::ofstream file(filename + ".json");
+    file << jsonfile;
 }

@@ -37,11 +37,13 @@ private:
      * Retourne le joueur ennemie
      * @return joueur ennemeie
      */
+    void endOfTurnPhase();
     Player* getOpponent();
 protected:
     Player p1;
     Player p2;
     Player* playerTurn;
+    bool playerHasPlayedLandCard;
     int round;
 
 public :

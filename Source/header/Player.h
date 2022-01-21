@@ -75,6 +75,7 @@ public :
      * envoyer une carte au cimetière
      * @param c
      */
+    std::vector<Card*> getHandCards();
     void discardCard(Card* c);
 };
 

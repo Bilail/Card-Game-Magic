@@ -69,6 +69,7 @@ public:
      * Les cartes jouables
      * @param c
      */
+    std::vector<Card*> getHandCards();
     void playCard(Card* c);
     /**
      * Les cartes dans le cimetière
@@ -80,6 +81,8 @@ public:
      * @param nomDeck
      */
     void JsonToDeck(std::string nomDeck);
+    void CardtoJson(std::string nomDeck);
+    void exportToJson(std::string filename);
 
 };
 
