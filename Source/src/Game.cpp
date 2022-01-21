@@ -302,17 +302,18 @@ void Game::fightPhase() {
                     Card::print(defenseCards);
                     std::cout << "Avec quelle(s) carte(s) souhaitez-vous contrer la carte " << chosenCardsToAttack.at(i)->getColoredName() << " (tapez \"aucune\" pour ne pas défendre) :\n";
                     bool validInput = false;
-                    do {
+                    bool playerWantToAddDef = false;
+                    while (!validInput || playerWantToAddDef) {
+                        playerWantToAddDef = false;
                         std::getline(std::cin, input);
                         if (input != "aucune") {
-                            bool playerWantToAddDef = false;
-                            int i = -1;
+                            int j = -1;
                             for (Card* c : defenseCards) {
-                                i++;
+                                j++;
                                 if (c->getName() == input) {
                                     validInput = true;
                                     attackDefenseCards[chosenCardsToAttack.at(i)].push_back(c);
-                                    defenseCards.erase(defenseCards.begin() + i);
+                                    defenseCards.erase(defenseCards.begin() + j);
                                     std::cout << "Vous avez décidé de défendre avec la carte " << c->getColoredName() << " pour contrer l'attaque.\n";
                                     std::cout << "Souhaitez-vous rajouter d'autres défenses contre cette carte ? (y/n) ";
                                     std::getline(std::cin, input);
@@ -323,6 +324,7 @@ void Game::fightPhase() {
                                     if (input == "y") {
                                         std::cout << "Quelle carte souhaitez-vous rajouter ? ";
                                         playerWantToAddDef = true;
+                                        validInput = false;
                                     }
                                 }
                             }
@@ -335,7 +337,7 @@ void Game::fightPhase() {
                         }
                         if (!validInput)
                             std::cout << "Réponse inconnue, veuillez réessayer : ";
-                    } while (!validInput);
+                    }
                 }
             }
             else {
