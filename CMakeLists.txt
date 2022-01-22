@@ -13,6 +13,8 @@ add_executable(
         Source/header/CreatureCard.h
         Source/src/LandCard.cpp
         Source/header/LandCard.h
+        Source/src/EnchantmentCard.cpp
+        Source/header/EnchantmentCard.h
         Source/src/GameCards.cpp
         Source/header/GameCards.h
         Source/src/Deck.cpp
@@ -21,7 +23,7 @@ add_executable(
         Source/header/Game.h
         Source/src/Player.cpp
         Source/header/Player.h
-        Source/src/Main.cpp)
+        Source/src/Main.cpp )
 
 
 set(SFML_ROOT c:/SFML)

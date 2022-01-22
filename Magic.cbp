@@ -91,6 +91,9 @@
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/Source/header/Deck.h">
 			<Option target="Magic"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/Source/header/EnchantmentCard.h">
+			<Option target="Magic"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/Source/header/Game.h">
 			<Option target="Magic"/>
 		</Unit>
@@ -113,6 +116,9 @@
 			<Option target="Magic"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/Source/src/Deck.cpp">
+			<Option target="Magic"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/Source/src/EnchantmentCard.cpp">
 			<Option target="Magic"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/bilai/OneDrive/Paris Saclay/ET4/S7/C++/Projet/Magic/Source/src/Game.cpp">
