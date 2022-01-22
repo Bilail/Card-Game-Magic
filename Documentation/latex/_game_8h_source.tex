@@ -19,21 +19,23 @@
 \DoxyCodeLine{25     \textcolor{keywordtype}{void} randomDraw();}
 \DoxyCodeLine{30     \textcolor{keywordtype}{void} mainPhase();}
 \DoxyCodeLine{35     \textcolor{keywordtype}{void} fightPhase();}
-\DoxyCodeLine{40     Player* getOpponent();}
-\DoxyCodeLine{41 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{42     Player p1;}
-\DoxyCodeLine{43     Player p2;}
-\DoxyCodeLine{44     Player* playerTurn;}
-\DoxyCodeLine{45     \textcolor{keywordtype}{int} round;}
-\DoxyCodeLine{46 }
-\DoxyCodeLine{47 public :}
-\DoxyCodeLine{48     Game();}
-\DoxyCodeLine{49     \textcolor{comment}{//Game(Game const \&); //reprendre une game}}
-\DoxyCodeLine{53 \textcolor{comment}{}    \textcolor{keywordtype}{void} playGame();}
-\DoxyCodeLine{57     \textcolor{keyword}{static} \textcolor{keywordtype}{int} MAX\_CARDS\_IN\_HAND;}
-\DoxyCodeLine{58 \};}
-\DoxyCodeLine{59 }
-\DoxyCodeLine{60 }
-\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_GAME\_H}}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} endOfTurnPhase();}
+\DoxyCodeLine{41     Player* getOpponent();}
+\DoxyCodeLine{42 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{43     Player p1;}
+\DoxyCodeLine{44     Player p2;}
+\DoxyCodeLine{45     Player* playerTurn;}
+\DoxyCodeLine{46     \textcolor{keywordtype}{bool} playerHasPlayedLandCard;}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} round;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 public :}
+\DoxyCodeLine{50     Game();}
+\DoxyCodeLine{51     \textcolor{comment}{//Game(Game const \&); //reprendre une game}}
+\DoxyCodeLine{55 \textcolor{comment}{}    \textcolor{keywordtype}{void} playGame();}
+\DoxyCodeLine{59     \textcolor{keyword}{static} \textcolor{keywordtype}{int} MAX\_CARDS\_IN\_HAND;}
+\DoxyCodeLine{60 \};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_GAME\_H}}
 
 \end{DoxyCode}

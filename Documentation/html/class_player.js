@@ -8,6 +8,7 @@ var class_player =
     [ "getAttackCards", "class_player.html#a8c12eeee6d1b4718dd61ebf21750ae30", null ],
     [ "getColoredName", "class_player.html#a13c963d763eca10e5527e14f6aa10393", null ],
     [ "getDefenseCards", "class_player.html#aabe0a76c0767e94328d75a32963b4de6", null ],
+    [ "getHandCards", "class_player.html#a8e7c03bb48ae14c24fbba7456f8ca4fb", null ],
     [ "getHp", "class_player.html#aa6479f194f9bb44b09adaf3b04a5594d", null ],
     [ "getName", "class_player.html#af1aa472885d589516f483e26e786600e", null ],
     [ "getPlayableCards", "class_player.html#ae0f72a15d6130e0469251bc1543cc23a", null ],

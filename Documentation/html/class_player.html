@@ -16,7 +16,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,8 +99,8 @@ Graphe de collaboration de Player:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player__coll__graph.png" border="0" usemap="#a_player_coll__map" alt="Collaboration graph"/></div>
 <map name="a_player_coll__map" id="a_player_coll__map">
-<area shape="rect" title=" " alt="" coords="5,512,205,912"/>
-<area shape="rect" href="class_deck.html" title=" " alt="" coords="7,5,203,449"/>
+<area shape="rect" title=" " alt="" coords="5,600,205,1029"/>
+<area shape="rect" href="class_deck.html" title=" " alt="" coords="7,5,203,537"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -142,8 +142,10 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:aabe0a76c0767e94328d75a32963b4de6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_card.html">Card</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aabe0a76c0767e94328d75a32963b4de6">getDefenseCards</a> ()</td></tr>
 <tr class="memdesc:aabe0a76c0767e94328d75a32963b4de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ses cartes qui peuvent défendre  <a href="class_player.html#aabe0a76c0767e94328d75a32963b4de6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aabe0a76c0767e94328d75a32963b4de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7c03bb48ae14c24fbba7456f8ca4fb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_card.html">Card</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a8e7c03bb48ae14c24fbba7456f8ca4fb">getHandCards</a> ()</td></tr>
+<tr class="memdesc:a8e7c03bb48ae14c24fbba7456f8ca4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">envoyer une carte au cimetière  <a href="class_player.html#a8e7c03bb48ae14c24fbba7456f8ca4fb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8e7c03bb48ae14c24fbba7456f8ca4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d6549590fb8e154951c873d6bfb412e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3d6549590fb8e154951c873d6bfb412e">discardCard</a> (<a class="el" href="class_card.html">Card</a> *c)</td></tr>
-<tr class="memdesc:a3d6549590fb8e154951c873d6bfb412e"><td class="mdescLeft">&#160;</td><td class="mdescRight">envoyer une carte au cimetière  <a href="class_player.html#a3d6549590fb8e154951c873d6bfb412e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3d6549590fb8e154951c873d6bfb412e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -236,20 +238,12 @@ Attributs protégés statiques</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>envoyer une carte au cimetière </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">c</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_a3d6549590fb8e154951c873d6bfb412e_cgraph.png" border="0" usemap="#aclass_player_a3d6549590fb8e154951c873d6bfb412e_cgraph" alt=""/></div>
 <map name="aclass_player_a3d6549590fb8e154951c873d6bfb412e_cgraph" id="aclass_player_a3d6549590fb8e154951c873d6bfb412e_cgraph">
-<area shape="rect" title="envoyer une carte au cimetière" alt="" coords="5,5,141,32"/>
+<area shape="rect" title=" " alt="" coords="5,5,141,32"/>
 <area shape="rect" href="class_deck.html#ab1272e1dfafff2faa3bc7890dc31dc4b" title="Les cartes dans le cimetière." alt="" coords="189,5,319,32"/>
 </map>
 </div>
@@ -427,6 +421,50 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
+<a id="a8e7c03bb48ae14c24fbba7456f8ca4fb" name="a8e7c03bb48ae14c24fbba7456f8ca4fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7c03bb48ae14c24fbba7456f8ca4fb">&#9670;&nbsp;</a></span>getHandCards()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_card.html">Card</a> * &gt; Player::getHandCards </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>envoyer une carte au cimetière </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a8e7c03bb48ae14c24fbba7456f8ca4fb_cgraph.png" border="0" usemap="#aclass_player_a8e7c03bb48ae14c24fbba7456f8ca4fb_cgraph" alt=""/></div>
+<map name="aclass_player_a8e7c03bb48ae14c24fbba7456f8ca4fb_cgraph" id="aclass_player_a8e7c03bb48ae14c24fbba7456f8ca4fb_cgraph">
+<area shape="rect" title="envoyer une carte au cimetière" alt="" coords="5,5,155,32"/>
+<area shape="rect" href="class_deck.html#a3c09493235fdb75fcfc2258bbe9b003c" title="Les cartes jouables." alt="" coords="203,5,345,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a8e7c03bb48ae14c24fbba7456f8ca4fb_icgraph.png" border="0" usemap="#aclass_player_a8e7c03bb48ae14c24fbba7456f8ca4fb_icgraph" alt=""/></div>
+<map name="aclass_player_a8e7c03bb48ae14c24fbba7456f8ca4fb_icgraph" id="aclass_player_a8e7c03bb48ae14c24fbba7456f8ca4fb_icgraph">
+<area shape="rect" title="envoyer une carte au cimetière" alt="" coords="276,5,425,32"/>
+<area shape="rect" href="class_game.html#a9a705e31bcc5c3d5778e3136ccc15489" title="Lance la partie." alt="" coords="104,5,228,32"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aa6479f194f9bb44b09adaf3b04a5594d" name="aa6479f194f9bb44b09adaf3b04a5594d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6479f194f9bb44b09adaf3b04a5594d">&#9670;&nbsp;</a></span>getHp()</h2>
 
@@ -538,7 +576,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="center"><img src="class_player_aa016a6401d45ac510fd71c5629b0a707_cgraph.png" border="0" usemap="#aclass_player_aa016a6401d45ac510fd71c5629b0a707_cgraph" alt=""/></div>
 <map name="aclass_player_aa016a6401d45ac510fd71c5629b0a707_cgraph" id="aclass_player_aa016a6401d45ac510fd71c5629b0a707_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,124,57"/>
-<area shape="rect" href="class_deck.html#acec615e3dbd2c22200f74b61d95ddac4" title="Les cartes jouables." alt="" coords="172,31,283,57"/>
+<area shape="rect" href="class_deck.html#acec615e3dbd2c22200f74b61d95ddac4" title=" " alt="" coords="172,31,283,57"/>
 <area shape="rect" href="_util_8h.html#acfb36b6330384dbc3c0733a83da43a70" title=" " alt="" coords="363,5,433,32"/>
 <area shape="rect" href="class_card.html#a5a078756e3490cb59956bec8abab5494" title="Affiche le nom de la carte coloré" alt="" coords="331,56,465,83"/>
 </map>

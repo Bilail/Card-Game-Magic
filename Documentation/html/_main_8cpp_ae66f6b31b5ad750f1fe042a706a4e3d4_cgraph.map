@@ -1,15 +1,18 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,183,56,209"/>
-<area shape="rect" id="node2" href="$class_game.html#a9a705e31bcc5c3d5778e3136ccc15489" title="Lance la partie." alt="" coords="104,183,228,209"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,233,56,260"/>
+<area shape="rect" id="node2" href="$class_game.html#a9a705e31bcc5c3d5778e3136ccc15489" title="Lance la partie." alt="" coords="104,233,228,260"/>
 <area shape="rect" id="node3" href="$_game_8cpp.html#a65b69695f76049b7d677a330557e2e77" title=" " alt="" coords="311,5,403,32"/>
 <area shape="rect" id="node4" href="$class_player.html#aa87746929fad46316b1452dd0d9b2b36" title="désengager ses cartes" alt="" coords="277,56,437,83"/>
 <area shape="rect" id="node6" href="$class_player.html#a3b9eb955669297073700bc13b27d27ff" title="piocher une carte" alt="" coords="297,107,418,133"/>
-<area shape="rect" id="node8" href="$class_player.html#a13c963d763eca10e5527e14f6aa10393" title=" " alt="" coords="276,157,439,184"/>
-<area shape="rect" id="node10" href="$class_player.html#aa6479f194f9bb44b09adaf3b04a5594d" title="récuperer les hp du joueurs" alt="" coords="307,208,408,235"/>
-<area shape="rect" id="node11" href="$class_player.html#af1aa472885d589516f483e26e786600e" title="Set le nom du joueurs." alt="" coords="298,259,417,285"/>
-<area shape="rect" id="node12" href="$class_player.html#a021f86d4c3ff6e81ec19b77c38550fe9" title="set les hp du joueurs" alt="" coords="307,309,408,336"/>
-<area shape="rect" id="node13" href="$class_str_color.html#ab79b28e206e66aa182ff9233a250fb6a" title=" " alt="" coords="301,360,414,387"/>
+<area shape="rect" id="node8" href="$class_player.html#a13c963d763eca10e5527e14f6aa10393" title=" " alt="" coords="276,208,439,235"/>
+<area shape="rect" id="node10" href="$class_player.html#a8e7c03bb48ae14c24fbba7456f8ca4fb" title="envoyer une carte au cimetière" alt="" coords="283,157,432,184"/>
+<area shape="rect" id="node12" href="$class_player.html#aa6479f194f9bb44b09adaf3b04a5594d" title="récuperer les hp du joueurs" alt="" coords="307,259,408,285"/>
+<area shape="rect" id="node13" href="$class_player.html#af1aa472885d589516f483e26e786600e" title="Set le nom du joueurs." alt="" coords="298,309,417,336"/>
+<area shape="rect" id="node14" href="$class_card.html#a50cb7f8100fb16db6e4de406d7e5af05" title="Fonction d&#39;affichage." alt="" coords="316,360,399,387"/>
+<area shape="rect" id="node15" href="$class_player.html#a021f86d4c3ff6e81ec19b77c38550fe9" title="set les hp du joueurs" alt="" coords="307,411,408,437"/>
+<area shape="rect" id="node16" href="$class_str_color.html#ab79b28e206e66aa182ff9233a250fb6a" title=" " alt="" coords="301,461,414,488"/>
 <area shape="rect" id="node5" href="$class_deck.html#a6c2cab6b4c3c69c01c80f50441d2173a" title="désengager la carte" alt="" coords="487,56,640,83"/>
 <area shape="rect" id="node7" href="$class_deck.html#a805e486ea52b3d84349aa9ec1edc1cad" title="Piocher une carte." alt="" coords="506,107,621,133"/>
-<area shape="rect" id="node9" href="$class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="512,157,615,184"/>
+<area shape="rect" id="node9" href="$class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="512,284,615,311"/>
+<area shape="rect" id="node11" href="$class_deck.html#a3c09493235fdb75fcfc2258bbe9b003c" title="Les cartes jouables." alt="" coords="492,157,635,184"/>
 </map>

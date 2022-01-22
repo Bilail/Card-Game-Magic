@@ -16,7 +16,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -98,22 +98,24 @@ $(document).ready(function(){initNavTree('_main_8cpp.html',''); initResizable();
 <code>#include &quot;<a class="el" href="_game_8h_source.html">../header/Game.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_deck_8h_source.html">../header/Deck.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_game_cards_8h_source.html">../header/GameCards.h</a>&quot;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
 <code>#include &quot;../dependance/json.hpp&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de Main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_main_8cpp__incl.png" border="0" usemap="#a_source_2src_2_main_8cpp" alt=""/></div>
 <map name="a_source_2src_2_main_8cpp" id="a_source_2src_2_main_8cpp">
-<area shape="rect" title=" " alt="" coords="467,5,610,32"/>
+<area shape="rect" title=" " alt="" coords="641,5,783,32"/>
 <area shape="rect" title=" " alt="" coords="180,528,236,555"/>
 <area shape="rect" title=" " alt="" coords="775,528,847,555"/>
 <area shape="rect" href="_card_8h.html" title=" " alt="" coords="492,453,607,480"/>
 <area shape="rect" href="_creature_card_8h.html" title=" " alt="" coords="297,379,461,405"/>
 <area shape="rect" href="_land_card_8h.html" title=" " alt="" coords="638,379,781,405"/>
 <area shape="rect" href="_game_8h.html" title=" " alt="" coords="151,80,273,107"/>
-<area shape="rect" href="_deck_8h.html" title=" " alt="" coords="507,229,570,256"/>
+<area shape="rect" href="_deck_8h.html" title=" " alt="" coords="513,229,575,256"/>
 <area shape="rect" href="_game_cards_8h.html" title=" " alt="" coords="403,304,506,331"/>
-<area shape="rect" title=" " alt="" coords="907,80,1064,107"/>
+<area shape="rect" title=" " alt="" coords="907,80,989,107"/>
+<area shape="rect" title=" " alt="" coords="1013,80,1171,107"/>
 <area shape="rect" title=" " alt="" coords="579,528,634,555"/>
 <area shape="rect" href="_player_8h.html" title=" " alt="" coords="122,155,193,181"/>
 <area shape="rect" title=" " alt="" coords="581,304,680,331"/>
@@ -165,19 +167,22 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#a_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
 <map name="a_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="a_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,183,56,209"/>
-<area shape="rect" href="class_game.html#a9a705e31bcc5c3d5778e3136ccc15489" title="Lance la partie." alt="" coords="104,183,228,209"/>
+<area shape="rect" title=" " alt="" coords="5,233,56,260"/>
+<area shape="rect" href="class_game.html#a9a705e31bcc5c3d5778e3136ccc15489" title="Lance la partie." alt="" coords="104,233,228,260"/>
 <area shape="rect" href="_game_8cpp.html#a65b69695f76049b7d677a330557e2e77" title=" " alt="" coords="311,5,403,32"/>
 <area shape="rect" href="class_player.html#aa87746929fad46316b1452dd0d9b2b36" title="désengager ses cartes" alt="" coords="277,56,437,83"/>
 <area shape="rect" href="class_player.html#a3b9eb955669297073700bc13b27d27ff" title="piocher une carte" alt="" coords="297,107,418,133"/>
-<area shape="rect" href="class_player.html#a13c963d763eca10e5527e14f6aa10393" title=" " alt="" coords="276,157,439,184"/>
-<area shape="rect" href="class_player.html#aa6479f194f9bb44b09adaf3b04a5594d" title="récuperer les hp du joueurs" alt="" coords="307,208,408,235"/>
-<area shape="rect" href="class_player.html#af1aa472885d589516f483e26e786600e" title="Set le nom du joueurs." alt="" coords="298,259,417,285"/>
-<area shape="rect" href="class_player.html#a021f86d4c3ff6e81ec19b77c38550fe9" title="set les hp du joueurs" alt="" coords="307,309,408,336"/>
-<area shape="rect" href="class_str_color.html#ab79b28e206e66aa182ff9233a250fb6a" title=" " alt="" coords="301,360,414,387"/>
+<area shape="rect" href="class_player.html#a13c963d763eca10e5527e14f6aa10393" title=" " alt="" coords="276,208,439,235"/>
+<area shape="rect" href="class_player.html#a8e7c03bb48ae14c24fbba7456f8ca4fb" title="envoyer une carte au cimetière" alt="" coords="283,157,432,184"/>
+<area shape="rect" href="class_player.html#aa6479f194f9bb44b09adaf3b04a5594d" title="récuperer les hp du joueurs" alt="" coords="307,259,408,285"/>
+<area shape="rect" href="class_player.html#af1aa472885d589516f483e26e786600e" title="Set le nom du joueurs." alt="" coords="298,309,417,336"/>
+<area shape="rect" href="class_card.html#a50cb7f8100fb16db6e4de406d7e5af05" title="Fonction d&#39;affichage." alt="" coords="316,360,399,387"/>
+<area shape="rect" href="class_player.html#a021f86d4c3ff6e81ec19b77c38550fe9" title="set les hp du joueurs" alt="" coords="307,411,408,437"/>
+<area shape="rect" href="class_str_color.html#ab79b28e206e66aa182ff9233a250fb6a" title=" " alt="" coords="301,461,414,488"/>
 <area shape="rect" href="class_deck.html#a6c2cab6b4c3c69c01c80f50441d2173a" title="désengager la carte" alt="" coords="487,56,640,83"/>
 <area shape="rect" href="class_deck.html#a805e486ea52b3d84349aa9ec1edc1cad" title="Piocher une carte." alt="" coords="506,107,621,133"/>
-<area shape="rect" href="class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="512,157,615,184"/>
+<area shape="rect" href="class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="512,284,615,311"/>
+<area shape="rect" href="class_deck.html#a3c09493235fdb75fcfc2258bbe9b003c" title="Les cartes jouables." alt="" coords="492,157,635,184"/>
 </map>
 </div>
 

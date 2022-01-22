@@ -1,0 +1,4 @@
+<map id="Player::getHandCards" name="Player::getHandCards">
+<area shape="rect" id="node1" title="envoyer une carte au cimetière" alt="" coords="5,5,155,32"/>
+<area shape="rect" id="node2" href="$class_deck.html#a3c09493235fdb75fcfc2258bbe9b003c" title="Les cartes jouables." alt="" coords="203,5,345,32"/>
+</map>

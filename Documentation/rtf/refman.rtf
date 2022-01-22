@@ -108,7 +108,7 @@
 {\info 
 {\title {\comment Magic }Magic}
 {\comment G\'E9n\'E9r\'E9 par doxygen1.9.3.}
-{\creatim \yr2022\mo1\dy21\hr22\min43\sec43}
+{\creatim \yr2022\mo1\dy21\hr23\min52\sec32}
 }\pard\plain 
 \sectd\pgnlcrm
 {\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
@@ -149,18 +149,18 @@ Card\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABJ \\*MERGEFORMAT}{\fldrslt
 \pard\plain \s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
 CreatureCard\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-LandCard\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEH \\*MERGEFORMAT}{\fldrslt pagenum}}
+LandCard\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEL \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 }\par
 Deck\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADB \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Game\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADV \\*MERGEFORMAT}{\fldrslt pagenum}}
+Game\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADY \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-GameCards\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAED \\*MERGEFORMAT}{\fldrslt pagenum}}
+GameCards\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEH \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Player\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEK \\*MERGEFORMAT}{\fldrslt pagenum}}
+Player\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-StrColor\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFF \\*MERGEFORMAT}{\fldrslt pagenum}}
+StrColor\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFK \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 }
 \pard\plain \sect\sbkpage
@@ -180,15 +180,15 @@ Liste des classes\par \pard\plain
 \par
 {\b {\b Deck} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADB \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Game} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADV \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Game} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADY \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b GameCards} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAED \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b GameCards} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEH \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b LandCard} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEH \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b LandCard} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEL \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Player} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEK \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Player} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b StrColor} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFF \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b StrColor} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFK \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 \par}
 \pard\plain \sect\sbkpage
@@ -1451,12 +1451,14 @@ Les cartes qui peuvent d\'E9fendre. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-void {\b playCard} ({\b Card} *c)\par
+std::vector< {\b Card} * > {\b getHandCards} ()\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Les cartes jouables. }{
 }\par
 }\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b playCard} ({\b Card} *c)\par
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 void {\b discardCard} ({\b Card} *c)\par
 {
@@ -1471,6 +1473,10 @@ void {\b JsonToDeck} (std::string nomDeck)\par
 Fonction qui convertit un fichier json de carte en deck jouable. }{
 }\par
 }\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b CardtoJson} (std::string nomDeck)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b exportToJson} (std::string filename)\par
 }
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Attributs publics statiques\par
@@ -1562,14 +1568,25 @@ Deck::~Deck ()}}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Documentation des fonctions membres\par
 \pard\plain 
+{\xe \v CardtoJson\:Deck}
+{\xe \v Deck\:CardtoJson}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector< {\b Card} e * > Deck::CardtoJson (std::string  {\i nomDeck})}}
+\par
+{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
 {\xe \v discardCard\:Deck}
 {\xe \v Deck\:discardCard}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
 void Deck::discardCard ({\b Card} *  {\i c})}}
 \par
-{\bkmkstart AAAAAAAADF}
-{\bkmkend AAAAAAAADF}
+{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1598,8 +1615,8 @@ Param\'E8tres\par}
 {\b 
 void Deck::disengageCards ()}}
 \par
-{\bkmkstart AAAAAAAADG}
-{\bkmkend AAAAAAAADG}
+{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1617,8 +1634,8 @@ Voici le graphe des appelants de cette fonction :{
 {\b 
 bool Deck::drawCard ()}}
 \par
-{\bkmkstart AAAAAAAADH}
-{\bkmkend AAAAAAAADH}
+{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1635,14 +1652,25 @@ Renvoie\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \s
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_deck_a805e486ea52b3d84349aa9ec1edc1cad_icgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
 }
 }
+{\xe \v exportToJson\:Deck}
+{\xe \v Deck\:exportToJson}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Deck::exportToJson (std::string  {\i filename})}}
+\par
+{\bkmkstart AAAAAAAADJ}
+{\bkmkend AAAAAAAADJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
 {\xe \v generateRandomDeck\:Deck}
 {\xe \v Deck\:generateRandomDeck}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
 void Deck::generateRandomDeck ()}}
 \par
-{\bkmkstart AAAAAAAADI}
-{\bkmkend AAAAAAAADI}
+{\bkmkstart AAAAAAAADK}
+{\bkmkend AAAAAAAADK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1656,8 +1684,8 @@ M\'E9lange le deck. }}\par
 {\b 
 std::vector< {\b Card} * > Deck::getAttackCards ()}}
 \par
-{\bkmkstart AAAAAAAADJ}
-{\bkmkend AAAAAAAADJ}
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1680,8 +1708,8 @@ Renvoie\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \s
 {\b 
 std::vector< {\b Card} * > Deck::getDefenseCards ()}}
 \par
-{\bkmkstart AAAAAAAADK}
-{\bkmkend AAAAAAAADK}
+{\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1698,14 +1726,44 @@ Renvoie\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \s
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_deck_ab00df76c200dc9fbc2e2cde423d3a488_icgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
 }
 }
+{\xe \v getHandCards\:Deck}
+{\xe \v Deck\:getHandCards}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::vector< {\b Card} * > Deck::getHandCards ()}}
+\par
+{\bkmkstart AAAAAAAADN}
+{\bkmkend AAAAAAAADN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Les cartes jouables. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E8tres\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i c} \cell }{\cell }
+{\row }
+}
+}Voici le graphe des appelants de cette fonction :{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_deck_a3c09493235fdb75fcfc2258bbe9b003c_icgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
 {\xe \v getPlayableCards\:Deck}
 {\xe \v Deck\:getPlayableCards}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
 std::vector< {\b Card} * > Deck::getPlayableCards ()}}
 \par
-{\bkmkstart AAAAAAAADL}
-{\bkmkend AAAAAAAADL}
+{\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1732,8 +1790,8 @@ Voici le graphe des appelants de cette fonction :{
 {\b 
 void Deck::JsonToDeck (std::string  {\i nomDeck})}}
 \par
-{\bkmkstart AAAAAAAADM}
-{\bkmkend AAAAAAAADM}
+{\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1762,26 +1820,11 @@ Param\'E8tres\par}
 {\b 
 void Deck::playCard ({\b Card} *  {\i c})}}
 \par
-{\bkmkstart AAAAAAAADN}
-{\bkmkend AAAAAAAADN}
+{\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
-\par
-{
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Les cartes jouables. }}\par
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-{\par
-{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-Param\'E8tres\par}
-\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
-\pard \widctlpar\intbl\adjustright
-{{\i c} \cell }{\cell }
-{\row }
-}
-}Voici le graphe d'appel pour cette fonction :{
+Voici le graphe d'appel pour cette fonction :{
 \pard\plain 
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_deck_acec615e3dbd2c22200f74b61d95ddac4_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
 }
@@ -1796,8 +1839,8 @@ Voici le graphe des appelants de cette fonction :{
 {\b 
 void Deck::printInPlayCards ()}}
 \par
-{\bkmkstart AAAAAAAADO}
-{\bkmkend AAAAAAAADO}
+{\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1815,8 +1858,8 @@ Voici le graphe d'appel pour cette fonction :{
 {\b 
 void Deck::printLibrary ()}}
 \par
-{\bkmkstart AAAAAAAADP}
-{\bkmkend AAAAAAAADP}
+{\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1838,8 +1881,8 @@ Documentation des donn\'E9es membres\par
 {\b 
 const int Deck::DECK_SIZE = 30{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAADQ}
-{\bkmkend AAAAAAAADQ}
+{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -1849,8 +1892,8 @@ const int Deck::DECK_SIZE = 30{\f2 [static]}}}
 {\b 
 std::vector<{\b Card}*> Deck::disCards{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAADR}
-{\bkmkend AAAAAAAADR}
+{\bkmkstart AAAAAAAADU}
+{\bkmkend AAAAAAAADU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -1860,8 +1903,8 @@ std::vector<{\b Card}*> Deck::disCards{\f2 [protected]}}}
 {\b 
 std::vector<{\b Card}*> Deck::handCards{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAADS}
-{\bkmkend AAAAAAAADS}
+{\bkmkstart AAAAAAAADV}
+{\bkmkend AAAAAAAADV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -1871,8 +1914,8 @@ std::vector<{\b Card}*> Deck::handCards{\f2 [protected]}}}
 {\b 
 std::vector<{\b Card}*> Deck::inPlayCards{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAADT}
-{\bkmkend AAAAAAAADT}
+{\bkmkstart AAAAAAAADW}
+{\bkmkend AAAAAAAADW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -1882,8 +1925,8 @@ std::vector<{\b Card}*> Deck::inPlayCards{\f2 [protected]}}}
 {\b 
 std::vector<{\b Card}*> Deck::library{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAADU}
-{\bkmkend AAAAAAAADU}
+{\bkmkstart AAAAAAAADX}
+{\bkmkend AAAAAAAADX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -1891,6 +1934,8 @@ std::vector<{\b Card}*> Deck::library{\f2 [protected]}}}
 La documentation de cette classe a \'E9t\'E9 g\'E9n\'E9r\'E9e \'E0 partir du fichier suivant :{\par
 \pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 Source/header/{\b Deck.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Source/data/{\b testJson.cpp}\par
 \pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 Source/src/{\b Deck.cpp}\par
 }\par \pard\plain 
@@ -1901,8 +1946,8 @@ Source/src/{\b Deck.cpp}\par
 R\'E9f\'E9rence de la classe Game\par \pard\plain 
 {\tc\tcl2 \v Game}
 {\xe \v Game}
-{\bkmkstart AAAAAAAADV}
-{\bkmkend AAAAAAAADV}
+{\bkmkstart AAAAAAAADY}
+{\bkmkend AAAAAAAADY}
 \par
 {
 {\f2 #include <Game.h>}}\par
@@ -1951,6 +1996,8 @@ Attributs prot\'E9g\'E9s\par
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 {\b Player} * {\b playerTurn}\par
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b playerHasPlayedLandCard}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 int {\b round}\par
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
@@ -1963,8 +2010,8 @@ Documentation des constructeurs et destructeur\par
 {\b 
 Game::Game ()}}
 \par
-{\bkmkstart AAAAAAAADW}
-{\bkmkend AAAAAAAADW}
+{\bkmkstart AAAAAAAADZ}
+{\bkmkend AAAAAAAADZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -1978,8 +2025,8 @@ Documentation des fonctions membres\par
 {\b 
 void Game::playGame ()}}
 \par
-{\bkmkstart AAAAAAAADX}
-{\bkmkend AAAAAAAADX}
+{\bkmkstart AAAAAAAAEA}
+{\bkmkend AAAAAAAAEA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2005,8 +2052,8 @@ Documentation des donn\'E9es membres\par
 {\b 
 int Game::MAX_CARDS_IN_HAND = 7{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAADY}
-{\bkmkend AAAAAAAADY}
+{\bkmkstart AAAAAAAAEB}
+{\bkmkend AAAAAAAAEB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2020,8 +2067,8 @@ Nombre de carte maximum dans la main. }}\par
 {\b 
 {\b Player} Game::p1{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAADZ}
-{\bkmkend AAAAAAAADZ}
+{\bkmkstart AAAAAAAAEC}
+{\bkmkend AAAAAAAAEC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2031,8 +2078,19 @@ Nombre de carte maximum dans la main. }}\par
 {\b 
 {\b Player} Game::p2{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAAEA}
-{\bkmkend AAAAAAAAEA}
+{\bkmkstart AAAAAAAAED}
+{\bkmkend AAAAAAAAED}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v playerHasPlayedLandCard\:Game}
+{\xe \v Game\:playerHasPlayedLandCard}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool Game::playerHasPlayedLandCard{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAAEE}
+{\bkmkend AAAAAAAAEE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2042,8 +2100,8 @@ Nombre de carte maximum dans la main. }}\par
 {\b 
 {\b Player}* Game::playerTurn{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAAEB}
-{\bkmkend AAAAAAAAEB}
+{\bkmkstart AAAAAAAAEF}
+{\bkmkend AAAAAAAAEF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2053,8 +2111,8 @@ Nombre de carte maximum dans la main. }}\par
 {\b 
 int Game::round{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAAEC}
-{\bkmkend AAAAAAAAEC}
+{\bkmkstart AAAAAAAAEG}
+{\bkmkend AAAAAAAAEG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2072,8 +2130,8 @@ Source/src/{\b Game.cpp}\par
 R\'E9f\'E9rence de la classe GameCards\par \pard\plain 
 {\tc\tcl2 \v GameCards}
 {\xe \v GameCards}
-{\bkmkstart AAAAAAAAED}
-{\bkmkend AAAAAAAAED}
+{\bkmkstart AAAAAAAAEH}
+{\bkmkend AAAAAAAAEH}
 \par
 {
 {\f2 #include <GameCards.h>}}\par
@@ -2109,8 +2167,8 @@ Documentation des constructeurs et destructeur\par
 {\b 
 GameCards::GameCards ()}}
 \par
-{\bkmkstart AAAAAAAAEE}
-{\bkmkend AAAAAAAAEE}
+{\bkmkstart AAAAAAAAEI}
+{\bkmkend AAAAAAAAEI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2128,8 +2186,8 @@ Documentation des fonctions membres\par
 {\b 
 const std::vector< {\b CreatureCard} > & GameCards::getCreatures ()}}
 \par
-{\bkmkstart AAAAAAAAEF}
-{\bkmkend AAAAAAAAEF}
+{\bkmkstart AAAAAAAAEJ}
+{\bkmkend AAAAAAAAEJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 Voici le graphe des appelants de cette fonction :{
@@ -2143,8 +2201,8 @@ Voici le graphe des appelants de cette fonction :{
 {\b 
 const std::vector< {\b LandCard} > & GameCards::getLands ()}}
 \par
-{\bkmkstart AAAAAAAAEG}
-{\bkmkend AAAAAAAAEG}
+{\bkmkstart AAAAAAAAEK}
+{\bkmkend AAAAAAAAEK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 Voici le graphe des appelants de cette fonction :{
@@ -2166,8 +2224,8 @@ Source/src/{\b GameCards.cpp}\par
 R\'E9f\'E9rence de la classe LandCard\par \pard\plain 
 {\tc\tcl2 \v LandCard}
 {\xe \v LandCard}
-{\bkmkstart AAAAAAAAEH}
-{\bkmkend AAAAAAAAEH}
+{\bkmkstart AAAAAAAAEL}
+{\bkmkend AAAAAAAAEL}
 \par
 {
 {\f2 #include <LandCard.h>}}\par
@@ -2223,8 +2281,8 @@ Documentation des constructeurs et destructeur\par
 {\b 
 LandCard::LandCard (std::string  {\i nm}, std::string  {\i clr})}}
 \par
-{\bkmkstart AAAAAAAAEI}
-{\bkmkend AAAAAAAAEI}
+{\bkmkstart AAAAAAAAEM}
+{\bkmkend AAAAAAAAEM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2255,8 +2313,8 @@ Param\'E8tres\par}
 {\b 
 LandCard::~LandCard (){\f2 [inline]}}}
 \par
-{\bkmkstart AAAAAAAAEJ}
-{\bkmkend AAAAAAAAEJ}
+{\bkmkstart AAAAAAAAEN}
+{\bkmkend AAAAAAAAEN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2331,8 +2389,8 @@ Source/src/{\b LandCard.cpp}\par
 R\'E9f\'E9rence de la classe Player\par \pard\plain 
 {\tc\tcl2 \v Player}
 {\xe \v Player}
-{\bkmkstart AAAAAAAAEK}
-{\bkmkend AAAAAAAAEK}
+{\bkmkstart AAAAAAAAEO}
+{\bkmkend AAAAAAAAEO}
 \par
 {
 {\f2 #include <Player.h>}}\par
@@ -2423,12 +2481,14 @@ ses cartes qui peuvent d\'E9fendre }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-void {\b discardCard} ({\b Card} *c)\par
+std::vector< {\b Card} * > {\b getHandCards} ()\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 envoyer une carte au cimeti\'E8re }{
 }\par
 }\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b discardCard} ({\b Card} *c)\par
 }
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Attributs prot\'E9g\'E9s\par
@@ -2464,8 +2524,8 @@ Documentation des constructeurs et destructeur\par
 {\b 
 Player::Player (std::string  {\i name}, {\b Deck}  {\i deck})}}
 \par
-{\bkmkstart AAAAAAAAEL}
-{\bkmkend AAAAAAAAEL}
+{\bkmkstart AAAAAAAAEP}
+{\bkmkend AAAAAAAAEP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2479,8 +2539,8 @@ Constructeur d'un joueur. }}\par
 {\b 
 Player::~Player (){\f2 [inline]}}}
 \par
-{\bkmkstart AAAAAAAAEM}
-{\bkmkend AAAAAAAAEM}
+{\bkmkstart AAAAAAAAEQ}
+{\bkmkend AAAAAAAAEQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2494,26 +2554,11 @@ Documentation des fonctions membres\par
 {\b 
 void Player::discardCard ({\b Card} *  {\i c})}}
 \par
-{\bkmkstart AAAAAAAAEN}
-{\bkmkend AAAAAAAAEN}
+{\bkmkstart AAAAAAAAER}
+{\bkmkend AAAAAAAAER}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
-\par
-{
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-envoyer une carte au cimeti\'E8re }}\par
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-{\par
-{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-Param\'E8tres\par}
-\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
-\pard \widctlpar\intbl\adjustright
-{{\i c} \cell }{\cell }
-{\row }
-}
-}Voici le graphe d'appel pour cette fonction :{
+Voici le graphe d'appel pour cette fonction :{
 \pard\plain 
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_player_a3d6549590fb8e154951c873d6bfb412e_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
 }
@@ -2524,8 +2569,8 @@ Param\'E8tres\par}
 {\b 
 void Player::disengageCards ()}}
 \par
-{\bkmkstart AAAAAAAAEO}
-{\bkmkend AAAAAAAAEO}
+{\bkmkstart AAAAAAAAES}
+{\bkmkend AAAAAAAAES}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2547,8 +2592,8 @@ Voici le graphe des appelants de cette fonction :{
 {\b 
 bool Player::drawCard ()}}
 \par
-{\bkmkstart AAAAAAAAEP}
-{\bkmkend AAAAAAAAEP}
+{\bkmkstart AAAAAAAAET}
+{\bkmkend AAAAAAAAET}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2575,8 +2620,8 @@ Voici le graphe des appelants de cette fonction :{
 {\b 
 std::vector< {\b Card} * > Player::getAttackCards ()}}
 \par
-{\bkmkstart AAAAAAAAEQ}
-{\bkmkend AAAAAAAAEQ}
+{\bkmkstart AAAAAAAAEU}
+{\bkmkend AAAAAAAAEU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2599,8 +2644,8 @@ Renvoie\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \s
 {\b 
 std::string Player::getColoredName ()}}
 \par
-{\bkmkstart AAAAAAAAER}
-{\bkmkend AAAAAAAAER}
+{\bkmkstart AAAAAAAAEV}
+{\bkmkend AAAAAAAAEV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 Voici le graphe d'appel pour cette fonction :{
@@ -2618,8 +2663,8 @@ Voici le graphe des appelants de cette fonction :{
 {\b 
 std::vector< {\b Card} * > Player::getDefenseCards ()}}
 \par
-{\bkmkstart AAAAAAAAES}
-{\bkmkend AAAAAAAAES}
+{\bkmkstart AAAAAAAAEW}
+{\bkmkend AAAAAAAAEW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2636,14 +2681,48 @@ Renvoie\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \s
 \par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_player_aabe0a76c0767e94328d75a32963b4de6_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
 }
 }
+{\xe \v getHandCards\:Player}
+{\xe \v Player\:getHandCards}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::vector< {\b Card} * > Player::getHandCards ()}}
+\par
+{\bkmkstart AAAAAAAAEX}
+{\bkmkend AAAAAAAAEX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+envoyer une carte au cimeti\'E8re }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E8tres\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i c} \cell }{\cell }
+{\row }
+}
+}Voici le graphe d'appel pour cette fonction :{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_player_a8e7c03bb48ae14c24fbba7456f8ca4fb_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+Voici le graphe des appelants de cette fonction :{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_player_a8e7c03bb48ae14c24fbba7456f8ca4fb_icgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
 {\xe \v getHp\:Player}
 {\xe \v Player\:getHp}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
 int Player::getHp ()}}
 \par
-{\bkmkstart AAAAAAAAET}
-{\bkmkend AAAAAAAAET}
+{\bkmkstart AAAAAAAAEY}
+{\bkmkend AAAAAAAAEY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2666,8 +2745,8 @@ Renvoie\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \s
 {\b 
 std::string Player::getName ()}}
 \par
-{\bkmkstart AAAAAAAAEU}
-{\bkmkend AAAAAAAAEU}
+{\bkmkstart AAAAAAAAEZ}
+{\bkmkend AAAAAAAAEZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2690,8 +2769,8 @@ Renvoie\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \s
 {\b 
 std::vector< {\b Card} * > Player::getPlayableCards ()}}
 \par
-{\bkmkstart AAAAAAAAEV}
-{\bkmkend AAAAAAAAEV}
+{\bkmkstart AAAAAAAAFA}
+{\bkmkend AAAAAAAAFA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2714,8 +2793,8 @@ Renvoie\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \s
 {\b 
 void Player::playCard ({\b Card} *  {\i c})}}
 \par
-{\bkmkstart AAAAAAAAEW}
-{\bkmkend AAAAAAAAEW}
+{\bkmkstart AAAAAAAAFB}
+{\bkmkend AAAAAAAAFB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 Voici le graphe d'appel pour cette fonction :{
@@ -2729,8 +2808,8 @@ Voici le graphe d'appel pour cette fonction :{
 {\b 
 void Player::setHp (int  {\i hp})}}
 \par
-{\bkmkstart AAAAAAAAEX}
-{\bkmkend AAAAAAAAEX}
+{\bkmkstart AAAAAAAAFC}
+{\bkmkend AAAAAAAAFC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2759,8 +2838,8 @@ Param\'E8tres\par}
 {\b 
 void Player::setPrintColor (std::string  {\i color})}}
 \par
-{\bkmkstart AAAAAAAAEY}
-{\bkmkend AAAAAAAAEY}
+{\bkmkstart AAAAAAAAFD}
+{\bkmkend AAAAAAAAFD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2789,8 +2868,8 @@ Documentation des donn\'E9es membres\par
 {\b 
 int Player::baseHp = 4{\f2 [static]}, {\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAAEZ}
-{\bkmkend AAAAAAAAEZ}
+{\bkmkstart AAAAAAAAFE}
+{\bkmkend AAAAAAAAFE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2800,8 +2879,8 @@ int Player::baseHp = 4{\f2 [static]}, {\f2 [protected]}}}
 {\b 
 {\b Deck} Player::cards{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAAFA}
-{\bkmkend AAAAAAAAFA}
+{\bkmkstart AAAAAAAAFF}
+{\bkmkend AAAAAAAAFF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2811,8 +2890,8 @@ int Player::baseHp = 4{\f2 [static]}, {\f2 [protected]}}}
 {\b 
 int Player::currentHp{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAAFB}
-{\bkmkend AAAAAAAAFB}
+{\bkmkstart AAAAAAAAFG}
+{\bkmkend AAAAAAAAFG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2822,8 +2901,8 @@ int Player::currentHp{\f2 [protected]}}}
 {\b 
 bool Player::isAlive{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAAFC}
-{\bkmkend AAAAAAAAFC}
+{\bkmkstart AAAAAAAAFH}
+{\bkmkend AAAAAAAAFH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2833,8 +2912,8 @@ bool Player::isAlive{\f2 [protected]}}}
 {\b 
 std::string Player::name{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAAFD}
-{\bkmkend AAAAAAAAFD}
+{\bkmkstart AAAAAAAAFI}
+{\bkmkend AAAAAAAAFI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2844,8 +2923,8 @@ std::string Player::name{\f2 [protected]}}}
 {\b 
 std::string Player::printColor{\f2 [protected]}}}
 \par
-{\bkmkstart AAAAAAAAFE}
-{\bkmkend AAAAAAAAFE}
+{\bkmkstart AAAAAAAAFJ}
+{\bkmkend AAAAAAAAFJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2863,8 +2942,8 @@ Source/src/{\b Player.cpp}\par
 R\'E9f\'E9rence de la classe StrColor\par \pard\plain 
 {\tc\tcl2 \v StrColor}
 {\xe \v StrColor}
-{\bkmkstart AAAAAAAAFF}
-{\bkmkend AAAAAAAAFF}
+{\bkmkstart AAAAAAAAFK}
+{\bkmkend AAAAAAAAFK}
 \par
 {
 {\f2 #include <StrColor.h>}}\par
@@ -2903,8 +2982,8 @@ Documentation des fonctions membres\par
 {\b 
 std::string StrColor::blue (std::string  {\i str}){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAFG}
-{\bkmkend AAAAAAAAFG}
+{\bkmkstart AAAAAAAAFL}
+{\bkmkend AAAAAAAAFL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2914,8 +2993,8 @@ std::string StrColor::blue (std::string  {\i str}){\f2 [static]}}}
 {\b 
 std::string StrColor::cyan (std::string  {\i str}){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAFH}
-{\bkmkend AAAAAAAAFH}
+{\bkmkstart AAAAAAAAFM}
+{\bkmkend AAAAAAAAFM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2925,8 +3004,8 @@ std::string StrColor::cyan (std::string  {\i str}){\f2 [static]}}}
 {\b 
 std::string StrColor::green (std::string  {\i str}){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAFI}
-{\bkmkend AAAAAAAAFI}
+{\bkmkstart AAAAAAAAFN}
+{\bkmkend AAAAAAAAFN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2936,8 +3015,8 @@ std::string StrColor::green (std::string  {\i str}){\f2 [static]}}}
 {\b 
 std::string StrColor::magenta (std::string  {\i str}){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAFJ}
-{\bkmkend AAAAAAAAFJ}
+{\bkmkstart AAAAAAAAFO}
+{\bkmkend AAAAAAAAFO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2947,8 +3026,8 @@ std::string StrColor::magenta (std::string  {\i str}){\f2 [static]}}}
 {\b 
 std::string StrColor::print (std::string  {\i str}, std::string  {\i color}){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAFK}
-{\bkmkend AAAAAAAAFK}
+{\bkmkstart AAAAAAAAFP}
+{\bkmkend AAAAAAAAFP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 Voici le graphe des appelants de cette fonction :{
@@ -2962,8 +3041,8 @@ Voici le graphe des appelants de cette fonction :{
 {\b 
 std::string StrColor::red (std::string  {\i str}){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAFL}
-{\bkmkend AAAAAAAAFL}
+{\bkmkstart AAAAAAAAFQ}
+{\bkmkend AAAAAAAAFQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -2973,8 +3052,8 @@ std::string StrColor::red (std::string  {\i str}){\f2 [static]}}}
 {\b 
 std::string StrColor::yellow (std::string  {\i str}){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAFM}
-{\bkmkend AAAAAAAAFM}
+{\bkmkstart AAAAAAAAFR}
+{\bkmkend AAAAAAAAFR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 Voici le graphe des appelants de cette fonction :{
@@ -3291,14 +3370,17 @@ Aller \'E0 la documentation de ce fichier.{
 57     std::vector<Card*> getPlayableCards();\par
 62     std::vector<Card*> getAttackCards();\par
 67     std::vector<Card*> getDefenseCards();\par
-72     {\cf18 void} playCard(Card* c);\par
-77     {\cf18 void} discardCard(Card* c);\par
-82     {\cf18 void} JsonToDeck(std::string nomDeck);\par
-83 \par
-84 \};\par
-85 \par
+72     std::vector<Card*> getHandCards();\par
+73     {\cf18 void} playCard(Card* c);\par
+78     {\cf18 void} discardCard(Card* c);\par
+83     {\cf18 void} JsonToDeck(std::string nomDeck);\par
+84     {\cf18 void} CardtoJson(std::string nomDeck);\par
+85     {\cf18 void} exportToJson(std::string filename);\par
 86 \par
-87 {\cf21 #endif }{\cf20 //MAGIC_DECK_H}\par
+87 \};\par
+88 \par
+89 \par
+90 {\cf21 #endif }{\cf20 //MAGIC_DECK_H}\par
 }
 \par \pard\plain 
 
@@ -3363,22 +3445,24 @@ Aller \'E0 la documentation de ce fichier.{
 25     {\cf18 void} randomDraw();\par
 30     {\cf18 void} mainPhase();\par
 35     {\cf18 void} fightPhase();\par
-40     Player* getOpponent();\par
-41 {\cf17 protected}:\par
-42     Player p1;\par
-43     Player p2;\par
-44     Player* playerTurn;\par
-45     {\cf18 int} round;\par
-46 \par
-47 public :\par
-48     Game();\par
-49     {\cf20 //Game(Game const &); //reprendre une game}\par
-53 {\cf20 }    {\cf18 void} playGame();\par
-57     {\cf17 static} {\cf18 int} MAX_CARDS_IN_HAND;\par
-58 \};\par
-59 \par
-60 \par
-61 {\cf21 #endif }{\cf20 //MAGIC_GAME_H}\par
+40     {\cf18 void} endOfTurnPhase();\par
+41     Player* getOpponent();\par
+42 {\cf17 protected}:\par
+43     Player p1;\par
+44     Player p2;\par
+45     Player* playerTurn;\par
+46     {\cf18 bool} playerHasPlayedLandCard;\par
+47     {\cf18 int} round;\par
+48 \par
+49 public :\par
+50     Game();\par
+51     {\cf20 //Game(Game const &); //reprendre une game}\par
+55 {\cf20 }    {\cf18 void} playGame();\par
+59     {\cf17 static} {\cf18 int} MAX_CARDS_IN_HAND;\par
+60 \};\par
+61 \par
+62 \par
+63 {\cf21 #endif }{\cf20 //MAGIC_GAME_H}\par
 }
 \par \pard\plain 
 
@@ -3607,11 +3691,12 @@ Aller \'E0 la documentation de ce fichier.{
 63     {\cf18 void} playCard(Card* c);\par
 68     std::vector<Card*> getAttackCards();\par
 73     std::vector<Card*> getDefenseCards();\par
-78     {\cf18 void} discardCard(Card* c);\par
-79 \};\par
-80 \par
+78     std::vector<Card*> getHandCards();\par
+79     {\cf18 void} discardCard(Card* c);\par
+80 \};\par
 81 \par
-82 {\cf21 #endif }{\cf20 //MAGIC_PLAYER_H}\par
+82 \par
+83 {\cf21 #endif }{\cf20 //MAGIC_PLAYER_H}\par
 }
 \par \pard\plain 
 
@@ -3844,13 +3929,12 @@ R\'E9f\'E9rence du fichier Source/src/Deck.cpp\par \pard\plain
 {\bkmkstart AAAAAAAAAY}
 {\bkmkend AAAAAAAAAY}
 {
-\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "../header/Card.h"}\par
-{\f2 #include "../header/Deck.h"}\par
-{\f2 #include "../header/Util.h"}\par
-{\f2 #include <vector>}\par
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <vector>}\par
 {\f2 #include <string>}\par
-{\f2 #include <iostream>}\par
 {\f2 #include <fstream>}\par
+{\f2 #include "../header/Util.h"}\par
+{\f2 #include "../header/Card.h"}\par
+{\f2 #include "../header/Deck.h"}\par
 {\f2 #include "../dependance/json.hpp"}\par
 }
 {
@@ -4003,6 +4087,7 @@ R\'E9f\'E9rence du fichier Source/src/Main.cpp\par \pard\plain
 {\f2 #include "../header/Game.h"}\par
 {\f2 #include "../header/Deck.h"}\par
 {\f2 #include "../header/GameCards.h"}\par
+{\f2 #include <filesystem>}\par
 {\f2 #include "../dependance/json.hpp"}\par
 }
 {
