@@ -26,7 +26,7 @@ Deck::Deck() {
 }
 
 Deck::Deck(std::string nomDeck){
-    JsonToDeck(nomDeck);
+    importFromJson(nomDeck);
 }
 
 Deck::~Deck() {
@@ -179,6 +179,13 @@ void Deck::importFromJson(std::string nomDeck) {
         std::string color = land.value()["color"];
         library.push_back(new LandCard(name, color));
     }
+
+    // Ajout des enchantements
+    auto& enchantments = deck["Deck"]["Enchantment"];
+    for (auto& enchantment : enchantments.items()){
+        std::string name = enchantment.value()["name"];
+        library.push_back(new EnchantmentCard(name));
+    }
 }
 
 void Deck::exportToJson(std::string filename) {
@@ -214,3 +221,18 @@ void Deck::exportToJson(std::string filename) {
     std::ofstream file(filename + ".json");
     file << jsonfile;
 }
+
+std::vector<EnchantmentCard*> Deck::getEnchantmentInGame(){
+    return enchantmentInGame;
+}
+
+bool Deck::GetEnchant(std::string e){
+    for(EnchantmentCard* c : enchantmentInGame){
+        if ( c->getName() == e){
+            return true;
+        }
+    }
+    return false;
+}
+
+

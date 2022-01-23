@@ -111,6 +111,24 @@
         "name" : "Forest",
         "color" : "Green"
       }
-    ]
+    ],
+    "Enchantment" :
+      [
+        {
+          "name" : "white"
+        },
+        {
+          "name" : "blue"
+        },
+        {
+          "name" : "green"
+        },
+        {
+          "name" : "red"
+        },
+        {
+          "name" : "black"
+        }
+      ]
   }
 }

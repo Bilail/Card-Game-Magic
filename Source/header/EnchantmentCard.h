@@ -7,14 +7,17 @@
 #include <vector>
 #include <string>
 #include "Card.h"
+#include "StrColor.h"
 
 class EnchantmentCard : public Card {
 public :
-    EnchantmentCard(std::string name, std::vector<int> manaCost , std::string cl)
+    EnchantmentCard(std::string name);
 
     ~EnchantmentCard();
 
     void effect();
+    void print();
+    void printLine(int line);
 
 protected :
     Card* associate;
