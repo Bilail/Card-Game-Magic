@@ -277,11 +277,23 @@ void Game::fightPhase() {
                     std::string cardColor = "";
                     for (Card *c: attackCards) {
                         if (lower(c->getName()) == lower(cardToPlay)) {
-                            validInput = true;
-                            cardColor = c->getColor();
-                            c->engage();
-                            chosenCardsToAttack.push_back(c);
-                            break;
+                            if (CreatureCard* cc = dynamic_cast<CreatureCard*>(c)) {
+                                // Si la carte a la capacité "défense", elle ne peut pas être utilisée en attaque
+                                if (cc->hasCapacity("défenseur")) {
+                                    std::cout << "Vous ne pouvez pas attaquer avec cette carte car elle possède la capacité \"défenseur\".\n";
+                                    std::cout << "Veuillez donner une autre réponse : ";
+                                    break;
+                                }
+                                else {
+                                    // Si la carte a la capacité "vigilance", on ne l'engage pas
+                                    if (!cc->hasCapacity("vigilance"))
+                                        c->engage();
+                                    validInput = true;
+                                    cardColor = c->getColor();
+                                    chosenCardsToAttack.push_back(c);
+                                    break;
+                                }
+                            }
                         }
                     }
                     if (validInput) {
@@ -320,6 +332,13 @@ void Game::fightPhase() {
                 for (int i = 0; i < chosenCardsToAttack.size(); i++) {
                     std::cout << "Voici l'ensemble de vos créatures qui peuvent défendre :\n";
                     Card::print(defenseCards);
+                    if (CreatureCard* ccAtk = dynamic_cast<CreatureCard*>(chosenCardsToAttack.at(i))) {
+                        // Si la carte a la capacité "imblocable", on ne peut pas la contrer
+                        if (ccAtk->hasCapacity("imblocable")) {
+                            std::cout << "Vous ne pouvez pas défendre la carte " << ccAtk->getColoredName() << " car elle est imblocable.\n";
+                            continue;
+                        }
+                    }
                     std::cout << "Avec quelle(s) carte(s) souhaitez-vous contrer la carte " << chosenCardsToAttack.at(i)->getColoredName() << " (tapez \"aucune\" pour ne pas défendre) : ";
                     bool validInput = false;
                     bool playerWantToAddDef = false;
@@ -331,21 +350,35 @@ void Game::fightPhase() {
                             for (Card* c : defenseCards) {
                                 j++;
                                 if (lower(c->getName()) == lower(input)) {
-                                    validInput = true;
-                                    attackDefenseCards[chosenCardsToAttack.at(i)].push_back(c);
-                                    defenseCards.erase(defenseCards.begin() + j);
-                                    std::cout << "Vous avez décidé de défendre avec la carte " << c->getColoredName() << " pour contrer l'attaque.\n";
-                                    if (defenseCards.size() > 0) {
-                                        std::cout << "Souhaitez-vous rajouter d'autres défenses contre cette carte ? (y/n) ";
-                                        std::getline(std::cin, input);
-                                        while (lower(input) != "y" && lower(input) != "n") {
-                                            std::cout << "Réponse inconnue, veuillez réessayer : ";
-                                            std::getline(std::cin, input);
-                                        }
-                                        if (lower(input) == "y") {
-                                            std::cout << "Quelle carte souhaitez-vous rajouter ? ";
-                                            playerWantToAddDef = true;
-                                            validInput = false;
+                                    // Si la carte a la capacité "vol", on vérifie que la défense est de type "vol" ou "portée"
+                                    if (CreatureCard* ccAtk = dynamic_cast<CreatureCard*>(chosenCardsToAttack.at(i))) {
+                                        if (CreatureCard *ccDef = dynamic_cast<CreatureCard *>(c)) {
+                                            if (!ccAtk->hasCapacity("vol") || ccDef->hasCapacity("vol") ||
+                                                ccDef->hasCapacity("portée")) {
+                                                validInput = true;
+                                                attackDefenseCards[chosenCardsToAttack.at(i)].push_back(c);
+                                                defenseCards.erase(defenseCards.begin() + j);
+                                                std::cout << "Vous avez décidé de défendre avec la carte "
+                                                          << c->getColoredName() << " pour contrer l'attaque.\n";
+                                                if (defenseCards.size() > 0) {
+                                                    std::cout
+                                                            << "Souhaitez-vous rajouter d'autres défenses contre cette carte ? (y/n) ";
+                                                    std::getline(std::cin, input);
+                                                    while (lower(input) != "y" && lower(input) != "n") {
+                                                        std::cout << "Réponse inconnue, veuillez réessayer : ";
+                                                        std::getline(std::cin, input);
+                                                    }
+                                                    if (lower(input) == "y") {
+                                                        std::cout << "Quelle carte souhaitez-vous rajouter ? ";
+                                                        playerWantToAddDef = true;
+                                                        validInput = false;
+                                                    }
+                                                }
+                                            } else {
+                                                std::cout
+                                                        << "Vous ne pouvez pas défendre avec cette carte car elle ne possède pas la capacité \"vol\" ou \"portée\".\n";
+                                                std::cout << "Veuillez donner une autre réponse : ";
+                                            }
                                         }
                                     }
                                 }

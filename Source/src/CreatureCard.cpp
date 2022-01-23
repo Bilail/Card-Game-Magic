@@ -99,3 +99,10 @@ void CreatureCard::disengage() {
 void CreatureCard::resetHp() {
     hp = defaultHp;
 }
+
+bool CreatureCard::hasCapacity(std::string capacity) {
+    for (std::string s : capacities)
+        if (s == capacity)
+            return true;
+    return false;
+}

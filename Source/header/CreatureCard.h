@@ -62,11 +62,18 @@ public:
      * Réinitialise les points de vie de la créature
      */
     void resetHp();
+    /**
+     * Permet de savoir si la carte possède la capacité transmise en paramètre
+     * @param capacity
+     * @return
+     */
+    bool hasCapacity(std::string capacity);
 protected:
     int hp;
     int defaultHp;
     int attackPower;
     bool firstTurn;
+    std::vector<std::string> capacities;
 };
 
 
