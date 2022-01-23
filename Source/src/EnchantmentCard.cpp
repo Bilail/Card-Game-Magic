@@ -23,7 +23,7 @@ EnchantmentCard::~EnchantmentCard() {
 }
 
 void EnchantmentCard::effect() {
-    
+
 }
 
 

@@ -17,7 +17,7 @@ public :
     void effect();
 
 protected :
-    Card associate;
+    Card* associate;
 
 };
 
