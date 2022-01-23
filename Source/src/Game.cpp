@@ -26,6 +26,13 @@ void wait(int sec) {
         std::this_thread::sleep_for(std::chrono::seconds(sec));
 }
 
+std::string lower(std::string str) {
+    for (int i = 0; i < str.length(); i++)
+        if(str[i] >= 'A' && str[i] <= 'Z')
+            str[i] = str[i] + 32;
+    return str;
+}
+
 std::string centerString(std::string s, int size) {
     std::string str = "";
     int l = s.length();
@@ -205,10 +212,10 @@ void Game::mainPhase() {
             while (!validInput) {
                 std::string cardToPlay = "";
                 std::getline(std::cin, cardToPlay);
-                if (cardToPlay != "aucune") {
+                if (lower(cardToPlay) != "aucune") {
                     std::string cardColor = "white";
                     for (Card *c: playableCards) {
-                        if (c->getName() == cardToPlay) {
+                        if (lower(c->getName()) == lower(cardToPlay)) {
                             validInput = true;
                             if (dynamic_cast<const LandCard*>(c))
                                 playerHasPlayedLandCard =  true;
@@ -266,10 +273,10 @@ void Game::fightPhase() {
             while (!validInput) {
                 std::string cardToPlay = "";
                 std::getline(std::cin, cardToPlay);
-                if (cardToPlay != "aucune") {
+                if (lower(cardToPlay) != "aucune") {
                     std::string cardColor = "";
                     for (Card *c: attackCards) {
-                        if (c->getName() == cardToPlay) {
+                        if (lower(c->getName()) == lower(cardToPlay)) {
                             validInput = true;
                             cardColor = c->getColor();
                             c->engage();
@@ -303,11 +310,11 @@ void Game::fightPhase() {
         std::cout << "\nVoulez-vous vous défendre ? (y/n) ";
         std::string input;
         std::getline(std::cin, input);
-        while (input != "y" && input != "n") {
+        while (lower(input) != "y" && lower(input) != "n") {
             std::cout << "Réponse inconnue, veuillez réessayer : ";
             std::getline(std::cin, input);
         }
-        if (input == "y") {
+        if (lower(input) == "y") {
             std::vector<Card*> defenseCards = opponent->getDefenseCards();
             if (defenseCards.size() > 0) {
                 for (int i = 0; i < chosenCardsToAttack.size(); i++) {
@@ -319,11 +326,11 @@ void Game::fightPhase() {
                     while (!validInput || playerWantToAddDef) {
                         playerWantToAddDef = false;
                         std::getline(std::cin, input);
-                        if (input != "aucune") {
+                        if (lower(input) != "aucune") {
                             int j = -1;
                             for (Card* c : defenseCards) {
                                 j++;
-                                if (c->getName() == input) {
+                                if (lower(c->getName()) == lower(input)) {
                                     validInput = true;
                                     attackDefenseCards[chosenCardsToAttack.at(i)].push_back(c);
                                     defenseCards.erase(defenseCards.begin() + j);
@@ -331,11 +338,11 @@ void Game::fightPhase() {
                                     if (defenseCards.size() > 0) {
                                         std::cout << "Souhaitez-vous rajouter d'autres défenses contre cette carte ? (y/n) ";
                                         std::getline(std::cin, input);
-                                        while (input != "y" && input != "n") {
+                                        while (lower(input) != "y" && lower(input) != "n") {
                                             std::cout << "Réponse inconnue, veuillez réessayer : ";
                                             std::getline(std::cin, input);
                                         }
-                                        if (input == "y") {
+                                        if (lower(input) == "y") {
                                             std::cout << "Quelle carte souhaitez-vous rajouter ? ";
                                             playerWantToAddDef = true;
                                             validInput = false;
@@ -369,18 +376,18 @@ void Game::fightPhase() {
                     std::cout << "Souhaitez-vous changer l'ordre d'attaque ? (y/n) ";
                     std::string input;
                     std::getline(std::cin, input);
-                    while (input != "y" && input != "n") {
+                    while (lower(input) != "y" && lower(input) != "n") {
                         std::cout << "Réponse inconnue, veuillez réessayer : ";
                         std::getline(std::cin, input);
                     }
-                    if (input == "y") {
+                    if (lower(input) == "y") {
                         std::vector<Card*> newOrder;
                         std::cout << "Indiquez le nom de la carte à attaquer en premier : ";
                         bool validInput = false;
                         while (!validInput) {
                             std::getline(std::cin, input);
                             for (int i = 0; i < it.second.size(); i++) {
-                                if (it.second.at(i)->getName() == input) {
+                                if (lower(it.second.at(i)->getName()) == lower(input)) {
                                     newOrder.push_back(it.second.at(i));
                                     it.second.erase(it.second.begin() + i);
                                     validInput = true;
@@ -397,7 +404,7 @@ void Game::fightPhase() {
                             while (!validInput) {
                                 std::getline(std::cin, input);
                                 for (int i = 0; i < it.second.size(); i++) {
-                                    if (it.second.at(i)->getName() == input) {
+                                    if (lower(it.second.at(i)->getName()) == lower(input)) {
                                         newOrder.push_back(it.second.at(i));
                                         it.second.erase(it.second.begin() + i);
                                         validInput = true;
@@ -460,7 +467,7 @@ void Game::endOfTurnPhase() {
             std::string input;
             std::getline(std::cin, input);
             for (int i = 0; i < playerTurn->getHandCards().size(); i++) {
-                if (playerTurn->getHandCards().at(i)->getName() == input) {
+                if (lower(playerTurn->getHandCards().at(i)->getName()) == lower(input)) {
                     playerTurn->discardCard(playerTurn->getHandCards().at(i));
                     validInput = true;
                     break;
