@@ -13,7 +13,7 @@ private:
     /**
      * Affiche le titre du jeux
      */
-    void showBanner();*
+    void showBanner();
     /**
      * Initialise la game
      * les joueurs et les decks

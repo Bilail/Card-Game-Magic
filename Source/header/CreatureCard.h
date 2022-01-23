@@ -54,7 +54,14 @@ public:
      */
     void printLine(int line);
     void attack();
-
+    /**
+     * Désengager une carte
+     */
+    void disengage();
+    /**
+     * Réinitialise les points de vie de la créature
+     */
+    void resetHp();
 protected:
     int hp;
     int defaultHp;

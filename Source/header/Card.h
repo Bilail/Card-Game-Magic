@@ -39,7 +39,7 @@ public:
     /**
      * Désengager une carte
      */
-    void disengage();
+    virtual void disengage();
     /**
      * Saisir le cout en terrain
      * @param manaCost

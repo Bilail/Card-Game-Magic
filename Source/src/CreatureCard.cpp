@@ -43,7 +43,6 @@ void CreatureCard::attack(){
     engage();
 }
 
-
 void CreatureCard::print() {
     std::string nameSpaces = "                ";
     for (int i = 0; i < name.length(); i++)
@@ -90,4 +89,13 @@ void CreatureCard::printLine(int line) {
         std::cout << StrColor::print("| Attack : " + std::to_string(attackPower) + "      HP : " + std::to_string(hp) + " |", color);
     else if (line == 5)
         std::cout << StrColor::print("|________________________|", color);
+}
+
+void CreatureCard::disengage() {
+    resetHp();
+    isEngaged = false;
+}
+
+void CreatureCard::resetHp() {
+    hp = defaultHp;
 }

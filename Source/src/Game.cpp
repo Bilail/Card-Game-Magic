@@ -20,6 +20,12 @@
 
 int Game::MAX_CARDS_IN_HAND = 7;
 
+void wait(int sec) {
+    bool activateDelayedTransition = false;
+    if (activateDelayedTransition)
+        std::this_thread::sleep_for(std::chrono::seconds(sec));
+}
+
 std::string centerString(std::string s, int size) {
     std::string str = "";
     int l = s.length();
@@ -51,6 +57,7 @@ void Game::playGame() {
     while(p1.getHp() > 0 && p2.getHp() > 0) {
         round++;
         playerHasPlayedLandCard = false;
+        wait(3);
         std::cout << " ***---*** Début du tour n°" << round << " ***---*** " << std::endl;
         std::cout << " ***---*** C'est à " << playerTurn->getColoredName() << " de jouer ***---***\n\n";
         // PHASE DE PIOCHE
@@ -63,17 +70,20 @@ void Game::playGame() {
         std::cout << "Votre main est composé des cartes suivantes :\n";
         Card::print(playerTurn->getHandCards());
         // PHASE DE DESANGAGEMENT
+        wait(3);
         std::cout << "\n### ### ### ### ### ### ### ### ### ###\n";
         std::cout << "######   PHASE DE DESENGAGEMENT  ######\n";
         std::cout << "### ### ### ### ### ### ### ### ### ###\n\n";
         playerTurn->disengageCards();
         std::cout << "Vos cartes ont toutes été désengagées\n";
         // PHASE PRINCIPALE
+        wait(3);
         std::cout << "\n### ### ### ### ### ### ### ### ### ###\n";
         std::cout << "######      PHASE PRINCIPALE     ######\n";
         std::cout << "### ### ### ### ### ### ### ### ### ###\n\n";
         mainPhase();
         // PHASE DE COMBAT
+        wait(3);
         std::cout << "\n### ### ### ### ### ### ### ### ### ###\n";
         std::cout << "######      PHASE DE COMBAT      ######\n";
         std::cout << "### ### ### ### ### ### ### ### ### ###\n\n";
@@ -81,11 +91,13 @@ void Game::playGame() {
         if (p1.getHp() <= 0 || p2.getHp() <= 0)
             break;
         // PHASE SECONDAIRE
+        wait(3);
         std::cout << "\n### ### ### ### ### ### ### ### ### ###\n";
         std::cout << "######      PHASE SECONDAIRE     ######\n";
         std::cout << "### ### ### ### ### ### ### ### ### ###\n\n";
         mainPhase();
         // FIN DE TOUR ET CHANGEMENT DE JOUEUR
+        wait(3);
         std::cout << "\n### ### ### ### ### ### ### ### ### ###\n";
         std::cout << "######        FIN DE TOUR        ######\n";
         std::cout << "### ### ### ### ### ### ### ### ### ###\n\n";
@@ -98,6 +110,7 @@ void Game::playGame() {
     }
     else {
         std::cout << "\nLe gagnant de cette partie est :\n\n";
+        wait(4);
         if (p1.getHp() <= 0)
             std::cout << StrColor::yellow(centerString(p2.getName(),37)) << std::endl;
         else if (p2.getHp() <= 0)
@@ -129,9 +142,9 @@ void Game::initGame() {
     std::string nameP1("P1");
     std::string nameP2("P2");
     std::cout << "Quel est le nom du premier joueur ?\n";
-    std::cin >> nameP1;
+    std::getline(std::cin, nameP1);
     std::cout << "\nQuel est le nom du deuxieme joueur ?\n";
-    std::cin >> nameP2;
+    std::getline(std::cin, nameP2);
     Deck d1, d2;
     d1.generateRandomDeck();
     d2.generateRandomDeck();
@@ -149,21 +162,21 @@ void Game::randomDraw() {
     else
         playerTurn = &p2;
     if (false) {
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        wait(1);
         std::cout << "Roulement de tambours" << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        wait(1);
         std::cout << " 5 " << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        wait(1);
         std::cout << " 4 " << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        wait(1);
         std::cout << " 3 " << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        wait(1);
         std::cout << " 2 " << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        wait(1);
         std::cout << " 1 " << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        wait(1);
         std::cout << " BONNE ANN... ah non enfaite. " << std::flush;
-        std::this_thread::sleep_for(std::chrono::seconds(3));
+        wait(3);
         std::cout << "\n\n";
     }
     std::cout << "C'est à " << playerTurn->getColoredName() << " de commencer.\n\n";
@@ -187,10 +200,10 @@ void Game::mainPhase() {
             Card::print(playableCards);
             std::cout << std::endl;
             std::cout
-                    << "Indiquer le nom de la carte que vous souhaitez jouer (tapez \"aucune\" pour ne rien jouer) :\n";
+                    << "Indiquer le nom de la carte que vous souhaitez jouer (tapez \"aucune\" pour ne rien jouer) : ";
             bool validInput = false;
             while (!validInput) {
-                std::string cardToPlay;
+                std::string cardToPlay = "";
                 std::getline(std::cin, cardToPlay);
                 if (cardToPlay != "aucune") {
                     std::string cardColor = "white";
@@ -207,7 +220,7 @@ void Game::mainPhase() {
                     if (validInput) {
                         std::cout << "\nVous venez de jouer la carte " << StrColor::print(cardToPlay, cardColor) << std::endl;
                     } else {
-                        std::cout << "Le nom de la carte est inconnu, veuillez réessayer :\n";
+                        std::cout << "Le nom de la carte est inconnu, veuillez réessayer : ";
                     }
                 }
                 else {
@@ -248,7 +261,7 @@ void Game::fightPhase() {
             std::cout << "Vous pouvez attaquer avec les cartes suivantes :\n";
             Card::print(attackCards);
             std::cout << std::endl;
-            std::cout << "Avec qui souhaitez-vous attaquer ? (tapez \"aucune\" pour ne pas attaquer)\n";
+            std::cout << "Avec qui souhaitez-vous attaquer ? (tapez \"aucune\" pour ne pas attaquer) : ";
             bool validInput = false;
             while (!validInput) {
                 std::string cardToPlay = "";
@@ -268,7 +281,7 @@ void Game::fightPhase() {
                         std::cout << "\nVous venez d'enagager la carte " << StrColor::print(cardToPlay, cardColor)
                                   << std::endl;
                     } else {
-                        std::cout << "Le nom de la carte est inconnu, veuillez réessayer :\n";
+                        std::cout << "Le nom de la carte est inconnu, veuillez réessayer : ";
                     }
                 } else {
                     std::cout << "Vous avez décidé d'engager aucune carte.\n";
@@ -289,10 +302,10 @@ void Game::fightPhase() {
         Card::print(chosenCardsToAttack);
         std::cout << "\nVoulez-vous vous défendre ? (y/n) ";
         std::string input;
-        std::cin >> input;
+        std::getline(std::cin, input);
         while (input != "y" && input != "n") {
             std::cout << "Réponse inconnue, veuillez réessayer : ";
-            std::cin >> input;
+            std::getline(std::cin, input);
         }
         if (input == "y") {
             std::vector<Card*> defenseCards = opponent->getDefenseCards();
@@ -300,7 +313,7 @@ void Game::fightPhase() {
                 for (int i = 0; i < chosenCardsToAttack.size(); i++) {
                     std::cout << "Voici l'ensemble de vos créatures qui peuvent défendre :\n";
                     Card::print(defenseCards);
-                    std::cout << "Avec quelle(s) carte(s) souhaitez-vous contrer la carte " << chosenCardsToAttack.at(i)->getColoredName() << " (tapez \"aucune\" pour ne pas défendre) :\n";
+                    std::cout << "Avec quelle(s) carte(s) souhaitez-vous contrer la carte " << chosenCardsToAttack.at(i)->getColoredName() << " (tapez \"aucune\" pour ne pas défendre) : ";
                     bool validInput = false;
                     bool playerWantToAddDef = false;
                     while (!validInput || playerWantToAddDef) {
@@ -315,16 +328,18 @@ void Game::fightPhase() {
                                     attackDefenseCards[chosenCardsToAttack.at(i)].push_back(c);
                                     defenseCards.erase(defenseCards.begin() + j);
                                     std::cout << "Vous avez décidé de défendre avec la carte " << c->getColoredName() << " pour contrer l'attaque.\n";
-                                    std::cout << "Souhaitez-vous rajouter d'autres défenses contre cette carte ? (y/n) ";
-                                    std::getline(std::cin, input);
-                                    while (input != "y" && input != "n") {
-                                        std::cout << "Réponse inconnue, veuillez réessayer : ";
+                                    if (defenseCards.size() > 0) {
+                                        std::cout << "Souhaitez-vous rajouter d'autres défenses contre cette carte ? (y/n) ";
                                         std::getline(std::cin, input);
-                                    }
-                                    if (input == "y") {
-                                        std::cout << "Quelle carte souhaitez-vous rajouter ? ";
-                                        playerWantToAddDef = true;
-                                        validInput = false;
+                                        while (input != "y" && input != "n") {
+                                            std::cout << "Réponse inconnue, veuillez réessayer : ";
+                                            std::getline(std::cin, input);
+                                        }
+                                        if (input == "y") {
+                                            std::cout << "Quelle carte souhaitez-vous rajouter ? ";
+                                            playerWantToAddDef = true;
+                                            validInput = false;
+                                        }
                                     }
                                 }
                             }
@@ -353,17 +368,17 @@ void Game::fightPhase() {
                 if (it.second.size() > 1) {
                     std::cout << "Souhaitez-vous changer l'ordre d'attaque ? (y/n) ";
                     std::string input;
-                    std::cin >> input;
+                    std::getline(std::cin, input);
                     while (input != "y" && input != "n") {
                         std::cout << "Réponse inconnue, veuillez réessayer : ";
-                        std::cin >> input;
+                        std::getline(std::cin, input);
                     }
                     if (input == "y") {
                         std::vector<Card*> newOrder;
                         std::cout << "Indiquez le nom de la carte à attaquer en premier : ";
                         bool validInput = false;
                         while (!validInput) {
-                            std::cin >> input;
+                            std::getline(std::cin, input);
                             for (int i = 0; i < it.second.size(); i++) {
                                 if (it.second.at(i)->getName() == input) {
                                     newOrder.push_back(it.second.at(i));
@@ -380,7 +395,7 @@ void Game::fightPhase() {
                             std::cout << "Indiquez le nom de la carte suivante à attaquer : ";
                             bool validInput = false;
                             while (!validInput) {
-                                std::cin >> input;
+                                std::getline(std::cin, input);
                                 for (int i = 0; i < it.second.size(); i++) {
                                     if (it.second.at(i)->getName() == input) {
                                         newOrder.push_back(it.second.at(i));
@@ -443,7 +458,7 @@ void Game::endOfTurnPhase() {
         bool validInput = false;
         while (!validInput) {
             std::string input;
-            std::cin >> input;
+            std::getline(std::cin, input);
             for (int i = 0; i < playerTurn->getHandCards().size(); i++) {
                 if (playerTurn->getHandCards().at(i)->getName() == input) {
                     playerTurn->discardCard(playerTurn->getHandCards().at(i));
