@@ -14,9 +14,10 @@ public :
 
     ~EnchantmentCard();
 
-private :
     void effect();
 
+protected :
+    Card associate;
 
 };
 

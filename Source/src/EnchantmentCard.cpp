@@ -6,12 +6,24 @@
 #include <vector>
 #include <string>
 
-EnchantmentCard::EnchantmentCard(std::string name, std::vector<int> manaCost , std::string cl) : Card(name, manaCost, cl) {
+enum enchantment {
+    white,
+    blue,
+    black,
+    red,
+    green
+};
 
+EnchantmentCard::EnchantmentCard(std::string name, std::vector<int> manaCost , std::string cl) : Card(name, manaCost, cl) {
+    associate = NULL
 }
 
 EnchantmentCard::~EnchantmentCard() {
 
+}
+
+void EnchantmentCard::effect() {
+    
 }
 
 
