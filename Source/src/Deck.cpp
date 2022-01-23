@@ -155,13 +155,12 @@ std::vector<Card*> Deck::getHandCards() {
     return handCards;
 }
 
-void Deck::JsonToDeck(std::string nomDeck) {
-    std::vector<Card*> r = {};
+void Deck::importFromJson(std::string nomDeck) {
     std::ifstream ifs(nomDeck+".json");
     json deck;
     ifs >> deck;
 
-    // Ajout des créature
+    // Ajout des créatures
     auto& creatures = deck["Deck"]["Creature"];
     for (auto& creature : creatures.items()){
         std::string name = creature.value()["name"];

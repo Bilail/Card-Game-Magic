@@ -31,18 +31,9 @@ void CreatureCard::setAttackPower(int attackPower) {
     CreatureCard::attackPower = attackPower;
 }
 
-void CreatureCard::invocate() {
-    firstTurn = true;
-}
-
 bool CreatureCard::isFirstTurn() {
     return firstTurn;
 }
-
-void CreatureCard::attack(){
-    engage();
-}
-
 
 void CreatureCard::print() {
     std::string nameSpaces = "                ";
@@ -90,4 +81,20 @@ void CreatureCard::printLine(int line) {
         std::cout << StrColor::print("| Attack : " + std::to_string(attackPower) + "      HP : " + std::to_string(hp) + " |", color);
     else if (line == 5)
         std::cout << StrColor::print("|________________________|", color);
+}
+
+void CreatureCard::disengage() {
+    resetHp();
+    isEngaged = false;
+}
+
+void CreatureCard::resetHp() {
+    hp = defaultHp;
+}
+
+bool CreatureCard::hasCapacity(std::string capacity) {
+    for (std::string s : capacities)
+        if (s == capacity)
+            return true;
+    return false;
 }

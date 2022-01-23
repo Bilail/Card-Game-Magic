@@ -39,7 +39,7 @@ public:
     /**
      * Désengager une carte
      */
-    void disengage();
+    virtual void disengage();
     /**
      * Saisir le cout en terrain
      * @param manaCost
@@ -56,12 +56,12 @@ public:
      */
     void setIsDiscarded(bool isDiscarded);
     /**
-     * Récuperer le nom de la carte
+     * Récupéré le nom de la carte
      * @return name
      */
     const std::string &getName() const;
     /**
-     * Récuperer le nomde la couleur  de la carte
+     * Récupéré le nom de la couleur  de la carte
      * @return couleur
      */
     const std::string getColoredName() const;

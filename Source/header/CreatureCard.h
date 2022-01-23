@@ -13,18 +13,18 @@ public:
      * Constructeurs des cartes créatures
      * @param nam
      * @param cout en terrain
-     * @param couelur
+     * @param couleur
      * @param attaque
      * @param point de vie
      */
     CreatureCard(std::string nam, std::vector<int> mC, std::string cl, int ap, int hp);
     /**
-     * Récuper les points de vie
+     * Récupère les points de vie
      * @return hp
      */
     int getHp() const;
     /**
-     * Recuper les points d'attaques
+     * Récupère les points d'attaques
      * @return attaque
      */
     int getAttackPower() const;
@@ -38,7 +38,6 @@ public:
      * @param attackPower
      */
     void setAttackPower(int attackPower);
-    void invocate();
     /**
      * boolean si premier tour
      * @return
@@ -53,13 +52,26 @@ public:
      * @param line
      */
     void printLine(int line);
-    void attack();
-
+    /**
+     * Désengager une carte
+     */
+    void disengage();
+    /**
+     * Réinitialise les points de vie de la créature
+     */
+    void resetHp();
+    /**
+     * Permet de savoir si la carte possède la capacité transmise en paramètre
+     * @param capacity
+     * @return
+     */
+    bool hasCapacity(std::string capacity);
 protected:
     int hp;
     int defaultHp;
     int attackPower;
     bool firstTurn;
+    std::vector<std::string> capacities;
 };
 
 
