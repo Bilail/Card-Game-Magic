@@ -31,16 +31,8 @@ void CreatureCard::setAttackPower(int attackPower) {
     CreatureCard::attackPower = attackPower;
 }
 
-void CreatureCard::invocate() {
-    firstTurn = true;
-}
-
 bool CreatureCard::isFirstTurn() {
     return firstTurn;
-}
-
-void CreatureCard::attack(){
-    engage();
 }
 
 void CreatureCard::print() {

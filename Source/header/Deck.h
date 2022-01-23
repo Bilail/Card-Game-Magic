@@ -80,8 +80,11 @@ public:
      * Fonction qui convertit un fichier json de carte en deck jouable
      * @param nomDeck
      */
-    void JsonToDeck(std::string nomDeck);
-    void CardtoJson(std::string nomDeck);
+    void importFromJson(std::string nomDeck);
+    /**
+     * Fonction qui convertit un deck de carte en fichier json
+     * @param filename
+     */
     void exportToJson(std::string filename);
 
 };

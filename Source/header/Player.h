@@ -26,7 +26,7 @@ public :
     Player(std::string, Deck);
     ~Player(){};
     /**
-     * set la coleur du joueur
+     * set la couleur du joueur
      * @param color
      */
     void setPrintColor(std::string color);
@@ -37,7 +37,7 @@ public :
     std::string getName();
     std::string getColoredName();
     /**
-     * récuperer les hp du joueurs
+     * récupère les hp du joueurs
      * @return
      */
     int getHp();

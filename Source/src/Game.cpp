@@ -150,7 +150,7 @@ void Game::initGame() {
     std::string nameP2("P2");
     std::cout << "Quel est le nom du premier joueur ?\n";
     std::getline(std::cin, nameP1);
-    std::cout << "\nQuel est le nom du deuxieme joueur ?\n";
+    std::cout << "\nQuel est le nom du deuxième joueur ?\n";
     std::getline(std::cin, nameP2);
     Deck d1, d2;
     d1.generateRandomDeck();
@@ -297,7 +297,7 @@ void Game::fightPhase() {
                         }
                     }
                     if (validInput) {
-                        std::cout << "\nVous venez d'enagager la carte " << StrColor::print(cardToPlay, cardColor)
+                        std::cout << "\nVous venez d'engager la carte " << StrColor::print(cardToPlay, cardColor)
                                   << std::endl;
                     } else {
                         std::cout << "Le nom de la carte est inconnu, veuillez réessayer : ";

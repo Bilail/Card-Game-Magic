@@ -25,7 +25,7 @@ private:
     void randomDraw();
     /**
      * Phase de jeux principale
-     * picoher, poser les cartes,..
+     * piocher, poser les cartes,..
      */
     void mainPhase();
     /**
@@ -34,10 +34,14 @@ private:
      */
     void fightPhase();
     /**
-     * Retourne le joueur ennemie
-     * @return joueur ennemeie
+     * Phase de fin de tour
+     * vérification nombre de cartes en main, changement de joueur
      */
     void endOfTurnPhase();
+    /**
+     * Retourne le joueur ennemie
+     * @return joueur ennemie
+     */
     Player* getOpponent();
 protected:
     Player p1;
