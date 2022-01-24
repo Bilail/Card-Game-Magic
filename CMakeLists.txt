@@ -21,6 +21,8 @@ add_executable(
         Source/header/Game.h
         Source/src/Player.cpp
         Source/header/Player.h
+        Source/src/DeckCreator.cpp
+        Source/header/DeckCreator.h
         Source/src/Main.cpp)
 
 

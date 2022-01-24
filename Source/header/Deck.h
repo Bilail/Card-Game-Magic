@@ -28,6 +28,11 @@ public:
      * @param nomDeck
      */
     Deck(std::string nomDeck);
+    /**
+     * Constructeur avec le choix des créatures
+     * @param creatures
+     */
+    Deck(std::vector<CreatureCard> creatures);
     ~Deck();
     /**
      * Affiche toute les cartes du joueurs

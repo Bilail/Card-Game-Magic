@@ -10,6 +10,7 @@
 #include "../header/Game.h"
 #include "../header/Deck.h"
 #include "../header/GameCards.h"
+#include "../header/DeckCreator.h"
 
 #include <filesystem>
 #include "../dependance/json.hpp"
@@ -17,8 +18,34 @@ using json = nlohmann::json;
 
 int main() {
 
-    Game game;
-    game.playGame();
+    std::cout << "\n#### MENU PRINCIPAL ####\n\n";
+
+    std::cout << "- 1 : Lancement du jeu\n";
+    std::cout << "- 2 : Création d'un deck personnalisé\n";
+    std::cout << "- 3 : Création d'une créature personnalisée\n";
+    std::cout << "\nSaisissez le numéro de l'application que vous souhaitez démarrer : ";
+    std::string input;
+    bool validInput = false;
+    while (!validInput) {
+        std::getline(std::cin, input);
+        if (input == "1") {
+            validInput = true;
+            Game game;
+            game.playGame();
+        }
+        else if (input == "2") {
+            DeckCreator dc;
+            dc.startApp();
+            validInput = true;
+        }
+        else if (input == "3") {
+            std::cout << "Fonctionnalité non implémentée pour le moment.\n";
+            validInput = true;
+        }
+        else {
+            std::cout << "Réponse inconnue, veuillez réessayer : ";
+        }
+    }
 
     /*
     std::cout << "\nContenu de ./data/ :\n";
@@ -26,30 +53,6 @@ int main() {
     for (const auto & entry : std::filesystem::directory_iterator(path)) {
         std::cout << entry.path().filename() << std::endl;
     }
-
-    Deck d;
-    std::cout << "\ngénération du json...\n";
-    d.exportToJson("test");
-    std::cout << "export terminé\n";
     */
-
-    //Création des cartes :
-    /*    Deck d1;
-    GameCards gc;
-
-    // Test Json :
-    Deck *d2 = new Deck("./data/cards");
-    d2->printLibrary();
-*/
-    /*for (int i = 0; i < gc.getCreatures().size(); i++)
-        d1.addCreature(gc.getCreatures().at(i));*/
-
-    /*
-    std::cout << " ------- Deck de base ------- " << std::endl;
-    d1.printLibrary();std::cout << "on mélange " << std::endl;
-    d1.generateRandomDeck();
-    std::cout << "------- Deck mélanger ------- " << std::endl;
-    d1.printLibrary();
-*/
     return 0;
 }

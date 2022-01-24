@@ -11,7 +11,7 @@
 class Game {
 private:
     /**
-     * Affiche le titre du jeux
+     * Affiche le titre du jeu
      */
     void showBanner();
     /**

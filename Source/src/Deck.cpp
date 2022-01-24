@@ -25,8 +25,18 @@ Deck::Deck() {
     }
 }
 
-Deck::Deck(std::string nomDeck){
-    JsonToDeck(nomDeck);
+Deck::Deck(std::string nomDeck) {
+    importFromJson(nomDeck);
+}
+
+Deck::Deck(std::vector<CreatureCard> creatures) {
+    for (CreatureCard c : creatures)
+        library.push_back(new CreatureCard(c));
+    GameCards gc;
+    for(LandCard l : gc.getLands()) {
+        library.push_back(new LandCard(l));
+        library.push_back(new LandCard(l));
+    }
 }
 
 Deck::~Deck() {
@@ -211,6 +221,6 @@ void Deck::exportToJson(std::string filename) {
             jsonfile["Deck"]["Land"].push_back(j);
         }
     }
-    std::ofstream file(filename + ".json");
+    std::ofstream file("./data/" + filename + ".json");
     file << jsonfile;
 }
