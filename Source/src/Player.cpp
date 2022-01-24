@@ -66,3 +66,15 @@ void Player::playCard(Card *c) {
 void Player::discardCard(Card* c) {
     cards.discardCard(c);
 }
+
+bool Player::getEnchant(std::string enchantCard){
+    return cards.getEnchant(enchantCard);
+}
+
+std::vector<Card*> Player::getCreatureCard(){
+    return cards.getCreatureCard();
+}
+
+std::vector<Card*> Player::getCardInPlay(){
+    return cards.getCardInPlay();
+}

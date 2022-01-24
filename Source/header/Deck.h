@@ -18,7 +18,7 @@ protected:
     std::vector<Card*> handCards;
     std::vector<Card*> library;
     std::vector<Card*> disCards;
-    std::vector<EnchantmentCard*> enchantmentInGame;
+    std::vector<Card*> enchantmentInGame;
 public:
     static const int DECK_SIZE;
     /**
@@ -89,8 +89,10 @@ public:
      */
     void exportToJson(std::string filename);
 
-    std::vector<EnchantmentCard*> getEnchantmentInGame();
-    bool GetEnchant(std::string nameEnchant);
+    std::vector<Card*> getEnchantmentInGame();
+    bool getEnchant(std::string nameEnchant);
+    std::vector<Card*> getCreatureCard();
+    std::vector<Card*> getCardInPlay();
 
 };
 

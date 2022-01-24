@@ -17,8 +17,8 @@ using json = nlohmann::json;
 
 int main() {
 
-    /*Game game;
-    game.playGame();*/
+    Game game;
+    game.playGame();
 
     /*
     std::cout << "\nContenu de ./data/ :\n";
@@ -37,11 +37,11 @@ int main() {
         Deck d1;
     GameCards gc;
 
-    // Test Json :
+    /*// Test Json :
     Deck *d2 = new Deck("./Source/data/cards");
     d2->printLibrary();
 
-    /*for (int i = 0; i < gc.getCreatures().size(); i++)
+    for (int i = 0; i < gc.getCreatures().size(); i++)
         d1.addCreature(gc.getCreatures().at(i));*/
 
     /*

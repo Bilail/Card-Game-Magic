@@ -57,3 +57,7 @@ void EnchantmentCard::printLine(int line) {
         std::cout << StrColor::print("|________________________|", color);
 }
 
+
+void EnchantmentCard::associate(Card* c){
+    this->asso = c;
+}

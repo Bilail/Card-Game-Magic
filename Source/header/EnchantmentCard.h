@@ -18,9 +18,10 @@ public :
     void effect();
     void print();
     void printLine(int line);
+    void associate(Card* CardToAssociate);
 
 protected :
-    Card* associate;
+    Card* asso;
 
 };
 

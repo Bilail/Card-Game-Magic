@@ -77,6 +77,9 @@ public :
      */
     std::vector<Card*> getHandCards();
     void discardCard(Card* c);
+    bool getEnchant(std::string enchantCard);
+    std::vector<Card*> getCreatureCard();
+    std::vector<Card*> getCardInPlay();
 };
 
 

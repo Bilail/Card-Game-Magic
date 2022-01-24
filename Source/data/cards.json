@@ -115,19 +115,19 @@
     "Enchantment" :
       [
         {
-          "name" : "white"
+          "name" : "enchantWhite"
         },
         {
-          "name" : "blue"
+          "name" : "enchantBlue"
         },
         {
-          "name" : "green"
+          "name" : "enchantGreen"
         },
         {
-          "name" : "red"
+          "name" : "enchantRed"
         },
         {
-          "name" : "black"
+          "name" : "enchantBlack"
         }
       ]
   }

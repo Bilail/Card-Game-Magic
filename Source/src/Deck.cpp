@@ -98,6 +98,8 @@ std::vector<Card*> Deck::getPlayableCards() {
 
 void Deck::playCard(Card* c) {
     // On commence par engager les terrains nécessaires pour poser la carte
+    if (dynamic_cast<const EnchantmentCard*>(c))
+        enchantmentInGame.push_back(c);
     for (int i = 0; i < c->getManaCost().size(); i++) {
         for (int j = 0; j < c->getManaCost().at(i); j++) {
             for (int k = 0; k < inPlayCards.size(); k++) {
@@ -222,17 +224,32 @@ void Deck::exportToJson(std::string filename) {
     file << jsonfile;
 }
 
-std::vector<EnchantmentCard*> Deck::getEnchantmentInGame(){
+std::vector<Card*> Deck::getEnchantmentInGame(){
     return enchantmentInGame;
 }
 
-bool Deck::GetEnchant(std::string e){
-    for(EnchantmentCard* c : enchantmentInGame){
+bool Deck::getEnchant(std::string e){
+    for(Card* c : enchantmentInGame){
         if ( c->getName() == e){
             return true;
         }
     }
     return false;
 }
+
+std::vector<Card*> Deck::getCreatureCard(){
+    std::vector<Card*> a = getAttackCards();
+    std::vector<Card*> d = getDefenseCards();
+    for (Card* c : d){
+        a.push_back(c);
+    }
+    //a.insert(a.end(), d.begin(), d.end())
+    return a ;
+}
+
+std::vector<Card*> Deck::getCardInPlay(){
+    return inPlayCards;
+}
+
 
 
