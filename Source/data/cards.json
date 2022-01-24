@@ -3,113 +3,1428 @@
   {
     "Creature":
     [
-      {
-        "name": "Soldier",
-        "cost": [0, 0, 0, 1, 0, 2],
-        "color": "yellow",
-        "attack": 1,
-        "hp": 1
-      },
-      {
-        "name":"ArmoredPegasus" ,
-        "cost": [0,0,0,1,0,1],
-        "color": "yellow",
-        "attack": 1 ,
-        "hp": 2
-      },
-      {
-        "name": "Phase Dolphin" ,
-        "cost": [0,2,0,0,0,2],
-        "color": "blue",
-        "attack":1 ,
-        "hp":4
-      },
-      {
-        "name": "AngryBear",
-        "cost": [1,0,0,0,0,1],
-        "color": "green",
-        "attack": 3,
-        "hp": 2
-      },
-      {
-        "name": "Guard" ,
-        "cost": [0,0,0,2,0,4],
-        "color": "yellow",
-        "attack": 2,
-        "hp": 5
-      },
-      {
-        "name": "Werewolf" ,
-        "cost": [1,0,0,0,0,4],
-        "color": "green",
-        "attack": 4,
-        "hp": 6
-      },
-      {
-        "name": "Skeleton" ,
-        "cost": [0,0,0,0,1,1],
-        "color": "black",
-        "attack": 1,
-        "hp": 1
-      },
-      {
-        "name": "Ghost" ,
-        "cost": [0,0,0,0,1,2],
-        "color": "black",
-        "attack": 2,
-        "hp": 1
-      },
-      {
-        "name": "BlackKnight" ,
-        "cost": [0,0,0,0,1,2],
-        "color": "black",
-        "attack": 2,
-        "hp": 2
-      },
-      {
-        "name": "Naga Eternal" ,
-        "cost": [0,2,0,0,0,1],
-        "color": "blue",
-        "attack": 3,
-        "hp": 2
-      },
-      {
-        "name": "Vampire" ,
-        "cost": [0,0,0,0,1,4],
-        "color": "black",
-        "attack": 6,
-        "hp": 3
-      },
-      {
-        "name": "Hobgoblin" ,
-        "cost": [0,1,2,1,0,3],
-        "color": "red",
-        "attack": 3,
-        "hp": 3
-      }
+  {
+    "name": "Blazehag",
+    "cost": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      3
     ],
+    "color": "red",
+    "attack": 3,
+    "hp": 4
+  },
+  {
+    "name": "Infernalwraith",
+    "cost": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      0
+    ],
+    "color": "red",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Cryptfreak",
+    "cost": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "color": "blue",
+    "attack": 3,
+    "hp": 3
+  },
+  {
+    "name": "Nethercrackle",
+    "cost": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      3
+    ],
+    "color": "blue",
+    "attack": 1,
+    "hp": 6
+  },
+  {
+    "name": "Phasebeast",
+    "cost": [
+      0,
+      0,
+      2,
+      2,
+      1,
+      0
+    ],
+    "color": "green",
+    "attack": 1,
+    "hp": 1
+  },
+  {
+    "name": "Corpsestep",
+    "cost": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "color": "black",
+    "attack": 3,
+    "hp": 6
+  },
+  {
+    "name": "Gloomhag",
+    "cost": [
+      3,
+      2,
+      1,
+      0,
+      2,
+      2
+    ],
+    "color": "yellow",
+    "attack": 2,
+    "hp": 1
+  },
+  {
+    "name": "Fetiddeviation",
+    "cost": [
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "color": "green",
+    "attack": 3,
+    "hp": 2
+  },
+  {
+    "name": "Cavernman",
+    "cost": [
+      2,
+      0,
+      3,
+      0,
+      3,
+      0
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 4
+  },
+  {
+    "name": "Brinesnare",
+    "cost": [
+      0,
+      0,
+      2,
+      1,
+      0,
+      1
+    ],
+    "color": "black",
+    "attack": 1,
+    "hp": 3
+  },
+  {
+    "name": "Gloomtaur",
+    "cost": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "color": "blue",
+    "attack": 1,
+    "hp": 1
+  },
+  {
+    "name": "Coffinscreamer",
+    "cost": [
+      3,
+      0,
+      1,
+      0,
+      2,
+      3
+    ],
+    "color": "green",
+    "attack": 1,
+    "hp": 4
+  },
+  {
+    "name": "Cryptstrike",
+    "cost": [
+      2,
+      0,
+      2,
+      0,
+      0,
+      2
+    ],
+    "color": "black",
+    "attack": 2,
+    "hp": 2
+  },
+  {
+    "name": "Acidhound",
+    "cost": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Vampling",
+    "cost": [
+      0,
+      0,
+      1,
+      3,
+      2,
+      0
+    ],
+    "color": "green",
+    "attack": 1,
+    "hp": 3
+  },
+  {
+    "name": "Voodoomask",
+    "cost": [
+      3,
+      0,
+      0,
+      1,
+      2,
+      1
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 3
+  },
+  {
+    "name": "Cryptpest",
+    "cost": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      1
+    ],
+    "color": "green",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Emberface",
+    "cost": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "color": "red",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Cloudclaw",
+    "cost": [
+      2,
+      0,
+      1,
+      0,
+      0,
+      2
+    ],
+    "color": "blue",
+    "attack": 5,
+    "hp": 2
+  },
+  {
+    "name": "Infernomouth",
+    "cost": [
+      0,
+      3,
+      0,
+      2,
+      0,
+      3
+    ],
+    "color": "black",
+    "attack": 4,
+    "hp": 2
+  },
+  {
+    "name": "Blademask",
+    "cost": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      2
+    ],
+    "color": "green",
+    "attack": 2,
+    "hp": 4
+  },
+  {
+    "name": "Dustwings",
+    "cost": [
+      0,
+      3,
+      0,
+      0,
+      0,
+      1
+    ],
+    "color": "red",
+    "attack": 4,
+    "hp": 1
+  },
+  {
+    "name": "Bladesoul",
+    "cost": [
+      0,
+      0,
+      0,
+      2,
+      1,
+      2
+    ],
+    "color": "blue",
+    "attack": 2,
+    "hp": 2
+  },
+  {
+    "name": "Vilewing",
+    "cost": [
+      2,
+      1,
+      0,
+      0,
+      1,
+      2
+    ],
+    "color": "blue",
+    "attack": 1,
+    "hp": 3
+  },
+  {
+    "name": "Dreadwings",
+    "cost": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      2
+    ],
+    "color": "black",
+    "attack": 3,
+    "hp": 3
+  },
+  {
+    "name": "Mistthing",
+    "cost": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "color": "red",
+    "attack": 5,
+    "hp": 3
+  },
+  {
+    "name": "Putridmorph",
+    "cost": [
+      1,
+      0,
+      1,
+      2,
+      0,
+      0
+    ],
+    "color": "yellow",
+    "attack": 5,
+    "hp": 3
+  },
+  {
+    "name": "Bouldercrackle",
+    "cost": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "color": "green",
+    "attack": 1,
+    "hp": 3
+  },
+  {
+    "name": "Moldgirl",
+    "cost": [
+      0,
+      0,
+      3,
+      2,
+      1,
+      3
+    ],
+    "color": "black",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Blightmask",
+    "cost": [
+      0,
+      0,
+      1,
+      2,
+      0,
+      0
+    ],
+    "color": "green",
+    "attack": 2,
+    "hp": 4
+  },
+  {
+    "name": "Tanglechild",
+    "cost": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "color": "yellow",
+    "attack": 5,
+    "hp": 3
+  },
+  {
+    "name": "Smokestrike",
+    "cost": [
+      0,
+      0,
+      2,
+      2,
+      3,
+      2
+    ],
+    "color": "black",
+    "attack": 2,
+    "hp": 3
+  },
+  {
+    "name": "Gloomdeviation",
+    "cost": [
+      0,
+      0,
+      2,
+      0,
+      2,
+      2
+    ],
+    "color": "green",
+    "attack": 5,
+    "hp": 2
+  },
+  {
+    "name": "Vampchild",
+    "cost": [
+      2,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "color": "yellow",
+    "attack": 3,
+    "hp": 5
+  },
+  {
+    "name": "Tangleserpent",
+    "cost": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "color": "red",
+    "attack": 3,
+    "hp": 4
+  },
+  {
+    "name": "Cavebrood",
+    "cost": [
+      1,
+      0,
+      0,
+      2,
+      2,
+      1
+    ],
+    "color": "blue",
+    "attack": 5,
+    "hp": 3
+  },
+  {
+    "name": "Aurawings",
+    "cost": [
+      2,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "color": "blue",
+    "attack": 2,
+    "hp": 3
+  },
+  {
+    "name": "Baneboy",
+    "cost": [
+      1,
+      1,
+      0,
+      0,
+      2,
+      0
+    ],
+    "color": "yellow",
+    "attack": 2,
+    "hp": 1
+  },
+  {
+    "name": "Dreadling",
+    "cost": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      3
+    ],
+    "color": "green",
+    "attack": 2,
+    "hp": 5
+  },
+  {
+    "name": "Foultooth",
+    "cost": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      3
+    ],
+    "color": "black",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Decayhound",
+    "cost": [
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+    ],
+    "color": "black",
+    "attack": 2,
+    "hp": 4
+  },
+  {
+    "name": "Thunderpest",
+    "cost": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "color": "black",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Nightsnake",
+    "cost": [
+      1,
+      0,
+      2,
+      2,
+      0,
+      1
+    ],
+    "color": "red",
+    "attack": 4,
+    "hp": 2
+  },
+  {
+    "name": "Gloomghoul",
+    "cost": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "color": "black",
+    "attack": 2,
+    "hp": 2
+  },
+  {
+    "name": "Tangleghoul",
+    "cost": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    "color": "green",
+    "attack": 3,
+    "hp": 3
+  },
+  {
+    "name": "Blazefreak",
+    "cost": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "color": "yellow",
+    "attack": 2,
+    "hp": 1
+  },
+  {
+    "name": "Infernalsnare",
+    "cost": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "color": "yellow",
+    "attack": 3,
+    "hp": 4
+  },
+  {
+    "name": "Infernalcat",
+    "cost": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "color": "green",
+    "attack": 2,
+    "hp": 2
+  },
+  {
+    "name": "Abysssnake",
+    "cost": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      2
+    ],
+    "color": "red",
+    "attack": 2,
+    "hp": 3
+  },
+  {
+    "name": "Metalmutant",
+    "cost": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "color": "blue",
+    "attack": 2,
+    "hp": 1
+  },
+  {
+    "name": "Corpsebrood",
+    "cost": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      1
+    ],
+    "color": "red",
+    "attack": 4,
+    "hp": 1
+  },
+  {
+    "name": "Bowelling",
+    "cost": [
+      0,
+      0,
+      3,
+      1,
+      0,
+      1
+    ],
+    "color": "blue",
+    "attack": 3,
+    "hp": 3
+  },
+  {
+    "name": "Abysswraith",
+    "cost": [
+      1,
+      3,
+      0,
+      0,
+      1,
+      2
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Tombteeth",
+    "cost": [
+      3,
+      2,
+      1,
+      0,
+      0,
+      2
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 3
+  },
+  {
+    "name": "Frostgolem",
+    "cost": [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 6
+  },
+  {
+    "name": "Slagdeviation",
+    "cost": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    "color": "green",
+    "attack": 1,
+    "hp": 4
+  },
+  {
+    "name": "Toxinmask",
+    "cost": [
+      0,
+      0,
+      0,
+      2,
+      3,
+      0
+    ],
+    "color": "black",
+    "attack": 2,
+    "hp": 2
+  },
+  {
+    "name": "Voodooboy",
+    "cost": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "color": "green",
+    "attack": 3,
+    "hp": 3
+  },
+  {
+    "name": "Chaosface",
+    "cost": [
+      0,
+      2,
+      1,
+      0,
+      0,
+      0
+    ],
+    "color": "yellow",
+    "attack": 2,
+    "hp": 2
+  },
+  {
+    "name": "Vexmonster",
+    "cost": [
+      0,
+      1,
+      2,
+      2,
+      0,
+      0
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Grimeling",
+    "cost": [
+      0,
+      0,
+      3,
+      1,
+      2,
+      1
+    ],
+    "color": "blue",
+    "attack": 3,
+    "hp": 6
+  },
+  {
+    "name": "Mornhand",
+    "cost": [
+      0,
+      0,
+      2,
+      0,
+      1,
+      1
+    ],
+    "color": "green",
+    "attack": 1,
+    "hp": 3
+  },
+  {
+    "name": "Duskfreak",
+    "cost": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Terrorface",
+    "cost": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "color": "blue",
+    "attack": 2,
+    "hp": 4
+  },
+  {
+    "name": "Wispcat",
+    "cost": [
+      0,
+      2,
+      1,
+      2,
+      0,
+      0
+    ],
+    "color": "black",
+    "attack": 1,
+    "hp": 1
+  },
+  {
+    "name": "Webbody",
+    "cost": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "color": "black",
+    "attack": 3,
+    "hp": 4
+  },
+  {
+    "name": "Grievetalon",
+    "cost": [
+      0,
+      2,
+      2,
+      0,
+      0,
+      0
+    ],
+    "color": "green",
+    "attack": 3,
+    "hp": 3
+  },
+  {
+    "name": "Warpsnare",
+    "cost": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    "color": "green",
+    "attack": 2,
+    "hp": 1
+  },
+  {
+    "name": "Acidface",
+    "cost": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "color": "red",
+    "attack": 1,
+    "hp": 6
+  },
+  {
+    "name": "Gloomcat",
+    "cost": [
+      2,
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    "color": "blue",
+    "attack": 5,
+    "hp": 1
+  },
+  {
+    "name": "Blazebeast",
+    "cost": [
+      2,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Barbwing",
+    "cost": [
+      1,
+      0,
+      1,
+      0,
+      2,
+      1
+    ],
+    "color": "blue",
+    "attack": 3,
+    "hp": 1
+  },
+  {
+    "name": "Blightscreamer",
+    "cost": [
+      1,
+      2,
+      0,
+      0,
+      0,
+      3
+    ],
+    "color": "blue",
+    "attack": 3,
+    "hp": 2
+  },
+  {
+    "name": "Mournfigure",
+    "cost": [
+      1,
+      1,
+      3,
+      0,
+      3,
+      0
+    ],
+    "color": "yellow",
+    "attack": 3,
+    "hp": 4
+  },
+  {
+    "name": "Smokepod",
+    "cost": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "color": "red",
+    "attack": 3,
+    "hp": 3
+  },
+  {
+    "name": "Frightspawn",
+    "cost": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "color": "red",
+    "attack": 5,
+    "hp": 4
+  },
+  {
+    "name": "Tangleclaw",
+    "cost": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "color": "blue",
+    "attack": 1,
+    "hp": 6
+  },
+  {
+    "name": "Smokewings",
+    "cost": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 3
+  },
+  {
+    "name": "Frightmask",
+    "cost": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "color": "blue",
+    "attack": 4,
+    "hp": 2
+  },
+  {
+    "name": "Terrormask",
+    "cost": [
+      2,
+      1,
+      2,
+      0,
+      0,
+      1
+    ],
+    "color": "yellow",
+    "attack": 2,
+    "hp": 2
+  },
+  {
+    "name": "Taintling",
+    "cost": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      0
+    ],
+    "color": "yellow",
+    "attack": 3,
+    "hp": 4
+  },
+  {
+    "name": "Razorspawn",
+    "cost": [
+      1,
+      2,
+      0,
+      2,
+      0,
+      3
+    ],
+    "color": "red",
+    "attack": 3,
+    "hp": 2
+  },
+  {
+    "name": "Terrorbrute",
+    "cost": [
+      1,
+      2,
+      1,
+      0,
+      3,
+      0
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Bowelmask",
+    "cost": [
+      2,
+      1,
+      3,
+      0,
+      0,
+      2
+    ],
+    "color": "red",
+    "attack": 3,
+    "hp": 3
+  },
+  {
+    "name": "Glowpest",
+    "cost": [
+      3,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    "color": "red",
+    "attack": 3,
+    "hp": 2
+  },
+  {
+    "name": "Moldling",
+    "cost": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "color": "yellow",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Hellbeast",
+    "cost": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "color": "black",
+    "attack": 1,
+    "hp": 6
+  },
+  {
+    "name": "Metaltree",
+    "cost": [
+      2,
+      1,
+      0,
+      2,
+      2,
+      1
+    ],
+    "color": "red",
+    "attack": 2,
+    "hp": 4
+  },
+  {
+    "name": "Gascrackle",
+    "cost": [
+      1,
+      0,
+      3,
+      0,
+      0,
+      2
+    ],
+    "color": "blue",
+    "attack": 2,
+    "hp": 5
+  },
+  {
+    "name": "Taintscream",
+    "cost": [
+      0,
+      1,
+      1,
+      3,
+      1,
+      1
+    ],
+    "color": "black",
+    "attack": 4,
+    "hp": 3
+  },
+  {
+    "name": "Toxinwraith",
+    "cost": [
+      3,
+      3,
+      1,
+      0,
+      0,
+      0
+    ],
+    "color": "yellow",
+    "attack": 3,
+    "hp": 4
+  },
+  {
+    "name": "Nethersnare",
+    "cost": [
+      0,
+      0,
+      2,
+      0,
+      2,
+      2
+    ],
+    "color": "blue",
+    "attack": 2,
+    "hp": 3
+  },
+  {
+    "name": "Acidmorph",
+    "cost": [
+      1,
+      2,
+      0,
+      0,
+      0,
+      2
+    ],
+    "color": "black",
+    "attack": 1,
+    "hp": 5
+  },
+  {
+    "name": "Toxingolem",
+    "cost": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "color": "red",
+    "attack": 1,
+    "hp": 3
+  },
+  {
+    "name": "Frighttaur",
+    "cost": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      3
+    ],
+    "color": "red",
+    "attack": 3,
+    "hp": 2
+  },
+  {
+    "name": "Vilemirage",
+    "cost": [
+      2,
+      2,
+      0,
+      0,
+      1,
+      0
+    ],
+    "color": "black",
+    "attack": 3,
+    "hp": 3
+  },
+  {
+    "name": "Corpsedeviation",
+    "cost": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      3
+    ],
+    "color": "blue",
+    "attack": 1,
+    "hp": 2
+  },
+  {
+    "name": "Gasghoul",
+    "cost": [
+      1,
+      0,
+      1,
+      3,
+      2,
+      1
+    ],
+    "color": "yellow",
+    "attack": 3,
+    "hp": 4
+  },
+  {
+    "name": "Shadeseeker",
+    "cost": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "color": "black",
+    "attack": 1,
+    "hp": 4
+  },
+  {
+    "name": "Rottingtalon",
+    "cost": [
+      2,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "color": "red",
+    "attack": 5,
+    "hp": 1
+  }
+],
     "Land" :
     [
       {
         "name" : "Plains",
-        "color" : "White"
+        "color" : "yellow"
       },
       {
         "name" : "Island",
-        "color" : "Blue"
+        "color" : "blue"
       },
       {
         "name" : "Swamp",
-        "color" : "Black"
+        "color" : "black"
       },
       {
         "name" : "Mountain",
-        "color" : "Red"
+        "color" : "red"
       },
-
       {
         "name" : "Forest",
-        "color" : "Green"
+        "color" : "green"
       }
     ]
   }

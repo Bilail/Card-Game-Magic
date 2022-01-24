@@ -1,0 +1,116 @@
+{
+  "Deck":
+  {
+    "Creature":
+    [
+      {
+        "name": "Soldier",
+        "cost": [0, 0, 0, 1, 0, 2],
+        "color": "yellow",
+        "attack": 1,
+        "hp": 1
+      },
+      {
+        "name":"ArmoredPegasus" ,
+        "cost": [0,0,0,1,0,1],
+        "color": "yellow",
+        "attack": 1 ,
+        "hp": 2
+      },
+      {
+        "name": "Phase Dolphin" ,
+        "cost": [0,2,0,0,0,2],
+        "color": "blue",
+        "attack":1 ,
+        "hp":4
+      },
+      {
+        "name": "AngryBear",
+        "cost": [1,0,0,0,0,1],
+        "color": "green",
+        "attack": 3,
+        "hp": 2
+      },
+      {
+        "name": "Guard" ,
+        "cost": [0,0,0,2,0,4],
+        "color": "yellow",
+        "attack": 2,
+        "hp": 5
+      },
+      {
+        "name": "Werewolf" ,
+        "cost": [1,0,0,0,0,4],
+        "color": "green",
+        "attack": 4,
+        "hp": 6
+      },
+      {
+        "name": "Skeleton" ,
+        "cost": [0,0,0,0,1,1],
+        "color": "black",
+        "attack": 1,
+        "hp": 1
+      },
+      {
+        "name": "Ghost" ,
+        "cost": [0,0,0,0,1,2],
+        "color": "black",
+        "attack": 2,
+        "hp": 1
+      },
+      {
+        "name": "BlackKnight" ,
+        "cost": [0,0,0,0,1,2],
+        "color": "black",
+        "attack": 2,
+        "hp": 2
+      },
+      {
+        "name": "Naga Eternal" ,
+        "cost": [0,2,0,0,0,1],
+        "color": "blue",
+        "attack": 3,
+        "hp": 2
+      },
+      {
+        "name": "Vampire" ,
+        "cost": [0,0,0,0,1,4],
+        "color": "black",
+        "attack": 6,
+        "hp": 3
+      },
+      {
+        "name": "Hobgoblin" ,
+        "cost": [0,1,2,1,0,3],
+        "color": "red",
+        "attack": 3,
+        "hp": 3
+      }
+    ],
+    "Land" :
+    [
+      {
+        "name" : "Plains",
+        "color" : "yellow"
+      },
+      {
+        "name" : "Island",
+        "color" : "blue"
+      },
+      {
+        "name" : "Swamp",
+        "color" : "black"
+      },
+      {
+        "name" : "Mountain",
+        "color" : "red"
+      },
+
+      {
+        "name" : "Forest",
+        "color" : "green"
+      }
+    ]
+  }
+}

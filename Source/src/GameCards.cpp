@@ -3,8 +3,33 @@
 //
 
 #include "../header/GameCards.h"
+#include <fstream>
+#include <string>
+#include "../dependance/json.hpp"
+using json = nlohmann::json;
 
 GameCards::GameCards() {
+    std::ifstream ifs("./data/cards.json");
+    json deck;
+    ifs >> deck;
+    // Ajout des créatures
+    auto& creaturesImported = deck["Deck"]["Creature"];
+    for (auto& creature : creaturesImported.items()){
+        std::string name = creature.value()["name"];
+        std::vector<int> mana = creature.value()["cost"];
+        std::string color = creature.value()["color"];
+        int attack = creature.value()["attack"];
+        int hp = creature.value()["hp"];
+        creatures.push_back(CreatureCard(name, mana, color, attack, hp));
+    }
+    // Ajout des terrains
+    auto& landsImported = deck["Deck"]["Land"];
+    for (auto& land : landsImported.items()){
+        std::string name = land.value()["name"];
+        std::string color = land.value()["color"];
+        lands.push_back(LandCard(name, color));
+    }
+    /*
     //  Création des créatures
     creatures.push_back(CreatureCard("Soldier", {0,0,0,1,0,2}, "yellow", 1, 1));
     creatures.push_back(CreatureCard("ArmoredPegasus", {0,0,0,1,0,1}, "yellow", 1, 2));
@@ -25,6 +50,7 @@ GameCards::GameCards() {
     lands.push_back(LandCard("Mountain", "red"));
     lands.push_back(LandCard("Plain", "yellow"));
     lands.push_back(LandCard("Swamp", "black"));
+     */
 }
 
 

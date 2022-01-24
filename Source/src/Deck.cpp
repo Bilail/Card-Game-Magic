@@ -15,16 +15,8 @@ using json = nlohmann::json;
 const int Deck::DECK_SIZE = 30;
 
 Deck::Deck() {
-    GameCards gc;
-    for (CreatureCard c : gc.getCreatures()) {
-        library.push_back(new CreatureCard(c));
-    }
-    for(LandCard l : gc.getLands()) {
-        library.push_back(new LandCard(l));
-        library.push_back(new LandCard(l));
-    }
+    importFromJson("default");
 }
-
 Deck::Deck(std::string nomDeck) {
     importFromJson(nomDeck);
 }
@@ -166,7 +158,7 @@ std::vector<Card*> Deck::getHandCards() {
 }
 
 void Deck::importFromJson(std::string nomDeck) {
-    std::ifstream ifs(nomDeck+".json");
+    std::ifstream ifs("./data/deck/" + nomDeck+".json");
     json deck;
     ifs >> deck;
 
@@ -221,6 +213,6 @@ void Deck::exportToJson(std::string filename) {
             jsonfile["Deck"]["Land"].push_back(j);
         }
     }
-    std::ofstream file("./data/" + filename + ".json");
+    std::ofstream file("./data/deck/" + filename + ".json");
     file << jsonfile;
 }
