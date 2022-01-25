@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['strcolor_2ecpp_0',['StrColor.cpp',['../_str_color_8cpp.html',1,'']]],
-  ['strcolor_2eh_1',['StrColor.h',['../_str_color_8h.html',1,'']]]
+  ['player_2ecpp_0',['Player.cpp',['../_player_8cpp.html',1,'']]],
+  ['player_2eh_1',['Player.h',['../_player_8h.html',1,'']]]
 ];

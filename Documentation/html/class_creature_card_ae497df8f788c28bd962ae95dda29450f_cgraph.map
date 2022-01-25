@@ -1,5 +1,7 @@
 <map id="CreatureCard::printLine" name="CreatureCard::printLine">
-<area shape="rect" id="node1" title="Affichage par ligne." alt="" coords="5,31,160,57"/>
-<area shape="rect" id="node2" href="$class_card.html#a2a55d1694a9292b2b46ab9a01fcf975f" title="Cout en terrain en string." alt="" coords="208,5,345,32"/>
-<area shape="rect" id="node3" href="$class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="393,31,496,57"/>
+<area shape="rect" id="node1" title="Affichage par ligne." alt="" coords="5,71,160,98"/>
+<area shape="rect" id="node2" href="$class_creature_card.html#ab6d5149dd6c66fdc0c5853623a00aade" title="Affichage des capacités." alt="" coords="208,5,373,47"/>
+<area shape="rect" id="node4" href="$class_card.html#a2a55d1694a9292b2b46ab9a01fcf975f" title="Cout en terrain en string." alt="" coords="222,71,359,98"/>
+<area shape="rect" id="node5" href="$class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="423,97,526,123"/>
+<area shape="rect" id="node3" href="$class_str_color.html#a3e1cb928a3fe812681ba35508bb3d741" title=" " alt="" coords="421,13,528,39"/>
 </map>

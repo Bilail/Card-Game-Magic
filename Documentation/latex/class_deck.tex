@@ -6,11 +6,12 @@
 
 
 
-Graphe de collaboration de Deck\+:\nopagebreak
+Graphe de collaboration de Deck\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=227pt]{class_deck__coll__graph}
+\includegraphics[height=550pt]{class_deck__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Fonctions membres publiques}
@@ -20,6 +21,8 @@ Graphe de collaboration de Deck\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Constructeur avec un deck par default. \end{DoxyCompactList}\item 
 \textbf{ Deck} (std\+::string nom\+Deck)
 \begin{DoxyCompactList}\small\item\em Constructeur avec le choix d\textquotesingle{}un deck stocké en json. \end{DoxyCompactList}\item 
+\textbf{ Deck} (std\+::vector$<$ \textbf{ Creature\+Card} $>$ creatures)
+\begin{DoxyCompactList}\small\item\em Constructeur avec le choix des créatures. \end{DoxyCompactList}\item 
 \textbf{ $\sim$\+Deck} ()
 \item 
 void \textbf{ print\+Library} ()
@@ -44,11 +47,23 @@ void \textbf{ play\+Card} (\textbf{ Card} $\ast$c)
 \item 
 void \textbf{ discard\+Card} (\textbf{ Card} $\ast$c)
 \begin{DoxyCompactList}\small\item\em Les cartes dans le cimetière. \end{DoxyCompactList}\item 
-void \textbf{ Json\+To\+Deck} (std\+::string nom\+Deck)
+void \textbf{ import\+From\+Json} (std\+::string filename)
 \begin{DoxyCompactList}\small\item\em Fonction qui convertit un fichier json de carte en deck jouable. \end{DoxyCompactList}\item 
-void \textbf{ Cardto\+Json} (std\+::string nom\+Deck)
-\item 
 void \textbf{ export\+To\+Json} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Fonction qui convertit un deck de carte en fichier json. \end{DoxyCompactList}\item 
+std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ get\+Enchantment\+In\+Game} ()
+\item 
+bool \textbf{ has\+Enchant} (std\+::string e)
+\item 
+std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ get\+Creature\+Card} ()
+\item 
+std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ get\+Card\+In\+Play} ()
+\item 
+int \textbf{ get\+Nb\+Forest} ()
+\item 
+void \textbf{ add\+Card\+In\+Play} (\textbf{ Card} $\ast$c)
+\item 
+void \textbf{ remove\+Card} (\textbf{ Card} $\ast$c)
 \end{DoxyCompactItemize}
 \doxysubsection*{Attributs publics statiques}
 \begin{DoxyCompactItemize}
@@ -65,6 +80,8 @@ std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ hand\+Cards}
 std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ library}
 \item 
 std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ dis\+Cards}
+\item 
+std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ enchantment\+In\+Game}
 \end{DoxyCompactItemize}
 
 
@@ -72,24 +89,25 @@ std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ dis\+Cards}
 \mbox{\label{class_deck_a57ae1cb4ac6fd61c249cefb2db85eb99}} 
 \index{Deck@{Deck}!Deck@{Deck}}
 \index{Deck@{Deck}!Deck@{Deck}}
-\doxysubsubsection{Deck()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{Deck()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily Deck\+::\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Constructeur avec un deck par default. 
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=314pt]{class_deck_a57ae1cb4ac6fd61c249cefb2db85eb99_cgraph}
+\includegraphics[width=299pt]{class_deck_a57ae1cb4ac6fd61c249cefb2db85eb99_cgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_deck_a424bb7c52fbe40c047ef2f54ad0afadf}} 
 \index{Deck@{Deck}!Deck@{Deck}}
 \index{Deck@{Deck}!Deck@{Deck}}
-\doxysubsubsection{Deck()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{Deck()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily Deck\+::\+Deck (\begin{DoxyParamCaption}\item[{std\+::string}]{nom\+Deck }\end{DoxyParamCaption})}
 
 
@@ -101,11 +119,35 @@ Constructeur avec le choix d\textquotesingle{}un deck stocké en json.
 {\em nom\+Deck} & \\
 \hline
 \end{DoxyParams}
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=282pt]{class_deck_a424bb7c52fbe40c047ef2f54ad0afadf_cgraph}
+\includegraphics[width=299pt]{class_deck_a424bb7c52fbe40c047ef2f54ad0afadf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_deck_acb8d07c12cc5dec246cc0f766452e8f9}} 
+\index{Deck@{Deck}!Deck@{Deck}}
+\index{Deck@{Deck}!Deck@{Deck}}
+\doxysubsubsection{Deck()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Deck\+::\+Deck (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \textbf{ Creature\+Card} $>$}]{creatures }\end{DoxyParamCaption})}
+
+
+
+Constructeur avec le choix des créatures. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em creatures} & \\
+\hline
+\end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{class_deck_acb8d07c12cc5dec246cc0f766452e8f9_cgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_deck_a7d1331cc558c302fdf44e5ae8aae1a95}} 
@@ -117,12 +159,20 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 
 
 \doxysubsection{Documentation des fonctions membres}
-\mbox{\label{class_deck_ad35835d4a64c7ed4dbd9f494e0fda5c1}} 
-\index{Deck@{Deck}!CardtoJson@{CardtoJson}}
-\index{CardtoJson@{CardtoJson}!Deck@{Deck}}
-\doxysubsubsection{CardtoJson()}
-{\footnotesize\ttfamily vector$<$ \textbf{ Card} e $\ast$ $>$ Deck\+::\+Cardto\+Json (\begin{DoxyParamCaption}\item[{std\+::string}]{nom\+Deck }\end{DoxyParamCaption})}
+\mbox{\label{class_deck_abc9cd4f42a416e9997348718cf850258}} 
+\index{Deck@{Deck}!addCardInPlay@{addCardInPlay}}
+\index{addCardInPlay@{addCardInPlay}!Deck@{Deck}}
+\doxysubsubsection{addCardInPlay()}
+{\footnotesize\ttfamily void Deck\+::add\+Card\+In\+Play (\begin{DoxyParamCaption}\item[{\textbf{ Card} $\ast$}]{c }\end{DoxyParamCaption})}
 
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_deck_abc9cd4f42a416e9997348718cf850258_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_deck_ab1272e1dfafff2faa3bc7890dc31dc4b}} 
 \index{Deck@{Deck}!discardCard@{discardCard}}
 \index{discardCard@{discardCard}!Deck@{Deck}}
@@ -138,6 +188,14 @@ Les cartes dans le cimetière.
 {\em c} & \\
 \hline
 \end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_deck_ab1272e1dfafff2faa3bc7890dc31dc4b_cgraph}
+\end{center}
+\end{figure}
 Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -188,6 +246,23 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \doxysubsubsection{exportToJson()}
 {\footnotesize\ttfamily void Deck\+::export\+To\+Json (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
 
+
+
+Fonction qui convertit un deck de carte en fichier json. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_deck_ac5daf06b803d68d7023c3626d6dfe001_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_deck_a7f2b01482b7a7b9b57d183730c7f58e8}} 
 \index{Deck@{Deck}!generateRandomDeck@{generateRandomDeck}}
 \index{generateRandomDeck@{generateRandomDeck}!Deck@{Deck}}
@@ -218,6 +293,34 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \includegraphics[width=347pt]{class_deck_a2cfc780efb6b9e6efd395fdad1dfd1a5_icgraph}
 \end{center}
 \end{figure}
+\mbox{\label{class_deck_a19f486548b9b6d8125dac972a9dfe031}} 
+\index{Deck@{Deck}!getCardInPlay@{getCardInPlay}}
+\index{getCardInPlay@{getCardInPlay}!Deck@{Deck}}
+\doxysubsubsection{getCardInPlay()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Card} $\ast$ $>$ Deck\+::get\+Card\+In\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_deck_a19f486548b9b6d8125dac972a9dfe031_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_deck_a3fa8046332855fde6bf04af0039d43c5}} 
+\index{Deck@{Deck}!getCreatureCard@{getCreatureCard}}
+\index{getCreatureCard@{getCreatureCard}!Deck@{Deck}}
+\doxysubsubsection{getCreatureCard()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Card} $\ast$ $>$ Deck\+::get\+Creature\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_deck_a3fa8046332855fde6bf04af0039d43c5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_deck_ab00df76c200dc9fbc2e2cde423d3a488}} 
 \index{Deck@{Deck}!getDefenseCards@{getDefenseCards}}
 \index{getDefenseCards@{getDefenseCards}!Deck@{Deck}}
@@ -238,6 +341,12 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{class_deck_ab00df76c200dc9fbc2e2cde423d3a488_icgraph}
 \end{center}
 \end{figure}
+\mbox{\label{class_deck_aa4dd48e0b745b3d14981ddd37e88e1ab}} 
+\index{Deck@{Deck}!getEnchantmentInGame@{getEnchantmentInGame}}
+\index{getEnchantmentInGame@{getEnchantmentInGame}!Deck@{Deck}}
+\doxysubsubsection{getEnchantmentInGame()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Card} $\ast$ $>$ Deck\+::get\+Enchantment\+In\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\label{class_deck_a3c09493235fdb75fcfc2258bbe9b003c}} 
 \index{Deck@{Deck}!getHandCards@{getHandCards}}
 \index{getHandCards@{getHandCards}!Deck@{Deck}}
@@ -258,6 +367,20 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_deck_a3c09493235fdb75fcfc2258bbe9b003c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_deck_a808ee9e608bea4f9177d456a000f5f41}} 
+\index{Deck@{Deck}!getNbForest@{getNbForest}}
+\index{getNbForest@{getNbForest}!Deck@{Deck}}
+\doxysubsubsection{getNbForest()}
+{\footnotesize\ttfamily int Deck\+::get\+Nb\+Forest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_deck_a808ee9e608bea4f9177d456a000f5f41_icgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_deck_a3b518ce89c61a12a8f42f02dfabe2053}} 
@@ -287,11 +410,25 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{class_deck_a3b518ce89c61a12a8f42f02dfabe2053_icgraph}
 \end{center}
 \end{figure}
-\mbox{\label{class_deck_a23253b2e54d517a8798e034c6910e3a6}} 
-\index{Deck@{Deck}!JsonToDeck@{JsonToDeck}}
-\index{JsonToDeck@{JsonToDeck}!Deck@{Deck}}
-\doxysubsubsection{JsonToDeck()}
-{\footnotesize\ttfamily void Deck\+::\+Json\+To\+Deck (\begin{DoxyParamCaption}\item[{std\+::string}]{nom\+Deck }\end{DoxyParamCaption})}
+\mbox{\label{class_deck_a9c0f7547df65450c228fb823ff131999}} 
+\index{Deck@{Deck}!hasEnchant@{hasEnchant}}
+\index{hasEnchant@{hasEnchant}!Deck@{Deck}}
+\doxysubsubsection{hasEnchant()}
+{\footnotesize\ttfamily bool Deck\+::has\+Enchant (\begin{DoxyParamCaption}\item[{std\+::string}]{e }\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_deck_a9c0f7547df65450c228fb823ff131999_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_deck_a6c51cb1cead0502af0a851137c7665fa}} 
+\index{Deck@{Deck}!importFromJson@{importFromJson}}
+\index{importFromJson@{importFromJson}!Deck@{Deck}}
+\doxysubsubsection{importFromJson()}
+{\footnotesize\ttfamily void Deck\+::import\+From\+Json (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
 
 
 
@@ -299,14 +436,15 @@ Fonction qui convertit un fichier json de carte en deck jouable.
 
 
 \begin{DoxyParams}{Paramètres}
-{\em nom\+Deck} & \\
+{\em filename} & \\
 \hline
 \end{DoxyParams}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=282pt]{class_deck_a23253b2e54d517a8798e034c6910e3a6_icgraph}
+\includegraphics[width=299pt]{class_deck_a6c51cb1cead0502af0a851137c7665fa_icgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_deck_acec615e3dbd2c22200f74b61d95ddac4}} 
@@ -339,7 +477,8 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 
 Affiche les cartes que le joueur peut jouer. 
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -356,11 +495,26 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 
 Affiche toute les cartes du joueurs. 
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_deck_ac6cc6ebfea343b238ccbcef810dc8243_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_deck_ab77b183ab76fa3b19975cb5ca2cb2092}} 
+\index{Deck@{Deck}!removeCard@{removeCard}}
+\index{removeCard@{removeCard}!Deck@{Deck}}
+\doxysubsubsection{removeCard()}
+{\footnotesize\ttfamily void Deck\+::remove\+Card (\begin{DoxyParamCaption}\item[{\textbf{ Card} $\ast$}]{c }\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_deck_ab77b183ab76fa3b19975cb5ca2cb2092_icgraph}
 \end{center}
 \end{figure}
 
@@ -377,6 +531,12 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \index{disCards@{disCards}!Deck@{Deck}}
 \doxysubsubsection{disCards}
 {\footnotesize\ttfamily std\+::vector$<$\textbf{ Card}$\ast$$>$ Deck\+::dis\+Cards\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_deck_a2e5cd936c100c51b25bed44df933a2bc}} 
+\index{Deck@{Deck}!enchantmentInGame@{enchantmentInGame}}
+\index{enchantmentInGame@{enchantmentInGame}!Deck@{Deck}}
+\doxysubsubsection{enchantmentInGame}
+{\footnotesize\ttfamily std\+::vector$<$\textbf{ Card}$\ast$$>$ Deck\+::enchantment\+In\+Game\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\label{class_deck_a3b133a12dde7ffce731a4694204641df}} 
 \index{Deck@{Deck}!handCards@{handCards}}
@@ -401,5 +561,4 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
 \item 
 Source/header/\textbf{ Deck.\+h}\item 
-Source/data/\textbf{ test\+Json.\+cpp}\item 
 Source/src/\textbf{ Deck.\+cpp}\end{DoxyCompactItemize}

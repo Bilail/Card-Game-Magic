@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['instanceof_0',['instanceof',['../_util_8h.html#a7cc95dc2709c50a9803dd5d432fefce5',1,'Util.h']]],
-  ['invocate_1',['invocate',['../class_creature_card.html#a78cb8a58e2ef85ef512cf96859204e17',1,'CreatureCard']]],
-  ['isfirstturn_2',['isFirstTurn',['../class_creature_card.html#aac9f7b9f17ff68a626522665fd106167',1,'CreatureCard']]],
-  ['isstilloperational_3',['isStillOperational',['../class_card.html#a81304c2d2a220be4d28380d8a971c742',1,'Card']]]
+  ['hascapacity_0',['hasCapacity',['../class_creature_card.html#aed8473bd6ecb62eced9ff32ce4d8b722',1,'CreatureCard']]],
+  ['hasenchant_1',['hasEnchant',['../class_deck.html#a9c0f7547df65450c228fb823ff131999',1,'Deck::hasEnchant()'],['../class_player.html#ab3c14e1c8a0cbeea548f6af8f128fadb',1,'Player::hasEnchant()']]]
 ];

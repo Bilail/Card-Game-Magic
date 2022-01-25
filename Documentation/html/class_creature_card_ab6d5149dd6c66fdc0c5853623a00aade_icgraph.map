@@ -1,0 +1,4 @@
+<map id="CreatureCard::capacitiesToString" name="CreatureCard::capacitiesToString">
+<area shape="rect" id="node1" title="Affichage des capacités." alt="" coords="208,5,373,47"/>
+<area shape="rect" id="node2" href="$class_creature_card.html#ae497df8f788c28bd962ae95dda29450f" title="Affichage par ligne." alt="" coords="5,13,160,39"/>
+</map>

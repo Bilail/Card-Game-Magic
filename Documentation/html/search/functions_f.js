@@ -1,28 +1,8 @@
 var searchData=
 [
-  ['packet_0',['Packet',['../classsf_1_1_packet.html#a786e5d4ced83992ceefa1799963ea858',1,'sf::Packet']]],
-  ['parent_5fpointer_1',['parent_pointer',['../classnlohmann_1_1json__pointer.html#afdaacce1edb7145e0434e014f0e8685a',1,'nlohmann::json_pointer']]],
-  ['parentdirectory_2',['parentDirectory',['../classsf_1_1_ftp.html#ad295cf77f30f9ad07b5c401fd9849189',1,'sf::Ftp']]],
-  ['parse_3',['parse',['../classnlohmann_1_1detail_1_1parser.html#a75fb9145ea85f1ad9cc14f61981e1111',1,'nlohmann::detail::parser::parse()'],['../classnlohmann_1_1basic__json.html#a15018ade392a844ea32d5188d1a0b9c6',1,'nlohmann::basic_json::parse(InputType &amp;&amp;i, const parser_callback_t cb=nullptr, const bool allow_exceptions=true, const bool ignore_comments=false)'],['../classnlohmann_1_1basic__json.html#ad832c70af0989389a9a104c21d2d1c5c',1,'nlohmann::basic_json::parse(IteratorType first, IteratorType last, const parser_callback_t cb=nullptr, const bool allow_exceptions=true, const bool ignore_comments=false)'],['../classnlohmann_1_1basic__json.html#a73cf15644f04fa569f50291049d1bafd',1,'nlohmann::basic_json::parse(detail::span_input_adapter &amp;&amp;i, const parser_callback_t cb=nullptr, const bool allow_exceptions=true, const bool ignore_comments=false)']]],
-  ['parse_5ferror_4',['parse_error',['../structnlohmann_1_1json__sax.html#a60287e3bd85f489e04c83f7e3b76e613',1,'nlohmann::json_sax::parse_error()'],['../classnlohmann_1_1detail_1_1json__sax__dom__parser.html#a7bc7d26e6a6f30185310de42cb2e820d',1,'nlohmann::detail::json_sax_dom_parser::parse_error()'],['../classnlohmann_1_1detail_1_1json__sax__dom__callback__parser.html#afb54d6937ee5d5a40e1db94422998aec',1,'nlohmann::detail::json_sax_dom_callback_parser::parse_error()'],['../classnlohmann_1_1detail_1_1json__sax__acceptor.html#a95bb3e8b6feaa523ecda8106fb5e38e3',1,'nlohmann::detail::json_sax_acceptor::parse_error()']]],
-  ['parser_5',['parser',['../classnlohmann_1_1detail_1_1parser.html#a33b852bf63cba58310d9c0d1242cfb12',1,'nlohmann::detail::parser']]],
-  ['patch_6',['patch',['../classnlohmann_1_1basic__json.html#adcc786998f220a5b3083ee8a37c4553e',1,'nlohmann::basic_json']]],
-  ['pause_7',['pause',['../classsf_1_1_sound.html#a5eeb25815bfa8cdc4a6cc000b7b19ad5',1,'sf::Sound::pause()'],['../classsf_1_1_sound_source.html#a21553d4e8fcf136231dd8c7ad4630aba',1,'sf::SoundSource::pause()'],['../classsf_1_1_sound_stream.html#a932ff181e661503cad288b4bb6fe45ca',1,'sf::SoundStream::pause()']]],
-  ['pixelate_8',['Pixelate',['../class_pixelate.html#a015529c914b50983e95905cf29da8f86',1,'Pixelate']]],
-  ['play_9',['play',['../classsf_1_1_sound.html#a2953ffe632536e72e696fd880ced2532',1,'sf::Sound::play()'],['../classsf_1_1_sound_source.html#a6e1bbb1f247ed8743faf3b1ed6f2bc21',1,'sf::SoundSource::play()'],['../classsf_1_1_sound_stream.html#afdc08b69cab5f243d9324940a85a1144',1,'sf::SoundStream::play()']]],
-  ['playcard_10',['playCard',['../class_deck.html#acec615e3dbd2c22200f74b61d95ddac4',1,'Deck::playCard()'],['../class_player.html#aa016a6401d45ac510fd71c5629b0a707',1,'Player::playCard(Card *c)']]],
-  ['player_11',['Player',['../class_player.html#a4d88b5f1bd0032e70ba7016f8a547c0a',1,'Player']]],
-  ['playgame_12',['playGame',['../class_game.html#a9a705e31bcc5c3d5778e3136ccc15489',1,'Game']]],
-  ['playmusic_13',['playMusic',['../_sound_8cpp.html#a8157f6109eef2df7d5dcc58e5c37d1ba',1,'Sound.cpp']]],
-  ['playsound_14',['playSound',['../_sound_8cpp.html#ad43013e2a3efe3bae11ef06683ffe326',1,'Sound.cpp']]],
-  ['pollevent_15',['pollEvent',['../classsf_1_1_window.html#a338e996585faf82e93069858e3b531b7',1,'sf::Window']]],
-  ['pop_5fback_16',['pop_back',['../classnlohmann_1_1json__pointer.html#a4b1ee4d511ca195bed896a3da47e264c',1,'nlohmann::json_pointer']]],
-  ['popglstates_17',['popGLStates',['../classsf_1_1_render_target.html#ad5a98401113df931ddcd54c080f7aa8e',1,'sf::RenderTarget']]],
-  ['print_18',['print',['../class_card.html#a50cb7f8100fb16db6e4de406d7e5af05',1,'Card::print()'],['../class_card.html#aaf9ba482dee7f29131ba2756af3c8a94',1,'Card::print(std::vector&lt; Card * &gt; v)'],['../class_creature_card.html#a74c0d3710cac9fd4bd33d125f762fe7b',1,'CreatureCard::print()'],['../class_land_card.html#afdb5c3e69662aecf838f6b1a29623eaf',1,'LandCard::print()'],['../class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157',1,'StrColor::print()']]],
-  ['printinplaycards_19',['printInPlayCards',['../class_deck.html#afcd4725f1ada242414bde58dae273bba',1,'Deck']]],
-  ['printlibrary_20',['printLibrary',['../class_deck.html#ac6cc6ebfea343b238ccbcef810dc8243',1,'Deck']]],
-  ['printline_21',['printLine',['../class_card.html#ab6d4bf92eefe79fdebb8cd6ff4062c8f',1,'Card::printLine()'],['../class_creature_card.html#ae497df8f788c28bd962ae95dda29450f',1,'CreatureCard::printLine()'],['../class_land_card.html#a03c634b8e1410f1e8835f583423fe8e3',1,'LandCard::printLine()']]],
-  ['processworkitem_22',['processWorkItem',['../_island_8cpp.html#ae562e6fdcd2292b778c8b88369c9290d',1,'Island.cpp']]],
-  ['push_5fback_23',['push_back',['../classnlohmann_1_1json__pointer.html#a697d12b5bd6205f8866691b166b7c7dc',1,'nlohmann::json_pointer::push_back(const std::string &amp;token)'],['../classnlohmann_1_1json__pointer.html#ac228b13596d3c34185da9fe61b570194',1,'nlohmann::json_pointer::push_back(std::string &amp;&amp;token)'],['../classnlohmann_1_1basic__json.html#ab9e0253c92736db021840105d374c4c4',1,'nlohmann::basic_json::push_back(basic_json &amp;&amp;val)'],['../classnlohmann_1_1basic__json.html#a3405d38087e13994a5a4556065b0be6d',1,'nlohmann::basic_json::push_back(const basic_json &amp;val)'],['../classnlohmann_1_1basic__json.html#a4567cf75f19b1efca090f75d7a8a350a',1,'nlohmann::basic_json::push_back(initializer_list_t init)'],['../classnlohmann_1_1basic__json.html#ad704839e6a5195e3b76f22e2b9aa63ee',1,'nlohmann::basic_json::push_back(const typename object_t::value_type &amp;val)']]],
-  ['pushglstates_24',['pushGLStates',['../classsf_1_1_render_target.html#a8d1998464ccc54e789aaf990242b47f7',1,'sf::RenderTarget']]]
+  ['_7ecard_0',['~Card',['../class_card.html#a4e05b0b68e43e5e76c6194458cee874f',1,'Card']]],
+  ['_7edeck_1',['~Deck',['../class_deck.html#a7d1331cc558c302fdf44e5ae8aae1a95',1,'Deck']]],
+  ['_7eenchantmentcard_2',['~EnchantmentCard',['../class_enchantment_card.html#ab38448ce9ad47cc32103733dde2197b0',1,'EnchantmentCard']]],
+  ['_7elandcard_3',['~LandCard',['../class_land_card.html#a435dc89e9d514e111311ce6af00e0e0f',1,'LandCard']]],
+  ['_7eplayer_4',['~Player',['../class_player.html#a749d2c00e1fe0f5c2746f7505a58c062',1,'Player']]]
 ];

@@ -39,9 +39,15 @@
 \DoxyCodeLine{73     std::vector<Card*> getDefenseCards();}
 \DoxyCodeLine{78     std::vector<Card*> getHandCards();}
 \DoxyCodeLine{79     \textcolor{keywordtype}{void} discardCard(Card* c);}
-\DoxyCodeLine{80 \};}
-\DoxyCodeLine{81 }
-\DoxyCodeLine{82 }
-\DoxyCodeLine{83 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_PLAYER\_H}}
+\DoxyCodeLine{80     \textcolor{keywordtype}{bool} hasEnchant(std::string enchantCard);}
+\DoxyCodeLine{81     std::vector<Card*> getCreatureCard();}
+\DoxyCodeLine{82     std::vector<Card*> getCardInPlay();}
+\DoxyCodeLine{83     \textcolor{keywordtype}{int} getNbForest();}
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} addCardInPlay(Card* c);}
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} removeCard(Card* c );}
+\DoxyCodeLine{86 \};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_PLAYER\_H}}
 
 \end{DoxyCode}

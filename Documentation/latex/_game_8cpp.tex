@@ -12,7 +12,8 @@
 {\ttfamily \#include \char`\"{}../header/\+Deck.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../header/\+Game.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../header/\+Str\+Color.\+h\char`\"{}}\newline
-Graphe des dépendances par inclusion de Game.\+cpp\+:\nopagebreak
+Graphe des dépendances par inclusion de Game.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,6 +22,10 @@ Graphe des dépendances par inclusion de Game.\+cpp\+:\nopagebreak
 \end{figure}
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
+\item 
+void \textbf{ wait} (int sec)
+\item 
+std\+::string \textbf{ lower} (std\+::string str)
 \item 
 std\+::string \textbf{ center\+String} (std\+::string s, int size)
 \end{DoxyCompactItemize}
@@ -38,5 +43,25 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{_game_8cpp_a65b69695f76049b7d677a330557e2e77_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{_game_8cpp_a7c5ac151905d9a4c26b72651c8c5d7f9}} 
+\index{Game.cpp@{Game.cpp}!lower@{lower}}
+\index{lower@{lower}!Game.cpp@{Game.cpp}}
+\doxysubsubsection{lower()}
+{\footnotesize\ttfamily std\+::string lower (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})}
+
+\mbox{\label{_game_8cpp_a55d083d007e76bbb5e0df50d927c163f}} 
+\index{Game.cpp@{Game.cpp}!wait@{wait}}
+\index{wait@{wait}!Game.cpp@{Game.cpp}}
+\doxysubsubsection{wait()}
+{\footnotesize\ttfamily void wait (\begin{DoxyParamCaption}\item[{int}]{sec }\end{DoxyParamCaption})}
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{_game_8cpp_a55d083d007e76bbb5e0df50d927c163f_icgraph}
 \end{center}
 \end{figure}

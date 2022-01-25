@@ -1,0 +1,4 @@
+<map id="CreatureCard::disengage" name="CreatureCard::disengage">
+<area shape="rect" id="node1" title="Désengager une carte." alt="" coords="5,5,171,32"/>
+<area shape="rect" id="node2" href="$class_creature_card.html#aaf654e273b0d8c5d69ecff44f2a4e4df" title="Réinitialise les points de vie de la créature." alt="" coords="219,5,369,32"/>
+</map>

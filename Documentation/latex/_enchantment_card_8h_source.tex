@@ -1,0 +1,36 @@
+\doxysection{Enchantment\+Card.\+h}
+\label{_enchantment_card_8h_source}\index{Source/header/EnchantmentCard.h@{Source/header/EnchantmentCard.h}}
+\textbf{ Aller à la documentation de ce fichier.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by bilai on 22/01/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef MAGIC\_ENCHANTMENTCARD\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define MAGIC\_ENCHANTMENTCARD\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Card.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}StrColor.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }EnchantmentCard : \textcolor{keyword}{public} Card \{}
+\DoxyCodeLine{13 public :}
+\DoxyCodeLine{14     EnchantmentCard(std::string name, std::string color);}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \string~EnchantmentCard();}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} effect();}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} print();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} printLine(\textcolor{keywordtype}{int} line);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} associate(Card* CardToAssociate);}
+\DoxyCodeLine{22     Card* getAsso();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 protected :}
+\DoxyCodeLine{25     Card* asso;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_ENCHANTMENTCARD\_H}}
+
+\end{DoxyCode}

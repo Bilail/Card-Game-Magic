@@ -1,4 +1,5 @@
 <map id="Card::print" name="Card::print">
 <area shape="rect" id="node1" title="Fonction d&#39;affichage." alt="" coords="5,5,88,32"/>
-<area shape="rect" id="node2" href="$class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="136,5,239,32"/>
+<area shape="rect" id="node2" href="$class_card.html#ab6d4bf92eefe79fdebb8cd6ff4062c8f" title="Fonction d&#39;affichage par ligne Pour l&#39;affiche en ligne et non pas en colonne." alt="" coords="136,5,243,32"/>
+<area shape="rect" id="node3" href="$class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="291,5,393,32"/>
 </map>

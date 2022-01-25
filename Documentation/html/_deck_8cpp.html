@@ -92,6 +92,7 @@ $(document).ready(function(){initNavTree('_deck_8cpp.html',''); initResizable();
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
 <code>#include &quot;<a class="el" href="_util_8h_source.html">../header/Util.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_card_8h_source.html">../header/Card.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_deck_8h_source.html">../header/Deck.h</a>&quot;</code><br />
@@ -101,19 +102,22 @@ Graphe des dépendances par inclusion de Deck.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_deck_8cpp__incl.png" border="0" usemap="#a_source_2src_2_deck_8cpp" alt=""/></div>
 <map name="a_source_2src_2_deck_8cpp" id="a_source_2src_2_deck_8cpp">
-<area shape="rect" title=" " alt="" coords="533,5,677,32"/>
-<area shape="rect" title=" " alt="" coords="129,379,185,405"/>
-<area shape="rect" title=" " alt="" coords="587,379,642,405"/>
-<area shape="rect" title=" " alt="" coords="745,80,810,107"/>
-<area shape="rect" href="_util_8h.html" title=" " alt="" coords="96,80,203,107"/>
-<area shape="rect" href="_card_8h.html" title=" " alt="" coords="360,304,475,331"/>
-<area shape="rect" href="_deck_8h.html" title=" " alt="" coords="315,80,434,107"/>
-<area shape="rect" title=" " alt="" coords="835,80,992,107"/>
-<area shape="rect" title=" " alt="" coords="289,379,361,405"/>
-<area shape="rect" title=" " alt="" coords="144,155,243,181"/>
-<area shape="rect" href="_game_cards_8h.html" title=" " alt="" coords="369,155,471,181"/>
-<area shape="rect" href="_creature_card_8h.html" title=" " alt="" coords="296,229,405,256"/>
-<area shape="rect" href="_land_card_8h.html" title=" " alt="" coords="480,229,568,256"/>
+<area shape="rect" title=" " alt="" coords="459,5,603,32"/>
+<area shape="rect" title=" " alt="" coords="181,379,237,405"/>
+<area shape="rect" title=" " alt="" coords="662,379,717,405"/>
+<area shape="rect" title=" " alt="" coords="769,80,834,107"/>
+<area shape="rect" title=" " alt="" coords="859,80,933,107"/>
+<area shape="rect" href="_util_8h.html" title=" " alt="" coords="44,80,151,107"/>
+<area shape="rect" href="_card_8h.html" title=" " alt="" coords="345,304,460,331"/>
+<area shape="rect" href="_deck_8h.html" title=" " alt="" coords="423,80,542,107"/>
+<area shape="rect" title=" " alt="" coords="957,80,1115,107"/>
+<area shape="rect" title=" " alt="" coords="340,379,412,405"/>
+<area shape="rect" title=" " alt="" coords="196,155,295,181"/>
+<area shape="rect" href="_game_cards_8h.html" title=" " alt="" coords="431,155,534,181"/>
+<area shape="rect" href="_enchantment_card_8h.html" title=" " alt="" coords="645,229,782,256"/>
+<area shape="rect" href="_creature_card_8h.html" title=" " alt="" coords="348,229,457,256"/>
+<area shape="rect" href="_land_card_8h.html" title=" " alt="" coords="532,229,620,256"/>
+<area shape="rect" href="_str_color_8h.html" title=" " alt="" coords="688,304,768,331"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -130,7 +134,7 @@ Définitions de type</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="test_json_8cpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> =  nlohmann::json</td>
+          <td class="memname">using <a class="el" href="_deck_8cpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> =  nlohmann::json</td>
         </tr>
       </table>
 </div><div class="memdoc">

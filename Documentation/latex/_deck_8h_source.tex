@@ -13,37 +13,47 @@
 \DoxyCodeLine{9 \textcolor{preprocessor}{\#include <bits/stdc++.h>}}
 \DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Card.h"{}}}
 \DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}GameCards.h"{}}}
-\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{13 }
-\DoxyCodeLine{14 \textcolor{keyword}{class }Deck \{}
-\DoxyCodeLine{15 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{16     std::vector<Card*> inPlayCards;}
-\DoxyCodeLine{17     std::vector<Card*> handCards;}
-\DoxyCodeLine{18     std::vector<Card*> library;}
-\DoxyCodeLine{19     std::vector<Card*> disCards;}
-\DoxyCodeLine{20 \textcolor{keyword}{public}:}
-\DoxyCodeLine{21     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} DECK\_SIZE;}
-\DoxyCodeLine{25     Deck();}
-\DoxyCodeLine{30     Deck(std::string nomDeck);}
-\DoxyCodeLine{31     \string~Deck();}
-\DoxyCodeLine{35     \textcolor{keywordtype}{void} printLibrary();}
-\DoxyCodeLine{39     \textcolor{keywordtype}{void} printInPlayCards();}
-\DoxyCodeLine{43     \textcolor{keywordtype}{void} generateRandomDeck();}
-\DoxyCodeLine{48     \textcolor{keywordtype}{bool} drawCard();}
-\DoxyCodeLine{52     \textcolor{keywordtype}{void} disengageCards();}
-\DoxyCodeLine{57     std::vector<Card*> getPlayableCards();}
-\DoxyCodeLine{62     std::vector<Card*> getAttackCards();}
-\DoxyCodeLine{67     std::vector<Card*> getDefenseCards();}
-\DoxyCodeLine{72     std::vector<Card*> getHandCards();}
-\DoxyCodeLine{73     \textcolor{keywordtype}{void} playCard(Card* c);}
-\DoxyCodeLine{78     \textcolor{keywordtype}{void} discardCard(Card* c);}
-\DoxyCodeLine{83     \textcolor{keywordtype}{void} JsonToDeck(std::string nomDeck);}
-\DoxyCodeLine{84     \textcolor{keywordtype}{void} CardtoJson(std::string nomDeck);}
-\DoxyCodeLine{85     \textcolor{keywordtype}{void} exportToJson(std::string filename);}
-\DoxyCodeLine{86 }
-\DoxyCodeLine{87 \};}
-\DoxyCodeLine{88 }
-\DoxyCodeLine{89 }
-\DoxyCodeLine{90 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_DECK\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}EnchantmentCard.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }Deck \{}
+\DoxyCodeLine{16 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{17     std::vector<Card*> inPlayCards;}
+\DoxyCodeLine{18     std::vector<Card*> handCards;}
+\DoxyCodeLine{19     std::vector<Card*> library;}
+\DoxyCodeLine{20     std::vector<Card*> disCards;}
+\DoxyCodeLine{21     std::vector<Card*> enchantmentInGame;}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} DECK\_SIZE;}
+\DoxyCodeLine{27     Deck();}
+\DoxyCodeLine{32     Deck(std::string nomDeck);}
+\DoxyCodeLine{37     Deck(std::vector<CreatureCard> creatures);}
+\DoxyCodeLine{38     \string~Deck();}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} printLibrary();}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} printInPlayCards();}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} generateRandomDeck();}
+\DoxyCodeLine{55     \textcolor{keywordtype}{bool} drawCard();}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} disengageCards();}
+\DoxyCodeLine{64     std::vector<Card*> getPlayableCards();}
+\DoxyCodeLine{69     std::vector<Card*> getAttackCards();}
+\DoxyCodeLine{74     std::vector<Card*> getDefenseCards();}
+\DoxyCodeLine{79     std::vector<Card*> getHandCards();}
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} playCard(Card* c);}
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} discardCard(Card* c);}
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} importFromJson(std::string filename);}
+\DoxyCodeLine{95     \textcolor{keywordtype}{void} exportToJson(std::string filename);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     std::vector<Card*> getEnchantmentInGame();}
+\DoxyCodeLine{98     \textcolor{keywordtype}{bool} hasEnchant(std::string e);}
+\DoxyCodeLine{99     std::vector<Card*> getCreatureCard();}
+\DoxyCodeLine{100     std::vector<Card*> getCardInPlay();}
+\DoxyCodeLine{101     \textcolor{keywordtype}{int} getNbForest();}
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} addCardInPlay(Card* c);}
+\DoxyCodeLine{103     \textcolor{keywordtype}{void} removeCard(Card* c );}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_DECK\_H}}
 
 \end{DoxyCode}

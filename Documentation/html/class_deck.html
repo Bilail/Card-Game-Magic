@@ -99,7 +99,7 @@ Graphe de collaboration de Deck:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_deck__coll__graph.png" border="0" usemap="#a_deck_coll__map" alt="Collaboration graph"/></div>
 <map name="a_deck_coll__map" id="a_deck_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,201,537"/>
+<area shape="rect" title=" " alt="" coords="5,5,201,743"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -111,6 +111,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a424bb7c52fbe40c047ef2f54ad0afadf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#a424bb7c52fbe40c047ef2f54ad0afadf">Deck</a> (std::string nomDeck)</td></tr>
 <tr class="memdesc:a424bb7c52fbe40c047ef2f54ad0afadf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur avec le choix d'un deck stocké en json.  <a href="class_deck.html#a424bb7c52fbe40c047ef2f54ad0afadf">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a424bb7c52fbe40c047ef2f54ad0afadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb8d07c12cc5dec246cc0f766452e8f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#acb8d07c12cc5dec246cc0f766452e8f9">Deck</a> (std::vector&lt; <a class="el" href="class_creature_card.html">CreatureCard</a> &gt; creatures)</td></tr>
+<tr class="memdesc:acb8d07c12cc5dec246cc0f766452e8f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur avec le choix des créatures.  <a href="class_deck.html#acb8d07c12cc5dec246cc0f766452e8f9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acb8d07c12cc5dec246cc0f766452e8f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d1331cc558c302fdf44e5ae8aae1a95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#a7d1331cc558c302fdf44e5ae8aae1a95">~Deck</a> ()</td></tr>
 <tr class="separator:a7d1331cc558c302fdf44e5ae8aae1a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6cc6ebfea343b238ccbcef810dc8243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#ac6cc6ebfea343b238ccbcef810dc8243">printLibrary</a> ()</td></tr>
@@ -145,13 +148,26 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ab1272e1dfafff2faa3bc7890dc31dc4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#ab1272e1dfafff2faa3bc7890dc31dc4b">discardCard</a> (<a class="el" href="class_card.html">Card</a> *c)</td></tr>
 <tr class="memdesc:ab1272e1dfafff2faa3bc7890dc31dc4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les cartes dans le cimetière.  <a href="class_deck.html#ab1272e1dfafff2faa3bc7890dc31dc4b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab1272e1dfafff2faa3bc7890dc31dc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23253b2e54d517a8798e034c6910e3a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#a23253b2e54d517a8798e034c6910e3a6">JsonToDeck</a> (std::string nomDeck)</td></tr>
-<tr class="memdesc:a23253b2e54d517a8798e034c6910e3a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui convertit un fichier json de carte en deck jouable.  <a href="class_deck.html#a23253b2e54d517a8798e034c6910e3a6">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a23253b2e54d517a8798e034c6910e3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad35835d4a64c7ed4dbd9f494e0fda5c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#ad35835d4a64c7ed4dbd9f494e0fda5c1">CardtoJson</a> (std::string nomDeck)</td></tr>
-<tr class="separator:ad35835d4a64c7ed4dbd9f494e0fda5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c51cb1cead0502af0a851137c7665fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#a6c51cb1cead0502af0a851137c7665fa">importFromJson</a> (std::string filename)</td></tr>
+<tr class="memdesc:a6c51cb1cead0502af0a851137c7665fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui convertit un fichier json de carte en deck jouable.  <a href="class_deck.html#a6c51cb1cead0502af0a851137c7665fa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6c51cb1cead0502af0a851137c7665fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5daf06b803d68d7023c3626d6dfe001"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#ac5daf06b803d68d7023c3626d6dfe001">exportToJson</a> (std::string filename)</td></tr>
+<tr class="memdesc:ac5daf06b803d68d7023c3626d6dfe001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui convertit un deck de carte en fichier json.  <a href="class_deck.html#ac5daf06b803d68d7023c3626d6dfe001">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac5daf06b803d68d7023c3626d6dfe001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4dd48e0b745b3d14981ddd37e88e1ab"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_card.html">Card</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#aa4dd48e0b745b3d14981ddd37e88e1ab">getEnchantmentInGame</a> ()</td></tr>
+<tr class="separator:aa4dd48e0b745b3d14981ddd37e88e1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c0f7547df65450c228fb823ff131999"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#a9c0f7547df65450c228fb823ff131999">hasEnchant</a> (std::string e)</td></tr>
+<tr class="separator:a9c0f7547df65450c228fb823ff131999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa8046332855fde6bf04af0039d43c5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_card.html">Card</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#a3fa8046332855fde6bf04af0039d43c5">getCreatureCard</a> ()</td></tr>
+<tr class="separator:a3fa8046332855fde6bf04af0039d43c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f486548b9b6d8125dac972a9dfe031"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_card.html">Card</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#a19f486548b9b6d8125dac972a9dfe031">getCardInPlay</a> ()</td></tr>
+<tr class="separator:a19f486548b9b6d8125dac972a9dfe031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a808ee9e608bea4f9177d456a000f5f41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#a808ee9e608bea4f9177d456a000f5f41">getNbForest</a> ()</td></tr>
+<tr class="separator:a808ee9e608bea4f9177d456a000f5f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc9cd4f42a416e9997348718cf850258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#abc9cd4f42a416e9997348718cf850258">addCardInPlay</a> (<a class="el" href="class_card.html">Card</a> *c)</td></tr>
+<tr class="separator:abc9cd4f42a416e9997348718cf850258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab77b183ab76fa3b19975cb5ca2cb2092"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#ab77b183ab76fa3b19975cb5ca2cb2092">removeCard</a> (<a class="el" href="class_card.html">Card</a> *c)</td></tr>
+<tr class="separator:ab77b183ab76fa3b19975cb5ca2cb2092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Attributs publics statiques</h2></td></tr>
@@ -168,10 +184,12 @@ Attributs protégés</h2></td></tr>
 <tr class="separator:a55b27cc203e9fdcf44600a0180a2a01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add30a488480308b5a339fcc6728d8caa"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_card.html">Card</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#add30a488480308b5a339fcc6728d8caa">disCards</a></td></tr>
 <tr class="separator:add30a488480308b5a339fcc6728d8caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e5cd936c100c51b25bed44df933a2bc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_card.html">Card</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_deck.html#a2e5cd936c100c51b25bed44df933a2bc">enchantmentInGame</a></td></tr>
+<tr class="separator:a2e5cd936c100c51b25bed44df933a2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a57ae1cb4ac6fd61c249cefb2db85eb99" name="a57ae1cb4ac6fd61c249cefb2db85eb99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57ae1cb4ac6fd61c249cefb2db85eb99">&#9670;&nbsp;</a></span>Deck() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a57ae1cb4ac6fd61c249cefb2db85eb99">&#9670;&nbsp;</a></span>Deck() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,16 +209,15 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="class_deck_a57ae1cb4ac6fd61c249cefb2db85eb99_cgraph.png" border="0" usemap="#aclass_deck_a57ae1cb4ac6fd61c249cefb2db85eb99_cgraph" alt=""/></div>
 <map name="aclass_deck_a57ae1cb4ac6fd61c249cefb2db85eb99_cgraph" id="aclass_deck_a57ae1cb4ac6fd61c249cefb2db85eb99_cgraph">
-<area shape="rect" title="Constructeur avec un deck par default." alt="" coords="5,31,96,57"/>
-<area shape="rect" href="class_game_cards.html#a596d9655f13e0eb9f51a26cd6306584c" title=" " alt="" coords="144,5,317,32"/>
-<area shape="rect" href="class_game_cards.html#acfff5e5295f7025feea27d99a3720b32" title=" " alt="" coords="155,56,307,83"/>
+<area shape="rect" title="Constructeur avec un deck par default." alt="" coords="5,5,96,32"/>
+<area shape="rect" href="class_deck.html#a6c51cb1cead0502af0a851137c7665fa" title="Fonction qui convertit un fichier json de carte en deck jouable." alt="" coords="144,5,297,32"/>
 </map>
 </div>
 
 </div>
 </div>
 <a id="a424bb7c52fbe40c047ef2f54ad0afadf" name="a424bb7c52fbe40c047ef2f54ad0afadf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a424bb7c52fbe40c047ef2f54ad0afadf">&#9670;&nbsp;</a></span>Deck() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a424bb7c52fbe40c047ef2f54ad0afadf">&#9670;&nbsp;</a></span>Deck() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -228,7 +245,42 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="center"><img src="class_deck_a424bb7c52fbe40c047ef2f54ad0afadf_cgraph.png" border="0" usemap="#aclass_deck_a424bb7c52fbe40c047ef2f54ad0afadf_cgraph" alt=""/></div>
 <map name="aclass_deck_a424bb7c52fbe40c047ef2f54ad0afadf_cgraph" id="aclass_deck_a424bb7c52fbe40c047ef2f54ad0afadf_cgraph">
 <area shape="rect" title="Constructeur avec le choix d&#39;un deck stocké en json." alt="" coords="5,5,96,32"/>
-<area shape="rect" href="class_deck.html#a23253b2e54d517a8798e034c6910e3a6" title="Fonction qui convertit un fichier json de carte en deck jouable." alt="" coords="144,5,275,32"/>
+<area shape="rect" href="class_deck.html#a6c51cb1cead0502af0a851137c7665fa" title="Fonction qui convertit un fichier json de carte en deck jouable." alt="" coords="144,5,297,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acb8d07c12cc5dec246cc0f766452e8f9" name="acb8d07c12cc5dec246cc0f766452e8f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb8d07c12cc5dec246cc0f766452e8f9">&#9670;&nbsp;</a></span>Deck() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Deck::Deck </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_creature_card.html">CreatureCard</a> &gt;&#160;</td>
+          <td class="paramname"><em>creatures</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur avec le choix des créatures. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">creatures</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_deck_acb8d07c12cc5dec246cc0f766452e8f9_cgraph.png" border="0" usemap="#aclass_deck_acb8d07c12cc5dec246cc0f766452e8f9_cgraph" alt=""/></div>
+<map name="aclass_deck_acb8d07c12cc5dec246cc0f766452e8f9_cgraph" id="aclass_deck_acb8d07c12cc5dec246cc0f766452e8f9_cgraph">
+<area shape="rect" title="Constructeur avec le choix des créatures." alt="" coords="5,5,96,32"/>
+<area shape="rect" href="class_game_cards.html#acfff5e5295f7025feea27d99a3720b32" title=" " alt="" coords="144,5,296,32"/>
 </map>
 </div>
 
@@ -252,21 +304,30 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="ad35835d4a64c7ed4dbd9f494e0fda5c1" name="ad35835d4a64c7ed4dbd9f494e0fda5c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad35835d4a64c7ed4dbd9f494e0fda5c1">&#9670;&nbsp;</a></span>CardtoJson()</h2>
+<a id="abc9cd4f42a416e9997348718cf850258" name="abc9cd4f42a416e9997348718cf850258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9cd4f42a416e9997348718cf850258">&#9670;&nbsp;</a></span>addCardInPlay()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt; <a class="el" href="class_card.html">Card</a> e * &gt; Deck::CardtoJson </td>
+          <td class="memname">void Deck::addCardInPlay </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>nomDeck</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_card.html">Card</a> *&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_deck_abc9cd4f42a416e9997348718cf850258_icgraph.png" border="0" usemap="#aclass_deck_abc9cd4f42a416e9997348718cf850258_icgraph" alt=""/></div>
+<map name="aclass_deck_abc9cd4f42a416e9997348718cf850258_icgraph" id="aclass_deck_abc9cd4f42a416e9997348718cf850258_icgraph">
+<area shape="rect" title=" " alt="" coords="204,5,348,32"/>
+<area shape="rect" href="class_player.html#a48ea1830bdbcd5dbedd0001cb5537cb3" title=" " alt="" coords="5,5,156,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -293,6 +354,15 @@ Voici le graphe d'appel pour cette fonction :</div>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_deck_ab1272e1dfafff2faa3bc7890dc31dc4b_cgraph.png" border="0" usemap="#aclass_deck_ab1272e1dfafff2faa3bc7890dc31dc4b_cgraph" alt=""/></div>
+<map name="aclass_deck_ab1272e1dfafff2faa3bc7890dc31dc4b_cgraph" id="aclass_deck_ab1272e1dfafff2faa3bc7890dc31dc4b_cgraph">
+<area shape="rect" title="Les cartes dans le cimetière." alt="" coords="5,5,135,32"/>
+<area shape="rect" href="class_enchantment_card.html#a469b5c9d031197f55e06fc5925517730" title=" " alt="" coords="183,5,365,32"/>
+</map>
+</div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
@@ -382,6 +452,24 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
+<p>Fonction qui convertit un deck de carte en fichier json. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_deck_ac5daf06b803d68d7023c3626d6dfe001_icgraph.png" border="0" usemap="#aclass_deck_ac5daf06b803d68d7023c3626d6dfe001_icgraph" alt=""/></div>
+<map name="aclass_deck_ac5daf06b803d68d7023c3626d6dfe001_icgraph" id="aclass_deck_ac5daf06b803d68d7023c3626d6dfe001_icgraph">
+<area shape="rect" title="Fonction qui convertit un deck de carte en fichier json." alt="" coords="303,5,440,32"/>
+<area shape="rect" href="class_deck_creator.html#abf14bb7ff8b411de452a65df0f697f4a" title="démarre l&#39;application qui gère la création de deck" alt="" coords="104,5,255,32"/>
+<area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a7f2b01482b7a7b9b57d183730c7f58e8" name="a7f2b01482b7a7b9b57d183730c7f58e8"></a>
@@ -432,6 +520,58 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
+<a id="a19f486548b9b6d8125dac972a9dfe031" name="a19f486548b9b6d8125dac972a9dfe031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f486548b9b6d8125dac972a9dfe031">&#9670;&nbsp;</a></span>getCardInPlay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_card.html">Card</a> * &gt; Deck::getCardInPlay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_deck_a19f486548b9b6d8125dac972a9dfe031_icgraph.png" border="0" usemap="#aclass_deck_a19f486548b9b6d8125dac972a9dfe031_icgraph" alt=""/></div>
+<map name="aclass_deck_a19f486548b9b6d8125dac972a9dfe031_icgraph" id="aclass_deck_a19f486548b9b6d8125dac972a9dfe031_icgraph">
+<area shape="rect" title=" " alt="" coords="201,5,343,32"/>
+<area shape="rect" href="class_player.html#aa34c74eeac5aca2202d35c28396da191" title=" " alt="" coords="5,5,153,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3fa8046332855fde6bf04af0039d43c5" name="a3fa8046332855fde6bf04af0039d43c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fa8046332855fde6bf04af0039d43c5">&#9670;&nbsp;</a></span>getCreatureCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_card.html">Card</a> * &gt; Deck::getCreatureCard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_deck_a3fa8046332855fde6bf04af0039d43c5_icgraph.png" border="0" usemap="#aclass_deck_a3fa8046332855fde6bf04af0039d43c5_icgraph" alt=""/></div>
+<map name="aclass_deck_a3fa8046332855fde6bf04af0039d43c5_icgraph" id="aclass_deck_a3fa8046332855fde6bf04af0039d43c5_icgraph">
+<area shape="rect" title=" " alt="" coords="215,5,369,32"/>
+<area shape="rect" href="class_player.html#a3a977bc9e746dc87792bd1bff4faec69" title=" " alt="" coords="5,5,167,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ab00df76c200dc9fbc2e2cde423d3a488" name="ab00df76c200dc9fbc2e2cde423d3a488"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab00df76c200dc9fbc2e2cde423d3a488">&#9670;&nbsp;</a></span>getDefenseCards()</h2>
 
@@ -458,6 +598,23 @@ Voici le graphe des appelants de cette fonction :</div>
 <area shape="rect" href="class_player.html#aabe0a76c0767e94328d75a32963b4de6" title="ses cartes qui peuvent défendre" alt="" coords="5,5,172,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="aa4dd48e0b745b3d14981ddd37e88e1ab" name="aa4dd48e0b745b3d14981ddd37e88e1ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4dd48e0b745b3d14981ddd37e88e1ab">&#9670;&nbsp;</a></span>getEnchantmentInGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_card.html">Card</a> * &gt; Deck::getEnchantmentInGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -492,6 +649,32 @@ Voici le graphe des appelants de cette fonction :</div>
 <area shape="rect" href="class_player.html#a8e7c03bb48ae14c24fbba7456f8ca4fb" title="envoyer une carte au cimetière" alt="" coords="276,5,425,32"/>
 <area shape="rect" href="class_game.html#a9a705e31bcc5c3d5778e3136ccc15489" title="Lance la partie." alt="" coords="104,5,228,32"/>
 <area shape="rect" href="_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a808ee9e608bea4f9177d456a000f5f41" name="a808ee9e608bea4f9177d456a000f5f41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a808ee9e608bea4f9177d456a000f5f41">&#9670;&nbsp;</a></span>getNbForest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Deck::getNbForest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_deck_a808ee9e608bea4f9177d456a000f5f41_icgraph.png" border="0" usemap="#aclass_deck_a808ee9e608bea4f9177d456a000f5f41_icgraph" alt=""/></div>
+<map name="aclass_deck_a808ee9e608bea4f9177d456a000f5f41_icgraph" id="aclass_deck_a808ee9e608bea4f9177d456a000f5f41_icgraph">
+<area shape="rect" title=" " alt="" coords="192,5,323,32"/>
+<area shape="rect" href="class_player.html#ae9b47f3b26914219d4760f1d2a46eefe" title=" " alt="" coords="5,5,144,32"/>
 </map>
 </div>
 
@@ -535,17 +718,44 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
-<a id="a23253b2e54d517a8798e034c6910e3a6" name="a23253b2e54d517a8798e034c6910e3a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23253b2e54d517a8798e034c6910e3a6">&#9670;&nbsp;</a></span>JsonToDeck()</h2>
+<a id="a9c0f7547df65450c228fb823ff131999" name="a9c0f7547df65450c228fb823ff131999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0f7547df65450c228fb823ff131999">&#9670;&nbsp;</a></span>hasEnchant()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Deck::JsonToDeck </td>
+          <td class="memname">bool Deck::hasEnchant </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>nomDeck</em></td><td>)</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_deck_a9c0f7547df65450c228fb823ff131999_icgraph.png" border="0" usemap="#aclass_deck_a9c0f7547df65450c228fb823ff131999_icgraph" alt=""/></div>
+<map name="aclass_deck_a9c0f7547df65450c228fb823ff131999_icgraph" id="aclass_deck_a9c0f7547df65450c228fb823ff131999_icgraph">
+<area shape="rect" title=" " alt="" coords="189,5,319,32"/>
+<area shape="rect" href="class_player.html#ab3c14e1c8a0cbeea548f6af8f128fadb" title=" " alt="" coords="5,5,141,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6c51cb1cead0502af0a851137c7665fa" name="a6c51cb1cead0502af0a851137c7665fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c51cb1cead0502af0a851137c7665fa">&#9670;&nbsp;</a></span>importFromJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Deck::importFromJson </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -554,17 +764,17 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Fonction qui convertit un fichier json de carte en deck jouable. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nomDeck</td><td></td></tr>
+    <tr><td class="paramname">filename</td><td></td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="class_deck_a23253b2e54d517a8798e034c6910e3a6_icgraph.png" border="0" usemap="#aclass_deck_a23253b2e54d517a8798e034c6910e3a6_icgraph" alt=""/></div>
-<map name="aclass_deck_a23253b2e54d517a8798e034c6910e3a6_icgraph" id="aclass_deck_a23253b2e54d517a8798e034c6910e3a6_icgraph">
-<area shape="rect" title="Fonction qui convertit un fichier json de carte en deck jouable." alt="" coords="144,5,275,32"/>
-<area shape="rect" href="class_deck.html#a424bb7c52fbe40c047ef2f54ad0afadf" title="Constructeur avec le choix d&#39;un deck stocké en json." alt="" coords="5,5,96,32"/>
+<div class="center"><img src="class_deck_a6c51cb1cead0502af0a851137c7665fa_icgraph.png" border="0" usemap="#aclass_deck_a6c51cb1cead0502af0a851137c7665fa_icgraph" alt=""/></div>
+<map name="aclass_deck_a6c51cb1cead0502af0a851137c7665fa_icgraph" id="aclass_deck_a6c51cb1cead0502af0a851137c7665fa_icgraph">
+<area shape="rect" title="Fonction qui convertit un fichier json de carte en deck jouable." alt="" coords="144,5,297,32"/>
+<area shape="rect" href="class_deck.html#a57ae1cb4ac6fd61c249cefb2db85eb99" title="Constructeur avec un deck par default." alt="" coords="5,5,96,32"/>
 </map>
 </div>
 
@@ -630,7 +840,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 <map name="aclass_deck_afcd4725f1ada242414bde58dae273bba_cgraph" id="aclass_deck_afcd4725f1ada242414bde58dae273bba_cgraph">
 <area shape="rect" title="Affiche les cartes que le joueur peut jouer." alt="" coords="5,5,160,32"/>
 <area shape="rect" href="class_card.html#a50cb7f8100fb16db6e4de406d7e5af05" title="Fonction d&#39;affichage." alt="" coords="208,5,291,32"/>
-<area shape="rect" href="class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="339,5,441,32"/>
+<area shape="rect" href="class_card.html#ab6d4bf92eefe79fdebb8cd6ff4062c8f" title="Fonction d&#39;affichage par ligne Pour l&#39;affiche en ligne et non pas en colonne." alt="" coords="339,5,445,32"/>
+<area shape="rect" href="class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="493,5,596,32"/>
 </map>
 </div>
 
@@ -659,7 +870,35 @@ Voici le graphe d'appel pour cette fonction :</div>
 <map name="aclass_deck_ac6cc6ebfea343b238ccbcef810dc8243_cgraph" id="aclass_deck_ac6cc6ebfea343b238ccbcef810dc8243_cgraph">
 <area shape="rect" title="Affiche toute les cartes du joueurs." alt="" coords="5,5,129,32"/>
 <area shape="rect" href="class_card.html#a50cb7f8100fb16db6e4de406d7e5af05" title="Fonction d&#39;affichage." alt="" coords="177,5,260,32"/>
-<area shape="rect" href="class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="308,5,411,32"/>
+<area shape="rect" href="class_card.html#ab6d4bf92eefe79fdebb8cd6ff4062c8f" title="Fonction d&#39;affichage par ligne Pour l&#39;affiche en ligne et non pas en colonne." alt="" coords="308,5,415,32"/>
+<area shape="rect" href="class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="463,5,565,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab77b183ab76fa3b19975cb5ca2cb2092" name="ab77b183ab76fa3b19975cb5ca2cb2092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab77b183ab76fa3b19975cb5ca2cb2092">&#9670;&nbsp;</a></span>removeCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Deck::removeCard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_card.html">Card</a> *&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="class_deck_ab77b183ab76fa3b19975cb5ca2cb2092_icgraph.png" border="0" usemap="#aclass_deck_ab77b183ab76fa3b19975cb5ca2cb2092_icgraph" alt=""/></div>
+<map name="aclass_deck_ab77b183ab76fa3b19975cb5ca2cb2092_icgraph" id="aclass_deck_ab77b183ab76fa3b19975cb5ca2cb2092_icgraph">
+<area shape="rect" title=" " alt="" coords="188,5,316,32"/>
+<area shape="rect" href="class_player.html#aabd5e20b909a56795d55fce31a48b3f5" title=" " alt="" coords="5,5,140,32"/>
 </map>
 </div>
 
@@ -699,6 +938,28 @@ Voici le graphe d'appel pour cette fonction :</div>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="class_card.html">Card</a>*&gt; Deck::disCards</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e5cd936c100c51b25bed44df933a2bc" name="a2e5cd936c100c51b25bed44df933a2bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e5cd936c100c51b25bed44df933a2bc">&#9670;&nbsp;</a></span>enchantmentInGame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_card.html">Card</a>*&gt; Deck::enchantmentInGame</td>
         </tr>
       </table>
   </td>
@@ -778,7 +1039,6 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
 <li>Source/header/<a class="el" href="_deck_8h_source.html">Deck.h</a></li>
-<li>Source/data/<a class="el" href="test_json_8cpp.html">testJson.cpp</a></li>
 <li>Source/src/<a class="el" href="_deck_8cpp.html">Deck.cpp</a></li>
 </ul>
 </div><!-- contents -->

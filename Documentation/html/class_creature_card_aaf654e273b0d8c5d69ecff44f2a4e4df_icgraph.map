@@ -1,0 +1,4 @@
+<map id="CreatureCard::resetHp" name="CreatureCard::resetHp">
+<area shape="rect" id="node1" title="Réinitialise les points de vie de la créature." alt="" coords="219,5,369,32"/>
+<area shape="rect" id="node2" href="$class_creature_card.html#a3871f99a27950727195b0a56dc0aa9cd" title="Désengager une carte." alt="" coords="5,5,171,32"/>
+</map>

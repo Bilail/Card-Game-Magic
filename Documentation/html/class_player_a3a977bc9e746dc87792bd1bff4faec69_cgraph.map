@@ -1,0 +1,4 @@
+<map id="Player::getCreatureCard" name="Player::getCreatureCard">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,167,32"/>
+<area shape="rect" id="node2" href="$class_deck.html#a3fa8046332855fde6bf04af0039d43c5" title=" " alt="" coords="215,5,369,32"/>
+</map>

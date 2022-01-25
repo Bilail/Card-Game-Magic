@@ -13,25 +13,28 @@
 \DoxyCodeLine{9 }
 \DoxyCodeLine{10 \textcolor{keyword}{class }CreatureCard : \textcolor{keyword}{public} Card  \{}
 \DoxyCodeLine{11 \textcolor{keyword}{public}:}
-\DoxyCodeLine{20     CreatureCard(std::string nam, std::vector<int> mC, std::string cl, \textcolor{keywordtype}{int} ap, \textcolor{keywordtype}{int} hp);}
+\DoxyCodeLine{20     CreatureCard(std::string nam, std::vector<int> mC, std::vector<std::string> capa, std::string cl, \textcolor{keywordtype}{int} ap, \textcolor{keywordtype}{int} hp);}
 \DoxyCodeLine{25     \textcolor{keywordtype}{int} getHp() \textcolor{keyword}{const};}
 \DoxyCodeLine{30     \textcolor{keywordtype}{int} getAttackPower() \textcolor{keyword}{const};}
-\DoxyCodeLine{35     \textcolor{keywordtype}{void} setHp(\textcolor{keywordtype}{int} hp);}
-\DoxyCodeLine{40     \textcolor{keywordtype}{void} setAttackPower(\textcolor{keywordtype}{int} attackPower);}
-\DoxyCodeLine{41     \textcolor{keywordtype}{void} invocate();}
-\DoxyCodeLine{46     \textcolor{keywordtype}{bool} isFirstTurn();}
-\DoxyCodeLine{50     \textcolor{keywordtype}{void} print();}
-\DoxyCodeLine{55     \textcolor{keywordtype}{void} printLine(\textcolor{keywordtype}{int} line);}
-\DoxyCodeLine{56     \textcolor{keywordtype}{void} attack();}
-\DoxyCodeLine{57 }
-\DoxyCodeLine{58 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{59     \textcolor{keywordtype}{int} hp;}
-\DoxyCodeLine{60     \textcolor{keywordtype}{int} defaultHp;}
-\DoxyCodeLine{61     \textcolor{keywordtype}{int} attackPower;}
-\DoxyCodeLine{62     \textcolor{keywordtype}{bool} firstTurn;}
-\DoxyCodeLine{63 \};}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{65 }
-\DoxyCodeLine{66 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_CREATURECARD\_H}}
+\DoxyCodeLine{35     std::vector<std::string> getCapacities() \textcolor{keyword}{const};}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} setHp(\textcolor{keywordtype}{int} hp);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} setAttackPower(\textcolor{keywordtype}{int} attackPower);}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} setFirstTurn(\textcolor{keywordtype}{int} b);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{bool} isFirstTurn();}
+\DoxyCodeLine{60     std::string capacitiesToString();}
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} printLine(\textcolor{keywordtype}{int} line);}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} disengage();}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} resetHp();}
+\DoxyCodeLine{79     \textcolor{keywordtype}{bool} hasCapacity(std::string capacity);}
+\DoxyCodeLine{80 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{81     \textcolor{keywordtype}{int} hp;}
+\DoxyCodeLine{82     \textcolor{keywordtype}{int} defaultHp;}
+\DoxyCodeLine{83     \textcolor{keywordtype}{int} attackPower;}
+\DoxyCodeLine{84     \textcolor{keywordtype}{bool} firstTurn;}
+\DoxyCodeLine{85     std::vector<std::string> capacities;}
+\DoxyCodeLine{86 \};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAGIC\_CREATURECARD\_H}}
 
 \end{DoxyCode}

@@ -63,6 +63,6 @@ void EnchantmentCard::associate(Card* c){
     this->asso = c;
 }
 
-card* EnchantmentCard::getAsso(){
+Card* EnchantmentCard::getAsso(){
     return asso;
 }

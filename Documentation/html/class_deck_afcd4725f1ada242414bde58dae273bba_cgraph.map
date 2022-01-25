@@ -1,5 +1,6 @@
 <map id="Deck::printInPlayCards" name="Deck::printInPlayCards">
 <area shape="rect" id="node1" title="Affiche les cartes que le joueur peut jouer." alt="" coords="5,5,160,32"/>
 <area shape="rect" id="node2" href="$class_card.html#a50cb7f8100fb16db6e4de406d7e5af05" title="Fonction d&#39;affichage." alt="" coords="208,5,291,32"/>
-<area shape="rect" id="node3" href="$class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="339,5,441,32"/>
+<area shape="rect" id="node3" href="$class_card.html#ab6d4bf92eefe79fdebb8cd6ff4062c8f" title="Fonction d&#39;affichage par ligne Pour l&#39;affiche en ligne et non pas en colonne." alt="" coords="339,5,445,32"/>
+<area shape="rect" id="node4" href="$class_str_color.html#aad4aa345b5f0fe83eb77bfce3cea0157" title=" " alt="" coords="493,5,596,32"/>
 </map>

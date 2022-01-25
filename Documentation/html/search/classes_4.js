@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['player_0',['Player',['../class_player.html',1,'']]]
+  ['landcard_0',['LandCard',['../class_land_card.html',1,'']]]
 ];

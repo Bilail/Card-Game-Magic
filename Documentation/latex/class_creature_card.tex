@@ -6,7 +6,8 @@
 
 
 
-Graphe d\textquotesingle{}héritage de Creature\+Card\+:\nopagebreak
+Graphe d\textquotesingle{}héritage de Creature\+Card\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,8 @@ Graphe d\textquotesingle{}héritage de Creature\+Card\+:\nopagebreak
 \end{figure}
 
 
-Graphe de collaboration de Creature\+Card\+:\nopagebreak
+Graphe de collaboration de Creature\+Card\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,26 +27,32 @@ Graphe de collaboration de Creature\+Card\+:\nopagebreak
 \doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Creature\+Card} (std\+::string nam, std\+::vector$<$ int $>$ mC, std\+::string cl, int ap, int \textbf{ hp})
+\textbf{ Creature\+Card} (std\+::string nam, std\+::vector$<$ int $>$ mC, std\+::vector$<$ std\+::string $>$ capa, std\+::string cl, int ap, int \textbf{ hp})
 \begin{DoxyCompactList}\small\item\em Constructeurs des cartes créatures. \end{DoxyCompactList}\item 
 int \textbf{ get\+Hp} () const
-\begin{DoxyCompactList}\small\item\em Récuper les points de vie. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Récupère les points de vie. \end{DoxyCompactList}\item 
 int \textbf{ get\+Attack\+Power} () const
-\begin{DoxyCompactList}\small\item\em Recuper les points d\textquotesingle{}attaques. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Récupère les points d\textquotesingle{}attaques. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \textbf{ get\+Capacities} () const
+\begin{DoxyCompactList}\small\item\em getter pour les capacités \end{DoxyCompactList}\item 
 void \textbf{ set\+Hp} (int \textbf{ hp})
 \begin{DoxyCompactList}\small\item\em Set les hp. \end{DoxyCompactList}\item 
 void \textbf{ set\+Attack\+Power} (int \textbf{ attack\+Power})
 \begin{DoxyCompactList}\small\item\em Set l\textquotesingle{}attaque. \end{DoxyCompactList}\item 
-void \textbf{ invocate} ()
-\item 
+void \textbf{ set\+First\+Turn} (int b)
+\begin{DoxyCompactList}\small\item\em set le boolean first\+Turn \end{DoxyCompactList}\item 
 bool \textbf{ is\+First\+Turn} ()
 \begin{DoxyCompactList}\small\item\em boolean si premier tour \end{DoxyCompactList}\item 
-void \textbf{ print} ()
-\begin{DoxyCompactList}\small\item\em Affichage. \end{DoxyCompactList}\item 
+std\+::string \textbf{ capacities\+To\+String} ()
+\begin{DoxyCompactList}\small\item\em Affichage des capacités. \end{DoxyCompactList}\item 
 void \textbf{ print\+Line} (int line)
 \begin{DoxyCompactList}\small\item\em Affichage par ligne. \end{DoxyCompactList}\item 
-void \textbf{ attack} ()
-\end{DoxyCompactItemize}
+void \textbf{ disengage} ()
+\begin{DoxyCompactList}\small\item\em Désengager une carte. \end{DoxyCompactList}\item 
+void \textbf{ reset\+Hp} ()
+\begin{DoxyCompactList}\small\item\em Réinitialise les points de vie de la créature. \end{DoxyCompactList}\item 
+bool \textbf{ has\+Capacity} (std\+::string capacity)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si la carte possède la capacité transmise en paramètre. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Attributs protégés}
 \begin{DoxyCompactItemize}
 \item 
@@ -55,16 +63,18 @@ int \textbf{ default\+Hp}
 int \textbf{ attack\+Power}
 \item 
 bool \textbf{ first\+Turn}
+\item 
+std\+::vector$<$ std\+::string $>$ \textbf{ capacities}
 \end{DoxyCompactItemize}
 \doxysubsection*{Membres hérités additionnels}
 
 
 \doxysubsection{Documentation des constructeurs et destructeur}
-\mbox{\label{class_creature_card_a07476aed8380d9520867d77553586b74}} 
+\mbox{\label{class_creature_card_ad23365075920b3e72bbe9dbb4688ee30}} 
 \index{CreatureCard@{CreatureCard}!CreatureCard@{CreatureCard}}
 \index{CreatureCard@{CreatureCard}!CreatureCard@{CreatureCard}}
 \doxysubsubsection{CreatureCard()}
-{\footnotesize\ttfamily Creature\+Card\+::\+Creature\+Card (\begin{DoxyParamCaption}\item[{std\+::string}]{nam,  }\item[{std\+::vector$<$ int $>$}]{mC,  }\item[{std\+::string}]{cl,  }\item[{int}]{ap,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Creature\+Card\+::\+Creature\+Card (\begin{DoxyParamCaption}\item[{std\+::string}]{nam,  }\item[{std\+::vector$<$ int $>$}]{mC,  }\item[{std\+::vector$<$ std\+::string $>$}]{capa,  }\item[{std\+::string}]{cl,  }\item[{int}]{ap,  }\item[{int}]{hp }\end{DoxyParamCaption})}
 
 
 
@@ -76,7 +86,7 @@ Constructeurs des cartes créatures.
 \hline
 {\em cout} & en terrain \\
 \hline
-{\em couelur} & \\
+{\em couleur} & \\
 \hline
 {\em attaque} & \\
 \hline
@@ -86,17 +96,55 @@ Constructeurs des cartes créatures.
 
 
 \doxysubsection{Documentation des fonctions membres}
-\mbox{\label{class_creature_card_af60802e4cf9f07e3e05330c5b774bdb0}} 
-\index{CreatureCard@{CreatureCard}!attack@{attack}}
-\index{attack@{attack}!CreatureCard@{CreatureCard}}
-\doxysubsubsection{attack()}
-{\footnotesize\ttfamily void Creature\+Card\+::attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\label{class_creature_card_ab6d5149dd6c66fdc0c5853623a00aade}} 
+\index{CreatureCard@{CreatureCard}!capacitiesToString@{capacitiesToString}}
+\index{capacitiesToString@{capacitiesToString}!CreatureCard@{CreatureCard}}
+\doxysubsubsection{capacitiesToString()}
+{\footnotesize\ttfamily std\+::string Creature\+Card\+::capacities\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+
+
+Affichage des capacités. 
+
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=297pt]{class_creature_card_af60802e4cf9f07e3e05330c5b774bdb0_cgraph}
+\includegraphics[width=320pt]{class_creature_card_ab6d5149dd6c66fdc0c5853623a00aade_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_creature_card_ab6d5149dd6c66fdc0c5853623a00aade_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_creature_card_a3871f99a27950727195b0a56dc0aa9cd}} 
+\index{CreatureCard@{CreatureCard}!disengage@{disengage}}
+\index{disengage@{disengage}!CreatureCard@{CreatureCard}}
+\doxysubsubsection{disengage()}
+{\footnotesize\ttfamily void Creature\+Card\+::disengage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Désengager une carte. 
+
+
+
+Réimplémentée à partir de \textbf{ Card} \doxyref{}{p.}{class_card_ad72326463fd58f420ef32bd8617f8580}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_creature_card_a3871f99a27950727195b0a56dc0aa9cd_cgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_creature_card_aa877969081ecf4de9caf74c8fb1e20c6}} 
@@ -107,10 +155,23 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 
 
 
-Recuper les points d\textquotesingle{}attaques. 
+Récupère les points d\textquotesingle{}attaques. 
 
 \begin{DoxyReturn}{Renvoie}
 attaque 
+\end{DoxyReturn}
+\mbox{\label{class_creature_card_a2845208f7d3fb828e67cc830887cb0fa}} 
+\index{CreatureCard@{CreatureCard}!getCapacities@{getCapacities}}
+\index{getCapacities@{getCapacities}!CreatureCard@{CreatureCard}}
+\doxysubsubsection{getCapacities()}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Creature\+Card\+::get\+Capacities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+getter pour les capacités 
+
+\begin{DoxyReturn}{Renvoie}
+
 \end{DoxyReturn}
 \mbox{\label{class_creature_card_ad92541fc66484f07b1fc243c53d17376}} 
 \index{CreatureCard@{CreatureCard}!getHp@{getHp}}
@@ -120,17 +181,29 @@ attaque
 
 
 
-Récuper les points de vie. 
+Récupère les points de vie. 
 
 \begin{DoxyReturn}{Renvoie}
 hp 
 \end{DoxyReturn}
-\mbox{\label{class_creature_card_a78cb8a58e2ef85ef512cf96859204e17}} 
-\index{CreatureCard@{CreatureCard}!invocate@{invocate}}
-\index{invocate@{invocate}!CreatureCard@{CreatureCard}}
-\doxysubsubsection{invocate()}
-{\footnotesize\ttfamily void Creature\+Card\+::invocate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\label{class_creature_card_aed8473bd6ecb62eced9ff32ce4d8b722}} 
+\index{CreatureCard@{CreatureCard}!hasCapacity@{hasCapacity}}
+\index{hasCapacity@{hasCapacity}!CreatureCard@{CreatureCard}}
+\doxysubsubsection{hasCapacity()}
+{\footnotesize\ttfamily bool Creature\+Card\+::has\+Capacity (\begin{DoxyParamCaption}\item[{std\+::string}]{capacity }\end{DoxyParamCaption})}
 
+
+
+Permet de savoir si la carte possède la capacité transmise en paramètre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em capacity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+
+\end{DoxyReturn}
 \mbox{\label{class_creature_card_aac9f7b9f17ff68a626522665fd106167}} 
 \index{CreatureCard@{CreatureCard}!isFirstTurn@{isFirstTurn}}
 \index{isFirstTurn@{isFirstTurn}!CreatureCard@{CreatureCard}}
@@ -144,27 +217,6 @@ boolean si premier tour
 \begin{DoxyReturn}{Renvoie}
 
 \end{DoxyReturn}
-\mbox{\label{class_creature_card_a74c0d3710cac9fd4bd33d125f762fe7b}} 
-\index{CreatureCard@{CreatureCard}!print@{print}}
-\index{print@{print}!CreatureCard@{CreatureCard}}
-\doxysubsubsection{print()}
-{\footnotesize\ttfamily void Creature\+Card\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Affichage. 
-
-
-
-Réimplémentée à partir de \textbf{ Card} \doxyref{}{p.}{class_card_a50cb7f8100fb16db6e4de406d7e5af05}.
-
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_creature_card_a74c0d3710cac9fd4bd33d125f762fe7b_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{class_creature_card_ae497df8f788c28bd962ae95dda29450f}} 
 \index{CreatureCard@{CreatureCard}!printLine@{printLine}}
 \index{printLine@{printLine}!CreatureCard@{CreatureCard}}
@@ -184,11 +236,30 @@ Affichage par ligne.
 
 Réimplémentée à partir de \textbf{ Card} \doxyref{}{p.}{class_card_ab6d4bf92eefe79fdebb8cd6ff4062c8f}.
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_creature_card_ae497df8f788c28bd962ae95dda29450f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_creature_card_aaf654e273b0d8c5d69ecff44f2a4e4df}} 
+\index{CreatureCard@{CreatureCard}!resetHp@{resetHp}}
+\index{resetHp@{resetHp}!CreatureCard@{CreatureCard}}
+\doxysubsubsection{resetHp()}
+{\footnotesize\ttfamily void Creature\+Card\+::reset\+Hp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Réinitialise les points de vie de la créature. 
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_creature_card_aaf654e273b0d8c5d69ecff44f2a4e4df_icgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_creature_card_a4b2c5a457332c9bf401ea3a7b94a884a}} 
@@ -204,6 +275,21 @@ Set l\textquotesingle{}attaque.
 
 \begin{DoxyParams}{Paramètres}
 {\em attack\+Power} & \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_creature_card_a013d926be4ef0f83ba02b6bda36e214e}} 
+\index{CreatureCard@{CreatureCard}!setFirstTurn@{setFirstTurn}}
+\index{setFirstTurn@{setFirstTurn}!CreatureCard@{CreatureCard}}
+\doxysubsubsection{setFirstTurn()}
+{\footnotesize\ttfamily void Creature\+Card\+::set\+First\+Turn (\begin{DoxyParamCaption}\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+set le boolean first\+Turn 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em b} & \\
 \hline
 \end{DoxyParams}
 \mbox{\label{class_creature_card_a8889874c805ca2bcfc3619c9ad7f8dbf}} 
@@ -229,6 +315,12 @@ Set les hp.
 \index{attackPower@{attackPower}!CreatureCard@{CreatureCard}}
 \doxysubsubsection{attackPower}
 {\footnotesize\ttfamily int Creature\+Card\+::attack\+Power\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_creature_card_a173cbd5487c396e6041107c0bdf182c8}} 
+\index{CreatureCard@{CreatureCard}!capacities@{capacities}}
+\index{capacities@{capacities}!CreatureCard@{CreatureCard}}
+\doxysubsubsection{capacities}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Creature\+Card\+::capacities\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\label{class_creature_card_ad9c6643dd37bfdd204051b208b64853a}} 
 \index{CreatureCard@{CreatureCard}!defaultHp@{defaultHp}}

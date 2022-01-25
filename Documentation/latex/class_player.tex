@@ -6,7 +6,8 @@
 
 
 
-Graphe de collaboration de Player\+:\nopagebreak
+Graphe de collaboration de Player\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,13 +22,13 @@ Graphe de collaboration de Player\+:\nopagebreak
 \textbf{ $\sim$\+Player} ()
 \item 
 void \textbf{ set\+Print\+Color} (std\+::string color)
-\begin{DoxyCompactList}\small\item\em set la coleur du joueur \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em set la couleur du joueur \end{DoxyCompactList}\item 
 std\+::string \textbf{ get\+Name} ()
 \begin{DoxyCompactList}\small\item\em Set le nom du joueurs. \end{DoxyCompactList}\item 
 std\+::string \textbf{ get\+Colored\+Name} ()
 \item 
 int \textbf{ get\+Hp} ()
-\begin{DoxyCompactList}\small\item\em récuperer les hp du joueurs \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em récupère les hp du joueurs \end{DoxyCompactList}\item 
 void \textbf{ set\+Hp} (int hp)
 \begin{DoxyCompactList}\small\item\em set les hp du joueurs \end{DoxyCompactList}\item 
 bool \textbf{ draw\+Card} ()
@@ -45,6 +46,18 @@ std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ get\+Defense\+Cards} ()
 std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ get\+Hand\+Cards} ()
 \begin{DoxyCompactList}\small\item\em envoyer une carte au cimetière \end{DoxyCompactList}\item 
 void \textbf{ discard\+Card} (\textbf{ Card} $\ast$c)
+\item 
+bool \textbf{ has\+Enchant} (std\+::string enchant\+Card)
+\item 
+std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ get\+Creature\+Card} ()
+\item 
+std\+::vector$<$ \textbf{ Card} $\ast$ $>$ \textbf{ get\+Card\+In\+Play} ()
+\item 
+int \textbf{ get\+Nb\+Forest} ()
+\item 
+void \textbf{ add\+Card\+In\+Play} (\textbf{ Card} $\ast$c)
+\item 
+void \textbf{ remove\+Card} (\textbf{ Card} $\ast$c)
 \end{DoxyCompactItemize}
 \doxysubsection*{Attributs protégés}
 \begin{DoxyCompactItemize}
@@ -62,7 +75,7 @@ int \textbf{ current\+Hp}
 \doxysubsection*{Attributs protégés statiques}
 \begin{DoxyCompactItemize}
 \item 
-static int \textbf{ base\+Hp} = 4
+static int \textbf{ base\+Hp} = 20
 \end{DoxyCompactItemize}
 
 
@@ -86,17 +99,32 @@ Constructeur d\textquotesingle{}un joueur.
 
 
 \doxysubsection{Documentation des fonctions membres}
+\mbox{\label{class_player_a48ea1830bdbcd5dbedd0001cb5537cb3}} 
+\index{Player@{Player}!addCardInPlay@{addCardInPlay}}
+\index{addCardInPlay@{addCardInPlay}!Player@{Player}}
+\doxysubsubsection{addCardInPlay()}
+{\footnotesize\ttfamily void Player\+::add\+Card\+In\+Play (\begin{DoxyParamCaption}\item[{\textbf{ Card} $\ast$}]{c }\end{DoxyParamCaption})}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_player_a48ea1830bdbcd5dbedd0001cb5537cb3_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_player_a3d6549590fb8e154951c873d6bfb412e}} 
 \index{Player@{Player}!discardCard@{discardCard}}
 \index{discardCard@{discardCard}!Player@{Player}}
 \doxysubsubsection{discardCard()}
 {\footnotesize\ttfamily void Player\+::discard\+Card (\begin{DoxyParamCaption}\item[{\textbf{ Card} $\ast$}]{c }\end{DoxyParamCaption})}
 
-Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=315pt]{class_player_a3d6549590fb8e154951c873d6bfb412e_cgraph}
+\includegraphics[width=350pt]{class_player_a3d6549590fb8e154951c873d6bfb412e_cgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_player_aa87746929fad46316b1452dd0d9b2b36}} 
@@ -170,6 +198,20 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=347pt]{class_player_a8c12eeee6d1b4718dd61ebf21750ae30_cgraph}
 \end{center}
 \end{figure}
+\mbox{\label{class_player_aa34c74eeac5aca2202d35c28396da191}} 
+\index{Player@{Player}!getCardInPlay@{getCardInPlay}}
+\index{getCardInPlay@{getCardInPlay}!Player@{Player}}
+\doxysubsubsection{getCardInPlay()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Card} $\ast$ $>$ Player\+::get\+Card\+In\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_player_aa34c74eeac5aca2202d35c28396da191_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_player_a13c963d763eca10e5527e14f6aa10393}} 
 \index{Player@{Player}!getColoredName@{getColoredName}}
 \index{getColoredName@{getColoredName}!Player@{Player}}
@@ -188,6 +230,20 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_player_a13c963d763eca10e5527e14f6aa10393_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_a3a977bc9e746dc87792bd1bff4faec69}} 
+\index{Player@{Player}!getCreatureCard@{getCreatureCard}}
+\index{getCreatureCard@{getCreatureCard}!Player@{Player}}
+\doxysubsubsection{getCreatureCard()}
+{\footnotesize\ttfamily std\+::vector$<$ \textbf{ Card} $\ast$ $>$ Player\+::get\+Creature\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a3a977bc9e746dc87792bd1bff4faec69_cgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_player_aabe0a76c0767e94328d75a32963b4de6}} 
@@ -247,12 +303,13 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 
 
 
-récuperer les hp du joueurs 
+récupère les hp du joueurs 
 
 \begin{DoxyReturn}{Renvoie}
 
 \end{DoxyReturn}
-Voici le graphe des appelants de cette fonction \+:\nopagebreak
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -279,6 +336,20 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{class_player_af1aa472885d589516f483e26e786600e_icgraph}
 \end{center}
 \end{figure}
+\mbox{\label{class_player_ae9b47f3b26914219d4760f1d2a46eefe}} 
+\index{Player@{Player}!getNbForest@{getNbForest}}
+\index{getNbForest@{getNbForest}!Player@{Player}}
+\doxysubsubsection{getNbForest()}
+{\footnotesize\ttfamily int Player\+::get\+Nb\+Forest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_player_ae9b47f3b26914219d4760f1d2a46eefe_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_player_ae0f72a15d6130e0469251bc1543cc23a}} 
 \index{Player@{Player}!getPlayableCards@{getPlayableCards}}
 \index{getPlayableCards@{getPlayableCards}!Player@{Player}}
@@ -299,6 +370,20 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \includegraphics[width=350pt]{class_player_ae0f72a15d6130e0469251bc1543cc23a_cgraph}
 \end{center}
 \end{figure}
+\mbox{\label{class_player_ab3c14e1c8a0cbeea548f6af8f128fadb}} 
+\index{Player@{Player}!hasEnchant@{hasEnchant}}
+\index{hasEnchant@{hasEnchant}!Player@{Player}}
+\doxysubsubsection{hasEnchant()}
+{\footnotesize\ttfamily bool Player\+::has\+Enchant (\begin{DoxyParamCaption}\item[{std\+::string}]{enchant\+Card }\end{DoxyParamCaption})}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_player_ab3c14e1c8a0cbeea548f6af8f128fadb_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{class_player_aa016a6401d45ac510fd71c5629b0a707}} 
 \index{Player@{Player}!playCard@{playCard}}
 \index{playCard@{playCard}!Player@{Player}}
@@ -310,6 +395,20 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_player_aa016a6401d45ac510fd71c5629b0a707_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{class_player_aabd5e20b909a56795d55fce31a48b3f5}} 
+\index{Player@{Player}!removeCard@{removeCard}}
+\index{removeCard@{removeCard}!Player@{Player}}
+\doxysubsubsection{removeCard()}
+{\footnotesize\ttfamily void Player\+::remove\+Card (\begin{DoxyParamCaption}\item[{\textbf{ Card} $\ast$}]{c }\end{DoxyParamCaption})}
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_player_aabd5e20b909a56795d55fce31a48b3f5_cgraph}
 \end{center}
 \end{figure}
 \mbox{\label{class_player_a021f86d4c3ff6e81ec19b77c38550fe9}} 
@@ -342,7 +441,7 @@ Voici le graphe des appelants de cette fonction \+:\nopagebreak
 
 
 
-set la coleur du joueur 
+set la couleur du joueur 
 
 
 \begin{DoxyParams}{Paramètres}
@@ -356,7 +455,7 @@ set la coleur du joueur
 \index{Player@{Player}!baseHp@{baseHp}}
 \index{baseHp@{baseHp}!Player@{Player}}
 \doxysubsubsection{baseHp}
-{\footnotesize\ttfamily int Player\+::base\+Hp = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+{\footnotesize\ttfamily int Player\+::base\+Hp = 20\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
 \mbox{\label{class_player_a8a6eab4cd07b6c75151360ccfb4ad9a1}} 
 \index{Player@{Player}!cards@{cards}}

@@ -21,7 +21,7 @@
 int Game::MAX_CARDS_IN_HAND = 7;
 
 void wait(int sec) {
-    bool activateDelayedTransition = false;
+    bool activateDelayedTransition = true;
     if (activateDelayedTransition)
         std::this_thread::sleep_for(std::chrono::seconds(sec));
 }
@@ -527,7 +527,7 @@ void Game::fightPhase() {
                 }
             }
             else {
-                std::cout << "Vous n'avez aucune créature d'engagée donc vous ne pouvez pas vous défendre.\n";
+                std::cout << "Vous n'avez aucune créature désengagée donc vous ne pouvez pas vous défendre.\n";
             }
         }
         std::cout << "\nC'est à " << playerTurn->getColoredName() << " de reprendre la main.\n\n";

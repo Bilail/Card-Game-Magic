@@ -155,7 +155,7 @@ void Deck::discardCard(Card *c) {
             inPlayCards.erase(inPlayCards.begin()+i);
             for(int j = 0; j < enchantmentInGame.size(); j++){
                 // Si la carte détruite est associé à un enchantement, on détruit aussi cet enchantement
-                EnchantmentCard* enchant = dynamic_cast<EnchantmentCard*>(enchantmentInGame.at(i));
+                EnchantmentCard* enchant = dynamic_cast<EnchantmentCard*>(enchantmentInGame.at(j));
                 if (enchant->getAsso() == c)
                 {
                     enchantmentInGame.erase(enchantmentInGame.begin()+j);

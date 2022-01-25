@@ -1,0 +1,8 @@
+<map id="DeckCreator::startApp" name="DeckCreator::startApp">
+<area shape="rect" id="node1" title="démarre l&#39;application qui gère la création de deck" alt="" coords="5,56,156,83"/>
+<area shape="rect" id="node2" href="$class_deck.html#ac5daf06b803d68d7023c3626d6dfe001" title="Fonction qui convertit un deck de carte en fichier json." alt="" coords="222,5,359,32"/>
+<area shape="rect" id="node3" href="$class_game_cards.html#a596d9655f13e0eb9f51a26cd6306584c" title=" " alt="" coords="204,56,377,83"/>
+<area shape="rect" id="node4" href="$class_deck_creator.html#a633c971f2c577b1a3b74fad58325a32c" title="Affiche le titre de l&#39;application." alt="" coords="204,107,377,133"/>
+<area shape="rect" id="node5" href="$class_str_color.html#a42970b32576afbc0fdc13bd4c28be007" title=" " alt="" coords="436,81,541,108"/>
+<area shape="rect" id="node6" href="$class_str_color.html#ada43fbbdae825878a41923fcbaec79ff" title=" " alt="" coords="425,132,552,159"/>
+</map>

@@ -9,6 +9,12 @@ var dir_494333d89aed4c0f17b9a3f710ec4cb2 =
     [ "Deck.h", "_deck_8h.html", [
       [ "Deck", "class_deck.html", "class_deck" ]
     ] ],
+    [ "DeckCreator.h", "_deck_creator_8h.html", [
+      [ "DeckCreator", "class_deck_creator.html", "class_deck_creator" ]
+    ] ],
+    [ "EnchantmentCard.h", "_enchantment_card_8h.html", [
+      [ "EnchantmentCard", "class_enchantment_card.html", "class_enchantment_card" ]
+    ] ],
     [ "Game.h", "_game_8h.html", [
       [ "Game", "class_game.html", "class_game" ]
     ] ],

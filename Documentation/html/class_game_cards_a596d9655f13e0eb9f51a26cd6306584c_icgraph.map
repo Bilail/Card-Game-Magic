@@ -1,4 +1,5 @@
 <map id="GameCards::getCreatures" name="GameCards::getCreatures">
-<area shape="rect" id="node1" title=" " alt="" coords="144,5,317,32"/>
-<area shape="rect" id="node2" href="$class_deck.html#a57ae1cb4ac6fd61c249cefb2db85eb99" title="Constructeur avec un deck par default." alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="303,5,476,32"/>
+<area shape="rect" id="node2" href="$class_deck_creator.html#abf14bb7ff8b411de452a65df0f697f4a" title="démarre l&#39;application qui gère la création de deck" alt="" coords="104,5,255,32"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>

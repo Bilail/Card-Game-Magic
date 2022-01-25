@@ -1,5 +1,4 @@
 <map id="Deck::Deck" name="Deck::Deck">
-<area shape="rect" id="node1" title="Constructeur avec un deck par default." alt="" coords="5,31,96,57"/>
-<area shape="rect" id="node2" href="$class_game_cards.html#a596d9655f13e0eb9f51a26cd6306584c" title=" " alt="" coords="144,5,317,32"/>
-<area shape="rect" id="node3" href="$class_game_cards.html#acfff5e5295f7025feea27d99a3720b32" title=" " alt="" coords="155,56,307,83"/>
+<area shape="rect" id="node1" title="Constructeur avec un deck par default." alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node2" href="$class_deck.html#a6c51cb1cead0502af0a851137c7665fa" title="Fonction qui convertit un fichier json de carte en deck jouable." alt="" coords="144,5,297,32"/>
 </map>

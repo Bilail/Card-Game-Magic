@@ -1,5 +1,6 @@
 <map id="Card" name="Card">
-<area shape="rect" id="node1" title=" " alt="" coords="72,5,267,669"/>
-<area shape="rect" id="node2" href="$class_creature_card.html" title=" " alt="" coords="5,717,157,1059"/>
-<area shape="rect" id="node3" href="$class_land_card.html" title=" " alt="" coords="182,813,333,963"/>
+<area shape="rect" id="node1" title=" " alt="" coords="183,5,378,669"/>
+<area shape="rect" id="node2" href="$class_creature_card.html" title=" " alt="" coords="5,717,175,1191"/>
+<area shape="rect" id="node3" href="$class_enchantment_card.html" title=" " alt="" coords="199,842,363,1066"/>
+<area shape="rect" id="node4" href="$class_land_card.html" title=" " alt="" coords="387,886,537,1022"/>
 </map>

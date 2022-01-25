@@ -1,4 +1,4 @@
 <map id="GameCards::getLands" name="GameCards::getLands">
 <area shape="rect" id="node1" title=" " alt="" coords="144,5,296,32"/>
-<area shape="rect" id="node2" href="$class_deck.html#a57ae1cb4ac6fd61c249cefb2db85eb99" title="Constructeur avec un deck par default." alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node2" href="$class_deck.html#acb8d07c12cc5dec246cc0f766452e8f9" title="Constructeur avec le choix des créatures." alt="" coords="5,5,96,32"/>
 </map>

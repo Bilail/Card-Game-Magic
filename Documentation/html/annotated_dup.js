@@ -3,6 +3,8 @@ var annotated_dup =
     [ "Card", "class_card.html", "class_card" ],
     [ "CreatureCard", "class_creature_card.html", "class_creature_card" ],
     [ "Deck", "class_deck.html", "class_deck" ],
+    [ "DeckCreator", "class_deck_creator.html", "class_deck_creator" ],
+    [ "EnchantmentCard", "class_enchantment_card.html", "class_enchantment_card" ],
     [ "Game", "class_game.html", "class_game" ],
     [ "GameCards", "class_game_cards.html", "class_game_cards" ],
     [ "LandCard", "class_land_card.html", "class_land_card" ],

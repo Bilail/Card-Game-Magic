@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['yellow_0',['yellow',['../class_str_color.html#ab79b28e206e66aa182ff9233a250fb6a',1,'StrColor']]]
+  ['wait_0',['wait',['../_game_8cpp.html#a55d083d007e76bbb5e0df50d927c163f',1,'Game.cpp']]],
+  ['white_1',['white',['../class_str_color.html#a3e1cb928a3fe812681ba35508bb3d741',1,'StrColor::white()'],['../_enchantment_card_8cpp.html#a1b39de26de6e9a384957f3c0669a358dade7bfe6c82a2aaaee276f752cdadf3a9',1,'white():&#160;EnchantmentCard.cpp']]]
 ];
