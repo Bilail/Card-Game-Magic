@@ -4,17 +4,33 @@
     "Creature":
     [
       {
-        "name": "Soldier",
-        "cost": [0, 0, 0, 1, 0, 2],
-        "capacities": [],
+        "name": "Dope",
+        "cost": [0, 0, 0, 0, 0, 1],
+        "capacities": ["imblocable", "lien de vie", "pietinement"],
+        "color": "red",
+        "attack": 9,
+        "hp": 9
+      },
+      {
+        "name": "Wabbit",
+        "cost": [0, 0, 0, 1, 0, 0],
+        "capacities": ["hate"],
         "color": "yellow",
         "attack": 1,
         "hp": 1
       },
       {
+        "name": "Soldier",
+        "cost": [0, 0, 0, 1, 0, 2],
+        "capacities": ["hate"],
+        "color": "yellow",
+        "attack": 1,
+        "hp": 2
+      },
+      {
         "name":"ArmoredPegasus",
         "cost": [0,0,0,1,0,1],
-        "capacities": [],
+        "capacities": ["vol"],
         "color": "yellow",
         "attack": 1 ,
         "hp": 2
@@ -22,7 +38,7 @@
       {
         "name": "Phase Dolphin",
         "cost": [0,2,0,0,0,2],
-        "capacities": ["hate"],
+        "capacities": ["hate", "portee"],
         "color": "blue",
         "attack":1 ,
         "hp":4
@@ -30,7 +46,7 @@
       {
         "name": "AngryBear",
         "cost": [1,0,0,0,0,1],
-        "capacities": [],
+        "capacities": ["pietinement"],
         "color": "green",
         "attack": 3,
         "hp": 2
@@ -46,7 +62,7 @@
       {
         "name": "Werewolf",
         "cost": [1,0,0,0,0,4],
-        "capacities": [],
+        "capacities": ["pietinement"],
         "color": "green",
         "attack": 4,
         "hp": 6
@@ -54,7 +70,7 @@
       {
         "name": "Skeleton",
         "cost": [0,0,0,0,1,1],
-        "capacities": [],
+        "capacities": ["portee"],
         "color": "black",
         "attack": 1,
         "hp": 1
@@ -62,7 +78,7 @@
       {
         "name": "Ghost",
         "cost": [0,0,0,0,1,2],
-        "capacities": [],
+        "capacities": ["defenseur"],
         "color": "black",
         "attack": 2,
         "hp": 1
@@ -70,7 +86,7 @@
       {
         "name": "BlackKnight",
         "cost": [0,0,0,0,1,2],
-        "capacities": [],
+        "capacities": ["imblocable"],
         "color": "black",
         "attack": 2,
         "hp": 2
@@ -78,7 +94,7 @@
       {
         "name": "Naga Eternal",
         "cost": [0,2,0,0,0,1],
-        "capacities": [],
+        "capacities": ["lien de vie"],
         "color": "blue",
         "attack": 3,
         "hp": 2
@@ -92,12 +108,28 @@
         "hp": 3
       },
       {
+        "name": "Eagle",
+        "cost": [0,0,2,0,0,1],
+        "capacities": ["vol"],
+        "color": "red",
+        "attack": 3,
+        "hp": 2
+      },
+      {
+        "name": "Lion",
+        "cost": [0,0,2,0,0,2],
+        "capacities": ["pietinement"],
+        "color": "red",
+        "attack": 3,
+        "hp": 3
+      },
+      {
         "name": "Hobgoblin",
         "cost": [0,1,2,1,0,3],
         "capacities": ["portee"],
         "color": "red",
-        "attack": 3,
-        "hp": 3
+        "attack": 5,
+        "hp": 5
       }
     ],
     "Land" :

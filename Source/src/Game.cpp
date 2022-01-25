@@ -21,7 +21,7 @@
 int Game::MAX_CARDS_IN_HAND = 7;
 
 void wait(int sec) {
-    bool activateDelayedTransition = true;
+    bool activateDelayedTransition = false;
     if (activateDelayedTransition)
         std::this_thread::sleep_for(std::chrono::seconds(sec));
 }
@@ -353,14 +353,12 @@ Player* Game::getOpponent() {
 
 void Game::fightPhase() {
     // Si un enchantement rouge est actif on applique son effet
-
     if(playerTurn->hasEnchant("enchantRed")){
-
         std::vector<Card *> cardInGame = playerTurn->getCreatureCard();
         for (Card* c : cardInGame){
-            if (CreatureCard* c = dynamic_cast<CreatureCard*>(c))
-            c->setAttackPower(c->getAttackPower()+1);
-            //on ajoute +1 d'attaque à toute les cartes en jeux
+            if (CreatureCard* cc = dynamic_cast<CreatureCard*>(c))
+                //on ajoute +1 d'attaque à toutes les cartes en jeux
+            cc->setAttackPower(cc->getAttackPower()+1);
         }
     }
     std::vector<Card*> chosenCardsToAttack;
@@ -368,6 +366,14 @@ void Game::fightPhase() {
     while (!stopAttack)
     {
         std::vector<Card*> attackCards = playerTurn->getAttackCards();
+        for (Card* cAtk : chosenCardsToAttack) {
+            for (int i = 0; i < attackCards.size(); i++) {
+                if (cAtk == attackCards[i]) {
+                    attackCards.erase(attackCards.begin()+i);
+                    i--;
+                }
+            }
+        }
         if (attackCards.size() == 0) {
             std::cout << "Vous ne pouvez pas attaquer.\n";
             stopAttack = true;
@@ -379,7 +385,9 @@ void Game::fightPhase() {
             std::cout << std::endl;
             std::cout << "Avec qui souhaitez-vous attaquer ? (tapez \"aucune\" pour ne pas attaquer) : ";
             bool validInput = false;
+            bool cantUseThisCard = false;
             while (!validInput) {
+                cantUseThisCard = false;
                 std::string cardToPlay = "";
                 std::getline(std::cin, cardToPlay);
                 if (lower(cardToPlay) != "aucune") {
@@ -391,6 +399,7 @@ void Game::fightPhase() {
                                 if (cc->hasCapacity("defenseur")) {
                                     std::cout << "Vous ne pouvez pas attaquer avec cette carte car elle possède la capacité \"défenseur\".\n";
                                     std::cout << "Veuillez donner une autre réponse : ";
+                                    cantUseThisCard = true;
                                     break;
                                 }
                                 else {
@@ -405,6 +414,8 @@ void Game::fightPhase() {
                             }
                         }
                     }
+                    if (cantUseThisCard)
+                        continue;
                     if (validInput) {
                         std::cout << "\nVous venez d'engager la carte " << StrColor::print(cardToPlay, cardColor)
                                   << std::endl;

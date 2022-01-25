@@ -6,7 +6,7 @@
 #include "../header/StrColor.h"
 
 
-int Player::baseHp = 6;
+int Player::baseHp = 20;
 
 Player::Player(std::string name , Deck deck) {
     this->name = name;
