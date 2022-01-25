@@ -21,7 +21,7 @@
 int Game::MAX_CARDS_IN_HAND = 7;
 
 void wait(int sec) {
-    bool activateDelayedTransition = true;
+    bool activateDelayedTransition = false;
     if (activateDelayedTransition)
         std::this_thread::sleep_for(std::chrono::seconds(sec));
 }
@@ -266,7 +266,9 @@ void Game::mainPhase() {
                                     for(Card* toEnchant : inGame){
                                         if (lower(toEnchant->getName()) == lower(cardToEnchant)){
                                             // Si c'est un terrain on créer une copie du terrain
+                                            valid = true;
                                             if (dynamic_cast<const LandCard*>(toEnchant)){
+                                                std::cout << " Vous avez doublé ce terrain : " << toEnchant->getName() << std::endl;
                                                 playerTurn->getCardInPlay().push_back(toEnchant);
                                                 break;
                                             }
@@ -277,6 +279,7 @@ void Game::mainPhase() {
                                                 int nbrForest = playerTurn->getNbForest();
                                                 ctoEnchant->setAttackPower(ctoEnchant->getAttackPower()+nbrForest);
                                                 ctoEnchant->setHp(ctoEnchant->getHp()+nbrForest);
+                                                std::cout << " Vous avez ajouté : " << nbrForest << " de hp et attaque à cette carte"<< std::endl;
                                                 break;
                                             }
 
@@ -303,6 +306,7 @@ void Game::mainPhase() {
                                     for(Card* co : oCard){
                                         if (lower(co->getName()) == lower(CardToControl) ){
                                             valid = true;
+                                            std::cout << "vous venez de prendre le controle de :" << co->getName() << std::endl;
                                             playerTurn->addCardInPlay(co);
                                             opponent->removeCard(co);
 
@@ -355,11 +359,13 @@ void Game::fightPhase() {
     // Si un enchantement rouge est actif on applique son effet
 
     if(playerTurn->hasEnchant("enchantRed")){
+        std::cout << " Il y a un enchantement rouge" << std::endl;
 
         std::vector<Card *> cardInGame = playerTurn->getCreatureCard();
+
         for (Card* c : cardInGame){
-            if (CreatureCard* c = dynamic_cast<CreatureCard*>(c))
-            c->setAttackPower(c->getAttackPower()+1);
+            if (CreatureCard* cr = dynamic_cast<CreatureCard*>(c))
+            cr->setAttackPower(cr->getAttackPower()+1);
             //on ajoute +1 d'attaque à toute les cartes en jeux
         }
     }
@@ -582,6 +588,7 @@ void Game::fightPhase() {
                                  // Si une carte enchantement black est active alors l'ennemie perd 1 hp
                                 if(playerTurn->hasEnchant("enchantBlack")){
                                     opponent->setHp(opponent->getHp()-1);
+                                    std::cout << " L'adversaire perd 1 hp, hp actuel : " << opponent->getHp() << std::endl;
                                 }
                             }
                             if (offensive_c->getHp() <= 0) {
@@ -590,6 +597,7 @@ void Game::fightPhase() {
                                 // Si une carte enchantement black est active alors l'ennemie perd 1 hp
                                 if(playerTurn->hasEnchant("enchantBlack")){
                                     opponent->setHp(opponent->getHp()-1);
+                                    std::cout << " L'adversaire perd 1 hp, hp actuel : " << opponent->getHp() << std::endl;
                                 }
                             }
                         }
