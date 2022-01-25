@@ -252,7 +252,7 @@ void Game::mainPhase() {
                             if (dynamic_cast<const LandCard*>(c))
                                 playerHasPlayedLandCard =  true;
                             if (CreatureCard* cc = dynamic_cast<CreatureCard*>(c))
-                                if (cc->hasCapacity("hâte"))
+                                if (cc->hasCapacity("hate"))
                                     cc->setFirstTurn(false);
                             cardColor = c->getColor();
                             playerTurn->playCard(c);
@@ -314,7 +314,7 @@ void Game::fightPhase() {
                         if (lower(c->getName()) == lower(cardToPlay)) {
                             if (CreatureCard* cc = dynamic_cast<CreatureCard*>(c)) {
                                 // Si la carte a la capacité "défense", elle ne peut pas être utilisée en attaque
-                                if (cc->hasCapacity("défenseur")) {
+                                if (cc->hasCapacity("defenseur")) {
                                     std::cout << "Vous ne pouvez pas attaquer avec cette carte car elle possède la capacité \"défenseur\".\n";
                                     std::cout << "Veuillez donner une autre réponse : ";
                                     break;
@@ -391,7 +391,7 @@ void Game::fightPhase() {
                                     if (CreatureCard* ccAtk = dynamic_cast<CreatureCard*>(chosenCardsToAttack.at(i))) {
                                         if (CreatureCard *ccDef = dynamic_cast<CreatureCard *>(c)) {
                                             if (!ccAtk->hasCapacity("vol") || ccDef->hasCapacity("vol") ||
-                                                ccDef->hasCapacity("portée")) {
+                                                ccDef->hasCapacity("portee")) {
                                                 validInput = true;
                                                 attackDefenseCards[chosenCardsToAttack.at(i)].push_back(c);
                                                 defenseCards.erase(defenseCards.begin() + j);
@@ -513,7 +513,7 @@ void Game::fightPhase() {
                         }
                     }
                 }
-                if (offensive_c->hasCapacity("piétinement") && offensive_c->getHp() > 0 && remainingAtkPower > 0) {
+                if (offensive_c->hasCapacity("pietinement") && offensive_c->getHp() > 0 && remainingAtkPower > 0) {
                     std::cout << "Votre carte " << offensive_c->getColoredName() << " a la capacité \"piétinement\" elle peut attaquer l'adversaire.\n";
                     std::cout << "L'adversaire subit " << StrColor::red(std::to_string(remainingAtkPower) + " point(s) de dégâts") << "\n";
                     opponent->setHp(opponent->getHp() - remainingAtkPower);

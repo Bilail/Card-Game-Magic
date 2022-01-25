@@ -9,9 +9,10 @@
 
 
 
-CreatureCard::CreatureCard(std::string nam, std::vector<int> mC, std::string cl, int ap, int hp) : Card(nam, mC, cl) {
+CreatureCard::CreatureCard(std::string nam, std::vector<int> mC, std::vector<std::string> capa, std::string cl, int ap, int hp) : Card(nam, mC, cl) {
     this->hp = hp;
     defaultHp = hp;
+    capacities = capa;
     attackPower = ap;
     firstTurn = true;
 }
@@ -22,6 +23,10 @@ int CreatureCard::getHp() const {
 
 int CreatureCard::getAttackPower() const {
     return attackPower;
+}
+
+std::vector<std::string> CreatureCard::getCapacities() const {
+    return capacities;
 }
 
 void CreatureCard::setHp(int hP) {
@@ -43,7 +48,7 @@ bool CreatureCard::isFirstTurn() {
 std::string CreatureCard::capacitiesToString() {
     std::string s = "";
     for (int i = 0; i < capacities.size(); i++) {
-         s += StrColor::white("" + capacities[i][0] + capacities[i][1]);
+         s += StrColor::white(capacities[i].substr(0,3));
             if (i+1 < capacities.size())
                 s += " - ";
     }
@@ -64,9 +69,9 @@ void CreatureCard::printLine(int line) {
         if (manaSpaces.length() > 0)
             manaSpaces.pop_back();
     }
-    std::string capacitySpaces = "           ";
+    std::string capacitySpaces = "            ";
     if (capacities.size() > 0) {
-        for (int i = 0; i < 3 * capacities.size() - 1; i++) {
+        for (int i = 0; i < 6 * capacities.size() - 3; i++) {
             if (capacitySpaces.length() > 0)
                 capacitySpaces.pop_back();
         }

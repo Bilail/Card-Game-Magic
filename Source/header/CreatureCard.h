@@ -17,7 +17,7 @@ public:
      * @param attaque
      * @param point de vie
      */
-    CreatureCard(std::string nam, std::vector<int> mC, std::string cl, int ap, int hp);
+    CreatureCard(std::string nam, std::vector<int> mC, std::vector<std::string> capa, std::string cl, int ap, int hp);
     /**
      * Récupère les points de vie
      * @return hp
@@ -28,6 +28,11 @@ public:
      * @return attaque
      */
     int getAttackPower() const;
+    /**
+     * getter pour les capacités
+     * @return
+     */
+    std::vector<std::string> getCapacities() const;
     /**
      * Set les hp
      * @param hp

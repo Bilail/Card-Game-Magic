@@ -172,11 +172,12 @@ void Deck::importFromJson(std::string filename) {
     for (auto& creature : creatures.items()){
         std::string name = creature.value()["name"];
         std::vector<int> mana = creature.value()["cost"];
+        std::vector<std::string> capacities = creature.value()["capacities"];
         std::string color = creature.value()["color"];
         int attack = creature.value()["attack"];
         int hp = creature.value()["hp"];
 
-        library.push_back(new CreatureCard(name, mana, color, attack, hp));
+        library.push_back(new CreatureCard(name, mana, capacities, color, attack, hp));
     }
 
     // Ajout des terrains
@@ -208,6 +209,10 @@ void Deck::exportToJson(std::string filename) {
                     {"attack", cc->getAttackPower()},
                     {"hp", cc->getHp()}
             };
+            j["capacities"] = json::array({});
+            for (std::string capacity : cc->getCapacities()) {
+                j["capacities"].push_back(capacity);
+            }
             jsonfile["Deck"]["Creature"].push_back(j);
         }
         else if (LandCard* lc = dynamic_cast<LandCard*>(c)) {

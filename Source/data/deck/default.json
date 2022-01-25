@@ -6,20 +6,23 @@
       {
         "name": "Soldier",
         "cost": [0, 0, 0, 1, 0, 2],
+        "capacities": [],
         "color": "yellow",
         "attack": 1,
         "hp": 1
       },
       {
-        "name":"ArmoredPegasus" ,
+        "name":"ArmoredPegasus",
         "cost": [0,0,0,1,0,1],
+        "capacities": [],
         "color": "yellow",
         "attack": 1 ,
         "hp": 2
       },
       {
-        "name": "Phase Dolphin" ,
+        "name": "Phase Dolphin",
         "cost": [0,2,0,0,0,2],
+        "capacities": ["hate"],
         "color": "blue",
         "attack":1 ,
         "hp":4
@@ -27,62 +30,71 @@
       {
         "name": "AngryBear",
         "cost": [1,0,0,0,0,1],
+        "capacities": [],
         "color": "green",
         "attack": 3,
         "hp": 2
       },
       {
-        "name": "Guard" ,
+        "name": "Guard",
         "cost": [0,0,0,2,0,4],
+        "capacities": ["defenseur"],
         "color": "yellow",
         "attack": 2,
         "hp": 5
       },
       {
-        "name": "Werewolf" ,
+        "name": "Werewolf",
         "cost": [1,0,0,0,0,4],
+        "capacities": [],
         "color": "green",
         "attack": 4,
         "hp": 6
       },
       {
-        "name": "Skeleton" ,
+        "name": "Skeleton",
         "cost": [0,0,0,0,1,1],
+        "capacities": [],
         "color": "black",
         "attack": 1,
         "hp": 1
       },
       {
-        "name": "Ghost" ,
+        "name": "Ghost",
         "cost": [0,0,0,0,1,2],
+        "capacities": [],
         "color": "black",
         "attack": 2,
         "hp": 1
       },
       {
-        "name": "BlackKnight" ,
+        "name": "BlackKnight",
         "cost": [0,0,0,0,1,2],
+        "capacities": [],
         "color": "black",
         "attack": 2,
         "hp": 2
       },
       {
-        "name": "Naga Eternal" ,
+        "name": "Naga Eternal",
         "cost": [0,2,0,0,0,1],
+        "capacities": [],
         "color": "blue",
         "attack": 3,
         "hp": 2
       },
       {
-        "name": "Vampire" ,
+        "name": "Vampire",
         "cost": [0,0,0,0,1,4],
+        "capacities": ["vigilance"],
         "color": "black",
         "attack": 6,
         "hp": 3
       },
       {
-        "name": "Hobgoblin" ,
+        "name": "Hobgoblin",
         "cost": [0,1,2,1,0,3],
+        "capacities": ["portee"],
         "color": "red",
         "attack": 3,
         "hp": 3
@@ -106,7 +118,26 @@
         "name" : "Mountain",
         "color" : "red"
       },
-
+      {
+        "name" : "Forest",
+        "color" : "green"
+      },
+      {
+        "name" : "Plains",
+        "color" : "yellow"
+      },
+      {
+        "name" : "Island",
+        "color" : "blue"
+      },
+      {
+        "name" : "Swamp",
+        "color" : "black"
+      },
+      {
+        "name" : "Mountain",
+        "color" : "red"
+      },
       {
         "name" : "Forest",
         "color" : "green"

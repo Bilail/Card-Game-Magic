@@ -3,6 +3,7 @@
 //
 
 #include "../header/GameCards.h"
+#include <vector>
 #include <fstream>
 #include <string>
 #include "../dependance/json.hpp"
@@ -14,13 +15,14 @@ GameCards::GameCards() {
     ifs >> deck;
     // Ajout des créatures
     auto& creaturesImported = deck["Deck"]["Creature"];
-    for (auto& creature : creaturesImported.items()){
+    for (auto& creature : creaturesImported.items()) {
         std::string name = creature.value()["name"];
         std::vector<int> mana = creature.value()["cost"];
+        std::vector<std::string> capacities = creature.value()["capacities"];
         std::string color = creature.value()["color"];
         int attack = creature.value()["attack"];
         int hp = creature.value()["hp"];
-        creatures.push_back(CreatureCard(name, mana, color, attack, hp));
+        creatures.push_back(CreatureCard(name, mana, capacities, color, attack, hp));
     }
     // Ajout des terrains
     auto& landsImported = deck["Deck"]["Land"];
