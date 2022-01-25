@@ -146,17 +146,51 @@ void Game::showBanner() {
 }
 
 void Game::initGame() {
-    std::string nameP1("P1");
-    std::string nameP2("P2");
-    std::cout << "Quel est le nom du premier joueur ?\n";
-    std::getline(std::cin, nameP1);
-    std::cout << "\nQuel est le nom du deuxième joueur ?\n";
-    std::getline(std::cin, nameP2);
-    Deck d1, d2;
-    d1.generateRandomDeck();
-    d2.generateRandomDeck();
-    p1 = Player(nameP1,d1);
-    p2 = Player(nameP2, d2);
+
+    std::cout << "\nListe des decks disponible :\n";
+    std::vector<std::string> availableDecks;
+    for (const auto & entry : std::filesystem::directory_iterator( "./data/deck/")) {
+        availableDecks.push_back(entry.path().stem());
+        std::cout << entry.path().stem() << " ";
+    }
+
+    std::string playerName;
+    std::string deckName;
+    std::cout << "\n\nQuel est le nom du premier joueur ? ";
+    std::getline(std::cin, playerName);
+    std::cout << "Avec quel deck souhaitez-vous jouer ? ";
+    bool validInput = false;
+    while (!validInput) {
+        std::getline(std::cin, deckName);
+        for (std::string str : availableDecks) {
+            if (str == deckName) {
+                validInput = true;
+                Deck d(deckName);
+                d.generateRandomDeck();
+                p1 = Player(playerName,d);
+            }
+        }
+        if (!validInput)
+            std::cout << "Nom de deck inconnu, veuillez réessayer : ";
+    }
+    std::cout << "\nQuel est le nom du deuxième joueur ? ";
+    std::getline(std::cin, playerName);
+    std::cout << "Avec quel deck souhaitez-vous jouer ? ";
+    validInput = false;
+    while (!validInput) {
+        std::getline(std::cin, deckName);
+        for (std::string str : availableDecks) {
+            if (str == deckName) {
+                validInput = true;
+                Deck d(deckName);
+                d.generateRandomDeck();
+                p2 = Player(playerName,d);
+                break;
+            }
+        }
+        if (!validInput)
+            std::cout << "Nom de deck inconnu, veuillez réessayer : ";
+    }
     p1.setPrintColor("cyan");
     p2.setPrintColor("magenta");
 }

@@ -47,12 +47,5 @@ int main() {
         }
     }
 
-    /*
-    std::cout << "\nContenu de ./data/ :\n";
-    std::string path = "./data/";
-    for (const auto & entry : std::filesystem::directory_iterator(path)) {
-        std::cout << entry.path().filename() << std::endl;
-    }
-    */
     return 0;
 }

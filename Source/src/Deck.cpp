@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <algorithm>
 #include "../header/Util.h"
 #include "../header/Card.h"
 #include "../header/Deck.h"
@@ -157,8 +158,9 @@ std::vector<Card*> Deck::getHandCards() {
     return handCards;
 }
 
-void Deck::importFromJson(std::string nomDeck) {
-    std::ifstream ifs("./data/deck/" + nomDeck+".json");
+void Deck::importFromJson(std::string filename) {
+    std::replace(filename.begin(), filename.end(), ' ', '_');
+    std::ifstream ifs("./data/deck/" + filename+".json");
     json deck;
     ifs >> deck;
 
@@ -213,6 +215,7 @@ void Deck::exportToJson(std::string filename) {
             jsonfile["Deck"]["Land"].push_back(j);
         }
     }
+    std::replace(filename.begin(), filename.end(), ' ', '_');
     std::ofstream file("./data/deck/" + filename + ".json");
     file << jsonfile;
 }

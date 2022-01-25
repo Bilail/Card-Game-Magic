@@ -83,9 +83,9 @@ public:
     void discardCard(Card* c);
     /**
      * Fonction qui convertit un fichier json de carte en deck jouable
-     * @param nomDeck
+     * @param filename
      */
-    void importFromJson(std::string nomDeck);
+    void importFromJson(std::string filename);
     /**
      * Fonction qui convertit un deck de carte en fichier json
      * @param filename
