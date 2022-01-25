@@ -224,7 +224,6 @@ void Game::randomDraw() {
 void Game::mainPhase() {
     bool stopMainPhase = false;
     bool firstMainPhase = true;
-    //EnchantmentCard* E = new EnchantmentCard("enchantRed");
     while (!stopMainPhase) {
         std::vector <Card*> playableCards = playerTurn->getPlayableCards();
         if (playerHasPlayedLandCard) {
@@ -358,16 +357,18 @@ Player* Game::getOpponent() {
 void Game::fightPhase() {
     // Si un enchantement rouge est actif on applique son effet
     if(playerTurn->hasEnchant("enchantRed")){
-        std::cout << " Il y a un enchantement rouge" << std::endl;
-
+        std::cout << "Il y a un enchantement rouge" << std::endl;
         std::vector<Card *> cardInGame = playerTurn->getCreatureCard();
-
         for (Card* c : cardInGame){
-            if (CreatureCard* cr = dynamic_cast<CreatureCard*>(c))
-            cr->setAttackPower(cr->getAttackPower()+1);
-            //on ajoute +1 d'attaque à toute les cartes en jeux
+            if (CreatureCard* cr = dynamic_cast<CreatureCard*>(c)) {
+                //on ajoute +1 d'attaque à toute les cartes en jeu
+                cr->setAttackPower(cr->getAttackPower()+1);
+            }
         }
     }
+    std::cout << "Carte(s) sur le terrain :\n";
+    Card::print(playerTurn->getCreatureCard());
+
     std::vector<Card*> chosenCardsToAttack;
     bool stopAttack = false;
     while (!stopAttack)
