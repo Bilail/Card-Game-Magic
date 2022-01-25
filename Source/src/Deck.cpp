@@ -101,6 +101,12 @@ std::vector<Card*> Deck::getPlayableCards() {
 
 void Deck::playCard(Card* c) {
     // On commence par engager les terrains nécessaires pour poser la carte
+    if (dynamic_cast<const EnchantmentCard*>(c)){
+        enchantmentInGame.push_back(c);
+        int idx = getIndex(handCards, c);
+        handCards.erase(handCards.begin() + idx);
+        return;
+    }
     for (int i = 0; i < c->getManaCost().size(); i++) {
         for (int j = 0; j < c->getManaCost().at(i); j++) {
             for (int k = 0; k < inPlayCards.size(); k++) {
@@ -187,6 +193,14 @@ void Deck::importFromJson(std::string filename) {
         std::string color = land.value()["color"];
         library.push_back(new LandCard(name, color));
     }
+
+    // Ajout des enchantements
+    auto& enchantments = deck["Deck"]["Enchantment"];
+    for (auto& enchantment : enchantments.items()){
+        std::string name = enchantment.value()["name"];
+        std::string color = enchantment.value()["color"].
+        library.push_back(new EnchantmentCard(name,color));
+    }
 }
 
 void Deck::exportToJson(std::string filename) {
@@ -226,4 +240,52 @@ void Deck::exportToJson(std::string filename) {
     std::replace(filename.begin(), filename.end(), ' ', '_');
     std::ofstream file("./data/deck/" + filename + ".json");
     file << jsonfile;
+}
+
+std::vector<Card*> Deck::getEnchantmentInGame(){
+    return enchantmentInGame;
+}
+
+bool Deck::hasEnchant(std::string e){
+    for(Card* c : enchantmentInGame){
+        if ( c->getName() == e){
+            return true;
+        }
+    }
+    return false;
+}
+
+std::vector<Card*> Deck::getCreatureCard(){
+    std::vector<Card*> a = getAttackCards();
+    std::vector<Card*> d = getDefenseCards();
+    for (Card* c : d){
+        a.push_back(c);
+    }
+    //a.insert(a.end(), d.begin(), d.end())
+    return a ;
+}
+
+std::vector<Card*> Deck::getCardInPlay(){
+    return inPlayCards;
+}
+
+int Deck::getNbForest(){
+    int res = 0;
+    for (Card* c : inPlayCards){
+        if (c->getName() == "Forest")
+            res = res+1;
+    }
+    return res;
+}
+
+
+void Deck::addCardInPlay(Card* c){
+    inPlayCards.push_back(c);
+}
+void Deck::removeCard(Card* c ){
+    for (int i = 0; i < inPlayCards.size(); i++) {
+        if (inPlayCards.at(i) == c) {
+            inPlayCards.erase(inPlayCards.begin()+i);
+        }
+    }
 }

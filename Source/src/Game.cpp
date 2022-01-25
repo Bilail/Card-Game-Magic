@@ -224,6 +224,7 @@ void Game::randomDraw() {
 void Game::mainPhase() {
     bool stopMainPhase = false;
     bool firstMainPhase = true;
+    //EnchantmentCard* E = new EnchantmentCard("enchantRed");
     while (!stopMainPhase) {
         std::vector <Card*> playableCards = playerTurn->getPlayableCards();
         if (playerHasPlayedLandCard) {
@@ -249,6 +250,68 @@ void Game::mainPhase() {
                     for (Card *c: playableCards) {
                         if (lower(c->getName()) == lower(cardToPlay)) {
                             validInput = true;
+
+                            if (lower(c->getName()) == lower("enchantGreen")){
+                                EnchantmentCard* enchant = dynamic_cast<EnchantmentCard*>(c);
+                                std::cout << "A qui voulez vous lier la carte " << std::endl;
+                                // soit un terrain ou une créature déja posé
+                                // si c'est un terrain on double ce terrain
+                                std::cout << "Voici les cartes que vous avez en Jeu : " << std::endl;
+                                std::vector<Card*> inGame = playerTurn->getCardInPlay();
+                                Card::print(inGame);
+                                bool valid = false;
+                                while (!valid) {
+                                    std::string cardToEnchant = "";
+                                    std::getline(std::cin, cardToEnchant);
+                                    for(Card* toEnchant : inGame){
+                                        if (lower(toEnchant->getName()) == lower(cardToEnchant)){
+                                            // Si c'est un terrain on créer une copie du terrain
+                                            if (dynamic_cast<const LandCard*>(toEnchant)){
+                                                playerTurn->getCardInPlay().push_back(toEnchant);
+                                                break;
+                                            }
+                                            if (CreatureCard* ctoEnchant = dynamic_cast<CreatureCard*>(toEnchant)){
+                                                // Si c'est une créature on la lie et on la buff
+                                                enchant->associate(ctoEnchant);
+                                                // On compte le nombre de terrain foret
+                                                int nbrForest = playerTurn->getNbForest();
+                                                ctoEnchant->setAttackPower(ctoEnchant->getAttackPower()+nbrForest);
+                                                ctoEnchant->setHp(ctoEnchant->getHp()+nbrForest);
+                                                break;
+                                            }
+
+                                        }
+                                    }
+                                    if (!valid){
+                                        std::cout << "Reponse inconnue veuillez reessayer : ";
+                                    }
+                                }
+                            }
+
+                            if (c->getName() == "enchantBlue") {
+                                // On prend le controle d'une carte ennemie
+                                dynamic_cast<const EnchantmentCard *>(c);
+                                Player* opponent = getOpponent();
+                                std::vector<Card*> oCard = opponent->getCreatureCard();
+                                std::cout << "Voici les creatures adverses :  " << std::endl;
+                                Card::print(oCard);
+                                std::cout << "De quel cartes souhaitez vous prendre le controle ? " << std::endl;
+                                bool valid = false;
+                                while (!valid) {
+                                    std::string CardToControl = "";
+                                    std::getline(std::cin, CardToControl);
+                                    for(Card* co : oCard){
+                                        if (lower(co->getName()) == lower(CardToControl) ){
+                                            valid = true;
+                                            playerTurn->addCardInPlay(co);
+                                            opponent->removeCard(co);
+
+                                        }
+                                    }
+                                }
+
+                            }
+
                             if (dynamic_cast<const LandCard*>(c))
                                 playerHasPlayedLandCard =  true;
                             if (CreatureCard* cc = dynamic_cast<CreatureCard*>(c))
@@ -289,6 +352,17 @@ Player* Game::getOpponent() {
 }
 
 void Game::fightPhase() {
+    // Si un enchantement rouge est actif on applique son effet
+
+    if(playerTurn->hasEnchant("enchantRed")){
+
+        std::vector<Card *> cardInGame = playerTurn->getCreatureCard();
+        for (Card* c : cardInGame){
+            if (CreatureCard* c = dynamic_cast<CreatureCard*>(c))
+            c->setAttackPower(c->getAttackPower()+1);
+            //on ajoute +1 d'attaque à toute les cartes en jeux
+        }
+    }
     std::vector<Card*> chosenCardsToAttack;
     bool stopAttack = false;
     while (!stopAttack)
@@ -505,10 +579,18 @@ void Game::fightPhase() {
                             if (defensive_c->getHp() <= 0) {
                                 std::cout << "La carte " << defensive_c->getColoredName() << " meurt.\n";
                                 opponent->discardCard(defensive_c);
+                                 // Si une carte enchantement black est active alors l'ennemie perd 1 hp
+                                if(playerTurn->hasEnchant("enchantBlack")){
+                                    opponent->setHp(opponent->getHp()-1);
+                                }
                             }
                             if (offensive_c->getHp() <= 0) {
                                 std::cout << "La carte " << offensive_c->getColoredName() << " meurt.\n";
                                 playerTurn->discardCard(offensive_c);
+                                // Si une carte enchantement black est active alors l'ennemie perd 1 hp
+                                if(playerTurn->hasEnchant("enchantBlack")){
+                                    opponent->setHp(opponent->getHp()-1);
+                                }
                             }
                         }
                     }

@@ -9,6 +9,7 @@
 #include <bits/stdc++.h>
 #include "Card.h"
 #include "GameCards.h"
+#include "EnchantmentCard.h"
 #include <string>
 
 class Deck {
@@ -17,6 +18,7 @@ protected:
     std::vector<Card*> handCards;
     std::vector<Card*> library;
     std::vector<Card*> disCards;
+    std::vector<Card*> enchantmentInGame;
 public:
     static const int DECK_SIZE;
     /**
@@ -91,6 +93,14 @@ public:
      * @param filename
      */
     void exportToJson(std::string filename);
+
+    std::vector<Card*> getEnchantmentInGame();
+    bool hasEnchant(std::string e);
+    std::vector<Card*> getCreatureCard();
+    std::vector<Card*> getCardInPlay();
+    int getNbForest();
+    void addCardInPlay(Card* c);
+    void removeCard(Card* c );
 
 };
 

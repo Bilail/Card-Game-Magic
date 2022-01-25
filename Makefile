@@ -204,6 +204,33 @@ Source/src/Deck.cpp.s:
 	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/Deck.cpp.s
 .PHONY : Source/src/Deck.cpp.s
 
+Source/src/EnchantmentCard.o: Source/src/EnchantmentCard.cpp.o
+
+.PHONY : Source/src/EnchantmentCard.o
+
+# target to build an object file
+Source/src/EnchantmentCard.cpp.o:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/EnchantmentCard.cpp.o
+.PHONY : Source/src/EnchantmentCard.cpp.o
+
+Source/src/EnchantmentCard.i: Source/src/EnchantmentCard.cpp.i
+
+.PHONY : Source/src/EnchantmentCard.i
+
+# target to preprocess a source file
+Source/src/EnchantmentCard.cpp.i:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/EnchantmentCard.cpp.i
+.PHONY : Source/src/EnchantmentCard.cpp.i
+
+Source/src/EnchantmentCard.s: Source/src/EnchantmentCard.cpp.s
+
+.PHONY : Source/src/EnchantmentCard.s
+
+# target to generate assembly for a file
+Source/src/EnchantmentCard.cpp.s:
+	$(MAKE) -f CMakeFiles/Magic.dir/build.make CMakeFiles/Magic.dir/Source/src/EnchantmentCard.cpp.s
+.PHONY : Source/src/EnchantmentCard.cpp.s
+
 Source/src/Game.o: Source/src/Game.cpp.o
 
 .PHONY : Source/src/Game.o
@@ -384,6 +411,9 @@ help:
 	@echo "... Source/src/Deck.o"
 	@echo "... Source/src/Deck.i"
 	@echo "... Source/src/Deck.s"
+	@echo "... Source/src/EnchantmentCard.o"
+	@echo "... Source/src/EnchantmentCard.i"
+	@echo "... Source/src/EnchantmentCard.s"
 	@echo "... Source/src/Game.o"
 	@echo "... Source/src/Game.i"
 	@echo "... Source/src/Game.s"

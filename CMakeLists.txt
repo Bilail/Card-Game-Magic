@@ -13,6 +13,8 @@ add_executable(
         Source/header/CreatureCard.h
         Source/src/LandCard.cpp
         Source/header/LandCard.h
+        Source/src/EnchantmentCard.cpp
+        Source/header/EnchantmentCard.h
         Source/src/GameCards.cpp
         Source/header/GameCards.h
         Source/src/Deck.cpp
