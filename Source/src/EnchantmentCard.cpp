@@ -62,3 +62,7 @@ void EnchantmentCard::printLine(int line) {
 void EnchantmentCard::associate(Card* c){
     this->asso = c;
 }
+
+card* EnchantmentCard::getAsso(){
+    return asso;
+}

@@ -19,6 +19,7 @@ public :
     void print();
     void printLine(int line);
     void associate(Card* CardToAssociate);
+    card* getAsso();
 
 protected :
     Card* asso;
