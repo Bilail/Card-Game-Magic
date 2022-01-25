@@ -256,14 +256,13 @@ bool Deck::hasEnchant(std::string e){
     return false;
 }
 
-std::vector<Card*> Deck::getCreatureCard(){
-    std::vector<Card*> a = getAttackCards();
-    std::vector<Card*> d = getDefenseCards();
-    for (Card* c : d){
-        a.push_back(c);
+std::vector<Card*> Deck::getCreatureCard() {
+    std::vector<Card*> vec;
+    for (Card* c : inPlayCards){
+        if (dynamic_cast<CreatureCard*>(c))
+        vec.push_back(c);
     }
-    //a.insert(a.end(), d.begin(), d.end())
-    return a ;
+    return vec;
 }
 
 std::vector<Card*> Deck::getCardInPlay(){
