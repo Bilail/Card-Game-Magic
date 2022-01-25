@@ -67,8 +67,8 @@ void Player::discardCard(Card* c) {
     cards.discardCard(c);
 }
 
-bool Player::getEnchant(std::string enchantCard){
-    return cards.getEnchant(enchantCard);
+bool Player::hasEnchant(std::string enchantCard){
+    return cards.hasEnchant(enchantCard);
 }
 
 std::vector<Card*> Player::getCreatureCard(){
@@ -77,4 +77,15 @@ std::vector<Card*> Player::getCreatureCard(){
 
 std::vector<Card*> Player::getCardInPlay(){
     return cards.getCardInPlay();
+}
+
+int Player::getNbForest(){
+    return cards.getNbForest();
+}
+
+void Player::addCardInPlay(Card* c){
+    cards.addCardInPlay(c);
+}
+void Player::removeCard(Card* c ){
+    cards.removeCard(c);
 }

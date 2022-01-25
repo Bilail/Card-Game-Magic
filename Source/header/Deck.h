@@ -90,9 +90,12 @@ public:
     void exportToJson(std::string filename);
 
     std::vector<Card*> getEnchantmentInGame();
-    bool getEnchant(std::string nameEnchant);
+    bool hasEnchant(std::string e);
     std::vector<Card*> getCreatureCard();
     std::vector<Card*> getCardInPlay();
+    int getNbForest();
+    void addCardInPlay(Card* c);
+    void removeCard(Card* c );
 
 };
 

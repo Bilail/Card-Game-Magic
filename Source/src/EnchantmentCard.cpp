@@ -14,8 +14,8 @@ enum enchantment {
     green
 };
 
-EnchantmentCard::EnchantmentCard(std::string name) : Card(name, std::vector<int>(6, 0), name) {
-    associate = NULL;
+EnchantmentCard::EnchantmentCard(std::string name, std::string color) : Card(name, std::vector<int>(6, 0), color) {
+    asso = NULL;
 };
 
 EnchantmentCard::~EnchantmentCard() {
