@@ -4,6 +4,7 @@
 #include <iostream>
 #include "../header/GameCards.h"
 #include "../header/Deck.h"
+#include "../header/StrColor.h"
 #include "../header/DeckCreator.h"
 
 DeckCreator::DeckCreator() {}
@@ -66,10 +67,10 @@ void DeckCreator::startApp() {
 }
 
 void DeckCreator::showBanner() {
-    std::cout << "______          _      _____                _             \n"
-                 "|  _  \\        | |    /  __ \\              | |            \n"
-                 "| | | |___  ___| | __ | /  \\/_ __ ___  __ _| |_ ___  _ __ \n"
-                 "| | | / _ \\/ __| |/ / | |   | '__/ _ \\/ _` | __/ _ \\| '__|\n"
-                 "| |/ /  __/ (__|   <  | \\__/\\ | |  __/ (_| | || (_) | |   \n"
-                 "|___/ \\___|\\___|_|\\_\\  \\____/_|  \\___|\\__,_|\\__\\___/|_|\n\n";
+    std::cout << StrColor::magenta("______          _     ")+StrColor::cyan(" _____                _             \n")
+              << StrColor::magenta("|  _  \\        | |   ")+StrColor::cyan(" /  __ \\              | |            \n")
+              << StrColor::magenta("| | | |___  ___| | __ ")+StrColor::cyan("| /  \\/_ __ ___  __ _| |_ ___  _ __ \n")
+              << StrColor::magenta("| | | / _ \\/ __| |/ / ")+StrColor::cyan("| |   | '__/ _ \\/ _` | __/ _ \\| '__|\n")
+              << StrColor::magenta("| |/ /  __/ (__|   <  ")+StrColor::cyan("| \\__/\\ | |  __/ (_| | || (_) | |   \n")
+              << StrColor::magenta("|___/ \\___|\\___|_|\\_\\")+StrColor::cyan("  \\____/_|  \\___|\\__,_|\\__\\___/|_|\n\n");
 }

@@ -1,18 +1,14 @@
 //
 // Created by bilai on 04/01/2022.
 //
-#include <vector>
 #include <iostream>
 
 #include "../header/Card.h"
 #include "../header/CreatureCard.h"
 #include "../header/LandCard.h"
 #include "../header/Game.h"
-#include "../header/Deck.h"
-#include "../header/GameCards.h"
 #include "../header/DeckCreator.h"
 
-#include <filesystem>
 #include "../dependance/json.hpp"
 using json = nlohmann::json;
 
