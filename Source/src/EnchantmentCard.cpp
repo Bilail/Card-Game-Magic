@@ -55,6 +55,7 @@ void EnchantmentCard::printLine(int line) {
         std::cout << StrColor::print("|                        |", color);
     else if (line == 5)
         std::cout << StrColor::print("|________________________|", color);
+    else std::cout << "                          ";
 }
 
 

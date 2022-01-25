@@ -11,7 +11,7 @@
 
 class EnchantmentCard : public Card {
 public :
-    EnchantmentCard(std::string name);
+    EnchantmentCard(std::string name, std::string color);
 
     ~EnchantmentCard();
 

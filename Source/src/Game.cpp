@@ -21,7 +21,7 @@
 int Game::MAX_CARDS_IN_HAND = 7;
 
 void wait(int sec) {
-    bool activateDelayedTransition = false;
+    bool activateDelayedTransition = true;
     if (activateDelayedTransition)
         std::this_thread::sleep_for(std::chrono::seconds(sec));
 }

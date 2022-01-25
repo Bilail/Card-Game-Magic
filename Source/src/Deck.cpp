@@ -32,7 +32,8 @@ Deck::Deck(std::vector<CreatureCard> creatures) {
     }
 }
 
-Deck::~Deck() {
+Deck::~Deck() { //parcourir tous les vector et les delete
+
 }
 
 void Deck::printLibrary() {
@@ -198,7 +199,7 @@ void Deck::importFromJson(std::string filename) {
     auto& enchantments = deck["Deck"]["Enchantment"];
     for (auto& enchantment : enchantments.items()){
         std::string name = enchantment.value()["name"];
-        std::string color = enchantment.value()["color"].
+        std::string color = enchantment.value()["color"];
         library.push_back(new EnchantmentCard(name,color));
     }
 }
