@@ -39,6 +39,11 @@ public:
      */
     void setAttackPower(int attackPower);
     /**
+     * set le boolean firstTurn
+     * @param b
+     */
+    void setFirstTurn(int b);
+    /**
      * boolean si premier tour
      * @return
      */

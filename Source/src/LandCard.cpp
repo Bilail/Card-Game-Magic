@@ -10,7 +10,7 @@
 
 LandCard::LandCard(std::string nm, std::string clr) : Card(nm,std::vector<int>(6, 0),clr) {
 }
-~LandCard::LandCard() {}
+LandCard::~LandCard() {}
 
 void LandCard::printLine(int line) {
     std::string nameSpaces = "                ";

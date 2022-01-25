@@ -13,6 +13,7 @@ CreatureCard::CreatureCard(std::string nam, std::vector<int> mC, std::string cl,
     this->hp = hp;
     defaultHp = hp;
     attackPower = ap;
+    firstTurn = true;
 }
 
 int CreatureCard::getHp() const {
@@ -29,6 +30,10 @@ void CreatureCard::setHp(int hP) {
 
 void CreatureCard::setAttackPower(int attackPower) {
     CreatureCard::attackPower = attackPower;
+}
+
+void CreatureCard::setFirstTurn(int b) {
+    firstTurn = b;
 }
 
 bool CreatureCard::isFirstTurn() {
@@ -88,6 +93,7 @@ void CreatureCard::printLine(int line) {
 void CreatureCard::disengage() {
     resetHp();
     isEngaged = false;
+    firstTurn = false;
 }
 
 void CreatureCard::resetHp() {

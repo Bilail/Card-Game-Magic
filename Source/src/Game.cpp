@@ -137,8 +137,8 @@ void Game::playGame() {
 
 void Game::showBanner() {
     std::cout
-            << StrColor::magenta("  _   _  ____ _______  ") + StrColor::cyan("  __  __          _____ _____ _____ \n")
-            << StrColor::magenta(" | \\ | |/ __ \\__   __| ") + StrColor::cyan(" |  \\/  |   /\\   / ____|_   _/ ____|\n")
+            << StrColor::magenta("  _   _  ____ _______ ") + StrColor::cyan("  __  __          _____ _____ _____ \n")
+            << StrColor::magenta(" | \\ | |/ __ \\__   __|") + StrColor::cyan(" |  \\/  |   /\\   / ____|_   _/ ____|\n")
             << StrColor::magenta(" |  \\| | |  | | | |  ") + StrColor::cyan("  | \\  / |  /  \\ | |  __  | || |     \n")
             << StrColor::magenta(" | . ` | |  | | | |  ") + StrColor::cyan("  | |\\/| | / /\\ \\| | |_ | | || |     \n")
             << StrColor::magenta(" | |\\  | |__| | | |  ") + StrColor::cyan("  | |  | |/ ____ \\ |__| |_| || |____ \n")
@@ -146,14 +146,12 @@ void Game::showBanner() {
 }
 
 void Game::initGame() {
-
     std::cout << "\nListe des decks disponible :\n";
     std::vector<std::string> availableDecks;
     for (const auto & entry : std::filesystem::directory_iterator( "./data/deck/")) {
         availableDecks.push_back(entry.path().stem());
         std::cout << entry.path().stem() << " ";
     }
-
     std::string playerName;
     std::string deckName;
     std::cout << "\n\nQuel est le nom du premier joueur ? ";
@@ -253,6 +251,9 @@ void Game::mainPhase() {
                             validInput = true;
                             if (dynamic_cast<const LandCard*>(c))
                                 playerHasPlayedLandCard =  true;
+                            if (CreatureCard* cc = dynamic_cast<CreatureCard*>(c))
+                                if (cc->hasCapacity("hâte"))
+                                    cc->setFirstTurn(false);
                             cardColor = c->getColor();
                             playerTurn->playCard(c);
                             break;
@@ -376,8 +377,10 @@ void Game::fightPhase() {
                     std::cout << "Avec quelle(s) carte(s) souhaitez-vous contrer la carte " << chosenCardsToAttack.at(i)->getColoredName() << " (tapez \"aucune\" pour ne pas défendre) : ";
                     bool validInput = false;
                     bool playerWantToAddDef = false;
+                    bool cantUseThisCard = false;
                     while (!validInput || playerWantToAddDef) {
                         playerWantToAddDef = false;
+                        cantUseThisCard = false;
                         std::getline(std::cin, input);
                         if (lower(input) != "aucune") {
                             int j = -1;
@@ -409,6 +412,7 @@ void Game::fightPhase() {
                                                     }
                                                 }
                                             } else {
+                                                cantUseThisCard = true;
                                                 std::cout
                                                         << "Vous ne pouvez pas défendre avec cette carte car elle ne possède pas la capacité \"vol\" ou \"portée\".\n";
                                                 std::cout << "Veuillez donner une autre réponse : ";
@@ -417,7 +421,7 @@ void Game::fightPhase() {
                                     }
                                 }
                             }
-                            if (playerWantToAddDef)
+                            if (playerWantToAddDef || cantUseThisCard)
                                 continue;
                         }
                         else {
@@ -509,6 +513,21 @@ void Game::fightPhase() {
                         }
                     }
                 }
+                if (offensive_c->hasCapacity("piétinement") && offensive_c->getHp() > 0 && remainingAtkPower > 0) {
+                    std::cout << "Votre carte " << offensive_c->getColoredName() << " a la capacité \"piétinement\" elle peut attaquer l'adversaire.\n";
+                    std::cout << "L'adversaire subit " << StrColor::red(std::to_string(remainingAtkPower) + " point(s) de dégâts") << "\n";
+                    opponent->setHp(opponent->getHp() - remainingAtkPower);
+                    if (opponent->getHp() <= 0) {
+                        std::cout << "L'adversaire " << StrColor::red("décède") << " de ses blessures.\n";
+                        return;
+                    }
+                    std::cout << "L'adversaire n'a plus que " << StrColor::green(std::to_string(opponent->getHp()) + " point(s) de vie") << "\n";
+                }
+                if (offensive_c->hasCapacity("lien de vie")) {
+                    int healing = offensive_c->getAttackPower() - remainingAtkPower;
+                    playerTurn->setHp(playerTurn->getHp() + healing);
+                    std::cout << "Votre carte " << offensive_c->getColoredName() << " a la capacité \"lien de vie\" donc vous gagnez " << StrColor::green(std::to_string(healing)) << " point(s) de vie.\n";
+                }
             }
             else {
                 std::cout << "Votre carte " << offensive_c->getColoredName()  << " peut directement attaquer l'adversaire :\n";
@@ -519,6 +538,11 @@ void Game::fightPhase() {
                     return;
                 }
                 std::cout << "L'adversaire n'a plus que " << StrColor::green(std::to_string(opponent->getHp()) + " point(s) de vie") << "\n";
+                if (offensive_c->hasCapacity("lien de vie")) {
+                    int healing = offensive_c->getAttackPower();
+                    playerTurn->setHp(playerTurn->getHp() + healing);
+                    std::cout << "Votre carte " << offensive_c->getColoredName() << " a la capacité \"lien de vie\" donc vous gagnez " << StrColor::green(std::to_string(healing)) << " point(s) de vie.\n";
+                }
             }
         }
     }

@@ -125,8 +125,11 @@ std::vector<Card*> Deck::getAttackCards() {
     std::vector<Card*> attackCards;
     for( Card* c : inPlayCards )
         if (!c->getIsEngaged())
-            if (dynamic_cast<const CreatureCard*>(c))
+            if (CreatureCard* cc = dynamic_cast<CreatureCard*>(c)) {
+                if (cc->isFirstTurn())
+                    continue;
                 attackCards.push_back(c);
+            }
     return attackCards;
 }
 
