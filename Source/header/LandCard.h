@@ -17,8 +17,7 @@ public :
      * @param couleur
      */
     LandCard(std::string nm, std::string clr);
-    ~LandCard(){};
-    void print();
+    ~LandCard();
     void printLine(int line);
 };
 

@@ -23,6 +23,12 @@ std::string StrColor::print(std::string str, std::string color) {
         return "\033[1;37m" + str + "\033[0m";
 }
 
+std::string StrColor::black(std::string str) {
+    return "\033[1;30m" + str + "\033[0m";
+}
+std::string StrColor::white(std::string str) {
+    return "\033[1;37m" + str + "\033[0m";
+}
 std::string StrColor::red(std::string str) {
     return "\033[1;31m" + str + "\033[0m";
 }

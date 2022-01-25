@@ -10,6 +10,8 @@
 class StrColor {
 public:
     static std::string print(std::string str, std::string color);
+    static std::string black(std::string);
+    static std::string white(std::string);
     static std::string red(std::string);
     static std::string green(std::string);
     static std::string yellow(std::string);

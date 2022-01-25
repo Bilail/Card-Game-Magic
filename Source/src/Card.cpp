@@ -73,12 +73,18 @@ void Card::setManaCost(std::vector<int> manaCost) {
     this-> manaCost = manaCost;
 }
 
-std::string Card::manaToString(){
+std::string Card::manaToString() {
     std::string s = "";
+    int nbManaCost = 0;
+    for (int i: manaCost)
+        if (i > 0)
+            nbManaCost++;
+    int nbManaCostAdded = 0;
     for (int i = 0; i < manaCost.size(); i++) {
         if (manaCost.at(i) > 0) {
             s += StrColor::print(std::to_string(manaCost.at(i)), Card::ColorCode.at(i));
-            if (i+1 < manaCost.size())
+            nbManaCostAdded++;
+            if (nbManaCostAdded < nbManaCost)
                 s += "-";
         }
     }
@@ -86,18 +92,11 @@ std::string Card::manaToString(){
 }
 
 void Card::print() {
-    std::string nameSpaces = "                ";
-    for (int i = 0; i < name.length(); i++)
-        if (nameSpaces.length() > 0)
-            nameSpaces.pop_back();
-    std::cout
-            << StrColor::print(" ________________________ ", color) << std::endl
-            << StrColor::print("| Name : " + name + nameSpaces + "|", color) << std::endl
-            << StrColor::print("| Mana Cost : undefined  |", color) << std::endl
-            << StrColor::print("|                        |", color) << std::endl
-            << StrColor::print("|________________________|", color) << std::endl;
+    for (int i = 1; i <= 6; i++) {
+        printLine(i);
+        std::cout << std::endl;
+    }
 }
-
 
 void Card::printLine(int line) {
     std::string nameSpaces = "                ";
@@ -119,7 +118,7 @@ void Card::printLine(int line) {
 void Card::print(std::vector<Card*> v) {
     int firstCardLineIdx = 0;
     int nbCardsPerLine = 5;
-    int linePerCardToPrint = 5;
+    int linePerCardToPrint = 6;
     int lineOfCards = (v.size() + nbCardsPerLine - 1) / nbCardsPerLine;
     for (int k = 0; k < lineOfCards; k++) {
         for (int i = 1; i <= linePerCardToPrint; i++) {

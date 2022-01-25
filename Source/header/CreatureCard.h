@@ -44,9 +44,10 @@ public:
      */
     bool isFirstTurn();
     /**
-     * Affichage
+     * Affichage des capacités
+     * @return
      */
-    void print();
+    std::string capacitiesToString();
     /**
      * Affichage par ligne
      * @param line

@@ -35,26 +35,14 @@ bool CreatureCard::isFirstTurn() {
     return firstTurn;
 }
 
-void CreatureCard::print() {
-    std::string nameSpaces = "                ";
-    for (int i = 0; i < name.length(); i++)
-        if (nameSpaces.length() > 0)
-            nameSpaces.pop_back();
-    std::string manaSpaces = "           ";
-    int nbManaCost = 0;
-    for (int i : manaCost)
-        if (i > 0)
-            nbManaCost++;
-    for (int i = 0; i < nbManaCost + nbManaCost - 1; i++) {
-        if (manaSpaces.length() > 0)
-            manaSpaces.pop_back();
+std::string CreatureCard::capacitiesToString() {
+    std::string s = "";
+    for (int i = 0; i < capacities.size(); i++) {
+         s += StrColor::white("" + capacities[i][0] + capacities[i][1]);
+            if (i+1 < capacities.size())
+                s += " - ";
     }
-    std::cout
-            << StrColor::print(" ________________________ ", color) << std::endl
-            << StrColor::print("| Name : " + name + nameSpaces + "|", color) << std::endl
-            << StrColor::print("| Mana Cost : ", color) + manaToString() + StrColor::print(manaSpaces + "|", color) << std::endl
-            << StrColor::print("| Attack : " + std::to_string(attackPower) + "      HP : " + std::to_string(hp) + " |", color) << std::endl
-            << StrColor::print("|________________________|", color) << std::endl;
+    return s;
 }
 
 void CreatureCard::printLine(int line) {
@@ -67,9 +55,19 @@ void CreatureCard::printLine(int line) {
     for (int i : manaCost)
         if (i > 0)
             nbManaCost++;
-    for (int i = 0; i < nbManaCost + nbManaCost - 1; i++) {
+    for (int i = 0; i < 2 * nbManaCost - 1; i++) {
         if (manaSpaces.length() > 0)
             manaSpaces.pop_back();
+    }
+    std::string capacitySpaces = "           ";
+    if (capacities.size() > 0) {
+        for (int i = 0; i < 3 * capacities.size() - 1; i++) {
+            if (capacitySpaces.length() > 0)
+                capacitySpaces.pop_back();
+        }
+    }
+    else {
+        capacitySpaces = "None        ";
     }
     if (line == 1)
         std::cout << StrColor::print(" ________________________ ", color);
@@ -78,9 +76,13 @@ void CreatureCard::printLine(int line) {
     else if (line == 3)
         std::cout << StrColor::print("| Mana Cost : ", color) + manaToString() + StrColor::print(manaSpaces + "|", color);
     else if (line == 4)
-        std::cout << StrColor::print("| Attack : " + std::to_string(attackPower) + "      HP : " + std::to_string(hp) + " |", color);
+        std::cout << StrColor::print("| Capacity : ", color) + capacitiesToString() + StrColor::print(capacitySpaces + "|", color);
     else if (line == 5)
+        std::cout << StrColor::print("| Attack : " + std::to_string(attackPower) + "      HP : " + std::to_string(hp) + " |", color);
+    else if (line == 6)
         std::cout << StrColor::print("|________________________|", color);
+    else
+        std::cout << "                          ";
 }
 
 void CreatureCard::disengage() {
