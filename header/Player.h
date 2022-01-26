@@ -60,6 +60,10 @@ public :
      * @return
      */
     std::vector<Card*> getPlayableCards();
+    /**
+     * pose la carte en jeu
+     * @param c
+     */
     void playCard(Card* c);
     /**
      * ses cartes qui peuvent attaquer
@@ -75,8 +79,8 @@ public :
      * envoyer une carte au cimetière
      * @param c
      */
-    std::vector<Card*> getHandCards();
     void discardCard(Card* c);
+    std::vector<Card*> getHandCards();
     bool hasEnchant(std::string enchantCard);
     std::vector<Card*> getCreatureCard();
     std::vector<Card*> getCardInPlay();

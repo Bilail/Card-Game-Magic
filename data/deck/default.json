@@ -4,14 +4,6 @@
     "Creature":
     [
       {
-        "name": "Dope",
-        "cost": [0, 0, 0, 0, 0, 1],
-        "capacities": ["imblocable", "lien de vie", "pietinement"],
-        "color": "red",
-        "attack": 9,
-        "hp": 9
-      },
-      {
         "name": "Wabbit",
         "cost": [0, 0, 0, 1, 0, 0],
         "capacities": ["hate"],

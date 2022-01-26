@@ -14,9 +14,7 @@ protected:
     std::string name;
     std::vector<int> manaCost; // { Forest Green , Island Blue , Mountain Red, Plain Yellow, Swamp Black, Other }
     std::string color;
-    bool isDiscarded = false;
     bool isEngaged = false;
-    std::string typeOfCard;
 
 public:
     /**
@@ -51,11 +49,6 @@ public:
      */
     void setColor(const std::string &color);
     /**
-     * Mettre une carte au cimetière
-     * @param isDiscarded
-     */
-    void setIsDiscarded(bool isDiscarded);
-    /**
      * Récupéré le nom de la carte
      * @return name
      */
@@ -76,11 +69,6 @@ public:
      */
     const std::string &getColor() const;
     /**
-     * Etat dans le cimetière ou pas
-     * @return
-     */
-    bool getIsDiscarded() const;
-    /**
      * Engagé ou pas
      * @return
      */
@@ -89,7 +77,6 @@ public:
      * Destructeur
      */
      ~Card();
-    void isStillOperational();
     /**
      * Fonction d'affichage
      */

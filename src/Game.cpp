@@ -201,25 +201,22 @@ void Game::randomDraw() {
         playerTurn = &p1;
     else
         playerTurn = &p2;
-    if (false) {
-        wait(1);
-        std::cout << "Roulement de tambours" << std::flush;
-        wait(1);
-        std::cout << " 5 " << std::flush;
-        wait(1);
-        std::cout << " 4 " << std::flush;
-        wait(1);
-        std::cout << " 3 " << std::flush;
-        wait(1);
-        std::cout << " 2 " << std::flush;
-        wait(1);
-        std::cout << " 1 " << std::flush;
-        wait(1);
-        std::cout << " BONNE ANN... ah non enfaite. " << std::flush;
-        wait(3);
-        std::cout << "\n\n";
-    }
-    std::cout << "C'est à " << playerTurn->getColoredName() << " de commencer.\n\n";
+    wait(1);
+    std::cout << "Roulement de tambours" << std::flush;
+    wait(1);
+    std::cout << " 5 " << std::flush;
+    wait(1);
+    std::cout << " 4 " << std::flush;
+    wait(1);
+    std::cout << " 3 " << std::flush;
+    wait(1);
+    std::cout << " 2 " << std::flush;
+    wait(1);
+    std::cout << " 1 " << std::flush;
+    wait(1);
+    std::cout << " BONNE ANN... ah non enfaite. " << std::flush;
+    wait(3);
+    std::cout << "\n\nC'est à " << playerTurn->getColoredName() << " de commencer.\n\n";
 }
 
 void Game::mainPhase() {

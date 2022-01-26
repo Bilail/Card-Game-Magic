@@ -20,7 +20,7 @@ void DeckCreator::startApp() {
     std::cout << "10 cartes sont des terrains par défaut (2 de chaque couleur)\n";
     std::cout << "4 cartes sont des enchantement par défaut (1 de chaque couleur)\n";
     std::cout << "Vous allez donc choisir 16 créatures.\n";
-    int nbCardsRemaining = 3;
+    int nbCardsRemaining = 16;
     std::vector<CreatureCard> availableCreatures = gc.getCreatures();
     std::vector<CreatureCard> chosenCreatures;
     while (nbCardsRemaining > 0) {

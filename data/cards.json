@@ -1,8 +1,6 @@
 {
-  "Deck":
-  {
-    "Creature":
-    [
+  "Deck": {
+    "Creature": [
       {
         "name": "Blazehag",
         "cost": [
@@ -45,21 +43,6 @@
         ],
         "capacities": [],
         "color": "black",
-        "attack": 3,
-        "hp": 3
-      },
-      {
-        "name": "Nethercrackle",
-        "cost": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "capacities": [],
-        "color": "green",
         "attack": 3,
         "hp": 3
       },
@@ -184,21 +167,6 @@
         "hp": 2
       },
       {
-        "name": "Cryptstrike",
-        "cost": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "capacities": [],
-        "color": "black",
-        "attack": 5,
-        "hp": 5
-      },
-      {
         "name": "Acidhound",
         "cost": [
           1,
@@ -257,21 +225,6 @@
         "color": "red",
         "attack": 1,
         "hp": 1
-      },
-      {
-        "name": "Emberface",
-        "cost": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "capacities": [],
-        "color": "yellow",
-        "attack": 1,
-        "hp": 3
       },
       {
         "name": "Cloudclaw",
@@ -587,21 +540,6 @@
         "color": "red",
         "attack": 5,
         "hp": 2
-      },
-      {
-        "name": "Foultooth",
-        "cost": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "capacities": [],
-        "color": "green",
-        "attack": 2,
-        "hp": 3
       },
       {
         "name": "Decayhound",
@@ -1504,47 +1442,45 @@
         "hp": 2
       }
     ],
-    "Land" :
-    [
+    "Land": [
       {
-        "name" : "Plains",
-        "color" : "yellow"
+        "name": "Plains",
+        "color": "yellow"
       },
       {
-        "name" : "Island",
-        "color" : "blue"
+        "name": "Island",
+        "color": "blue"
       },
       {
-        "name" : "Swamp",
-        "color" : "black"
+        "name": "Swamp",
+        "color": "black"
       },
       {
-        "name" : "Mountain",
-        "color" : "red"
+        "name": "Mountain",
+        "color": "red"
       },
       {
-        "name" : "Forest",
-        "color" : "green"
+        "name": "Forest",
+        "color": "green"
       }
     ],
-    "Enchantment" :
-      [
-        {
-          "name" : "enchantBlue",
-          "color" : "blue"
-        },
-        {
-          "name" : "enchantGreen",
-          "color" : "green"
-        },
-        {
-          "name" : "enchantRed",
-          "color" : "red"
-        },
-        {
-          "name" : "enchantBlack",
-          "color" : "black"
-        }
-      ]
+    "Enchantment": [
+      {
+        "name": "enchantBlue",
+        "color": "blue"
+      },
+      {
+        "name": "enchantGreen",
+        "color": "green"
+      },
+      {
+        "name": "enchantRed",
+        "color": "red"
+      },
+      {
+        "name": "enchantBlack",
+        "color": "black"
+      }
+    ]
   }
 }

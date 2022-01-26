@@ -18,27 +18,7 @@ EnchantmentCard::EnchantmentCard(std::string name, std::string color) : Card(nam
     asso = NULL;
 };
 
-EnchantmentCard::~EnchantmentCard() {
-
-};
-
-void EnchantmentCard::effect() {
-
-};
-
-
-void EnchantmentCard::print() {
-    std::string nameSpaces = "                ";
-    for (int i = 0; i < name.length(); i++)
-        if (nameSpaces.length() > 0)
-            nameSpaces.pop_back();
-    std::cout
-            << StrColor::print(" ________________________ ", color) << std::endl
-            << StrColor::print("| Name : " + name + nameSpaces + "|", color) << std::endl
-            << StrColor::print("| Mana Cost : 0          |", color) << std::endl
-            << StrColor::print("|                        |", color) << std::endl
-            << StrColor::print("|________________________|", color) << std::endl;
-}
+EnchantmentCard::~EnchantmentCard() {};
 
 void EnchantmentCard::printLine(int line) {
     std::string nameSpaces = "                ";
@@ -57,7 +37,6 @@ void EnchantmentCard::printLine(int line) {
         std::cout << StrColor::print("|________________________|", color);
     else std::cout << "                          ";
 }
-
 
 void EnchantmentCard::associate(Card* c){
     this->asso = c;

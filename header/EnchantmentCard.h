@@ -15,8 +15,6 @@ public :
 
     ~EnchantmentCard();
 
-    void effect();
-    void print();
     void printLine(int line);
     void associate(Card* CardToAssociate);
     Card* getAsso();
