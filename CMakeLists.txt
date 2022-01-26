@@ -1,28 +1,28 @@
 cmake_minimum_required(VERSION 3.16)
 project(Magic)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(
         Magic
-        Source/src/StrColor.cpp
-        Source/header/StrColor.h
-        Source/src/Card.cpp
-        Source/header/Card.h
-        Source/src/CreatureCard.cpp
-        Source/header/CreatureCard.h
-        Source/src/LandCard.cpp
-        Source/header/LandCard.h
-        Source/src/EnchantmentCard.cpp
-        Source/header/EnchantmentCard.h
-        Source/src/GameCards.cpp
-        Source/header/GameCards.h
-        Source/src/Deck.cpp
-        Source/header/Deck.h
-        Source/src/Game.cpp
-        Source/header/Game.h
-        Source/src/Player.cpp
-        Source/header/Player.h
-        Source/src/DeckCreator.cpp
-        Source/header/DeckCreator.h
-        Source/src/Main.cpp)
+        src/StrColor.cpp
+        header/StrColor.h
+        src/Card.cpp
+        header/Card.h
+        src/CreatureCard.cpp
+        header/CreatureCard.h
+        src/LandCard.cpp
+        header/LandCard.h
+        src/EnchantmentCard.cpp
+        header/EnchantmentCard.h
+        src/GameCards.cpp
+        header/GameCards.h
+        src/Deck.cpp
+        header/Deck.h
+        src/Game.cpp
+        header/Game.h
+        src/Player.cpp
+        header/Player.h
+        src/DeckCreator.cpp
+        header/DeckCreator.h
+        src/Main.cpp)
