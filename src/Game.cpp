@@ -290,9 +290,13 @@ void Game::mainPhase() {
 
                             if (c->getName() == "enchantBlue") {
                                 // On prend le controle d'une carte ennemie
-                                dynamic_cast<const EnchantmentCard *>(c);
+
                                 Player* opponent = getOpponent();
                                 std::vector<Card*> oCard = opponent->getCreatureCard();
+                                if (oCard.size()==0){
+                                    std::cout << "Le joueurs ennemmi n'a pas de créature sur le terrain" << std::endl;
+                                    break;
+                                }
                                 std::cout << "Voici les creatures adverses :  " << std::endl;
                                 Card::print(oCard);
                                 std::cout << "De quel cartes souhaitez vous prendre le controle ? " << std::endl;
