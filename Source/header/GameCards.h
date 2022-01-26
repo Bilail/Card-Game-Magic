@@ -9,11 +9,13 @@
 #include "Card.h"
 #include "CreatureCard.h"
 #include "LandCard.h"
+#include "EnchantmentCard.h"
 
 class GameCards {
 private:
     std::vector<CreatureCard> creatures;
     std::vector<LandCard> lands;
+    std::vector<EnchantmentCard> enchantments;
 public:
     /**
      * Créer un deck par défaut
@@ -21,6 +23,7 @@ public:
     GameCards();
     const std::vector<CreatureCard>& getCreatures();
     const std::vector<LandCard>& getLands();
+    const std::vector<EnchantmentCard>& getEnchantments();
 };
 
 

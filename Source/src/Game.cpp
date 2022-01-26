@@ -66,7 +66,8 @@ void Game::playGame() {
         playerHasPlayedLandCard = false;
         wait(3);
         std::cout << " ***---*** Début du tour n°" << round << " ***---*** " << std::endl;
-        std::cout << " ***---*** C'est à " << playerTurn->getColoredName() << " de jouer ***---***\n\n";
+        std::cout << " ***---*** C'est à " << playerTurn->getColoredName() << " de jouer ***---***\n";
+        std::cout << " ***---*** Nombre de PV restants : " << playerTurn->getHp() << " ***---***\n\n";
         // PHASE DE PIOCHE
         if (round != 1) {
             if (!playerTurn->drawCard()) { // Le joueur perd s'il ne peut plus piocher
@@ -78,36 +79,36 @@ void Game::playGame() {
         Card::print(playerTurn->getHandCards());
         // PHASE DE DESANGAGEMENT
         wait(3);
-        std::cout << "\n### ### ### ### ### ### ### ### ### ###\n";
-        std::cout << "######   PHASE DE DESENGAGEMENT  ######\n";
-        std::cout << "### ### ### ### ### ### ### ### ### ###\n\n";
+        std::cout << StrColor::white("\n### ### ### ### ### ### ### ### ### ###\n");
+        std::cout << StrColor::white("######   PHASE DE DESENGAGEMENT  ######\n");
+        std::cout << StrColor::white("### ### ### ### ### ### ### ### ### ###\n\n");
         playerTurn->disengageCards();
         std::cout << "Vos cartes ont toutes été désengagées\n";
         // PHASE PRINCIPALE
         wait(3);
-        std::cout << "\n### ### ### ### ### ### ### ### ### ###\n";
-        std::cout << "######      PHASE PRINCIPALE     ######\n";
-        std::cout << "### ### ### ### ### ### ### ### ### ###\n\n";
+        std::cout << StrColor::white("\n### ### ### ### ### ### ### ### ### ###\n");
+        std::cout << StrColor::white("######      PHASE PRINCIPALE     ######\n");
+        std::cout << StrColor::white("### ### ### ### ### ### ### ### ### ###\n\n");
         mainPhase();
         // PHASE DE COMBAT
         wait(3);
-        std::cout << "\n### ### ### ### ### ### ### ### ### ###\n";
-        std::cout << "######      PHASE DE COMBAT      ######\n";
-        std::cout << "### ### ### ### ### ### ### ### ### ###\n\n";
+        std::cout << StrColor::white("\n### ### ### ### ### ### ### ### ### ###\n");
+        std::cout << StrColor::white("######      PHASE DE COMBAT      ######\n");
+        std::cout << StrColor::white("### ### ### ### ### ### ### ### ### ###\n\n");
         fightPhase();
         if (p1.getHp() <= 0 || p2.getHp() <= 0)
             break;
         // PHASE SECONDAIRE
         wait(3);
-        std::cout << "\n### ### ### ### ### ### ### ### ### ###\n";
-        std::cout << "######      PHASE SECONDAIRE     ######\n";
-        std::cout << "### ### ### ### ### ### ### ### ### ###\n\n";
+        std::cout << StrColor::white("\n### ### ### ### ### ### ### ### ### ###\n");
+        std::cout << StrColor::white("######      PHASE SECONDAIRE     ######\n");
+        std::cout << StrColor::white("### ### ### ### ### ### ### ### ### ###\n\n");
         mainPhase();
         // FIN DE TOUR ET CHANGEMENT DE JOUEUR
         wait(3);
-        std::cout << "\n### ### ### ### ### ### ### ### ### ###\n";
-        std::cout << "######        FIN DE TOUR        ######\n";
-        std::cout << "### ### ### ### ### ### ### ### ### ###\n\n";
+        std::cout << StrColor::white("\n### ### ### ### ### ### ### ### ### ###\n");
+        std::cout << StrColor::white("######        FIN DE TOUR        ######\n");
+        std::cout << StrColor::white("### ### ### ### ### ### ### ### ### ###\n\n");
         endOfTurnPhase();
         std::cout << std::endl << std::endl;
         playerTurn = getOpponent();

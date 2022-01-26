@@ -30,6 +30,9 @@ Deck::Deck(std::vector<CreatureCard> creatures) {
         library.push_back(new LandCard(l));
         library.push_back(new LandCard(l));
     }
+    for(EnchantmentCard e : gc.getEnchantments()) {
+        library.push_back(new EnchantmentCard(e));
+    }
 }
 
 Deck::~Deck() { //parcourir tous les vector et les delete

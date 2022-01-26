@@ -18,7 +18,6 @@ int main() {
 
     std::cout << "- 1 : Lancement du jeu\n";
     std::cout << "- 2 : Création d'un deck personnalisé\n";
-    std::cout << "- 3 : Création d'une créature personnalisée\n";
     std::cout << "\nSaisissez le numéro de l'application que vous souhaitez démarrer : ";
     std::string input;
     bool validInput = false;
@@ -32,10 +31,6 @@ int main() {
         else if (input == "2") {
             DeckCreator dc;
             dc.startApp();
-            validInput = true;
-        }
-        else if (input == "3") {
-            std::cout << "Fonctionnalité non implémentée pour le moment.\n";
             validInput = true;
         }
         else {

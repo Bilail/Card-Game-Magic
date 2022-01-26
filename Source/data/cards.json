@@ -1530,10 +1530,6 @@
     "Enchantment" :
       [
         {
-          "name" : "enchantWhite",
-          "color" : "white"
-        },
-        {
           "name" : "enchantBlue",
           "color" : "blue"
         },
